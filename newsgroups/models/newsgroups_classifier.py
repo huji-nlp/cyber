@@ -1,18 +1,17 @@
 from typing import Dict, Optional
 
 import numpy
-from overrides import overrides
 import torch
 import torch.nn.functional as F
-
 from allennlp.common import Params
 from allennlp.common.checks import ConfigurationError
 from allennlp.data import Vocabulary
-from allennlp.modules import FeedForward, Seq2VecEncoder, TextFieldEmbedder
 from allennlp.models.model import Model
+from allennlp.modules import FeedForward, Seq2VecEncoder, TextFieldEmbedder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
 from allennlp.training.metrics import CategoricalAccuracy
+from overrides import overrides
 
 
 @Model.register("20newsgroups_classifier")
@@ -68,23 +67,6 @@ class Fetch20NewsgroupsClassifier(Model):
     def forward(self,  # type: ignore
                 text: Dict[str, torch.LongTensor],
                 label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
-        # pylint: disable=arguments-differ
-        """
-        Parameters
-        ----------
-        input_text : Dict[str, Variable], required
-            The output of ``TextField.as_array()``.
-        label : Variable, optional (default = None)
-            A variable representing the label for each instance in the batch.
-        Returns
-        -------
-        An output dictionary consisting of:
-        class_probabilities : torch.FloatTensor
-            A tensor of shape ``(batch_size, num_classes)`` representing a distribution over the
-            label classes for each instance.
-        loss : torch.FloatTensor, optional
-            A scalar loss to be optimised.
-        """
         embedded_text = self.model_text_field_embedder(text)
         text_mask = util.get_text_field_mask(text)
         encoded_text = self.internal_text_encoder(embedded_text, text_mask)
