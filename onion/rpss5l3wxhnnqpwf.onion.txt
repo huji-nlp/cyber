@@ -1,0 +1,164 @@
+
+
+   [1]Northwest Nuggets - Purveyor of Fine Cannabis
+
+     * 1 BTC = 678.7 USD
+
+
+
+                            Welcome to my store!
+
+
+
+   I am the vendor Northwest Nuggets from Silk Road and BMR and
+
+   Northwest_Nuggets from Agora. I currently vend on [2]Alphabay,
+
+   [3]Nucleus, [4]Dream, [5]Hansa, and [6]Valhalla markets. I sell high
+
+   quality indoor cannabis products. Anything less than top quality will
+
+   be noted in the listing. You can check my feedback at [7]Grams! If you
+
+   have any questions or problems using the site, contact me at
+
+   nwnuggets@sigaint.org. I also have threads at [8]Panacea Flower
+
+   Sanctuary and [9]The Majestic Garden forums, both of which allow direct
+
+   deals.
+
+
+
+   You will need a PGP key to use this hidden service. If you don't have
+
+   one, try this free [10]PGP software. For security, all communications
+
+   on this hidden service must be PGP encrypted or it won't work. You will
+
+   not have an account here to view your orders. When you place an order,
+
+   you will get an order URL with a bitcoin address. You will have 45
+
+   minutes to send the bitcoin before the order expires. After sending the
+
+   bitcoin, refresh your order URL and it should say PAID but don't worry
+
+   if it says EXPIRED. I will get any bitcoin you send to that address
+
+   either way. Your order URL is your way of messaging me and getting
+
+   status updates for your order so make sure to copy the order link or
+
+   bookmark it. If you lose it, email me with your order details and I
+
+   will try to find your order. Your order URL will stop working at some
+
+   point in time after the order is completed and will not remain in the
+
+   database permanently.
+
+
+
+   SHIPPING IS TO USA ONLY AND SHIPPING IS FREE!
+
+     __________________________________________________________________
+
+
+
+   7g Northern Lights
+
+   75 USD, 0.1105 BTC
+
+   [11]Order[12]Info
+
+   14g Northern Lights
+
+   130 USD, 0.1915 BTC
+
+   [13]Order[14]Info
+
+   1oz Northern Lights
+
+   231 USD, 0.3403 BTC
+
+   [15]Order[16]Info
+
+   2oz Northern Lights
+
+   420 USD, 0.6188 BTC
+
+   [17]Order[18]Info
+
+   10 Regular Seeds - Guerrilla Gold
+
+   50 USD, 0.0736 BTC
+
+   [19]Order[20]Info
+
+   10 Regular Seeds - Northern Gold
+
+   50 USD, 0.0736 BTC
+
+   [21]Order[22]Info
+
+   7g Gorilla Scout Cookies #3
+
+   82 USD, 0.1208 BTC
+
+   [23]Order[24]Info
+
+
+
+References
+
+
+
+   1. file:///opt/HTML/index.html
+
+   2. http://pwoah7foa6au2pul.onion/user.php?id=35989
+
+   3. http://nucleuspf3izq7o6.onion/user/profile/7bc67bc837fcb914f40b7bcf1cb818d89dc8ef2b
+
+   4. http://lchudifyeqm4ldjj.onion/contactMember?member=Northwest
+
+   5. http://hansamkt3iph6sbb.onion/vendor/NorthwestNuggets/
+
+   6. http://valhallaxmn3fydu.onion/northwest-nuggets
+
+   7. http://grams7enufi7jmdl.onion/infodesk/vendor/0xF52FC1FA3382C015
+
+   8. http://flowerk3r3nud4nc.onion/index.php?board=82.0
+
+   9. http://bm26rwk32m7u7rec.onion/index.php?topic=1844.0
+
+  10. http://www.gpg4usb.org/
+
+  11. file:///opt/HTML/cart.html
+
+  12. file:///opt/HTML/products/2.2.html
+
+  13. file:///opt/HTML/cart.html
+
+  14. file:///opt/HTML/products/3.2.html
+
+  15. file:///opt/HTML/cart.html
+
+  16. file:///opt/HTML/products/4.2.html
+
+  17. file:///opt/HTML/cart.html
+
+  18. file:///opt/HTML/products/5.2.html
+
+  19. file:///opt/HTML/cart.html
+
+  20. file:///opt/HTML/products/6.2.html
+
+  21. file:///opt/HTML/cart.html
+
+  22. file:///opt/HTML/products/7.2.html
+
+  23. file:///opt/HTML/products/10/orders/create
+
+  24. file:///opt/HTML/products/10.2.html
+

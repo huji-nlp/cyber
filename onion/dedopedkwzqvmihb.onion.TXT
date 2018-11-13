@@ -1,0 +1,39 @@
+   [1]Products [2]FAQs [3]Register [4]Login
+
+Bubblegum
+
+   Nice bubblegum taste! / Netter Kaugummie Geschmack!
+   Shipping from germany! / Versand aus Deutschland!
+   All orders will be professionally packaged and shipped within 48hours!
+   / Alle Bestellungen werden professionell verpackt und innerhalb 48
+   Stunden versendet!
+      Product       Price                      Quantity
+   10g Bubblegum  0.033   ฿ 1_ X [BUTTON Input] (not implemented)_______
+   25g Bubblegum  0.065   ฿ 1_ X [BUTTON Input] (not implemented)_______
+   100g Bubblegum 0.235   ฿ 1_ X [BUTTON Input] (not implemented)_______
+     __________________________________________________________________
+
+Marokk Hash
+
+   Freshly imported from marocco! / Frisch importiert aus Marokko!
+        Product        Price                      Quantity
+   50g Marocc Hash   0.081   ฿ 1_ X [BUTTON Input] (not implemented)_______
+   1000g Marocc Hash 1.329   ฿ 1_ X [BUTTON Input] (not
+                               implemented)_______
+   DeDope
+
+References
+
+   Visible links
+   1. file:///home/UNIVERSIDAD/dedopedkwzqvmihb.onion/index.php
+   2. file:///home/UNIVERSIDAD/dedopedkwzqvmihb.onion/info.php
+   3. file:///l/register.php
+   4. file:///l/login.php
+
+   Hidden links:
+   6. file://localhost/home/UNIVERSIDAD/dedopedkwzqvmihb.onion/index.php
+   7. file://localhost/l/login.php
+   8. file://localhost/l/login.php
+   9. file://localhost/l/login.php
+  10. file://localhost/l/login.php
+  11. file://localhost/l/login.php
