@@ -1,0 +1,1 @@
+from drugs.models.drugs_classifier import FetchDrugsClassifier
