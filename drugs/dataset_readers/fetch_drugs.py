@@ -26,11 +26,10 @@ class DrugsDatasetReader(DatasetReader):
 
     @overrides
     def _read(self, file_path):
-        if file_path not in ("train", "test"):
-            raise ConfigurationError("Path string not specified in read method")
-
-        logger.info("Reading %s instances", file_path)
-        for text, target in self.fetch_drugs(subset=file_path, categories=CATEGORIES):
+        logger.info("Reading %s instance(s)", file_path)
+        drugs_data = self.fetch_drugs(subset=file_path, categories=CATEGORIES) if file_path in ("train", "test") else \
+            [(self.read_file(file_path), None)]
+        for text, target in drugs_data:
             yield self.text_to_instance(text, target)
 
     @overrides
@@ -50,5 +49,9 @@ class DrugsDatasetReader(DatasetReader):
             files = files[:num_train] if subset == "train" else files[num_train:]
             for filename in files:
                 path = os.path.join(category, filename)
-                with open(path, "rb") as f:
-                    yield f.read().decode("utf-8", errors="ignore")[:MAX_LENGTH], i
+                yield DrugsDatasetReader.read_file(path), i
+
+    @staticmethod
+    def read_file(path):
+        with open(path, "rb") as f:
+            return f.read().decode("utf-8", errors="ignore")[:MAX_LENGTH]
