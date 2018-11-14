@@ -17,10 +17,10 @@ from overrides import overrides
 @Model.register("drugs_classifier")
 class FetchDrugsClassifier(Model):
     """
-    This ``Model`` performs text classification for a drugs text.  We assume we're given a
+    This ``Model`` performs text classification for drugs-related text.  We assume we're given a
     text and we predict some output label.
     The basic model structure: we'll embed the text and encode it with
-    a Seq2VecEncoder, getting a single vector representing the content.  We'll then
+    a Seq2VecEncoder, getting a single vector representing the content.  We'll then feed
     the result through a feedforward network, the output of
     which we'll use as our scores for each label.
     Parameters
