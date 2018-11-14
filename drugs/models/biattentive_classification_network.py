@@ -181,13 +181,13 @@ class BiattentiveClassificationNetwork(Model):
 
     @overrides
     def forward(self,  # type: ignore
-                tokens: Dict[str, torch.LongTensor],
+                text: Dict[str, torch.LongTensor],
                 label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
         # pylint: disable=arguments-differ
         """
         Parameters
         ----------
-        tokens : Dict[str, torch.LongTensor], required
+        text : Dict[str, torch.LongTensor], required
             The output of ``TextField.as_array()``.
         label : torch.LongTensor, optional (default = None)
             A variable representing the label for each instance in the batch.
@@ -200,15 +200,15 @@ class BiattentiveClassificationNetwork(Model):
         loss : torch.FloatTensor, optional
             A scalar loss to be optimised.
         """
-        text_mask = util.get_text_field_mask(tokens).float()
+        text_mask = util.get_text_field_mask(text).float()
         # Pop elmo tokens, since elmo embedder should not be present.
-        elmo_tokens = tokens.pop("elmo", None)
-        embedded_text = self._text_field_embedder(tokens) if tokens else None
+        elmo_tokens = text.pop("elmo", None)
+        embedded_text = self._text_field_embedder(text) if text else None
 
         # Add the "elmo" key back to "tokens" if not None, since the tests and the
         # subsequent training epochs rely not being modified during forward()
         if elmo_tokens is not None:
-            tokens["elmo"] = elmo_tokens
+            text["elmo"] = elmo_tokens
 
         # Create ELMo embeddings if applicable
         input_elmo = integrator_output_elmo = None
