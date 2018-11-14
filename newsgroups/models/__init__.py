@@ -1,1 +1,0 @@
-from newsgroups.models.newsgroups_classifier import Fetch20NewsgroupsClassifier
