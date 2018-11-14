@@ -3,7 +3,7 @@ import os
 from typing import Dict, Tuple
 
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
-from allennlp.data.fields import LabelField, TextField
+from allennlp.data.fields import Field, LabelField, TextField
 from allennlp.data.instance import Instance
 from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
 from allennlp.data.tokenizers import Tokenizer, WordTokenizer
@@ -35,21 +35,20 @@ class DrugsDatasetReader(DatasetReader):
 
     @overrides
     def text_to_instance(self, text: str, target: int = None) -> Instance:
-        tokenized_text = self._tokenizer.tokenize(text)
-        text_field = TextField(tokenized_text, self._token_indexers)
-        fields = {"text": text_field}
+        text_field = TextField(self._tokenizer.tokenize(text), self._token_indexers)
+        fields: Dict[str, Field] = {"text": text_field}
         if target is not None:
             fields["label"] = LabelField(target)
         return Instance(fields)
 
     def fetch_drugs(self, subset, categories):
-        for category in categories:
-            files = sorted(os.listdir(category))
-            num_train = int(self._train_ratio * len(files))
-            files = files[:num_train] if subset == "train" else files[num_train:]
-            for filename in files:
-                path = os.path.join(category, filename)
-                yield self.read_file(path), category
+        files = [sorted(os.listdir(category)) for category in categories]
+        num_files_per_category = min(map(len, files))  # Take the same number of files from each category
+        num_train = int(self._train_ratio * num_files_per_category)
+        for category, category_files in zip(categories, files):
+            for filename in category_files[:num_train] if subset == "train" else \
+                    category_files[num_train:num_files_per_category]:
+                yield self.read_file(os.path.join(category, filename)), category
 
     def read_file(self, path):
         with open(path, "rb") as f:
