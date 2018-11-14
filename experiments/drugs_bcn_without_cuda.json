@@ -8,7 +8,8 @@
       "elmo": {
         "type": "elmo_characters"
       }
-    }
+    },
+    "categories": ["onion/legal", "onion/illegal"]
   },
   "train_data_path": "train",
   "test_data_path": "test",

@@ -11,7 +11,7 @@ from overrides import overrides
 
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
-CATEGORIES = ("ebay", "onion/illegal", "onion/legal")
+CATEGORIES = ("ebay", "onion/legal", "onion/illegal")
 
 
 @DatasetReader.register("drugs")
