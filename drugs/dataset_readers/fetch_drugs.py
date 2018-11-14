@@ -1,6 +1,6 @@
 import logging
 import os
-from typing import Dict
+from typing import Dict, Tuple
 
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
 from allennlp.data.fields import LabelField, TextField
@@ -11,23 +11,25 @@ from overrides import overrides
 
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
-CATEGORIES = ["ebay", "onion/illegal", "onion/legal"]
-TRAIN_RATIO = .9
-MAX_LENGTH = 999999
+CATEGORIES = ("ebay", "onion/illegal", "onion/legal")
 
 
 @DatasetReader.register("drugs")
 class DrugsDatasetReader(DatasetReader):
-    def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None) -> None:
+    def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None,
+                 categories: Tuple[str] = CATEGORIES, train_ratio: float = .9, max_length: int = 999999) -> None:
         super().__init__()
         self._tokenizer = tokenizer or WordTokenizer()
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
+        self._categories = categories
+        self.train_ratio = train_ratio
+        self.max_length = max_length
 
     @overrides
     def _read(self, file_path):
         logger.info("Reading %s instance(s)", file_path)
-        drugs_data = self.fetch_drugs(subset=file_path, categories=CATEGORIES) if file_path in ("train", "test") else \
-            [(self.read_file(file_path), None)]
+        drugs_data = self.fetch_drugs(subset=file_path, categories=self._categories) if file_path in ("train", "test") \
+            else [(self.read_file(file_path), None)]
         for text, target in drugs_data:
             yield self.text_to_instance(text, target)
 
@@ -40,17 +42,15 @@ class DrugsDatasetReader(DatasetReader):
             fields["label"] = LabelField(target)
         return Instance(fields)
 
-    @staticmethod
-    def fetch_drugs(subset, categories):
+    def fetch_drugs(self, subset, categories):
         for category in categories:
             files = sorted(os.listdir(category))
-            num_train = int(TRAIN_RATIO * len(files))
+            num_train = int(self.train_ratio * len(files))
             files = files[:num_train] if subset == "train" else files[num_train:]
             for filename in files:
                 path = os.path.join(category, filename)
                 yield DrugsDatasetReader.read_file(path), category
 
-    @staticmethod
-    def read_file(path):
+    def read_file(self, path):
         with open(path, "rb") as f:
-            return f.read().decode("utf-8", errors="ignore")[:MAX_LENGTH]
+            return f.read().decode("utf-8", errors="ignore")[:self.max_length]
