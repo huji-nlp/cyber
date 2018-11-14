@@ -22,8 +22,8 @@ class DrugsDatasetReader(DatasetReader):
         self._tokenizer = tokenizer or WordTokenizer()
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
         self._categories = categories
-        self.train_ratio = train_ratio
-        self.max_length = max_length
+        self._train_ratio = train_ratio
+        self._max_length = max_length
 
     @overrides
     def _read(self, file_path):
@@ -45,12 +45,12 @@ class DrugsDatasetReader(DatasetReader):
     def fetch_drugs(self, subset, categories):
         for category in categories:
             files = sorted(os.listdir(category))
-            num_train = int(self.train_ratio * len(files))
+            num_train = int(self._train_ratio * len(files))
             files = files[:num_train] if subset == "train" else files[num_train:]
             for filename in files:
                 path = os.path.join(category, filename)
-                yield DrugsDatasetReader.read_file(path), category
+                yield self.read_file(path), category
 
     def read_file(self, path):
         with open(path, "rb") as f:
-            return f.read().decode("utf-8", errors="ignore")[:self.max_length]
+            return f.read().decode("utf-8", errors="ignore")[:self._max_length]
