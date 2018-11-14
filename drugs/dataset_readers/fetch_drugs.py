@@ -2,6 +2,7 @@ import logging
 import os
 from typing import Dict, Tuple
 
+from allennlp.data import Token
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
 from allennlp.data.fields import Field, LabelField, TextField
 from allennlp.data.instance import Instance
@@ -17,13 +18,15 @@ CATEGORIES = ("ebay", "onion/legal", "onion/illegal")
 @DatasetReader.register("drugs")
 class DrugsDatasetReader(DatasetReader):
     def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None,
-                 categories: Tuple[str] = CATEGORIES, train_ratio: float = .9, max_length: int = 999999) -> None:
+                 categories: Tuple[str] = CATEGORIES, train_ratio: float = .9, max_length: int = 999999,
+                 mask: str = None) -> None:
         super().__init__()
         self._tokenizer = tokenizer or WordTokenizer()
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
         self._categories = categories
         self._train_ratio = train_ratio
         self._max_length = max_length
+        self._mask = mask
 
     @overrides
     def _read(self, file_path):
@@ -36,10 +39,18 @@ class DrugsDatasetReader(DatasetReader):
     @overrides
     def text_to_instance(self, text: str, target: int = None) -> Instance:
         text_field = TextField(self._tokenizer.tokenize(text), self._token_indexers)
+        text_field.tokens = [self.mask_token(token) for token in text_field.tokens]
         fields: Dict[str, Field] = {"text": text_field}
         if target is not None:
             fields["label"] = LabelField(target)
         return Instance(fields)
+
+    def mask_token(self, token):
+        if self._mask:
+            if token.pos_ in self._mask:
+                return Token(text=token.pos_, idx=token.idx, lemma=token.pos_, pos=token.pos_, tag=token.tag_,
+                             dep=token.dep_, ent_type=token.ent_type_)
+        return token
 
     def fetch_drugs(self, subset, categories):
         files = [sorted(os.listdir(category)) for category in categories]
