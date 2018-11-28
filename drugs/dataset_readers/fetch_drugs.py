@@ -59,8 +59,10 @@ class DrugsDatasetReader(DatasetReader):
         for category, category_files in zip(categories, files):
             for filename in category_files[:num_train] if subset == "train" else \
                     category_files[num_train:num_files_per_category]:
-                yield self.read_file(os.path.join(category, filename)), category
+                for line in self.read_file(os.path.join(category, filename)):
+                    yield line, category
 
     def read_file(self, path):
         with open(path, "rb") as f:
-            return f.read().decode("utf-8", errors="ignore")[:self._max_length]
+            for line in f.read().decode("utf-8", errors="ignore").splitlines():
+                yield line[:self._max_length]
