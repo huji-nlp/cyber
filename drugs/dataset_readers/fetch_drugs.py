@@ -65,4 +65,6 @@ class DrugsDatasetReader(DatasetReader):
     def read_file(self, path):
         with open(path, "rb") as f:
             for line in f.read().decode("utf-8", errors="ignore").splitlines():
-                yield line[:self._max_length]
+                line = line.strip()
+                if line:
+                    yield line[:self._max_length]
