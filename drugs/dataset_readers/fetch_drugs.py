@@ -18,7 +18,7 @@ CATEGORIES = ("ebay", "onion/legal", "onion/illegal")
 @DatasetReader.register("drugs")
 class DrugsDatasetReader(DatasetReader):
     def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None,
-                 categories: Tuple[str] = CATEGORIES, train_ratio: float = .9, max_length: int = 999999,
+                 categories: Tuple[str] = CATEGORIES, train_ratio: float = .9, max_length: int = 999,
                  mask: str = None) -> None:
         super().__init__()
         self._tokenizer = tokenizer or WordTokenizer()
