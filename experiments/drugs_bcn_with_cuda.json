@@ -1,6 +1,6 @@
 {
   "dataset_reader": {
-    "type": "drugs",
+    "type": "document",
     "token_indexers": {
       "tokens": {
         "type": "single_id"
@@ -15,7 +15,7 @@
   "test_data_path": "test",
   "evaluate_on_test": true,
   "model": {
-    "type": "drugs_bcn",
+    "type": "document_bcn",
     "text_field_embedder": {
       "token_embedders": {
         "tokens": {

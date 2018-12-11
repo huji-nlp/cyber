@@ -14,10 +14,10 @@ from allennlp.training.metrics import CategoricalAccuracy
 from overrides import overrides
 
 
-@Model.register("drugs_classifier")
-class FetchDrugsClassifier(Model):
+@Model.register("document_classifier")
+class DocumentClassifier(Model):
     """
-    This ``Model`` performs text classification for drugs-related text.  We assume we're given a
+    This ``Model`` performs text classification.  We assume we're given a
     text and we predict some output label.
     The basic model structure: we'll embed the text and encode it with
     a Seq2VecEncoder, getting a single vector representing the content.  We'll then feed
@@ -43,7 +43,7 @@ class FetchDrugsClassifier(Model):
                  classifier_feedforward: FeedForward,
                  initializer: InitializerApplicator = InitializerApplicator(),
                  regularizer: Optional[RegularizerApplicator] = None) -> None:
-        super(FetchDrugsClassifier, self).__init__(vocab, regularizer)
+        super(DocumentClassifier, self).__init__(vocab, regularizer)
 
         self.model_text_field_embedder = model_text_field_embedder
         self.num_classes = self.vocab.get_vocab_size("labels")
@@ -101,7 +101,7 @@ class FetchDrugsClassifier(Model):
         return {metric_name: metric.get_metric(reset) for metric_name, metric in self.metrics.items()}
 
     @classmethod
-    def from_params(cls, vocab: Vocabulary, params: Params) -> 'FetchDrugsClassifier':
+    def from_params(cls, vocab: Vocabulary, params: Params) -> 'DocumentClassifier':
         embedder_params = params.pop("model_text_field_embedder")
         model_text_field_embedder = TextFieldEmbedder.from_params(embedder_params, vocab=vocab)
         internal_text_encoder = Seq2VecEncoder.from_params(params.pop("internal_text_encoder"))

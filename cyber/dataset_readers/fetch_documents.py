@@ -15,8 +15,8 @@ logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 CATEGORIES = ("ebay", "onion/legal", "onion/illegal")
 
 
-@DatasetReader.register("drugs")
-class DrugsDatasetReader(DatasetReader):
+@DatasetReader.register("document")
+class DocumentDatasetReader(DatasetReader):
     def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None,
                  categories: Tuple[str] = CATEGORIES, train_ratio: float = .9, max_length: int = 999,
                  mask: str = None) -> None:
@@ -31,7 +31,7 @@ class DrugsDatasetReader(DatasetReader):
     @overrides
     def _read(self, file_path):
         logger.info("Reading %s instance(s)", file_path)
-        drugs_data = self.fetch_drugs(subset=file_path, categories=self._categories) if file_path in ("train", "test") \
+        drugs_data = self.fetch_documents(subset=file_path, categories=self._categories) if file_path in ("train", "test") \
             else [(self.read_file(file_path), None)]
         for text, target in drugs_data:
             yield self.text_to_instance(text, target)
@@ -52,7 +52,7 @@ class DrugsDatasetReader(DatasetReader):
                              dep=token.dep_, ent_type=token.ent_type_)
         return token
 
-    def fetch_drugs(self, subset, categories):
+    def fetch_documents(self, subset, categories):
         files = [sorted(os.listdir(category)) for category in categories]
         num_files_per_category = min(map(len, files))  # Take the same number of files from each category
         num_train = int(self._train_ratio * num_files_per_category)

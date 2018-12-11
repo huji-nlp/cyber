@@ -16,7 +16,7 @@ from allennlp.nn import util
 from allennlp.training.metrics import CategoricalAccuracy
 
 
-@Model.register("drugs_bcn")
+@Model.register("document_bcn")
 class BiattentiveClassificationNetwork(Model):
     """
     This class implements the Biattentive Classification Network model described

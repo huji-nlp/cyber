@@ -1,12 +1,12 @@
 {
   "dataset_reader": {
-    "type": "drugs"
+    "type": "document"
   },
   "train_data_path": "train",
   "test_data_path": "test",
   "evaluate_on_test": true,
   "model": {
-    "type": "drugs_classifier",
+    "type": "document_classifier",
     "model_text_field_embedder": {
       "tokens": {
         "type": "embedding",
