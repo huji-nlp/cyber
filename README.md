@@ -6,4 +6,6 @@
 * `experiments`: AllenNLP configuration files
 * `onion`: documents from Onion (website text), classified by label
 
+The original database is at `/cs/labs/oabend/daneldad/datasets/Onion_Dataset_labled`.
+
 See [Wiki](../../wiki) for meeting summaries.
