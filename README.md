@@ -5,3 +5,5 @@
 * `ebay`: documents from eBay (product descriptions)
 * `experiments`: AllenNLP configuration files
 * `onion`: documents from Onion (website text), classified by label
+
+See [Wiki](../../wiki) for meeting summaries.
