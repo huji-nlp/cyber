@@ -53,7 +53,8 @@ class DocumentDatasetReader(DatasetReader):
         return token
 
     def fetch_documents(self, subset, categories):
-        files = [sorted(os.listdir(category)) for category in categories]
+        files = [sorted(os.listdir(os.path.join(c + "_clean" for c in os.path.spit(category))))
+                 for category in categories]
         num_files_per_category = min(map(len, files))  # Take the same number of files from each category
         num_train = int(self._train_ratio * num_files_per_category)
         for category, category_files in zip(categories, files):
