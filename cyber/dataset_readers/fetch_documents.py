@@ -34,7 +34,7 @@ class DocumentDatasetReader(DatasetReader):
         logger.info("Reading %s instance(s)", file_path)
         drugs_data = self.fetch_documents(subset=file_path, categories=self._categories)\
             if file_path in ("train", "validation", "test") \
-            else [(self.read_file(file_path), None)]
+            else [(l, None) for l in self.read_file(file_path)]
         for text, target in drugs_data:
             yield self.text_to_instance(text, target)
 
