@@ -1,2655 +1,2655 @@
 b'      
-b'   d/index  Infinit      Feed n'
+d/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   -3/feed/index  Infinit      Home Comments Feed n'
-b' n'
+-3/feed/index  Infinit      Home Comments Feed
+
 b'     
-b'   x @add-to-cart=57  site-navigation Skip to navigation n'
+x @add-to-cart=57  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=57  content Skip to content n'
-b' n'
+x @add-to-cart=57  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.15500 1 item n'
-b' n'
+index @p=6       xbf0.15500 1 item
+
 b'     
-b'   x @p=6  View Cart "Weed sample pack" was successfully added to n'
-b'   your cart. n'
-b' n'
-b'Home n'
-b' n'
-b'Product Categories n'
-b' n'
+x @p=6  View Cart "Weed sample pack" was successfully added to
+your cart.
+
+Home
+
+Product Categories
+
 b'         
-b'       product-category/drugs/index  Drugs n'
-b' n'
-b'Drugs (4) n'
-b' n'
-b'Recent Products n'
-b' n'
+product-category/drugs/index  Drugs
+
+Drugs (4)
+
+Recent Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
+index @add-to-cart=57  Add to cart
 b'         
-b'       index @p=56  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+index @p=56  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
+index @add-to-cart=56  Add to cart
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Featured Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Featured Products
+
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Top Rated Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Top Rated Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'On Sale n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+On Sale
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
+
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   uct/swazi-skunk/feed/index  Infinit      Swazi Skunk 50g Comments Feed n'
+uct/swazi-skunk/feed/index  Infinit      Swazi Skunk 50g Comments Feed
 b'     
-b'   x @p=28  72 % pure Speed 50g n'
+x @p=28  72 % pure Speed 50g
 b'     
-b'   /feed/index  New products n'
-b' n'
+/feed/index  New products
+
 b'     
-b'   x @p=15  site-navigation Skip to navigation n'
+x @p=15  site-navigation Skip to navigation
 b'     
-b'   x @p=15  content Skip to content n'
-b' n'
+x @p=15  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf1.83902 7 items n'
-b' n'
+index @p=6       xbf1.83902 7 items
+
 b'     
 b'   x  Home /   
 b'   2y5.onion/product-category/drugs/index  Drugs /   
-b'   ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/ n'
-b'   cannabis/index  Cannabis / Swazi Skunk 50g n'
+ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/
+cannabis/index  Cannabis / Swazi Skunk 50g
 b'     
-b'   5 barneys-red-dragon-002  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b' n'
-b'        xbf0.35078 n'
-b' n'
-b'   good weed for a great price n'
-b'   1    n'
-b'     Add to cart n'
-b'   SKU: 5. Category: n'
+5 barneys-red-dragon-002  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+
+xbf0.35078
+
+good weed for a great price
+1
+Add to cart
+SKU: 5. Category:
 b'     
-b'   uct-category/drugs/cannabis/index  Cannabis. n'
+uct-category/drugs/cannabis/index  Cannabis.
 b'         
-b'       index @p=15  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       Swazi Skunk 50g       n'
+index @p=15  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       Swazi Skunk 50g
 b'  
-b'@p=15  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@p=15  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       product/swazi-skunk/index @add-to-cart=57  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+product/swazi-skunk/index @add-to-cart=57  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
+
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   -3/feed/index  Infinit      Home Comments Feed n'
-b' n'
+-3/feed/index  Infinit      Home Comments Feed
+
 b'     
-b'   x @add-to-cart=56  site-navigation Skip to navigation n'
+x @add-to-cart=56  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=56  content Skip to content n'
-b' n'
+x @add-to-cart=56  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.29555 2 items n'
-b' n'
+index @p=6       xbf0.29555 2 items
+
 b'     
-b'   x @p=6  View Cart "72% pure Speed 10g" was successfully added n'
-b'   to your cart. n'
-b' n'
-b'Home n'
-b' n'
-b'Product Categories n'
-b' n'
+x @p=6  View Cart "72% pure Speed 10g" was successfully added
+to your cart.
+
+Home
+
+Product Categories
+
 b'         
-b'       product-category/drugs/index  Drugs n'
-b' n'
-b'Drugs (4) n'
-b' n'
-b'Recent Products n'
-b' n'
+product-category/drugs/index  Drugs
+
+Drugs (4)
+
+Recent Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
+index @add-to-cart=57  Add to cart
 b'         
-b'       index @p=56  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+index @p=56  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
+index @add-to-cart=56  Add to cart
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Featured Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Featured Products
+
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Top Rated Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Top Rated Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'On Sale n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+On Sale
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           n'
-b'   Feed n'
+
+
+Feed
 b'     
-b'   finit      Comments Feed n'
+finit      Comments Feed
 b'     
-b'   /index  Infinit      Cart Comments Feed n'
-b' n'
+/index  Infinit      Cart Comments Feed
+
 b'     
-b'   vigation Skip to navigation n'
+vigation Skip to navigation
 b'     
-b'    Skip to content n'
-b' n'
+Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
-b'       t n'
+t
 b'             
-b'            nion/checkout/index  Checkout n'
+nion/checkout/index  Checkout
 b'             
-b'            l My Account n'
+l My Account
 b'         
-b' n'
+
 b'         
 b'         
-b'       t n'
+t
 b'             
-b'            nion/checkout/index  Checkout n'
+nion/checkout/index  Checkout
 b'             
-b'            l My Account n'
+l My Account
 b'         
-b' n'
+
 b'         
-b'       00000 0 items n'
-b' n'
-b'      / Cart n'
-b' n'
-b'Cart n'
-b' n'
-b'   Your cart is currently empty. n'
-b' n'
-b'      To n'
-b'   Shop n'
-b'        Infinit 2016 n'
+00000 0 items
+
+/ Cart
+
+Cart
+
+Your cart is currently empty.
+
+To
+Shop
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      My Account Comments Feed n'
-b' n'
+/index  Infinit      My Account Comments Feed
+
 b'     
-b'   Skip to navigation n'
-b'      to n'
-b'   content n'
-b' n'
+Skip to navigation
+to
+content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            l Checkout n'
+l Checkout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            l Checkout n'
+l Checkout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          0 n'
-b'       items n'
-b' n'
+
+0
+items
+
 b'      /   
-b'   home/UNIVERSIDAD/index @p=6  Cart / My Account n'
-b' n'
-b'My Account n'
-b' n'
-b'Login n'
-b' n'
-b'   Username or email address                        n'
-b' n'
-b'   Password                        n'
-b' n'
-b'   Login     Remember me n'
-b' n'
+home/UNIVERSIDAD/index @p=6  Cart / My Account
+
+My Account
+
+Login
+
+Username or email address
+
+Password
+
+Login     Remember me
+
 b'     
-b'   -password/index  Lost your password? n'
-b'        Infinit 2016 n'
+-password/index  Lost your password?
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           Comments Feed n'
-b'           n'
-b'   My Account Comments Feed n'
-b' n'
+
+Feed
+Comments Feed
+
+My Account Comments Feed
+
 b'     
-b'   x  site-navigation Skip to navigation n'
+x  site-navigation Skip to navigation
 b'     
-b'   x  content Skip to content n'
-b' n'
+x  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            t n'
-b'              Account n'
+t
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            t n'
-b'              Account n'
+t
+Account
 b'         
-b' n'
-b'          4 items n'
-b' n'
+
+4 items
+
 b'      /   
 b'   tml@p=6  Cart /   
-b'   Account / Lost Password n'
-b' n'
-b'Lost Password n'
-b' n'
-b'   Lost your password? Please enter your username or email address. You n'
-b'   will receive a link to create a new password via email. n'
-b' n'
-b'   Username or email                      n'
-b' n'
-b'   Reset Password n'
-b'        Infinit 2016 n'
+Account / Lost Password
+
+Lost Password
+
+Lost your password? Please enter your username or email address. You
+will receive a link to create a new password via email.
+
+Username or email
+
+Reset Password
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18
 b'   Jul 2016 16:32:03 0000 hourly 1  
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
-b'           n'
-b'   Cart Comments Feed n'
-b' n'
+Feed
+
+Comments Feed
+
+Cart Comments Feed
+
 b'     
-b'   Skip to navigation n'
-b'      to n'
-b'   content n'
-b' n'
+Skip to navigation
+to
+content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            nion/index  Checkout n'
+nion/index  Checkout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            nion/index  Checkout n'
+nion/index  Checkout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          0 n'
-b'       items n'
-b' n'
-b'      / Cart n'
-b' n'
-b'Cart n'
-b' n'
-b'   Your cart is currently empty. n'
-b' n'
-b'      To Shop n'
-b'        Infinit 2016 n'
+
+0
+items
+
+/ Cart
+
+Cart
+
+Your cart is currently empty.
+
+To Shop
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18
 b'   Jul 2016 16:32:03 0000 hourly 1  
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   -3/feed/index  Infinit      Home Comments Feed n'
-b' n'
+-3/feed/index  Infinit      Home Comments Feed
+
 b'     
-b'   x  site-navigation Skip to navigation n'
+x  site-navigation Skip to navigation
 b'     
-b'   x  content Skip to content n'
-b' n'
+x  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.00000 0 items n'
-b' n'
-b'Home n'
-b' n'
-b'Product Categories n'
-b' n'
+index @p=6       xbf0.00000 0 items
+
+Home
+
+Product Categories
+
 b'         
-b'       product-category/drugs/index  Drugs n'
-b' n'
-b'Drugs (4) n'
-b' n'
-b'Recent Products n'
-b' n'
+product-category/drugs/index  Drugs
+
+Drugs (4)
+
+Recent Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
+index @add-to-cart=57  Add to cart
 b'         
-b'       index @p=56  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+index @p=56  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
+index @add-to-cart=56  Add to cart
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Featured Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Featured Products
+
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Top Rated Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Top Rated Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'On Sale n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+On Sale
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
+
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   uct/weed-sample-pack/feed/index  Infinit      Weed sample pack n'
-b'   Comments Feed n'
+uct/weed-sample-pack/feed/index  Infinit      Weed sample pack
+Comments Feed
 b'     
-b'   x @p=56  72% pure Speed 10g n'
+x @p=56  72% pure Speed 10g
 b'     
-b'   /feed/index  New products n'
-b' n'
+/feed/index  New products
+
 b'     
-b'   x @p=57  site-navigation Skip to navigation n'
+x @p=57  site-navigation Skip to navigation
 b'     
-b'   x @p=57  content Skip to content n'
-b' n'
+x @p=57  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.99701 4 items n'
-b' n'
+index @p=6       xbf0.99701 4 items
+
 b'     
 b'   x  Home /   
 b'   2y5.onion/product-category/drugs/index  Drugs /   
-b'   ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/ n'
-b'   cannabis/index  Cannabis / Weed sample pack n'
+ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/
+cannabis/index  Cannabis / Weed sample pack
 b'     
-b'   19f2b8c117c69edb0ad large.jpeg Autosave-File vom d-lab2/3 der AgfaPhoto n'
-b'   GmbH n'
-b' n'
-b'Weed sample pack n'
-b' n'
-b'        xbf0.15500 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+19f2b8c117c69edb0ad large.jpeg Autosave-File vom d-lab2/3 der AgfaPhoto
+GmbH
+
+Weed sample pack
+
+xbf0.15500
+1
+Add to cart
+Category:
 b'     
-b'   uct-category/drugs/cannabis/index  Cannabis. n'
+uct-category/drugs/cannabis/index  Cannabis.
 b'         
-b'       index @p=57  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       Weed sample pack       n'
+index @p=57  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       Weed sample pack
 b'  
-b'@p=57  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@p=57  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       product/weed-sample-pack/index @add-to-cart=15  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+product/weed-sample-pack/index @add-to-cart=15  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
+
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   uct/72-pure-speed-50g/feed/index  Infinit      72 % pure Speed 50g n'
-b'   Comments Feed n'
+uct/72-pure-speed-50g/feed/index  Infinit      72 % pure Speed 50g
+Comments Feed
 b'     
-b'   x @p=15  Swazi Skunk 50g n'
+x @p=15  Swazi Skunk 50g
 b'     
-b'   x @p=56  72% pure Speed 10g n'
+x @p=56  72% pure Speed 10g
 b'     
-b'   /feed/index  New products n'
-b' n'
+/feed/index  New products
+
 b'     
-b'   x @p=28  site-navigation Skip to navigation n'
+x @p=28  site-navigation Skip to navigation
 b'     
-b'   x @p=28  content Skip to content n'
-b' n'
+x @p=28  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf1.69847 6 items n'
-b' n'
+index @p=6       xbf1.69847 6 items
+
 b'     
 b'   x  Home /   
 b'   2y5.onion/product-category/drugs/index  Drugs /   
-b'   ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/ n'
-b'   speed/index  Speed / 72 % pure Speed 50g n'
+ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/
+speed/index  Speed / 72 % pure Speed 50g
 b'     
-b'   jboevrc  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b' n'
-b'        xbf0.35068 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+jboevrc  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+
+xbf0.35068
+1
+Add to cart
+Category:
 b'     
-b'   uct-category/drugs/speed/index  Speed. n'
+uct-category/drugs/speed/index  Speed.
 b'         
-b'       index @p=28  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       72 % pure Speed 50g       n'
+index @p=28  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       72 % pure Speed 50g
 b'  
-b'@p=28  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@p=28  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       index @p=56  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+index @p=56  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       product/72-pure-speed-50g/index @add-to-cart=56  Add to n'
-b'       cart n'
-b' n'
-b'        Infinit 2016 n'
+product/72-pure-speed-50g/index @add-to-cart=56  Add to
+cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      72% pure Speed 10g Comments Feed n'
-b'      % pure Speed n'
-b'   50g    sample n'
+/index  Infinit      72% pure Speed 10g Comments Feed
+% pure Speed
+50g    sample
 b'   pack   
-b'   products n'
-b' n'
+products
+
 b'     
-b'    Skip to navigation n'
-b'      to n'
-b'   content n'
-b' n'
+Skip to navigation
+to
+content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          1 n'
-b'       item n'
-b' n'
+
+1
+item
+
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed / n'
-b'   72% pure Speed 10g n'
+lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed /
+72% pure Speed 10g
 b'     
-b'   jboevrc  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b' n'
-b'        xbf0.14055 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+jboevrc  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+
+xbf0.14055
+1
+Add to cart
+Category:
 b'     
-b'   tml Speed. n'
+tml Speed.
 b'         
-b'        Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       72% pure Speed 10g       n'
-b'   reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       72% pure Speed 10g
+reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       vvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+vvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=28  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      72% pure Speed 10g Comments Feed n'
-b'      % pure Speed n'
-b'   50g    sample n'
+/index  Infinit      72% pure Speed 10g Comments Feed
+% pure Speed
+50g    sample
 b'   pack   
-b'   products n'
-b' n'
+products
+
 b'     
-b'   x @add-to-cart=28  site-navigation Skip to navigation n'
+x @add-to-cart=28  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=28  content Skip to content n'
-b' n'
+x @add-to-cart=28  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          6 n'
-b'       items n'
-b' n'
-b'      Cart "72 % n'
-b'   pure Speed 50g" was successfully added to your cart. n'
+
+6
+items
+
+Cart "72 %
+pure Speed 50g" was successfully added to your cart.
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed / n'
-b'   72% pure Speed 10g n'
+lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed /
+72% pure Speed 10g
 b'     
-b'   jboevrc  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b' n'
-b'        xbf0.14055 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+jboevrc  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+
+xbf0.14055
+1
+Add to cart
+Category:
 b'     
-b'   tml Speed. n'
+tml Speed.
 b'         
-b'       index @add-to-cart=28  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       72% pure Speed 10g       n'
+index @add-to-cart=28  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       72% pure Speed 10g
 b'  
-b'@add-to-cart=28  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@add-to-cart=28  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       vvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+vvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=28  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad n'
-b'   web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1 n'
+
+Dal       xad
+web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1
 b'    
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      72 % pure Speed 50g Comments Feed n'
-b'      Skunk 50g n'
-b'      pure Speed n'
+/index  Infinit      72 % pure Speed 50g Comments Feed
+Skunk 50g
+pure Speed
 b'   10g   
-b'   products n'
-b' n'
+products
+
 b'     
-b'   x @add-to-cart=56  site-navigation Skip to navigation n'
+x @add-to-cart=56  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=56  content Skip to content n'
-b' n'
+x @add-to-cart=56  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          7 n'
-b'       items n'
-b' n'
-b'      Cart "72% n'
-b'   pure Speed 10g" was successfully added to your cart. n'
+
+7
+items
+
+Cart "72%
+pure Speed 10g" was successfully added to your cart.
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed / n'
-b'   72 % pure Speed 50g n'
+lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed /
+72 % pure Speed 50g
 b'     
-b'   jboevrc  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b' n'
-b'        xbf0.35068 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+jboevrc  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+
+xbf0.35068
+1
+Add to cart
+Category:
 b'     
-b'   tml Speed. n'
+tml Speed.
 b'         
-b'       index @add-to-cart=56  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       72 % pure Speed 50g       n'
+index @add-to-cart=56  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       72 % pure Speed 50g
 b'  
-b'@add-to-cart=56  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@add-to-cart=56  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       vvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+vvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=56  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      72 % pure Speed 50g Comments Feed n'
-b'      Skunk 50g n'
-b'      pure Speed n'
+/index  Infinit      72 % pure Speed 50g Comments Feed
+Skunk 50g
+pure Speed
 b'   10g   
-b'   products n'
-b' n'
+products
+
 b'     
-b'    Skip to navigation n'
-b'      to n'
-b'   content n'
-b' n'
+Skip to navigation
+to
+content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          2 n'
-b'       items n'
-b' n'
+
+2
+items
+
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed / n'
-b'   72 % pure Speed 50g n'
+lhost/home/UNIVERSIDAD/product-category/drugs/speed/index  Speed /
+72 % pure Speed 50g
 b'     
-b'   jboevrc  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b' n'
-b'        xbf0.35068 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+jboevrc  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+
+xbf0.35068
+1
+Add to cart
+Category:
 b'     
-b'   tml Speed. n'
+tml Speed.
 b'         
-b'        Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       72 % pure Speed 50g       n'
-b'   reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       72 % pure Speed 50g
+reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       vvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+vvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=56  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web n'
-b'   pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1 n'
+
+Dal       xad web
+pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1
 b'    
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      Weed sample pack Comments Feed n'
-b'      pure Speed n'
+/index  Infinit      Weed sample pack Comments Feed
+pure Speed
 b'   10g   
-b'   products n'
-b' n'
+products
+
 b'     
-b'    Skip to navigation n'
-b'      to n'
-b'   content n'
-b' n'
+Skip to navigation
+to
+content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          0 n'
-b'       items n'
-b' n'
+
+0
+items
+
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna n'
-b'   bis / Weed sample pack n'
+lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna
+bis / Weed sample pack
 b'     
-b'   19f2b8c117c69edb0ad large.jpeg Autosave-File vom d-lab2/3 der AgfaPhoto n'
-b'   GmbH n'
-b' n'
-b'Weed sample pack n'
-b' n'
-b'        xbf0.15500 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+19f2b8c117c69edb0ad large.jpeg Autosave-File vom d-lab2/3 der AgfaPhoto
+GmbH
+
+Weed sample pack
+
+xbf0.15500
+1
+Add to cart
+Category:
 b'     
-b'   x  Cannabis. n'
+x  Cannabis.
 b'         
-b'        Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       Weed sample pack       n'
-b'   reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       Weed sample pack
+reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=15  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      Weed sample pack Comments Feed n'
-b'      pure Speed n'
+/index  Infinit      Weed sample pack Comments Feed
+pure Speed
 b'   10g   
-b'   products n'
-b' n'
+products
+
 b'     
-b'   x @add-to-cart=15  site-navigation Skip to navigation n'
+x @add-to-cart=15  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=15  content Skip to content n'
-b' n'
+x @add-to-cart=15  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          5 n'
-b'       items n'
-b' n'
-b'      Cart "Swazi n'
-b'   Skunk 50g" was successfully added to your cart. n'
+
+5
+items
+
+Cart "Swazi
+Skunk 50g" was successfully added to your cart.
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna n'
-b'   bis / Weed sample pack n'
+lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna
+bis / Weed sample pack
 b'     
-b'   19f2b8c117c69edb0ad large.jpeg Autosave-File vom d-lab2/3 der AgfaPhoto n'
-b'   GmbH n'
-b' n'
-b'Weed sample pack n'
-b' n'
-b'        xbf0.15500 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+19f2b8c117c69edb0ad large.jpeg Autosave-File vom d-lab2/3 der AgfaPhoto
+GmbH
+
+Weed sample pack
+
+xbf0.15500
+1
+Add to cart
+Category:
 b'     
-b'   x  Cannabis. n'
+x  Cannabis.
 b'         
-b'       index @add-to-cart=15  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       Weed sample pack       n'
+index @add-to-cart=15  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       Weed sample pack
 b'  
-b'@add-to-cart=15  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@add-to-cart=15  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=15  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web n'
-b'   pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1 n'
+
+Dal       xad web
+pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1
 b'    
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      Swazi Skunk 50g Comments Feed n'
-b'      % pure Speed n'
+/index  Infinit      Swazi Skunk 50g Comments Feed
+% pure Speed
 b'   50g   
-b'   products n'
-b' n'
+products
+
 b'     
-b'   x @add-to-cart=57  site-navigation Skip to navigation n'
+x @add-to-cart=57  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=57  content Skip to content n'
-b' n'
+x @add-to-cart=57  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          8 n'
-b'       items n'
-b' n'
-b'      Cart "Weed n'
-b'   sample pack" was successfully added to your cart. n'
+
+8
+items
+
+Cart "Weed
+sample pack" was successfully added to your cart.
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna n'
-b'   bis / Swazi Skunk 50g n'
+lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna
+bis / Swazi Skunk 50g
 b'     
-b'   5 barneys-red-dragon-002  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b' n'
-b'        xbf0.35078 n'
-b' n'
-b'   good weed for a great price n'
-b'   1    n'
-b'     Add to cart n'
-b'   SKU: 5. Category: n'
+5 barneys-red-dragon-002  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+
+xbf0.35078
+
+good weed for a great price
+1
+Add to cart
+SKU: 5. Category:
 b'     
-b'   x  Cannabis. n'
+x  Cannabis.
 b'         
-b'       index @add-to-cart=57  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       Swazi Skunk 50g       n'
+index @add-to-cart=57  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       Swazi Skunk 50g
 b'  
-b'@add-to-cart=57  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@add-to-cart=57  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       le vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+le vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+
+Feed
+
+Comments Feed
 b'     
-b'   /index  Infinit      Swazi Skunk 50g Comments Feed n'
-b'      % pure Speed n'
+/index  Infinit      Swazi Skunk 50g Comments Feed
+% pure Speed
 b'   50g   
-b'   products n'
-b' n'
+products
+
 b'     
-b'    Skip to navigation n'
-b'      to n'
-b'   content n'
-b' n'
+Skip to navigation
+to
+content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          3 n'
-b'       items n'
-b' n'
+
+3
+items
+
 b'      /   
 b'   home/UNIVERSIDAD/product-category/drugs/index  Drugs /   
-b'   lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna n'
-b'   bis / Swazi Skunk 50g n'
+lhost/home/UNIVERSIDAD/product-category/drugs/cannabis/index  Canna
+bis / Swazi Skunk 50g
 b'     
-b'   5 barneys-red-dragon-002  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b' n'
-b'        xbf0.35078 n'
-b' n'
-b'   good weed for a great price n'
-b'   1    n'
-b'     Add to cart n'
-b'   SKU: 5. Category: n'
+5 barneys-red-dragon-002  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+
+xbf0.35078
+
+good weed for a great price
+1
+Add to cart
+SKU: 5. Category:
 b'     
-b'   x  Cannabis. n'
+x  Cannabis.
 b'         
-b'        Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       Swazi Skunk 50g       n'
-b'   reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       Swazi Skunk 50g
+reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       le vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+le vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web n'
-b'   pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1 n'
-b'       Dal       xad web n'
-b'   pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1 n'
+
+Dal       xad web
+pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1
+Dal       xad web
+pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 Jul 2016 16:32:03 0000 hourly 1
 b'    
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   /my-account/feed/index  Infinit      My Account Comments Feed n'
-b' n'
+/my-account/feed/index  Infinit      My Account Comments Feed
+
 b'     
-b'   x @p=8  site-navigation Skip to navigation n'
+x @p=8  site-navigation Skip to navigation
 b'     
-b'   x @p=8  content Skip to content n'
-b' n'
+x @p=8  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.99701 4 items n'
-b' n'
+index @p=6       xbf0.99701 4 items
+
 b'     
 b'   x  Home /   
-b'   2y5.onion/index @p=6  Cart / My Account n'
-b' n'
-b'My Account n'
-b' n'
-b'Login n'
-b' n'
-b'   Username or email address                        n'
-b' n'
-b'   Password                        n'
-b' n'
-b'   Login     Remember me n'
-b' n'
+2y5.onion/index @p=6  Cart / My Account
+
+My Account
+
+Login
+
+Username or email address
+
+Password
+
+Login     Remember me
+
 b'     
-b'   /my-account/lost-password/index  Lost your password? n'
-b'        Infinit 2016 n'
+/my-account/lost-password/index  Lost your password?
+Infinit 2016
 b'   Storefront designed by   
-b' n'
+
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   -3/feed/index  Infinit      Home Comments Feed n'
-b' n'
+-3/feed/index  Infinit      Home Comments Feed
+
 b'     
-b'   x @add-to-cart=15  site-navigation Skip to navigation n'
+x @add-to-cart=15  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=15  content Skip to content n'
-b' n'
+x @add-to-cart=15  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.99701 4 items n'
-b' n'
+index @p=6       xbf0.99701 4 items
+
 b'     
-b'   x @p=6  View Cart "Swazi Skunk 50g" was successfully added to n'
-b'   your cart. n'
-b' n'
-b'Home n'
-b' n'
-b'Product Categories n'
-b' n'
+x @p=6  View Cart "Swazi Skunk 50g" was successfully added to
+your cart.
+
+Home
+
+Product Categories
+
 b'         
-b'       product-category/drugs/index  Drugs n'
-b' n'
-b'Drugs (4) n'
-b' n'
-b'Recent Products n'
-b' n'
+product-category/drugs/index  Drugs
+
+Drugs (4)
+
+Recent Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
+index @add-to-cart=57  Add to cart
 b'         
-b'       index @p=56  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+index @p=56  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
+index @add-to-cart=56  Add to cart
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Featured Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Featured Products
+
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Top Rated Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Top Rated Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'On Sale n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+On Sale
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
+
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   /feed/index  Infinit      Cart Comments Feed n'
-b' n'
+/feed/index  Infinit      Cart Comments Feed
+
 b'     
-b'   x @p=6  site-navigation Skip to navigation n'
+x @p=6  site-navigation Skip to navigation
 b'     
-b'   x @p=6  content Skip to content n'
-b' n'
+x @p=6  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.99701 4 items n'
-b' n'
+index @p=6       xbf0.99701 4 items
+
 b'     
-b'   x  Home / Cart n'
-b' n'
-b'Cart n'
-b' n'
-b'       Product Price Quantity Total n'
+x  Home / Cart
+
+Cart
+
+Product Price Quantity Total
 b'     
-b'   e0cb6cde7f& wpnonce=acf7e840f5      n'
+e0cb6cde7f& wpnonce=acf7e840f5
 b'     
-b'   x @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
+x @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
 b'     
-b'   x @p=57  Weed sample pack      xbf0.15500 n'
-b'   1    n'
-b'        xbf0.15500 n'
+x @p=57  Weed sample pack      xbf0.15500
+1
+xbf0.15500
 b'     
-b'   b20de6f466& wpnonce=acf7e840f5      n'
+b20de6f466& wpnonce=acf7e840f5
 b'     
-b'   x @p=56  bwykmyrswssvvjboevrc n'
+x @p=56  bwykmyrswssvvjboevrc
 b'     
-b'   x @p=56  72% pure Speed 10g      xbf0.14055 n'
-b'   1    n'
-b'        xbf0.14055 n'
+x @p=56  72% pure Speed 10g      xbf0.14055
+1
+xbf0.14055
 b'     
-b'   1039152189& wpnonce=acf7e840f5      n'
+1039152189& wpnonce=acf7e840f5
 b'     
-b'   x @p=28  bwykmyrswssvvjboevrc n'
+x @p=28  bwykmyrswssvvjboevrc
 b'     
-b'   x @p=28  72 % pure Speed 50g      xbf0.35068 n'
-b'   1    n'
-b'        xbf0.35068 n'
+x @p=28  72 % pure Speed 50g      xbf0.35068
+1
+xbf0.35068
 b'     
-b'   bd1f8f2ff3& wpnonce=acf7e840f5      n'
+bd1f8f2ff3& wpnonce=acf7e840f5
 b'     
-b'   x @p=15  20100831180805 barneys-red-dragon-002 n'
+x @p=15  20100831180805 barneys-red-dragon-002
 b'     
-b'   x @p=15  Swazi Skunk 50g      xbf0.35078 n'
-b'   1    n'
-b'        xbf0.35078 n'
-b'   Coupon:                      Apply Coupon n'
-b'   Update Cart n'
-b' n'
-b'Cart Totals n'
-b' n'
-b'Subtotal      xbf0.99701 n'
-b'Shipping Free Shipping n'
-b' n'
+x @p=15  Swazi Skunk 50g      xbf0.35078
+1
+xbf0.35078
+Coupon:                      Apply Coupon
+Update Cart
+
+Cart Totals
+
+Subtotal      xbf0.99701
+Shipping Free Shipping
+
 b'           
-b'         x @p=6  Calculate Shipping n'
-b' n'
-b'          United States (US)                 n'
-b' n'
-b'          Select a state                n'
-b' n'
-b'                              n'
-b' n'
-b'         (1) Update Totals n'
-b' Total        xbf0.99710 n'
+x @p=6  Calculate Shipping
+
+United States (US)
+
+Select a state
+
+
+
+(1) Update Totals
+Total        xbf0.99710
 b'     
-b'   /checkout/index  Proceed to Checkout n'
-b'        Infinit 2016 n'
+/checkout/index  Proceed to Checkout
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           n'
-b'   Feed n'
+
+
+Feed
 b'     
-b'   finit      Comments Feed n'
+finit      Comments Feed
 b'     
-b'   /index  Infinit      Products Feed n'
+/index  Infinit      Products Feed
 b'     
-b'   /index  New products n'
-b' n'
+/index  New products
+
 b'     
-b'   x  site-navigation Skip to navigation n'
+x  site-navigation Skip to navigation
 b'     
-b'   x  content Skip to content n'
-b' n'
+x  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
-b'       t n'
+t
 b'             
-b'            x  Checkout n'
+x  Checkout
 b'             
-b'            l My Account n'
+l My Account
 b'         
-b'       index  Shop n'
-b' n'
+index  Shop
+
 b'         
 b'         
-b'       t n'
+t
 b'             
-b'            x  Checkout n'
+x  Checkout
 b'             
-b'            l My Account n'
+l My Account
 b'         
-b'       index  Shop n'
-b' n'
+index  Shop
+
 b'         
-b'       00000 0 items n'
-b' n'
-b'      / Shop n'
-b' n'
-b'Shop n'
-b' n'
+00000 0 items
+
+/ Shop
+
+Shop
+
 b'         
-b'       index  Drugs n'
-b' n'
-b'Drugs (4) n'
-b' n'
-b'        Infinit 2016 n'
+index  Drugs
+
+Drugs (4)
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Thu, 23 n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Thu, 23
 b'   Jul 2015 07:41:58 0000 en-US hourly 1  
 b'    
-b'     Mon, n'
-b'   20 Jul 2015 06:52:32 0000 infinit5x0 n'
+Mon,
+20 Jul 2015 06:52:32 0000 infinit5x0
 b'    
-b'     0 n'
+0
 b'    
 b'    
-b'   Wed, 22 Jul 2015 07:35:15 0000 infinit5x0 n'
+Wed, 22 Jul 2015 07:35:15 0000 infinit5x0
 b'    
-b'     0 n'
+0
 b'    
-b'     Sat, 04 Jul n'
-b'   2015 07:18:05 0000 infinit5x0 n'
-b'     good weed for a n'
-b'   great price   0 n'
+Sat, 04 Jul
+2015 07:18:05 0000 infinit5x0
+good weed for a
+great price   0
 b'    
-b'     Wed, n'
-b'   22 Jul 2015 07:54:24 0000 infinit5x0 n'
+Wed,
+22 Jul 2015 07:54:24 0000 infinit5x0
 b'    
-b'     0 n'
-b'           Feed n'
-b'           n'
-b'   Comments Feed n'
+0
+Feed
+
+Comments Feed
 b'     
-b'   products added to Drugs n'
-b' n'
+products added to Drugs
+
 b'     
-b'   x  site-navigation Skip to navigation n'
+x  site-navigation Skip to navigation
 b'     
-b'   x  content Skip to content n'
-b' n'
+x  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'            eckout n'
+eckout
 b'             
-b'            Account n'
+Account
 b'         
-b' n'
-b'          0 n'
-b'       items n'
-b' n'
-b'      / Drugs n'
-b' n'
-b'Drugs n'
-b' n'
+
+0
+items
+
+/ Drugs
+
+Drugs
+
 b'         
-b'       cannabis/index  Cannabis n'
-b' n'
-b'Cannabis (2) n'
+cannabis/index  Cannabis
+
+Cannabis (2)
 b'         
-b'       speed/index  Speed n'
-b' n'
-b'Speed (2) n'
-b' n'
-b'        Infinit 2016 n'
+speed/index  Speed
+
+Speed (2)
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           Comments Feed n'
+
+Feed
+Comments Feed
 b'     
-b'   products added to Cannabis n'
-b' n'
+products added to Cannabis
+
 b'     
-b'   x @add-to-cart=57  site-navigation Skip to navigation n'
+x @add-to-cart=57  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=57  content Skip to content n'
-b' n'
+x @add-to-cart=57  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
-b'          10 items n'
-b' n'
-b'      Cart "Weed sample pack" n'
-b'   was successfully added to your cart. n'
+
+10 items
+
+Cart "Weed sample pack"
+was successfully added to your cart.
 b'      /   
-b'   IDAD/HTML NEW/index  Drugs / Cannabis n'
-b' n'
-b'Cannabis n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
+IDAD/HTML NEW/index  Drugs / Cannabis
+
+Cannabis
+
+Default sorting
+
+Showing all 2 results
 b'         
-b'       red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b'          vom n'
-b'       d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @add-to-cart=15  Add to cart
+vom
+d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+Default sorting
+
+Showing all 2 results
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           Comments Feed n'
+
+Feed
+Comments Feed
 b'     
-b'   products added to Cannabis n'
-b' n'
+products added to Cannabis
+
 b'     
-b'   x  site-navigation Skip to navigation n'
+x  site-navigation Skip to navigation
 b'     
-b'   x  content Skip to content n'
-b' n'
+x  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
-b'          4 items n'
-b' n'
+
+4 items
+
 b'      /   
-b'   IDAD/HTML NEW/index  Drugs / Cannabis n'
-b' n'
-b'Cannabis n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
+IDAD/HTML NEW/index  Drugs / Cannabis
+
+Cannabis
+
+Default sorting
+
+Showing all 2 results
 b'         
-b'       red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b'          vom n'
-b'       d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @add-to-cart=15  Add to cart
+vom
+d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+Default sorting
+
+Showing all 2 results
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           Comments Feed n'
+
+Feed
+Comments Feed
 b'     
-b'   products added to Cannabis n'
-b' n'
+products added to Cannabis
+
 b'     
-b'   x @add-to-cart=15  site-navigation Skip to navigation n'
+x @add-to-cart=15  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=15  content Skip to content n'
-b' n'
+x @add-to-cart=15  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
-b'          9 items n'
-b' n'
-b'      Cart "Swazi Skunk 50g" n'
-b'   was successfully added to your cart. n'
+
+9 items
+
+Cart "Swazi Skunk 50g"
+was successfully added to your cart.
 b'      /   
-b'   IDAD/HTML NEW/index  Drugs / Cannabis n'
-b' n'
-b'Cannabis n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
+IDAD/HTML NEW/index  Drugs / Cannabis
+
+Cannabis
+
+Default sorting
+
+Showing all 2 results
 b'         
-b'       red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b'          vom n'
-b'       d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @add-to-cart=15  Add to cart
+vom
+d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+Default sorting
+
+Showing all 2 results
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           Comments Feed n'
+
+Feed
+Comments Feed
 b'     
-b'   products added to Speed n'
-b' n'
+products added to Speed
+
 b'     
-b'   x @add-to-cart=56  site-navigation Skip to navigation n'
+x @add-to-cart=56  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=56  content Skip to content n'
-b' n'
+x @add-to-cart=56  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
-b'          12 items n'
-b' n'
-b'      Cart "72% pure Speed n'
-b'   10g" was successfully added to your cart. n'
+
+12 items
+
+Cart "72% pure Speed
+10g" was successfully added to your cart.
 b'      /   
-b'   IDAD/HTML NEW/index  Drugs / Speed n'
-b' n'
-b'Speed n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
+IDAD/HTML NEW/index  Drugs / Speed
+
+Speed
+
+Default sorting
+
+Showing all 2 results
 b'         
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
-b'        Infinit 2016 n'
+index @add-to-cart=56  Add to cart
+
+Default sorting
+
+Showing all 2 results
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           Comments Feed n'
+
+Feed
+Comments Feed
 b'     
-b'   products added to Speed n'
-b' n'
+products added to Speed
+
 b'     
-b'   x  site-navigation Skip to navigation n'
+x  site-navigation Skip to navigation
 b'     
-b'   x  content Skip to content n'
-b' n'
+x  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
-b'          4 items n'
-b' n'
+
+4 items
+
 b'      /   
-b'   IDAD/HTML NEW/index  Drugs / Speed n'
-b' n'
-b'Speed n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
+IDAD/HTML NEW/index  Drugs / Speed
+
+Speed
+
+Default sorting
+
+Showing all 2 results
 b'         
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
-b'        Infinit 2016 n'
+index @add-to-cart=56  Add to cart
+
+Default sorting
+
+Showing all 2 results
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'           Feed n'
-b'           Comments Feed n'
+
+Feed
+Comments Feed
 b'     
-b'   products added to Speed n'
-b' n'
+products added to Speed
+
 b'     
-b'   x @add-to-cart=28  site-navigation Skip to navigation n'
+x @add-to-cart=28  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=28  content Skip to content n'
-b' n'
+x @add-to-cart=28  content Skip to content
+
 b'  
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
+
 b'         
 b'         
 b'             
-b'              Account n'
+Account
 b'         
-b' n'
-b'          11 items n'
-b' n'
-b'      Cart "72 % pure Speed n'
-b'   50g" was successfully added to your cart. n'
+
+11 items
+
+Cart "72 % pure Speed
+50g" was successfully added to your cart.
 b'      /   
-b'   IDAD/HTML NEW/index  Drugs / Speed n'
-b' n'
-b'Speed n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
+IDAD/HTML NEW/index  Drugs / Speed
+
+Speed
+
+Default sorting
+
+Showing all 2 results
 b'         
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
-b' n'
-b'    Default sorting             n'
-b' n'
-b'   Showing all 2 results n'
-b'        Infinit 2016 n'
+index @add-to-cart=56  Add to cart
+
+Default sorting
+
+Showing all 2 results
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18 n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Mon, 18
 b'   Jul 2016 16:32:03 0000 hourly 1  
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   -3/feed/index  Infinit      Home Comments Feed n'
-b' n'
+-3/feed/index  Infinit      Home Comments Feed
+
 b'     
-b'   x @add-to-cart=28  site-navigation Skip to navigation n'
+x @add-to-cart=28  site-navigation Skip to navigation
 b'     
-b'   x @add-to-cart=28  content Skip to content n'
-b' n'
+x @add-to-cart=28  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf0.64623 3 items n'
-b' n'
+index @p=6       xbf0.64623 3 items
+
 b'     
-b'   x @p=6  View Cart "72 % pure Speed 50g" was successfully added n'
-b'   to your cart. n'
-b' n'
-b'Home n'
-b' n'
-b'Product Categories n'
-b' n'
+x @p=6  View Cart "72 % pure Speed 50g" was successfully added
+to your cart.
+
+Home
+
+Product Categories
+
 b'         
-b'       product-category/drugs/index  Drugs n'
-b' n'
-b'Drugs (4) n'
-b' n'
-b'Recent Products n'
-b' n'
+product-category/drugs/index  Drugs
+
+Drugs (4)
+
+Recent Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
+index @add-to-cart=57  Add to cart
 b'         
-b'       index @p=56  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b'            xbf0.14055 n'
+index @p=56  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+xbf0.14055
 b'         
-b'       index @add-to-cart=56  Add to cart n'
+index @add-to-cart=56  Add to cart
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Featured Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Featured Products
+
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       index @add-to-cart=28  Add to cart n'
+index @add-to-cart=28  Add to cart
 b'         
-b'       index @p=15  20100831180805 barneys-red-dragon-002 n'
-b' n'
-b'Swazi Skunk 50g n'
-b'            xbf0.35078 n'
+index @p=15  20100831180805 barneys-red-dragon-002
+
+Swazi Skunk 50g
+xbf0.35078
 b'         
-b'       index @add-to-cart=15  Add to cart n'
-b' n'
-b'Top Rated Products n'
-b' n'
+index @add-to-cart=15  Add to cart
+
+Top Rated Products
+
 b'         
-b'       index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH n'
-b' n'
-b'Weed sample pack n'
-b'            xbf0.15500 n'
+index @p=57  Autosave-File vom d-lab2/3 der AgfaPhoto GmbH
+
+Weed sample pack
+xbf0.15500
 b'         
-b'       index @add-to-cart=57  Add to cart n'
-b' n'
-b'On Sale n'
-b' n'
-b'        Infinit 2016 n'
+index @add-to-cart=57  Add to cart
+
+On Sale
+
+Infinit 2016
 b'   Storefront designed by   
-b' n'
-b'     Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Thu, 23 n'
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress Thu, 23
 b'   Jul 2015 07:41:58 0000 en-US hourly 1  
 b'     
-b'   /index  Infinit      Feed n'
+/index  Infinit      Feed
 b'     
-b'   ents/feed/index  Infinit      Comments Feed n'
+ents/feed/index  Infinit      Comments Feed
 b'     
-b'   uct/72-pure-speed-paste-10g/feed/index  Infinit      72% pure Speed n'
-b'   10g Comments Feed n'
+uct/72-pure-speed-paste-10g/feed/index  Infinit      72% pure Speed
+10g Comments Feed
 b'     
-b'   x @p=28  72 % pure Speed 50g n'
+x @p=28  72 % pure Speed 50g
 b'     
-b'   x @p=57  Weed sample pack n'
+x @p=57  Weed sample pack
 b'     
-b'   /feed/index  New products n'
-b' n'
+/feed/index  New products
+
 b'     
-b'   x @p=56  site-navigation Skip to navigation n'
+x @p=56  site-navigation Skip to navigation
 b'     
-b'   x @p=56  content Skip to content n'
-b' n'
+x @p=56  content Skip to content
+
 b'  
-b' Infinit n'
-b' n'
-b'   Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress n'
-b'   Search for:                      Search n'
-b'     Navigation n'
+Infinit
+
+Dal       xad web pou   xbe   xadvaj   xadc   xad WordPress
+Search for:                      Search
+Navigation
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index  Home n'
+index  Home
 b'         
-b'       index @p=6  Cart n'
+index @p=6  Cart
 b'             
-b'            nion/cart/checkout/index  Checkout n'
+nion/cart/checkout/index  Checkout
 b'             
-b'            nion/index @p=8  My Account n'
+nion/index @p=8  My Account
 b'         
-b'       shop/index  Shop n'
-b' n'
+shop/index  Shop
+
 b'         
-b'       index @p=6       xbf1.34779 5 items n'
-b' n'
+index @p=6       xbf1.34779 5 items
+
 b'     
 b'   x  Home /   
 b'   2y5.onion/product-category/drugs/index  Drugs /   
-b'   ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/ n'
-b'   speed/index  Speed / 72% pure Speed 10g n'
+ome/UNIVERSIDAD/HTML NEW/cswcx6jd66nqs2y5.onion/product-category/drugs/
+speed/index  Speed / 72% pure Speed 10g
 b'     
-b'   jboevrc  bwykmyrswssvvjboevrc n'
-b' n'
-b'72% pure Speed 10g n'
-b' n'
-b'        xbf0.14055 n'
-b'   1    n'
-b'     Add to cart n'
-b'   Category: n'
+jboevrc  bwykmyrswssvvjboevrc
+
+72% pure Speed 10g
+
+xbf0.14055
+1
+Add to cart
+Category:
 b'     
-b'   uct-category/drugs/speed/index  Speed. n'
+uct-category/drugs/speed/index  Speed.
 b'         
-b'       index @p=56  tab-reviews Reviews (0) n'
-b' n'
-b'Reviews n'
-b' n'
-b'   There are no reviews yet. n'
-b' n'
-b'Be the first to review       72% pure Speed 10g       n'
+index @p=56  tab-reviews Reviews (0)
+
+Reviews
+
+There are no reviews yet.
+
+Be the first to review       72% pure Speed 10g
 b'  
-b'@p=56  respond Cancel reply n'
-b' n'
-b'   Name                                  n'
-b' n'
-b'   Email                                  n'
-b' n'
-b'   Your Rating Rate             n'
-b' n'
-b'   Your Review n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b'                                                 n'
-b' n'
-b'   Submit n'
-b' n'
-b'Related Products n'
-b' n'
+@p=56  respond Cancel reply
+
+Name
+
+Email
+
+Your Rating Rate
+
+Your Review
+
+
+
+
+
+
+
+
+
+Submit
+
+Related Products
+
 b'         
-b'       index @p=28  bwykmyrswssvvjboevrc n'
-b' n'
-b'72 % pure Speed 50g n'
-b'            xbf0.35068 n'
+index @p=28  bwykmyrswssvvjboevrc
+
+72 % pure Speed 50g
+xbf0.35068
 b'         
-b'       product/72-pure-speed-paste-10g/index @add-to-cart=28  Add n'
-b'       to cart n'
-b' n'
-b'        Infinit 2016 n'
+product/72-pure-speed-paste-10g/index @add-to-cart=28  Add
+to cart
+
+Infinit 2016
 b'   Storefront designed by   
