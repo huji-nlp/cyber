@@ -10,7 +10,7 @@ from allennlp.models.model import Model
 from allennlp.modules import FeedForward, Seq2VecEncoder, TextFieldEmbedder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
-from allennlp.training.metrics import CategoricalAccuracy
+from allennlp.training.metrics import CategoricalAccuracy, F1Measure
 from overrides import overrides
 
 from cyber.metrics.confusion_matrix import ConfusionMatrix
@@ -59,7 +59,8 @@ class DocumentClassifier(Model):
                                                             internal_text_encoder.get_input_dim()))
         self.metrics = {
             "accuracy": CategoricalAccuracy(),
-            "confusion_matrix": ConfusionMatrix(),
+            "f1": F1Measure(positive_label=1),
+            "confusion_matrix": ConfusionMatrix(positive_label=1),
         }
         self.loss = torch.nn.CrossEntropyLoss()
 
@@ -101,7 +102,11 @@ class DocumentClassifier(Model):
 
     @overrides
     def get_metrics(self, reset: bool = False) -> Dict[str, float]:
-        return {metric_name: metric.get_metric(reset) for metric_name, metric in self.metrics.items()}
+        precision, recall, f1 = self.metrics["f1"].get_metric(reset=reset)
+        tp, tn, fp, fn = self.metrics["confusion_matrix"].get_metric(reset=reset)
+        return {"accuracy": self.metrics["accuracy"].get_metric(reset=reset),
+                "precision": precision, "recall": recall, "f1": f1,
+                "tp": tp, "tn": tn, "fp": fp, "fn": fn}
 
     @classmethod
     def from_params(cls, vocab: Vocabulary, params: Params) -> 'DocumentClassifier':
