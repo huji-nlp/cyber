@@ -50,13 +50,17 @@ def clean(text):
     return text
 
 
-for filename in os.listdir(os.getcwd()):
-    with open(filename, encoding="utf-8") as f_in, open(filename + '.clean', 'w', encoding="utf-8") as f_out:
-        for line in f_in:
-            string_new = clean(line.strip())
-            if string_new == '.':
-                string_new = ''
-            if ('References' or 'PGP') in string_new:
-                break
-            if len(string_new) > 1:
-                print(string_new, file=f_out)
+def clean_directory(dirname):
+    for filename in os.listdir(dirname):
+        with open(os.path.join(dirname, filename), encoding="utf-8") as f_in,\
+                open(os.path.join(dirname + "_clean", filename), 'w', encoding="utf-8") as f_out:
+            for line in f_in:
+                string_new = clean(line.strip())
+                if ('References' or 'PGP') in string_new:
+                    break
+                if len(string_new) > 1:
+                    print(string_new, file=f_out)
+
+
+if __name__ == "__main__":
+    clean_directory(os.getcwd())
