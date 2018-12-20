@@ -18,20 +18,22 @@ CATEGORIES = ("ebay", "onion/legal", "onion/illegal")
 @DatasetReader.register("document")
 class DocumentDatasetReader(DatasetReader):
     def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None,
-                 categories: Tuple[str] = CATEGORIES, train_ratio: float = .9, max_length: int = 999,
-                 mask: str = None) -> None:
+                 categories: Tuple[str] = CATEGORIES, train_ratio: float = .8, validation_ratio: float = .1,
+                 max_length: int = 999, mask: str = None) -> None:
         super().__init__()
         self._tokenizer = tokenizer or WordTokenizer()
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
         self._categories = categories
         self._train_ratio = train_ratio
+        self._validation_ratio = validation_ratio
         self._max_length = max_length
         self._mask = mask
 
     @overrides
     def _read(self, file_path):
         logger.info("Reading %s instance(s)", file_path)
-        drugs_data = self.fetch_documents(subset=file_path, categories=self._categories) if file_path in ("train", "test") \
+        drugs_data = self.fetch_documents(subset=file_path, categories=self._categories)\
+            if file_path in ("train", "validation", "test") \
             else [(self.read_file(file_path), None)]
         for text, target in drugs_data:
             yield self.text_to_instance(text, target)
@@ -57,9 +59,17 @@ class DocumentDatasetReader(DatasetReader):
                  for category in categories]
         num_files_per_category = min(map(len, files))  # Take the same number of files from each category
         num_train = int(self._train_ratio * num_files_per_category)
+        num_validation = int(self._validation_ratio * num_files_per_category)
         for category, category_files in zip(categories, files):
-            for filename in category_files[:num_train] if subset == "train" else \
-                    category_files[num_train:num_files_per_category]:
+            if subset == "train":
+                subset_files = category_files[:num_train]
+            elif subset == "validation":
+                subset_files = category_files[num_train:num_train + num_validation]
+            elif subset == "test":
+                subset_files = category_files[num_train + num_validation:num_files_per_category]
+            else:
+                raise ValueError("Invalid subset: %s" % subset)
+            for filename in subset_files:
                 for line in self.read_file(os.path.join(category, filename)):
                     yield line, category
 
