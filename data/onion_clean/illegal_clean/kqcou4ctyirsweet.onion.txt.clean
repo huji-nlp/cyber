@@ -615,9 +615,9 @@ when the coupon
 expires."},"individual use":{"required":false,"default":false,"descript
 ion":"Whether coupon can only be used
 individually."},"product ids":{"required":false,"description":"List of
-b"   product ID's the coupon can be used n"
+product ID's the coupon can be used
 on."},"exclude product ids":{"required":false,"description":"List of
-b"   product ID's the coupon cannot be used n"
+product ID's the coupon cannot be used
 on."},"usage limit":{"required":false,"description":"How many times the
 coupon can be
 used."},"usage limit per user":{"required":false,"description":"How
@@ -627,9 +627,9 @@ ax number of items in the cart the coupon can be applied
 to."},"free shipping":{"required":false,"default":false,"description":"
 Define if can be applied for free
 shipping."},"product categories":{"required":false,"description":"List
-b"   of category ID's the coupon applies n"
+of category ID's the coupon applies
 to."},"excluded product categories":{"required":false,"description":"Li
-b"   st of category ID's the coupon does not apply n"
+st of category ID's the coupon does not apply
 to."},"exclude sale items":{"required":false,"default":false,"descripti
 on":"Define if should not apply when have sale
 items."},"minimum amount":{"required":false,"description":"Minimum
@@ -656,9 +656,9 @@ when the coupon
 expires."},"individual use":{"required":false,"description":"Whether
 coupon can only be used
 individually."},"product ids":{"required":false,"description":"List of
-b"   product ID's the coupon can be used n"
+product ID's the coupon can be used
 on."},"exclude product ids":{"required":false,"description":"List of
-b"   product ID's the coupon cannot be used n"
+product ID's the coupon cannot be used
 on."},"usage limit":{"required":false,"description":"How many times the
 coupon can be
 used."},"usage limit per user":{"required":false,"description":"How
@@ -668,9 +668,9 @@ ax number of items in the cart the coupon can be applied
 to."},"free shipping":{"required":false,"description":"Define if can be
 applied for free
 shipping."},"product categories":{"required":false,"description":"List
-b"   of category ID's the coupon applies n"
+of category ID's the coupon applies
 to."},"excluded product categories":{"required":false,"description":"Li
-b"   st of category ID's the coupon does not apply n"
+st of category ID's the coupon does not apply
 to."},"exclude sale items":{"required":false,"description":"Define if
 should not apply when have sale
 items."},"minimum amount":{"required":false,"description":"Minimum
@@ -694,9 +694,9 @@ when the coupon
 expires."},"individual use":{"required":false,"description":"Whether
 coupon can only be used
 individually."},"product ids":{"required":false,"description":"List of
-b"   product ID's the coupon can be used n"
+product ID's the coupon can be used
 on."},"exclude product ids":{"required":false,"description":"List of
-b"   product ID's the coupon cannot be used n"
+product ID's the coupon cannot be used
 on."},"usage limit":{"required":false,"description":"How many times the
 coupon can be
 used."},"usage limit per user":{"required":false,"description":"How
@@ -706,9 +706,9 @@ ax number of items in the cart the coupon can be applied
 to."},"free shipping":{"required":false,"description":"Define if can be
 applied for free
 shipping."},"product categories":{"required":false,"description":"List
-b"   of category ID's the coupon applies n"
+of category ID's the coupon applies
 to."},"excluded product categories":{"required":false,"description":"Li
-b"   st of category ID's the coupon does not apply n"
+st of category ID's the coupon does not apply
 to."},"exclude sale items":{"required":false,"description":"Define if
 should not apply when have sale
 items."},"minimum amount":{"required":false,"description":"Minimum
@@ -1743,7 +1743,7 @@ ed" ,"description":"Webhook
 status."},"topic":{"required":false,"description":"Webhook
 topic."},"secret":{"required":false,"description":"Secret key used to
 generate a hash of the delivered webhook and provided in the request
-b"   headers. This will default is a MD5 hash from the current user's n"
+headers. This will default is a MD5 hash from the current user's
 ID|username if not
 provided."}}},{"methods": "DELETE" ,"args":{"force":{"required":false,"
 default":false,"description":"Required to be true, as resource does not
@@ -1757,7 +1757,7 @@ ed" ,"description":"Webhook
 status."},"topic":{"required":false,"description":"Webhook
 topic."},"secret":{"required":false,"description":"Secret key used to
 generate a hash of the delivered webhook and provided in the request
-b"   headers. This will default is a MD5 hash from the current user's n"
+headers. This will default is a MD5 hash from the current user's
 ID|username if not
 provided."}}} ," links":{"self":"http:  /  /kqcou4ctyirsweet.onion  /wp-js
 on  /wc  /v1  /webhooks  /batch"}}}," links":{"help": {"href":"http:  /  /v2.
