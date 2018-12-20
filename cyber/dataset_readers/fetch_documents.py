@@ -55,23 +55,28 @@ class DocumentDatasetReader(DatasetReader):
         return token
 
     def fetch_documents(self, subset, categories):
-        files = [sorted(os.listdir(os.path.join(c + "_clean" for c in os.path.spit(category))))
-                 for category in categories]
-        num_files_per_category = min(map(len, files))  # Take the same number of files from each category
-        num_train = int(self._train_ratio * num_files_per_category)
-        num_validation = int(self._validation_ratio * num_files_per_category)
-        for category, category_files in zip(categories, files):
+        # Take the same number of lines from each category
+        lines_per_category = list(zip(*map(self.fetch_lines, categories)))
+        num_train = int(self._train_ratio * len(lines_per_category))
+        num_validation = int(self._validation_ratio * len(lines_per_category))
+        print("Categories: " + ", ".join(categories))
+        print("Using train/validation/test split of %d/%d/%d lines for each category" % (
+            num_train, num_validation, len(lines_per_category) - num_train - num_validation))
+        for category_lines in zip(*lines_per_category):
             if subset == "train":
-                subset_files = category_files[:num_train]
+                start, end = 0, num_train
             elif subset == "validation":
-                subset_files = category_files[num_train:num_train + num_validation]
+                start, end = num_train, num_train + num_validation
             elif subset == "test":
-                subset_files = category_files[num_train + num_validation:num_files_per_category]
+                start, end = num_train + num_validation, len(category_lines)
             else:
                 raise ValueError("Invalid subset: %s" % subset)
-            for filename in subset_files:
-                for line in self.read_file(os.path.join(category, filename)):
-                    yield line, category
+            yield from category_lines[start:end]
+
+    def fetch_lines(self, category):
+        for filename in sorted(os.listdir(os.path.join(c + "_clean" for c in os.path.spit(category)))):
+            for line in self.read_file(os.path.join(category, filename)):
+                yield line, category
 
     def read_file(self, path):
         with open(path, "rb") as f:
