@@ -13,6 +13,8 @@ from allennlp.nn import util
 from allennlp.training.metrics import CategoricalAccuracy
 from overrides import overrides
 
+from cyber.metrics.confusion_matrix import ConfusionMatrix
+
 
 @Model.register("document_classifier")
 class DocumentClassifier(Model):
@@ -56,7 +58,8 @@ class DocumentClassifier(Model):
                                      "respectively.".format(model_text_field_embedder.get_output_dim(),
                                                             internal_text_encoder.get_input_dim()))
         self.metrics = {
-                "accuracy": CategoricalAccuracy(),
+            "accuracy": CategoricalAccuracy(),
+            "confusion_matrix": ConfusionMatrix(),
         }
         self.loss = torch.nn.CrossEntropyLoss()
 
