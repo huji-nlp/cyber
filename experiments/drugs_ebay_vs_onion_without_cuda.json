@@ -1,7 +1,7 @@
 {
   "dataset_reader": {
     "type": "document",
-    "categories": ["onion/legal", "onion/illegal"]
+    "categories": ["ebay", "onion/legal"]
   },
   "train_data_path": "train",
   "validation_data_path": "validation",
@@ -36,11 +36,11 @@
   "iterator": {
     "type": "bucket",
     "sorting_keys": [["text", "num_tokens"]],
-    "batch_size": 64
+    "batch_size" : 100
   },
   "trainer": {
-    "num_epochs": 30,
-    "patience": 3,
+    "num_epochs": 50,
+    "patience": 5,
     "cuda_device": -1,
     "grad_clipping": 5.0,
     "validation_metric": "+accuracy",
