@@ -2,6 +2,7 @@ import logging
 import os
 from typing import Dict, Tuple
 
+import numpy as np
 from allennlp.data import Token
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
 from allennlp.data.fields import Field, LabelField, TextField
@@ -63,6 +64,8 @@ class DocumentDatasetReader(DatasetReader):
         print("Using train/validation/test split of %d/%d/%d lines for each category" % (
             num_train, num_validation, len(lines_per_category) - num_train - num_validation))
         for category_lines in zip(*lines_per_category):
+            category_lines = list(category_lines)
+            np.random.shuffle(category_lines)
             if subset == "train":
                 start, end = 0, num_train
             elif subset == "validation":
@@ -83,5 +86,5 @@ class DocumentDatasetReader(DatasetReader):
         with open(path, "rb") as f:
             for line in f.read().decode("utf-8", errors="ignore").splitlines():
                 line = line.strip()
-                if line:
+                if line and not line.startswith("#"):
                     yield line[:self._max_length]
