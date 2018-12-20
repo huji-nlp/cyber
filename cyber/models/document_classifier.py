@@ -77,9 +77,9 @@ class DocumentClassifier(Model):
         logits = self.classifier_feedforward(encoded_text)
         output_dict = {'logits': logits}
         if label is not None:
-            loss = self.loss(logits, label.squeeze(-1))
+            loss = self.loss(logits, label)
             for metric in self.metrics.values():
-                metric(logits, label.squeeze(-1))
+                metric(logits, label)
             output_dict["loss"] = loss
 
         return output_dict
