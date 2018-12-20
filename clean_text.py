@@ -58,5 +58,5 @@ for filename in os.listdir(os.getcwd()):
                 string_new = ''
             if ('References' or 'PGP') in string_new:
                 break
-            if string_new:
+            if len(string_new) > 1:
                 print(string_new, file=f_out)
