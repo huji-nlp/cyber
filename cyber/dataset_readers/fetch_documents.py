@@ -74,9 +74,9 @@ class DocumentDatasetReader(DatasetReader):
             yield from category_lines[start:end]
 
     def fetch_lines(self, category):
-        dir = os.path.join(*[c + "_clean" for c in os.path.split(category) if c])
-        for filename in sorted(os.listdir(dir)):
-            for line in self.read_file(os.path.join(dir, filename)):
+        dir_name = os.path.join(*[c + "_clean" for c in os.path.split(category) if c])
+        for filename in sorted(os.listdir(dir_name)):
+            for line in self.read_file(os.path.join(dir_name, filename)):
                 yield line, category
 
     def read_file(self, path):
