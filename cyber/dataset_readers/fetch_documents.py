@@ -30,7 +30,7 @@ class DocumentDatasetReader(DatasetReader):
     def _read(self, file_path):
         logger.info("Reading %s instance(s)", file_path)
         drugs_data = self.fetch_documents(subset=file_path, categories=self._categories)\
-            if file_path in ("train", "validation", "test") else [(l, None) for l in read_file(file_path)]
+            if file_path in ("train", "validation", "test") else [(l, None) for l in clean_lines(read_file(file_path))]
         for text, target in drugs_data:
             yield self.text_to_instance(text, target)
 
@@ -46,8 +46,9 @@ class DocumentDatasetReader(DatasetReader):
     @staticmethod
     def fetch_documents(subset, categories):
         for category in categories:
-            for line in clean_lines(read_file(clean_file_path(subdir=category, div=subset))):
-                yield line, "/".join(category)
+            with open(clean_file_path(subdir=category, div=subset), encoding="utf-8") as f:
+                for line in f:
+                    yield line, "/".join(category)
 
     def mask_token(self, token):
         if self._mask:
