@@ -29,8 +29,9 @@ def read_file(path):
 
 
 def new_line(s):
-    if re.match(r"(.?\s*\[\d+\]\s*)+", s) or not re.search(r"[a-zA-Z]", s):
-        return None  # button list
+    if re.match(r"(.?\s*\[\d+\]\s*)+", s) or \
+            not re.search(r"[a-zA-Z]", s.replace("GMT", "")):  # button list or non alphabetic
+        return None
     m = re.match(r".?\s*(\(\d+\)|\d+\.)", s)
     if m:
         return m.group(1)  # other enumerated list
@@ -66,7 +67,7 @@ def clean(text):
     text = text.replace('#', ' ')
     text = text.replace('\\', ' ')
     text = text.replace('(BUTTON)', ' ')
-    text = re.sub(r"buy now|add to cart|comments feed", ' ', text, flags=re.IGNORECASE)
+    text = re.sub(r"\b(buy now|(add )?to cart|comments feed)\b", ' ', text, flags=re.IGNORECASE)
     text = re.sub(r'1_ X\b', ' ', text)
     text = re.sub(r'javascript:\S*', ' ', text)
     text = re.sub(r'BUTTON\s*(Input)?\s*(\(not)?\s*(implemented\))?', ' ', text)
@@ -80,10 +81,12 @@ def clean(text):
     text = text.replace('~', '')
     text = text.replace('+', '')
     text = text.replace('xb1ol', '')
+    text = text.replace('0 item(s)', '')
 
     # remove consecutive spaces
     text = re.sub(r'[\s=]+', ' ', text)
     text = re.sub(r'--+', '--', text)
+    text = re.sub(r'(\.\s*\.)+', '..', text)
 
     return text.strip()
 
