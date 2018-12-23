@@ -25,7 +25,7 @@
       "num_layers": 1,
       "dropout": 0.2
     },
-    "classifier_feedforward": {
+    "output_layer": {
       "input_dim": 200,
       "num_layers": 2,
       "hidden_dims": [200, 3],

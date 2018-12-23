@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import Dict, Optional, Union
 
 import numpy
 import torch
@@ -7,10 +7,12 @@ from allennlp.common import Params
 from allennlp.common.checks import ConfigurationError
 from allennlp.data import Vocabulary
 from allennlp.models.model import Model
-from allennlp.modules import FeedForward, Seq2VecEncoder, TextFieldEmbedder
+from allennlp.modules import FeedForward, Maxout, TextFieldEmbedder
+from allennlp.modules import Seq2VecEncoder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
-from allennlp.training.metrics import CategoricalAccuracy, F1Measure
+from allennlp.training.metrics import CategoricalAccuracy
+from allennlp.training.metrics import F1Measure
 from overrides import overrides
 
 from cyber.metrics.confusion_matrix import ConfusionMatrix
@@ -33,7 +35,9 @@ class DocumentClassifier(Model):
         Used to embed the ``tokens`` ``TextField`` we get as input to the model.
     internal_text_encoder : ``Seq2VecEncoder``
         The encoder that we will use to convert the input text to a vector.
-    classifier_feedforward : ``FeedForward``
+    output_layer : ``Union[Maxout, FeedForward]``
+        The maxout or feed forward network that takes the final representations and produces
+        a classification prediction.
     initializer : ``InitializerApplicator``, optional (default=``InitializerApplicator()``)
         Used to initialize the model parameters.
     regularizer : ``RegularizerApplicator``, optional (default=``None``)
@@ -42,7 +46,7 @@ class DocumentClassifier(Model):
     def __init__(self, vocab: Vocabulary,
                  model_text_field_embedder: TextFieldEmbedder,
                  internal_text_encoder: Seq2VecEncoder,
-                 classifier_feedforward: FeedForward,
+                 output_layer: Union[FeedForward, Maxout],
                  initializer: InitializerApplicator = InitializerApplicator(),
                  regularizer: Optional[RegularizerApplicator] = None) -> None:
         super(DocumentClassifier, self).__init__(vocab, regularizer)
@@ -50,7 +54,7 @@ class DocumentClassifier(Model):
         self.model_text_field_embedder = model_text_field_embedder
         self.num_classes = self.vocab.get_vocab_size("labels")
         self.internal_text_encoder = internal_text_encoder
-        self.classifier_feedforward = classifier_feedforward
+        self.output_layer = output_layer
 
         if model_text_field_embedder.get_output_dim() != internal_text_encoder.get_input_dim():
             raise ConfigurationError("The output dimension of the model_text_field_embedder must match the "
@@ -74,7 +78,7 @@ class DocumentClassifier(Model):
         text_mask = util.get_text_field_mask(text)
         encoded_text = self.internal_text_encoder(embedded_text, text_mask)
 
-        logits = self.classifier_feedforward(encoded_text)
+        logits = self.output_layer(encoded_text)
         output_dict = {'logits': logits}
         if label is not None:
             loss = self.loss(logits, label)
@@ -113,7 +117,7 @@ class DocumentClassifier(Model):
         embedder_params = params.pop("model_text_field_embedder")
         model_text_field_embedder = TextFieldEmbedder.from_params(embedder_params, vocab=vocab)
         internal_text_encoder = Seq2VecEncoder.from_params(params.pop("internal_text_encoder"))
-        classifier_feedforward = FeedForward.from_params(params.pop("classifier_feedforward"))
+        output_layer = FeedForward.from_params(params.pop("output_layer"))
 
         initializer = InitializerApplicator.from_params(params.pop('initializer', []))
         regularizer = RegularizerApplicator.from_params(params.pop('regularizer', []))
@@ -121,6 +125,6 @@ class DocumentClassifier(Model):
         return cls(vocab=vocab,
                    model_text_field_embedder=model_text_field_embedder,
                    internal_text_encoder=internal_text_encoder,
-                   classifier_feedforward=classifier_feedforward,
+                   output_layer=output_layer,
                    initializer=initializer,
                    regularizer=regularizer)
