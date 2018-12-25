@@ -9,7 +9,7 @@
         "type": "elmo_characters"
       }
     },
-    "categories": ["onion/legal", "onion/illegal"]
+    "categories": ["ebay", "onion/legal"]
   },
   "train_data_path": "train",
   "validation_data_path": "validation",
@@ -77,7 +77,7 @@
     "patience": 5,
     "grad_norm": 5.0,
     "validation_metric": "+accuracy",
-    "cuda_device": -1,
+    "cuda_device": 0,
     "optimizer": {
       "type": "adam",
       "lr": 0.001
