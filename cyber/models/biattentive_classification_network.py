@@ -1,19 +1,21 @@
 from typing import Dict, Optional, Union
 
 import numpy
-from overrides import overrides
 import torch
-from torch import nn
 import torch.nn.functional as F
-
 from allennlp.common import Params
 from allennlp.common.checks import check_dimensions_match, ConfigurationError
 from allennlp.data import Vocabulary
-from allennlp.modules import Elmo, FeedForward, Maxout, Seq2SeqEncoder, TextFieldEmbedder
 from allennlp.models.model import Model
+from allennlp.modules import Elmo, FeedForward, Maxout, Seq2SeqEncoder, TextFieldEmbedder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
 from allennlp.training.metrics import CategoricalAccuracy
+from allennlp.training.metrics import F1Measure
+from overrides import overrides
+from torch import nn
+
+from cyber.metrics.confusion_matrix import ConfusionMatrix
 
 
 @Model.register("document_bcn")
@@ -174,7 +176,9 @@ class BiattentiveClassificationNetwork(Model):
                                "Number of classes.")
 
         self.metrics = {
-                "accuracy": CategoricalAccuracy(),
+            "accuracy": CategoricalAccuracy(),
+            "f1": F1Measure(positive_label=1),
+            "confusion_matrix": ConfusionMatrix(positive_label=1),
         }
         self.loss = torch.nn.CrossEntropyLoss()
         initializer(self)
@@ -295,7 +299,11 @@ class BiattentiveClassificationNetwork(Model):
 
     @overrides
     def get_metrics(self, reset: bool = False) -> Dict[str, float]:
-        return {metric_name: metric.get_metric(reset) for metric_name, metric in self.metrics.items()}
+        precision, recall, f1 = self.metrics["f1"].get_metric(reset=reset)
+        tp, tn, fp, fn = self.metrics["confusion_matrix"].get_metric(reset=reset)
+        return {"accuracy": self.metrics["accuracy"].get_metric(reset=reset),
+                "precision": precision, "recall": recall, "f1": f1,
+                "tp": tp, "tn": tn, "fp": fp, "fn": fn}
 
     # The FeedForward vs Maxout logic here requires a custom from_params.
     @classmethod
