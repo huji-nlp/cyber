@@ -230,7 +230,11 @@ class AttentionClassifier(DocumentClassifier):
         logits = self._output_layer(pooled_representations_dropped)
         class_probabilities = F.softmax(logits, dim=-1)
 
-        output_dict = {'logits': logits, 'class_probabilities': class_probabilities}
+        output_dict = {
+            "logits": logits,
+            "class_probabilities": class_probabilities,
+            "self_weights": self_weights,
+        }
         if label is not None:
             loss = self.loss(logits, label)
             for metric in self.metrics.values():
