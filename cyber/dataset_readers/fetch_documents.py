@@ -1,6 +1,6 @@
 import logging
 import os
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Optional
 
 from allennlp.data import Token
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
@@ -18,8 +18,9 @@ logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
 @DatasetReader.register("document")
 class DocumentDatasetReader(DatasetReader):
-    def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None,
-                 categories: Tuple[str] = None, mask: str = None, drop_masked: bool = False) -> None:
+    def __init__(self, tokenizer: Tokenizer = None, token_indexers: Optional[Dict[str, TokenIndexer]] = None,
+                 categories: Optional[Tuple[str]] = None, mask: Optional[Tuple[str]] = None,
+                 drop_masked: bool = False) -> None:
         super().__init__()
         self._tokenizer = tokenizer or WordTokenizer()
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
