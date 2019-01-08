@@ -18,15 +18,12 @@
       }
     },
     "internal_text_encoder": {
-      "type": "lstm",
-      "bidirectional": true,
-      "input_size": 100,
-      "hidden_size": 100,
-      "num_layers": 1,
-      "dropout": 0.2
+      "type": "boe",
+      "embedding_dim": 100,
+      "averaged": true
     },
     "output_layer": {
-      "input_dim": 200,
+      "input_dim": 100,
       "num_layers": 2,
       "hidden_dims": [200, 3],
       "activations": ["relu", "linear"],
@@ -36,11 +33,11 @@
   "iterator": {
     "type": "bucket",
     "sorting_keys": [["text", "num_tokens"]],
-    "batch_size" : 100
+    "batch_size": 64
   },
   "trainer": {
-    "num_epochs": 50,
-    "patience": 5,
+    "num_epochs": 30,
+    "patience": 3,
     "cuda_device": -1,
     "grad_clipping": 5.0,
     "validation_metric": "+accuracy",
