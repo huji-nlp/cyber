@@ -4,3 +4,7 @@ overrides==1.9
 numpy==1.15.3
 torch==0.4.1
 unidecode
+pandas
+scipy
+matplotlib
+seaborn
