@@ -4,7 +4,7 @@ from typing import Dict, Tuple, Optional
 
 from allennlp.data import Token
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
-from allennlp.data.fields import Field, LabelField, TextField
+from allennlp.data.fields import Field, LabelField, TextField, MetadataField
 from allennlp.data.instance import Instance
 from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
 from allennlp.data.tokenizers import Tokenizer, WordTokenizer
@@ -39,10 +39,15 @@ class DocumentDatasetReader(DatasetReader):
     @overrides
     def text_to_instance(self, text: str, target: int = None) -> Instance:
         text_field = TextField(self._tokenizer.tokenize(text), self._token_indexers)
+        metadata = {
+            "tokens": [token.text for token in text_field.tokens],
+        }
         text_field.tokens = list(filter(None, (self.mask_token(token) for token in text_field.tokens)))
+        metadata["masked_tokens"] = [token.text for token in text_field.tokens]
         fields: Dict[str, Field] = {"text": text_field}
         if target is not None:
             fields["label"] = LabelField(target)
+        fields["metadata"] = MetadataField(metadata)
         return Instance(fields)
 
     @staticmethod
