@@ -6,16 +6,14 @@ import torch.nn as nn
 from allennlp.data import Vocabulary
 from allennlp.models.model import Model
 from allennlp.nn import util
-from allennlp.training.metrics import CategoricalAccuracy
-from allennlp.training.metrics import F1Measure
 from overrides import overrides
 from sklearn.naive_bayes import BernoulliNB
 
-from cyber.metrics.confusion_matrix import ConfusionMatrix
+from cyber.models.document_classifier import DocumentClassifier
 
 
 @Model.register("naive_bayes")
-class NaiveBayes(Model):
+class NaiveBayes(DocumentClassifier):
     def __init__(self, vocab: Vocabulary) -> None:
         super(NaiveBayes, self).__init__(vocab)
 
@@ -23,12 +21,6 @@ class NaiveBayes(Model):
         self.num_classes = self.vocab.get_vocab_size("labels")
         self.nb = BernoulliNB()
         self.dummy = nn.Parameter(torch.tensor(0.0))
-
-        self.metrics = {
-            "accuracy": CategoricalAccuracy(),
-            "f1": F1Measure(positive_label=1),
-            "confusion_matrix": ConfusionMatrix(positive_label=1),
-        }
 
     @overrides
     def forward(self, text: Dict[str, torch.LongTensor], label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:

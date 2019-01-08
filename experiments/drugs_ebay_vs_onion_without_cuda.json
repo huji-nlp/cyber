@@ -8,7 +8,7 @@
   "test_data_path": "test",
   "evaluate_on_test": true,
   "model": {
-    "type": "document_classifier",
+    "type": "seq2vec_classifier",
     "model_text_field_embedder": {
       "tokens": {
         "type": "embedding",

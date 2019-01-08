@@ -10,16 +10,14 @@ from allennlp.models.model import Model
 from allennlp.modules import Elmo, FeedForward, Maxout, Seq2SeqEncoder, TextFieldEmbedder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
-from allennlp.training.metrics import CategoricalAccuracy
-from allennlp.training.metrics import F1Measure
 from overrides import overrides
 from torch import nn
 
-from cyber.metrics.confusion_matrix import ConfusionMatrix
+from cyber.models.document_classifier import DocumentClassifier
 
 
-@Model.register("document_bcn")
-class BiattentiveClassificationNetwork(Model):
+@Model.register("attention_classifier")
+class AttentionClassifier(DocumentClassifier):
     """
     This class implements the Biattentive Classification Network model described
     in section 5 of `Learned in Translation: Contextualized Word Vectors (NIPS 2017)
@@ -86,7 +84,7 @@ class BiattentiveClassificationNetwork(Model):
                  use_integrator_output_elmo: bool = False,
                  initializer: InitializerApplicator = InitializerApplicator(),
                  regularizer: Optional[RegularizerApplicator] = None) -> None:
-        super(BiattentiveClassificationNetwork, self).__init__(vocab, regularizer)
+        super(AttentionClassifier, self).__init__(vocab, regularizer)
 
         self._text_field_embedder = text_field_embedder
         if "elmo" in self._text_field_embedder._token_embedders.keys():  # pylint: disable=protected-access
@@ -175,11 +173,6 @@ class BiattentiveClassificationNetwork(Model):
                                "Output layer output dim",
                                "Number of classes.")
 
-        self.metrics = {
-            "accuracy": CategoricalAccuracy(),
-            "f1": F1Measure(positive_label=1),
-            "confusion_matrix": ConfusionMatrix(positive_label=1),
-        }
         self.loss = torch.nn.CrossEntropyLoss()
         initializer(self)
 
@@ -297,17 +290,9 @@ class BiattentiveClassificationNetwork(Model):
         output_dict['label'] = labels
         return output_dict
 
-    @overrides
-    def get_metrics(self, reset: bool = False) -> Dict[str, float]:
-        precision, recall, f1 = self.metrics["f1"].get_metric(reset=reset)
-        tp, tn, fp, fn = self.metrics["confusion_matrix"].get_metric(reset=reset)
-        return {"accuracy": self.metrics["accuracy"].get_metric(reset=reset),
-                "precision": precision, "recall": recall, "f1": f1,
-                "tp": tp, "tn": tn, "fp": fp, "fn": fn}
-
     # The FeedForward vs Maxout logic here requires a custom from_params.
     @classmethod
-    def from_params(cls, vocab: Vocabulary, params: Params) -> 'BiattentiveClassificationNetwork':  # type: ignore
+    def from_params(cls, vocab: Vocabulary, params: Params) -> 'AttentionClassifier':  # type: ignore
         # pylint: disable=arguments-differ
         embedder_params = params.pop("text_field_embedder")
         text_field_embedder = TextFieldEmbedder.from_params(vocab=vocab, params=embedder_params)

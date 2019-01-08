@@ -16,7 +16,7 @@
   "test_data_path": "test",
   "evaluate_on_test": true,
   "model": {
-    "type": "document_bcn",
+    "type": "attention_classifier",
     "text_field_embedder": {
       "token_embedders": {
         "tokens": {

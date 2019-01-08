@@ -1,1 +1,1 @@
-from cyber.models.document_classifier import DocumentClassifier
+from cyber.models.seq2vec_classifier import Seq2VecClassifier
