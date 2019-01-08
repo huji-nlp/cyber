@@ -252,7 +252,7 @@ class AttentionClassifier(DocumentClassifier):
             output_dict["loss"] = loss
 
         if metadata is not None:
-            output_dict['tokens'] = [metadata[i]['tokens'] for i in range(batch_size)]
+            output_dict["tokens"] = [metadata[i]["tokens"] for i in range(batch_size)]
 
         return output_dict
 
@@ -264,6 +264,8 @@ class AttentionClassifier(DocumentClassifier):
         """
         predictions = output_dict["class_probabilities"].cpu().data.numpy()
         argmax_indices = numpy.argmax(predictions, axis=-1)
+        batch_size = len(output_dict["tokens"])
         output_dict["label"] = [self.vocab.get_token_from_index(x, namespace="labels") for x in argmax_indices]
-        output_dict["all_labels"] = [v for k, v in sorted(self.vocab.get_index_to_token_vocabulary("labels").items())]
+        output_dict["all_labels"] = batch_size * \
+                                    [[v for k, v in sorted(self.vocab.get_index_to_token_vocabulary("labels").items())]]
         return output_dict
