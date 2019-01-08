@@ -87,9 +87,9 @@ class AttentionClassifier(DocumentClassifier):
 
         self._text_field_embedder = text_field_embedder
         if "elmo" in self._text_field_embedder._token_embedders.keys():  # pylint: disable=protected-access
-            raise ConfigurationError("To use ELMo in the BiattentiveClassificationNetwork input, "
+            raise ConfigurationError("To use ELMo in the AttentionClassifier input, "
                                      "remove elmo from the text_field_embedder and pass an "
-                                     "Elmo object to the BiattentiveClassificationNetwork and set the "
+                                     "Elmo object to the AttentionClassifier and set the "
                                      "'use_input_elmo' and 'use_integrator_output_elmo' flags accordingly.")
         self._embedding_dropout = nn.Dropout(embedding_dropout)
         self._num_classes = self.vocab.get_vocab_size("labels")
