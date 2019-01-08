@@ -1,10 +1,10 @@
 import logging
 import os
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Optional
 
 from allennlp.data import Token
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
-from allennlp.data.fields import Field, LabelField, TextField
+from allennlp.data.fields import Field, LabelField, TextField, MetadataField
 from allennlp.data.instance import Instance
 from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
 from allennlp.data.tokenizers import Tokenizer, WordTokenizer
@@ -18,13 +18,15 @@ logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
 @DatasetReader.register("document")
 class DocumentDatasetReader(DatasetReader):
-    def __init__(self, tokenizer: Tokenizer = None, token_indexers: Dict[str, TokenIndexer] = None,
-                 categories: Tuple[str] = None, mask: str = None) -> None:
+    def __init__(self, tokenizer: Tokenizer = None, token_indexers: Optional[Dict[str, TokenIndexer]] = None,
+                 categories: Optional[Tuple[str]] = None, mask: Optional[Tuple[str]] = None,
+                 drop_masked: bool = False) -> None:
         super().__init__()
         self._tokenizer = tokenizer or WordTokenizer()
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
         self._categories = [c.split(os.sep) for c in categories] or DATA_SUBDIRS
         self._mask = mask
+        self._drop_masked = drop_masked
 
     @overrides
     def _read(self, file_path):
@@ -37,10 +39,15 @@ class DocumentDatasetReader(DatasetReader):
     @overrides
     def text_to_instance(self, text: str, target: int = None) -> Instance:
         text_field = TextField(self._tokenizer.tokenize(text), self._token_indexers)
-        text_field.tokens = [self.mask_token(token) for token in text_field.tokens]
+        metadata = {
+            "tokens": [token.text for token in text_field.tokens],
+        }
+        text_field.tokens = list(filter(None, (self.mask_token(token) for token in text_field.tokens)))
+        metadata["masked_tokens"] = [token.text for token in text_field.tokens]
         fields: Dict[str, Field] = {"text": text_field}
         if target is not None:
             fields["label"] = LabelField(target)
+        fields["metadata"] = MetadataField(metadata)
         return Instance(fields)
 
     @staticmethod
@@ -51,8 +58,10 @@ class DocumentDatasetReader(DatasetReader):
                     yield line, "/".join(category)
 
     def mask_token(self, token):
-        if self._mask:
-            if token.pos_ in self._mask:
-                return Token(text=token.pos_, idx=token.idx, lemma=token.pos_, pos=token.pos_, tag=token.tag_,
-                             dep=token.dep_, ent_type=token.ent_type_)
-        return token
+        if self._mask is None:
+            return token
+        if not self._mask or token.pos_ in self._mask:
+            if self._drop_masked:
+                return None
+            return Token(text=token.pos_, idx=token.idx, lemma=token.pos_, pos=token.pos_, tag=token.tag_,
+                         dep=token.dep_, ent_type=token.ent_type_)

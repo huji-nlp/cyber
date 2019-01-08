@@ -1,7 +1,15 @@
 {
   "dataset_reader": {
     "type": "document",
-    "categories": ["onion/legal", "onion/illegal"]
+    "tokenizer": {
+      "type": "word",
+      "word_splitter": {
+        "type": "spacy",
+        "pos_tags": true
+      }
+    },
+    "categories": ["ebay", "onion/legal"],
+    "mask": []
   },
   "train_data_path": "train",
   "validation_data_path": "validation",
@@ -12,9 +20,8 @@
     "model_text_field_embedder": {
       "tokens": {
         "type": "embedding",
-        "pretrained_file": "https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.6B.100d.txt.gz",
         "embedding_dim": 100,
-        "trainable": false
+        "trainable": true
       }
     },
     "internal_text_encoder": {

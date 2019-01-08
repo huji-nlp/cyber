@@ -1,7 +1,7 @@
 {
   "dataset_reader": {
     "type": "document",
-    "categories": ["onion/legal", "onion/illegal"]
+    "categories": ["ebay", "onion/legal"]
   },
   "train_data_path": "train",
   "validation_data_path": "validation",
@@ -18,15 +18,12 @@
       }
     },
     "internal_text_encoder": {
-      "type": "lstm",
-      "bidirectional": true,
-      "input_size": 100,
-      "hidden_size": 100,
-      "num_layers": 1,
-      "dropout": 0.2
+      "type": "boe",
+      "embedding_dim": 100,
+      "averaged": true
     },
     "output_layer": {
-      "input_dim": 200,
+      "input_dim": 100,
       "num_layers": 2,
       "hidden_dims": [200, 3],
       "activations": ["relu", "linear"],

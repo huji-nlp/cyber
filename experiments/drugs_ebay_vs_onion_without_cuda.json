@@ -8,7 +8,7 @@
   "test_data_path": "test",
   "evaluate_on_test": true,
   "model": {
-    "type": "document_classifier",
+    "type": "seq2vec_classifier",
     "model_text_field_embedder": {
       "tokens": {
         "type": "embedding",
@@ -25,7 +25,7 @@
       "num_layers": 1,
       "dropout": 0.2
     },
-    "classifier_feedforward": {
+    "output_layer": {
       "input_dim": 200,
       "num_layers": 2,
       "hidden_dims": [200, 3],

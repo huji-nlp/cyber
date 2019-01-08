@@ -4,8 +4,9 @@
 #SBATCH --gres=gpu:1
 
 EXPERIMENT=$1
+SUFFIX=$2
 JSON=experiments/${EXPERIMENT}.json
-MODEL=models/${EXPERIMENT}
+MODEL=models/${EXPERIMENT}${SUFFIX}
 
 if [[ ! -f ${JSON} ]]; then
     echo "Not found: ${JSON}"
