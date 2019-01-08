@@ -4,6 +4,7 @@
 #SBATCH --gres=gpu:1
 
 EXPERIMENT=$1
+SUFFIX=$2
 JSON=experiments/${EXPERIMENT}.json
 MODEL=models/${EXPERIMENT}
 
@@ -13,4 +14,4 @@ fi
 
 rm -rf ${MODEL}
 
-python run.py train ${JSON} --include-package cyber.dataset_readers --include-package cyber.models -s ${MODEL}
+python run.py train ${JSON} --include-package cyber.dataset_readers --include-package cyber.models -s ${MODEL}${SUFFIX}
