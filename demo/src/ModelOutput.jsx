@@ -12,9 +12,10 @@ class ModelOutput extends React.Component {
     // types you might have.  Change names for data types you want, and delete anything you don't
     // need.
     var label = outputs['label'];
+    var prob = Math.max.apply(Math, outputs['class_probabilities'].map(parseFloat)).toFixed(5) * 100.0;
     // This is a 1D attention array, which we need to make into a 2D matrix to use with our heat
     // map component.
-    // var attention_data = outputs['attention_data'].map(x => [x]);
+    var attention_data = outputs['self_weights'].map(x => [x]);
     // This is a 2D attention matrix.
     var self_weights = outputs['self_weights'];
     // Labels for our 2D attention matrix, and the rows in our 1D attention array.
@@ -35,18 +36,18 @@ class ModelOutput extends React.Component {
 
         <div className="form__field">
           <label>Label</label>
-          <div className="model__content__summary">{ label }</div>
+          <div className="model__content__summary">{ label } (p={ prob }%)</div>
         </div>
 
         <div className="form__field">
           {/* We like using Collapsible to show model internals; you can keep this or change it. */}
           <Collapsible trigger="Model internals">
-            {/*<Collapsible trigger="1D attention">*/}
-                {/*<HeatMap xLabels={['Column label']} yLabels={tokens} data={attention_data} xLabelWidth={xLabelWidth} />*/}
-            {/*</Collapsible>*/}
-            {/*<Collapsible trigger="2D attention">*/}
-            <HeatMap xLabels={tokens} yLabels={tokens} data={self_weights} xLabelWidth={xLabelWidth} />
-            {/*</Collapsible>*/}
+            <Collapsible trigger="1D attention">
+                <HeatMap xLabels={['Attention']} yLabels={tokens} data={attention_data} xLabelWidth={xLabelWidth} />
+            </Collapsible>
+            <Collapsible trigger="2D attention">
+                <HeatMap xLabels={tokens} yLabels={tokens} data={self_weights} xLabelWidth={xLabelWidth} />
+            </Collapsible>
           </Collapsible>
         </div>
 
