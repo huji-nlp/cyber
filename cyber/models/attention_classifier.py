@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import Dict, Optional, List, Any
 
 import numpy
 import torch
@@ -154,7 +154,8 @@ class AttentionClassifier(DocumentClassifier):
     @overrides
     def forward(self,
                 text: Dict[str, torch.LongTensor],
-                label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
+                label: torch.LongTensor = None,
+                metadata: Optional[List[Dict[str, Any]]] = None) -> Dict[str, torch.Tensor]:
         """
         Parameters
         ----------
@@ -162,6 +163,8 @@ class AttentionClassifier(DocumentClassifier):
             The output of ``TextField.as_array()``.
         label : torch.LongTensor, optional (default = None)
             A variable representing the label for each instance in the batch.
+        metadata : ``List[Dict[str, Any]]``, optional
+            If present, this should contain the document tokens.
         Returns
         -------
         An output dictionary consisting of:
@@ -170,10 +173,16 @@ class AttentionClassifier(DocumentClassifier):
             distribution over the label classes for each instance.
         loss : torch.FloatTensor, optional
             A scalar loss to be optimised.
+        self_weights : torch.FloatTensor
+            Attention weights.
+        tokens : List, optional
+            Tokens for each instance.
+
         """
         text_mask = util.get_text_field_mask(text).float()
         elmo_tokens = text.pop("elmo", None)  # Pop elmo tokens, since elmo embedder should not be present.
         embedded_text = self._text_field_embedder(text) if text else None
+        batch_size = embedded_text.size(0)
 
         if elmo_tokens is not None:  # Add the "elmo" key back to "tokens" if not None, since the tests and the
             text["elmo"] = elmo_tokens  # subsequent training epochs rely not being modified during forward()
@@ -241,6 +250,9 @@ class AttentionClassifier(DocumentClassifier):
                 metric(logits, label)
             output_dict["loss"] = loss
 
+        if metadata is not None:
+            output_dict['tokens'] = [metadata[i]['tokens'] for i in range(batch_size)]
+
         return output_dict
 
     @overrides
@@ -251,7 +263,6 @@ class AttentionClassifier(DocumentClassifier):
         """
         predictions = output_dict["class_probabilities"].cpu().data.numpy()
         argmax_indices = numpy.argmax(predictions, axis=-1)
-        labels = [self.vocab.get_token_from_index(x, namespace="labels")
-                  for x in argmax_indices]
-        output_dict['label'] = labels
+        labels = [self.vocab.get_token_from_index(x, namespace="labels") for x in argmax_indices]
+        output_dict["label"] = labels
         return output_dict
