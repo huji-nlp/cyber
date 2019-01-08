@@ -1,4 +1,4 @@
-from typing import Dict, Optional, List, Any
+from typing import Dict, Optional, List, Any, Union
 
 import numpy
 import torch
@@ -257,13 +257,13 @@ class AttentionClassifier(DocumentClassifier):
         return output_dict
 
     @overrides
-    def decode(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, torch.Tensor]:
+    def decode(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, Union[torch.Tensor, List[Any]]]:
         """
         Does a simple argmax over the class probabilities, converts indices to string labels, and
         adds a ``"label"`` key to the dictionary with the result.
         """
         predictions = output_dict["class_probabilities"].cpu().data.numpy()
         argmax_indices = numpy.argmax(predictions, axis=-1)
-        labels = [self.vocab.get_token_from_index(x, namespace="labels") for x in argmax_indices]
-        output_dict["label"] = labels
+        output_dict["label"] = [self.vocab.get_token_from_index(x, namespace="labels") for x in argmax_indices]
+        output_dict["all_labels"] = [v for k, v in sorted(self.vocab.get_index_to_token_vocabulary("labels").items())]
         return output_dict

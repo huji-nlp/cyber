@@ -32,7 +32,7 @@ function summarizeExample(example) {
 const title = "Cyber Classification Demo";
 const description = (
   <span>
-  Classify a paragraph as legal/illegal.
+  Classify a paragraph.
   </span>
 );
 

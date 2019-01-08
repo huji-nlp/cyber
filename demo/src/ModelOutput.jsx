@@ -12,7 +12,9 @@ class ModelOutput extends React.Component {
     // types you might have.  Change names for data types you want, and delete anything you don't
     // need.
     var label = outputs['label'];
-    var prob = Math.max.apply(Math, outputs['class_probabilities'].map(parseFloat)).toFixed(5) * 100.0;
+    var all_labels = outputs['all_labels'];
+    var class_probabilities = outputs['class_probabilities'];
+    var prob = Math.max.apply(Math, class_probabilities.map(parseFloat)).toFixed(5) * 100.0;
     // This is a 1D attention array, which we need to make into a 2D matrix to use with our heat
     // map component.
     var self_weights = outputs['self_weights'].map(x => [x]);
@@ -37,6 +39,14 @@ class ModelOutput extends React.Component {
         <div className="form__field">
           <label>Label</label>
           <div className="model__content__summary">{ label } (p={ prob }%)</div>
+        </div>
+
+        <div className="form__field">
+          <Collapsible trigger="Class probabilities">
+            <Collapsible trigger="1D attention">
+                <HeatMap xLabels={['p']} yLabels={all_labels} data={class_probabilities} xLabelWidth={xLabelWidth} />
+            </Collapsible>
+          </Collapsible>
         </div>
 
         <div className="form__field">
