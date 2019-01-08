@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from allennlp.common.checks import check_dimensions_match, ConfigurationError
 from allennlp.data import Vocabulary
 from allennlp.models.model import Model
-from allennlp.modules import Elmo, FeedForward, Seq2SeqEncoder, TextFieldEmbedder
+from allennlp.modules import Elmo, FeedForward, Maxout, Seq2SeqEncoder, TextFieldEmbedder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
 from overrides import overrides
@@ -33,7 +33,7 @@ class AttentionClassifier(DocumentClassifier):
     representation with the encoder outputs computed earlier, and then run this through
     yet another ``Seq2SeqEncoder`` (the ``integrator``). Lastly, we take the output of the
     integrator and max, min, mean, and self-attention pool to create a final representation,
-    which is passed through some feed-forward layers
+    which is passed through some maxout layers
     to output a classification (``output_layer``).
 
     Parameters
@@ -54,8 +54,8 @@ class AttentionClassifier(DocumentClassifier):
         with the token encodings.
     integrator_dropout : ``float``
         The amount of dropout to apply on integrator output.
-    output_layer : ``FeedForward``
-        The feed forward network that takes the final representations and produces
+    output_layer : ``Maxout``
+        The maxout network that takes the final representations and produces
         a classification prediction.
     elmo : ``Elmo``, optional (default=``None``)
         If provided, will be used to concatenate pretrained ELMo representations to
@@ -78,7 +78,7 @@ class AttentionClassifier(DocumentClassifier):
                  encoder: Seq2SeqEncoder,
                  integrator: Seq2SeqEncoder,
                  integrator_dropout: float,
-                 output_layer: FeedForward,
+                 output_layer: Maxout,
                  elmo: Elmo,
                  use_input_elmo: bool = False,
                  use_integrator_output_elmo: bool = False,
@@ -207,8 +207,7 @@ class AttentionClassifier(DocumentClassifier):
 
         # Concatenate ELMo representations to integrated_encodings if specified
         if self._use_integrator_output_elmo:
-            integrated_encodings = torch.cat([integrated_encodings,
-                                              integrator_output_elmo], dim=-1)
+            integrated_encodings = torch.cat([integrated_encodings, integrator_output_elmo], dim=-1)
 
         max_masked_integrated_encodings = util.replace_masked_values(  # Simple Pooling layers
             integrated_encodings, text_mask.unsqueeze(2), -1e7)
@@ -221,8 +220,7 @@ class AttentionClassifier(DocumentClassifier):
         # Self-attentive pooling layer
         # Run through linear projection. Shape: (batch_size, sequence length, 1)
         # Then remove the last dimension to get the proper attention shape (batch_size, sequence length)
-        self_attentive_logits = self._self_attentive_pooling_projection(
-                integrated_encodings).squeeze(2)
+        self_attentive_logits = self._self_attentive_pooling_projection(integrated_encodings).squeeze(2)
         self_weights = util.masked_softmax(self_attentive_logits, text_mask)
         self_attentive_pool = util.weighted_sum(integrated_encodings, self_weights)
 
