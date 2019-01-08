@@ -15,6 +15,7 @@ from torch import nn
 from cyber.models.document_classifier import DocumentClassifier
 
 
+# noinspection PyProtectedMember
 @Model.register("attention_classifier")
 class AttentionClassifier(DocumentClassifier):
     """
@@ -86,7 +87,7 @@ class AttentionClassifier(DocumentClassifier):
         super(AttentionClassifier, self).__init__(vocab, regularizer)
 
         self._text_field_embedder = text_field_embedder
-        if "elmo" in self._text_field_embedder._token_embedders.keys():  # pylint: disable=protected-access
+        if "elmo" in self._text_field_embedder._token_embedders:
             raise ConfigurationError("To use ELMo in the AttentionClassifier input, "
                                      "remove elmo from the text_field_embedder and pass an "
                                      "Elmo object to the AttentionClassifier and set the "
@@ -103,83 +104,57 @@ class AttentionClassifier(DocumentClassifier):
         self._use_input_elmo = use_input_elmo
         self._use_integrator_output_elmo = use_integrator_output_elmo
         self._num_elmo_layers = int(self._use_input_elmo) + int(self._use_integrator_output_elmo)
-        # Check that, if elmo is None, none of the elmo flags are set.
-        if self._elmo is None and self._num_elmo_layers != 0:
-            raise ConfigurationError("One of 'use_input_elmo' or 'use_integrator_output_elmo' is True, "
-                                     "but no Elmo object was provided upon construction. Pass in an Elmo "
-                                     "object to use Elmo.")
-
-        if self._elmo is not None:
-            # Check that, if elmo is not None, we use it somewhere.
-            if self._num_elmo_layers == 0:
-                raise ConfigurationError("Elmo object provided upon construction, but both 'use_input_elmo' "
-                                         "and 'use_integrator_output_elmo' are 'False'. Set one of them to "
-                                         "'True' to use Elmo, or do not provide an Elmo object upon construction.")
-            # Check that the number of flags set is equal to the num_output_representations of the Elmo object
-            # pylint: disable=protected-access,too-many-format-args
-            if len(self._elmo._scalar_mixes) != self._num_elmo_layers:
-                raise ConfigurationError("Elmo object has num_output_representations=%s, but this does not "
-                                         "match the number of use_*_elmo flags set to true. use_input_elmo "
-                                         "is %s, and use_integrator_output_elmo is %s".format(
-                                                 str(len(self._elmo._scalar_mixes)),
-                                                 str(self._use_input_elmo),
-                                                 str(self._use_integrator_output_elmo)))
 
         # Calculate combined integrator output dim, taking into account elmo
+        self._combined_integrator_output_dim = self._integrator.get_output_dim()
         if self._use_integrator_output_elmo:
-            self._combined_integrator_output_dim = (self._integrator.get_output_dim() +
-                                                    self._elmo.get_output_dim())
-        else:
-            self._combined_integrator_output_dim = self._integrator.get_output_dim()
+            self._combined_integrator_output_dim += self._elmo.get_output_dim()
 
-        self._self_attentive_pooling_projection = nn.Linear(
-                self._combined_integrator_output_dim, 1)
+        self._self_attentive_pooling_projection = nn.Linear(self._combined_integrator_output_dim, 1)
         self._output_layer = output_layer
 
-        if self._use_input_elmo:
-            check_dimensions_match(text_field_embedder.get_output_dim() +
-                                   self._elmo.get_output_dim(),
-                                   self._pre_encode_feedforward.get_input_dim(),
-                                   "text field embedder output dim + ELMo output dim",
-                                   "Pre-encoder feedforward input dim")
-        else:
-            check_dimensions_match(text_field_embedder.get_output_dim(),
-                                   self._pre_encode_feedforward.get_input_dim(),
-                                   "text field embedder output dim",
-                                   "Pre-encoder feedforward input dim")
-
-        check_dimensions_match(self._pre_encode_feedforward.get_output_dim(),
-                               self._encoder.get_input_dim(),
-                               "Pre-encoder feedforward output dim",
-                               "Encoder input dim")
-        check_dimensions_match(self._encoder.get_output_dim() * 3,
-                               self._integrator.get_input_dim(),
-                               "Encoder output dim * 3",
-                               "Integrator input dim")
-        if self._use_integrator_output_elmo:
-            check_dimensions_match(self._combined_integrator_output_dim * 4,
-                                   self._output_layer.get_input_dim(),
-                                   "(Integrator output dim + ELMo output dim) * 4",
-                                   "Output layer input dim")
-        else:
-            check_dimensions_match(self._integrator.get_output_dim() * 4,
-                                   self._output_layer.get_input_dim(),
-                                   "Integrator output dim * 4",
-                                   "Output layer input dim")
-
-        check_dimensions_match(self._output_layer.get_output_dim(),
-                               self._num_classes,
-                               "Output layer output dim",
-                               "Number of classes.")
+        self.check_input()
 
         self.loss = torch.nn.CrossEntropyLoss()
         initializer(self)
 
+    def check_input(self):
+        if self._elmo is None:  # Check that, if elmo is None, none of the elmo flags are set.
+            if self._num_elmo_layers:
+                raise ConfigurationError("One of 'use_input_elmo' or 'use_integrator_output_elmo' is True, "
+                                         "but no Elmo object was provided upon construction. Pass in an Elmo "
+                                         "object to use Elmo.")
+        else:  # Check that, if elmo is not None, we use it somewhere.
+            if not self._num_elmo_layers:
+                raise ConfigurationError("Elmo object provided upon construction, but both 'use_input_elmo' "
+                                         "and 'use_integrator_output_elmo' are 'False'. Set one of them to "
+                                         "'True' to use Elmo, or do not provide an Elmo object upon construction.")
+            # Check that the number of flags set is equal to the num_output_representations of the Elmo object
+            if len(self._elmo._scalar_mixes) != self._num_elmo_layers:
+                raise ConfigurationError("Elmo object has num_output_representations=%s, but this does not "
+                                         "match the number of use_*_elmo flags set to true. use_input_elmo "
+                                         "is %s, and use_integrator_output_elmo is %s".format(
+                                            len(self._elmo._scalar_mixes), self._use_input_elmo,
+                                            self._use_integrator_output_elmo))
+        check_dimensions_match(self._text_field_embedder.get_output_dim() +
+                               (self._elmo.get_output_dim() if self._use_input_elmo else 0),
+                               self._pre_encode_feedforward.get_input_dim(),
+                               "text field embedder output dim + ELMo output dim", "Pre-encoder feedforward input dim")
+        check_dimensions_match(self._pre_encode_feedforward.get_output_dim(), self._encoder.get_input_dim(),
+                               "Pre-encoder feedforward output dim", "Encoder input dim")
+        check_dimensions_match(self._encoder.get_output_dim() * 3,
+                               self._integrator.get_input_dim(),
+                               "Encoder output dim * 3",
+                               "Integrator input dim")
+        check_dimensions_match(self._combined_integrator_output_dim * 4, self._output_layer.get_input_dim(),
+                               "(Integrator output dim + ELMo output dim) * 4", "Output layer input dim")
+        check_dimensions_match(self._output_layer.get_output_dim(), self._num_classes,
+                               "Output layer output dim", "Number of classes.")
+
     @overrides
-    def forward(self,  # type: ignore
+    def forward(self,
                 text: Dict[str, torch.LongTensor],
                 label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
-        # pylint: disable=arguments-differ
         """
         Parameters
         ----------
@@ -197,44 +172,35 @@ class AttentionClassifier(DocumentClassifier):
             A scalar loss to be optimised.
         """
         text_mask = util.get_text_field_mask(text).float()
-        # Pop elmo tokens, since elmo embedder should not be present.
-        elmo_tokens = text.pop("elmo", None)
+        elmo_tokens = text.pop("elmo", None)  # Pop elmo tokens, since elmo embedder should not be present.
         embedded_text = self._text_field_embedder(text) if text else None
 
-        # Add the "elmo" key back to "tokens" if not None, since the tests and the
-        # subsequent training epochs rely not being modified during forward()
-        if elmo_tokens is not None:
-            text["elmo"] = elmo_tokens
+        if elmo_tokens is not None:  # Add the "elmo" key back to "tokens" if not None, since the tests and the
+            text["elmo"] = elmo_tokens  # subsequent training epochs rely not being modified during forward()
 
-        # Create ELMo embeddings if applicable
-        input_elmo = integrator_output_elmo = None
+        input_elmo = integrator_output_elmo = None  # Create ELMo embeddings if applicable
         if self._elmo:
-            if elmo_tokens is not None:
-                elmo_representations = self._elmo(elmo_tokens)["elmo_representations"]
-                # Pop from the end is more performant with list
-                if self._use_integrator_output_elmo:
-                    integrator_output_elmo = elmo_representations.pop()
-                if self._use_input_elmo:
-                    input_elmo = elmo_representations.pop()
-                assert not elmo_representations
-            else:
-                raise ConfigurationError(
-                        "Model was built to use Elmo, but input text is not tokenized for Elmo.")
+            if elmo_tokens is None:
+                raise ConfigurationError("Model was built to use Elmo, but input text is not tokenized for Elmo.")
+            elmo_representations = self._elmo(elmo_tokens)["elmo_representations"]
+            if self._use_integrator_output_elmo:
+                integrator_output_elmo = elmo_representations.pop()  # Pop from the end is more performant with list
+            if self._use_input_elmo:
+                input_elmo = elmo_representations.pop()
+            assert not elmo_representations
 
         if self._use_input_elmo:
-            embedded_text = torch.cat([embedded_text, input_elmo], dim=-1) if embedded_text is not None else input_elmo
+            embedded_text = input_elmo if embedded_text is None else torch.cat([embedded_text, input_elmo], dim=-1)
 
         dropped_embedded_text = self._embedding_dropout(embedded_text)
         pre_encoded_text = self._pre_encode_feedforward(dropped_embedded_text)
         encoded_tokens = self._encoder(pre_encoded_text, text_mask)
 
-        # Compute biattention. This is a special case since the inputs are the same.
-        attention_logits = encoded_tokens.bmm(encoded_tokens.permute(0, 2, 1).contiguous())
-        attention_weights = util.masked_softmax(attention_logits, text_mask)
-        encoded_text = util.weighted_sum(encoded_tokens, attention_weights)
+        attention_logits = encoded_tokens.bmm(encoded_tokens.permute(0, 2, 1).contiguous())  # Compute biattention
+        attention_weights = util.masked_softmax(attention_logits, text_mask)  # This is a special case,
+        encoded_text = util.weighted_sum(encoded_tokens, attention_weights)  # since the inputs are the same
 
-        # Build the input to the integrator
-        integrator_input = torch.cat([encoded_tokens,
+        integrator_input = torch.cat([encoded_tokens,  # Build the input to the integrator
                                       encoded_tokens - encoded_text,
                                       encoded_tokens * encoded_text], 2)
         integrated_encodings = self._integrator(integrator_input, text_mask)
@@ -244,9 +210,8 @@ class AttentionClassifier(DocumentClassifier):
             integrated_encodings = torch.cat([integrated_encodings,
                                               integrator_output_elmo], dim=-1)
 
-        # Simple Pooling layers
-        max_masked_integrated_encodings = util.replace_masked_values(
-                integrated_encodings, text_mask.unsqueeze(2), -1e7)
+        max_masked_integrated_encodings = util.replace_masked_values(  # Simple Pooling layers
+            integrated_encodings, text_mask.unsqueeze(2), -1e7)
         max_pool = torch.max(max_masked_integrated_encodings, 1)[0]
         min_masked_integrated_encodings = util.replace_masked_values(
                 integrated_encodings, text_mask.unsqueeze(2), +1e7)
@@ -255,7 +220,7 @@ class AttentionClassifier(DocumentClassifier):
 
         # Self-attentive pooling layer
         # Run through linear projection. Shape: (batch_size, sequence length, 1)
-        # Then remove the last dimension to get the proper attention shape (batch_size, sequence length).
+        # Then remove the last dimension to get the proper attention shape (batch_size, sequence length)
         self_attentive_logits = self._self_attentive_pooling_projection(
                 integrated_encodings).squeeze(2)
         self_weights = util.masked_softmax(self_attentive_logits, text_mask)
