@@ -1,4 +1,4 @@
-from typing import Dict, Optional, Union
+from typing import Dict, Optional
 
 import numpy
 import torch
@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from allennlp.common.checks import ConfigurationError
 from allennlp.data import Vocabulary
 from allennlp.models.model import Model
-from allennlp.modules import FeedForward, Maxout, TextFieldEmbedder
+from allennlp.modules import FeedForward, TextFieldEmbedder
 from allennlp.modules import Seq2VecEncoder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
@@ -32,8 +32,8 @@ class Seq2VecClassifier(DocumentClassifier):
         Used to embed the ``tokens`` ``TextField`` we get as input to the model.
     internal_text_encoder : ``Seq2VecEncoder``
         The encoder that we will use to convert the input text to a vector.
-    output_layer : ``Union[Maxout, FeedForward]``
-        The maxout or feed forward network that takes the final representations and produces
+    output_layer : ``FeedForward``
+        The feed forward network that takes the final representations and produces
         a classification prediction.
     initializer : ``InitializerApplicator``, optional (default=``InitializerApplicator()``)
         Used to initialize the model parameters.
@@ -43,7 +43,7 @@ class Seq2VecClassifier(DocumentClassifier):
     def __init__(self, vocab: Vocabulary,
                  model_text_field_embedder: TextFieldEmbedder,
                  internal_text_encoder: Seq2VecEncoder,
-                 output_layer: Union[FeedForward, Maxout],
+                 output_layer: FeedForward,
                  initializer: InitializerApplicator = InitializerApplicator(),
                  regularizer: Optional[RegularizerApplicator] = None) -> None:
         super(Seq2VecClassifier, self).__init__(vocab, regularizer)

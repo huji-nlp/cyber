@@ -1,13 +1,12 @@
-from typing import Dict, Optional, Union
+from typing import Dict, Optional
 
 import numpy
 import torch
 import torch.nn.functional as F
-from allennlp.common import Params
 from allennlp.common.checks import check_dimensions_match, ConfigurationError
 from allennlp.data import Vocabulary
 from allennlp.models.model import Model
-from allennlp.modules import Elmo, FeedForward, Maxout, Seq2SeqEncoder, TextFieldEmbedder
+from allennlp.modules import Elmo, FeedForward, Seq2SeqEncoder, TextFieldEmbedder
 from allennlp.nn import InitializerApplicator, RegularizerApplicator
 from allennlp.nn import util
 from overrides import overrides
@@ -33,7 +32,7 @@ class AttentionClassifier(DocumentClassifier):
     representation with the encoder outputs computed earlier, and then run this through
     yet another ``Seq2SeqEncoder`` (the ``integrator``). Lastly, we take the output of the
     integrator and max, min, mean, and self-attention pool to create a final representation,
-    which is passed through a maxout network or some feed-forward layers
+    which is passed through some feed-forward layers
     to output a classification (``output_layer``).
 
     Parameters
@@ -54,8 +53,8 @@ class AttentionClassifier(DocumentClassifier):
         with the token encodings.
     integrator_dropout : ``float``
         The amount of dropout to apply on integrator output.
-    output_layer : ``Union[Maxout, FeedForward]``
-        The maxout or feed forward network that takes the final representations and produces
+    output_layer : ``FeedForward``
+        The feed forward network that takes the final representations and produces
         a classification prediction.
     elmo : ``Elmo``, optional (default=``None``)
         If provided, will be used to concatenate pretrained ELMo representations to
@@ -78,7 +77,7 @@ class AttentionClassifier(DocumentClassifier):
                  encoder: Seq2SeqEncoder,
                  integrator: Seq2SeqEncoder,
                  integrator_dropout: float,
-                 output_layer: Union[FeedForward, Maxout],
+                 output_layer: FeedForward,
                  elmo: Elmo,
                  use_input_elmo: bool = False,
                  use_integrator_output_elmo: bool = False,
@@ -289,45 +288,3 @@ class AttentionClassifier(DocumentClassifier):
                   for x in argmax_indices]
         output_dict['label'] = labels
         return output_dict
-
-    # The FeedForward vs Maxout logic here requires a custom from_params.
-    @classmethod
-    def from_params(cls, vocab: Vocabulary, params: Params) -> 'AttentionClassifier':  # type: ignore
-        # pylint: disable=arguments-differ
-        embedder_params = params.pop("text_field_embedder")
-        text_field_embedder = TextFieldEmbedder.from_params(vocab=vocab, params=embedder_params)
-        embedding_dropout = params.pop("embedding_dropout")
-        pre_encode_feedforward = FeedForward.from_params(params.pop("pre_encode_feedforward"))
-        encoder = Seq2SeqEncoder.from_params(params.pop("encoder"))
-        integrator = Seq2SeqEncoder.from_params(params.pop("integrator"))
-        integrator_dropout = params.pop("integrator_dropout")
-
-        output_layer_params = params.pop("output_layer")
-        if "activations" in output_layer_params:
-            output_layer = FeedForward.from_params(output_layer_params)
-        else:
-            output_layer = Maxout.from_params(output_layer_params)
-
-        elmo = params.pop("elmo", None)
-        if elmo is not None:
-            elmo = Elmo.from_params(elmo)
-        use_input_elmo = params.pop_bool("use_input_elmo", False)
-        use_integrator_output_elmo = params.pop_bool("use_integrator_output_elmo", False)
-
-        initializer = InitializerApplicator.from_params(params.pop('initializer', []))
-        regularizer = RegularizerApplicator.from_params(params.pop('regularizer', []))
-        params.assert_empty(cls.__name__)
-
-        return cls(vocab=vocab,
-                   text_field_embedder=text_field_embedder,
-                   embedding_dropout=embedding_dropout,
-                   pre_encode_feedforward=pre_encode_feedforward,
-                   encoder=encoder,
-                   integrator=integrator,
-                   integrator_dropout=integrator_dropout,
-                   output_layer=output_layer,
-                   elmo=elmo,
-                   use_input_elmo=use_input_elmo,
-                   use_integrator_output_elmo=use_integrator_output_elmo,
-                   initializer=initializer,
-                   regularizer=regularizer)
