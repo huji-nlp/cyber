@@ -53,10 +53,10 @@ class DocumentDatasetReader(DatasetReader):
                     yield line, "/".join(category)
 
     def mask_token(self, token):
-        if self._mask:
-            if token.pos_ in self._mask:
-                if self._drop_masked:
-                    return None
-                return Token(text=token.pos_, idx=token.idx, lemma=token.pos_, pos=token.pos_, tag=token.tag_,
-                             dep=token.dep_, ent_type=token.ent_type_)
-        return token
+        if self._mask is None:
+            return token
+        if not self._mask or token.pos_ in self._mask:
+            if self._drop_masked:
+                return None
+            return Token(text=token.pos_, idx=token.idx, lemma=token.pos_, pos=token.pos_, tag=token.tag_,
+                         dep=token.dep_, ent_type=token.ent_type_)
