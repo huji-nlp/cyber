@@ -242,6 +242,7 @@ class AttentionClassifier(DocumentClassifier):
         output_dict = {
             "logits": logits,
             "class_probabilities": class_probabilities,
+            "attention_weights": attention_weights,
             "self_weights": self_weights,
         }
         if label is not None:

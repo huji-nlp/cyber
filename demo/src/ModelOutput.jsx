@@ -15,9 +15,9 @@ class ModelOutput extends React.Component {
     var prob = Math.max.apply(Math, outputs['class_probabilities'].map(parseFloat)).toFixed(5) * 100.0;
     // This is a 1D attention array, which we need to make into a 2D matrix to use with our heat
     // map component.
-    var attention_data = outputs['self_weights'].map(x => [x]);
+    var self_weights = outputs['self_weights'].map(x => [x]);
     // This is a 2D attention matrix.
-    var self_weights = outputs['self_weights'];
+    var attention_weights = outputs['attention_weights'];
     // Labels for our 2D attention matrix, and the rows in our 1D attention array.
     var tokens = outputs['tokens'];
 
@@ -43,10 +43,10 @@ class ModelOutput extends React.Component {
           {/* We like using Collapsible to show model internals; you can keep this or change it. */}
           <Collapsible trigger="Model internals">
             <Collapsible trigger="1D attention">
-                <HeatMap xLabels={['Attention']} yLabels={tokens} data={attention_data} xLabelWidth={xLabelWidth} />
+                <HeatMap xLabels={['Attention']} yLabels={tokens} data={self_weights} xLabelWidth={xLabelWidth} />
             </Collapsible>
             <Collapsible trigger="2D attention">
-                <HeatMap xLabels={tokens} yLabels={tokens} data={self_weights} xLabelWidth={xLabelWidth} />
+                <HeatMap xLabels={tokens} yLabels={tokens} data={attention_weights} xLabelWidth={xLabelWidth} />
             </Collapsible>
           </Collapsible>
         </div>
