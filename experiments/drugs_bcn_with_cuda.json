@@ -62,8 +62,8 @@
     "output_layer": {
         "input_dim": 2400,
         "num_layers": 3,
-        "output_dims": [1200, 600, 2],
-        "pool_sizes": 4,
+        "hidden_dims": [1200, 600, 2],
+        "activations": ["relu", "relu", "linear"],
         "dropout": [0.2, 0.3, 0.0]
     }
   },

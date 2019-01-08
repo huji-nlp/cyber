@@ -60,11 +60,11 @@
     "use_input_elmo": true,
     "use_integrator_output_elmo": false,
     "output_layer": {
-        "input_dim": 2400,
-        "num_layers": 3,
-        "output_dims": [1200, 600, 2],
-        "pool_sizes": 4,
-        "dropout": [0.2, 0.3, 0.0]
+      "input_dim": 200,
+      "num_layers": 2,
+      "hidden_dims": [200, 3],
+      "activations": ["relu", "linear"],
+      "dropout": [0.2, 0.3, 0.0]
     }
   },
   "iterator": {
