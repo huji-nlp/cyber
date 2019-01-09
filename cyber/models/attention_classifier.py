@@ -12,6 +12,7 @@ from allennlp.nn import util
 from overrides import overrides
 from torch import nn
 
+from cyber.metrics.attention import AttentionMetric
 from cyber.models.document_classifier import DocumentClassifier
 
 
@@ -117,6 +118,8 @@ class AttentionClassifier(DocumentClassifier):
 
         self.loss = torch.nn.CrossEntropyLoss()
         initializer(self)
+
+        self._attention_metric = AttentionMetric()
 
     def check_input(self):
         if self._elmo is None:  # Check that, if elmo is None, none of the elmo flags are set.
@@ -252,10 +255,15 @@ class AttentionClassifier(DocumentClassifier):
             output_dict["loss"] = loss
 
         if metadata is not None:
-            output_dict["tokens"] = [metadata[i]["tokens"] for i in range(batch_size)]
+            tokens = [metadata[i]["tokens"] for i in range(batch_size)]
+            output_dict["tokens"] = tokens
+            labels = [self.vocab.get_token_from_index(x, namespace="labels") for x in
+                      numpy.argmax(class_probabilities.cpu().data.numpy(), axis=-1)]
+            self._attention_metric(tokens, self_weights, labels, text_mask)
 
         return output_dict
 
+    # noinspection PyTypeChecker
     @overrides
     def decode(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, Union[torch.Tensor, List[Any]]]:
         """
@@ -266,6 +274,13 @@ class AttentionClassifier(DocumentClassifier):
         argmax_indices = numpy.argmax(predictions, axis=-1)
         batch_size = len(output_dict["tokens"])
         output_dict["label"] = [self.vocab.get_token_from_index(x, namespace="labels") for x in argmax_indices]
-        output_dict["all_labels"] = batch_size * \
-                                    [[v for k, v in sorted(self.vocab.get_index_to_token_vocabulary("labels").items())]]
+        output_dict["all_labels"] = batch_size * [
+            [v for k, v in sorted(self.vocab.get_index_to_token_vocabulary("labels").items())]
+        ]
         return output_dict
+
+    @overrides
+    def get_metrics(self, reset: bool = False) -> Dict[str, float]:
+        metrics = super().get_metrics(reset=reset)
+        metrics.update(self._attention_metric.get_metric(reset=reset))
+        return metrics
