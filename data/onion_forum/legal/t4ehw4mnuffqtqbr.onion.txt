@@ -1,0 +1,170 @@
+
+
+BF
+
+
+
+BF
+
+
+
+     * [1]Home
+
+     * [2]Login
+
+
+
+     * [3]Album list
+
+          + [4]Last uploads
+
+          + [5]Last comments
+
+          + [6]Most viewed
+
+          + [7]Top rated
+
+          + [8]My Favorites
+
+     * [9]Search
+
+
+
+                            Category Albums Files
+
+
+
+
+
+                                 [10]Colored
+
+
+
+
+
+                                 [11]African
+
+
+
+
+
+                                  [12]Asian
+
+
+
+                                     1 0
+
+
+
+
+
+                          [13]Set 01
+
+
+
+                              0 files
+
+                              Album viewed 0 times
+
+
+
+
+
+
+
+
+
+                           1 albums on 1 page(s)
+
+
+
+
+
+                                  [14]Other
+
+
+
+   388 files in 1 albums and 4 categories with 1 comments viewed 50 times
+
+
+
+                                 Random files
+
+
+
+                             No image to display
+
+
+
+                                Last additions
+
+
+
+                             No image to display
+
+
+
+                               Who is online?
+
+
+
+         There is 1 registered user.  The newest registered user is
+
+    [15]newgm88.  In total there is 1 visitor online: 0 registered users
+
+        and 1 guest.  Most users ever online: 1 on 06/13/14 at 17:26.
+
+       Registered users who have been online in the past 2 minutes: .
+
+
+
+                   Powered by [16]Coppermine Photo Gallery
+
+
+
+References
+
+
+
+   Visible links
+
+   1. file:///opt/HTML/index.php
+
+   2. file:///opt/HTML/login.php?referer=index.php
+
+   3. file:///opt/HTML/index.php?cat=0
+
+   4. file:///opt/HTML/thumbnails.php?album=lastup&cat=0
+
+   5. file:///opt/HTML/thumbnails.php?album=lastcom&cat=0
+
+   6. file:///opt/HTML/thumbnails.php?album=topn&cat=0
+
+   7. file:///opt/HTML/thumbnails.php?album=toprated&cat=0
+
+   8. file:///opt/HTML/thumbnails.php?album=favpics
+
+   9. file:///opt/HTML/search.php
+
+  10. file:///opt/HTML/index.php?cat=10
+
+  11. file:///opt/HTML/index.php?cat=11
+
+  12. file:///opt/HTML/index.php?cat=12
+
+  13. file:///opt/HTML/thumbnails.php?album=1
+
+  14. file:///opt/HTML/index.php?cat=13
+
+  15. file:///opt/HTML/profile.php?uid=1
+
+  16. http://coppermine-gallery.net/
+
+
+
+   Hidden links:
+
+  18. file://localhost/opt/HTML/index.php
+
+  19. file://localhost/opt/HTML/thumbnails.php?album=1
+

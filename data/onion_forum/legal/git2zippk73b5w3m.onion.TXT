@@ -1,0 +1,42 @@
+   [1]cgit logo drkhsh git
+   my personal repositories. this content varies a lot in usefulness and
+   seriousness.
+   [2]index __________ search
+   [3]Name [4]Description [5]Idle
+   [6]dotfiles [7]my config files.
+   [8]dwm [9]my fork of dwm.
+   [10]early-issue [11]A simple initcpio hook, which can display a file
+   like /etc/issue before full dis... 8 weeks
+   [12]git-auf-suedtirolerisch [13]Git af sidtiroulerisch 8 weeks
+   [14]juiced [15]juiced is a suckless and lightweight battery warning
+   daemon. 8 weeks
+   [16]slstatus [17]slstatus is a suckless and lightweight status monitor
+   for window managers which ... 14 days
+   [18]st [19]my fork of st.
+
+   hosted by [20]aaron marcher. access this site via tor:
+   [21]git2zippk73b5w3m.onion.
+
+References
+
+   1. file:///
+   2. file:///
+   3. file:///?s=name
+   4. file:///?s=desc
+   5. file:///?s=idle
+   6. file:///dotfiles/
+   7. file:///dotfiles/
+   8. file:///dwm/
+   9. file:///dwm/
+  10. file:///early-issue/
+  11. file:///early-issue/
+  12. file:///git-auf-suedtirolerisch/
+  13. file:///git-auf-suedtirolerisch/
+  14. file:///juiced/
+  15. file:///juiced/
+  16. file:///slstatus/
+  17. file:///slstatus/
+  18. file:///st/
+  19. file:///st/
+  20. https://drkhsh.at/
+  21. http://git2zippk73b5w3m.onion/

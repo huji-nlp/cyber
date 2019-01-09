@@ -1,0 +1,363 @@
+   #[1]alternate [2]RSS
+
+   [3]jump to content
+     * [4]front
+     * -[5]all
+     * -[6]random
+
+    |
+
+   [7]more »
+   [8]redditor3a2spgd6.onion
+     * [9]hot
+     * [10]new
+     * [11]rising
+     * [12]controversial
+     * [13]top
+     * [14]gilded
+     * [15]promoted
+
+   want to join? [16]sign in or create an account in seconds|
+     * [17]English
+
+   ____________________ Submit
+
+   use the following search parameters to narrow your results:
+
+   subreddit:subreddit
+          find submissions in "subreddit"
+
+   author:username
+          find submissions by "username"
+
+   site:example.com
+          find submissions from "example.com"
+
+   url:text
+          search for "text" in url
+
+   selftext:text
+          search for "text" in self post contents
+
+   self:yes (or self:no)
+          include (or exclude) self posts
+
+   nsfw:yes (or nsfw:no)
+          include (or exclude) results marked as NSFW
+
+   e.g. subreddit:aww site:imgur.com dog
+
+   [18]see the search faq for details.
+
+   [19]advanced search: by author, subreddit...
+   ____________________ ____________________
+   [ ] remember me[20]reset password
+   (BUTTON) login
+   [21]Submit a new link
+   [22]Submit a new text post
+
+reddit is a platform for internet communities
+
+where your votes shape what the world is talking about.
+
+   [23]learn more ›
+
+   it looks like you haven't subscribed to any subreddits yet. want some
+   ideas?
+
+   ____________________
+     * try these:
+     * [24]serendipity
+
+   (BUTTON) prev (BUTTON) next
+   what's this?
+
+   This sponsored link is an advertisement generated with our
+   [25]self-serve advertisement tool.
+
+   Use of this tool is open to all members of reddit.com, and for as
+   little as $20.00 you can advertise in this area. [26]Get started ›
+
+   This area shows new and upcoming links. Vote on links here to help them
+   become popular, and click the forwards and backwards buttons to view
+   more.
+
+   Enter a keyword or topic to discover new subreddits around your
+   interests. Be specific!
+
+   You can access this tool at any time on the [27]/subreddits/ page.
+
+   there doesn't seem to be anything here
+
+     * about
+     * [28]blog
+     * [29]about
+     * [30]team
+     * [31]source code
+     * [32]advertise
+     * [33]jobs
+
+     * help
+     * [34]site rules
+     * [35]FAQ
+     * [36]wiki
+     * [37]reddiquette
+     * [38]transparency
+     * [39]contact us
+
+     * apps & tools
+     * [40]Alien Blue iOS app
+     * [41]reddit AMA app
+     * [42]mobile beta
+     * [43]buttons
+
+     * <3
+     * [44]reddit gold
+     * [45]reddit store
+     * [46]redditgifts
+     * [47]reddit.tv
+     * [48]radio reddit
+
+   [49]Powered by reddit.
+
+   Use of this site constitutes acceptance of our [50]User Agreement and
+   [51]Privacy Policy. © 2016 reddit inc. All rights reserved.
+
+   REDDIT and the ALIEN Logo are registered trademarks of reddit inc.
+
+   π Rendered by PID 4770 on redditor at 2016-07-29 04:23:11.188823+00:00
+   running a40bf6f .
+   [52]alternate [53]RSS
+
+   [54]jump to content
+     * [55]front
+     * -[56]all
+     * -[57]random
+
+    |
+
+   [58]more »
+   [59]redditor3a2spgd6.onion
+     * [60]hot
+     * [61]new
+     * [62]rising
+     * [63]controversial
+     * [64]top
+     * [65]gilded
+     * [66]promoted
+
+   want to join? [67]sign in or create an account in seconds|
+     * [68]English
+
+   ____________________ Submit
+
+   use the following search parameters to narrow your results:
+
+   subreddit:subreddit
+          find submissions in "subreddit"
+
+   author:username
+          find submissions by "username"
+
+   site:example.com
+          find submissions from "example.com"
+
+   url:text
+          search for "text" in url
+
+   selftext:text
+          search for "text" in self post contents
+
+   self:yes (or self:no)
+          include (or exclude) self posts
+
+   nsfw:yes (or nsfw:no)
+          include (or exclude) results marked as NSFW
+
+   e.g. subreddit:aww site:imgur.com dog
+
+   [69]see the search faq for details.
+
+   [70]advanced search: by author, subreddit...
+   ____________________ ____________________
+   [ ] remember me[71]reset password
+   (BUTTON) login
+   [72]Submit a new link
+   [73]Submit a new text post
+
+reddit is a platform for internet communities
+
+where your votes shape what the world is talking about.
+
+   [74]learn more ›
+
+   it looks like you haven't subscribed to any subreddits yet. want some
+   ideas?
+
+   ____________________
+     * try these:
+     * [75]serendipity
+
+   (BUTTON) prev (BUTTON) next
+   what's this?
+
+   This sponsored link is an advertisement generated with our
+   [76]self-serve advertisement tool.
+
+   Use of this tool is open to all members of reddit.com, and for as
+   little as $20.00 you can advertise in this area. [77]Get started ›
+
+   This area shows new and upcoming links. Vote on links here to help them
+   become popular, and click the forwards and backwards buttons to view
+   more.
+
+   Enter a keyword or topic to discover new subreddits around your
+   interests. Be specific!
+
+   You can access this tool at any time on the [78]/subreddits/ page.
+
+   there doesn't seem to be anything here
+
+     * about
+     * [79]blog
+     * [80]about
+     * [81]team
+     * [82]source code
+     * [83]advertise
+     * [84]jobs
+
+     * help
+     * [85]site rules
+     * [86]FAQ
+     * [87]wiki
+     * [88]reddiquette
+     * [89]transparency
+     * [90]contact us
+
+     * apps & tools
+     * [91]Alien Blue iOS app
+     * [92]reddit AMA app
+     * [93]mobile beta
+     * [94]buttons
+
+     * <3
+     * [95]reddit gold
+     * [96]reddit store
+     * [97]redditgifts
+     * [98]reddit.tv
+     * [99]radio reddit
+
+   [100]Powered by reddit.
+
+   Use of this site constitutes acceptance of our [101]User Agreement and
+   [102]Privacy Policy. © 2016 reddit inc. All rights reserved.
+
+   REDDIT and the ALIEN Logo are registered trademarks of reddit inc.
+
+   π Rendered by PID 4770 on redditor at 2016-07-29 04:23:11.188823+00:00
+   running a40bf6f .
+
+References
+
+   1. https://simple.redditor3a2spgd6.onion/
+   2. http://redditor3a2spgd6.onion/.rss
+   3. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html#content
+   4. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html
+   5. http://redditor3a2spgd6.onion/r/all
+   6. http://redditor3a2spgd6.onion/r/random/
+   7. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/subreddits/index.html
+   8. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html
+   9. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html
+  10. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/new/index.html
+  11. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/rising/index.html
+  12. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/controversial/index.html
+  13. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/top/index.html
+  14. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/gilded/index.html
+  15. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/ads/index.html
+  16. http://redditor3a2spgd6.onion/login
+  17. javascript:void(0)
+  18. https://www.reddit.com/wiki/search
+  19. https://www.reddit.com/wiki/search
+  20. http://redditor3a2spgd6.onion/password
+  21. http://redditor3a2spgd6.onion/submit
+  22. http://redditor3a2spgd6.onion/submit?selftext=true
+  23. http://redditor3a2spgd6.onion/about
+  24. http://redditor3a2spgd6.onion/r/random
+  25. http://www.reddit.com/wiki/selfserve
+  26. http://redditor3a2spgd6.onion/advertising
+  27. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/subreddits/index.html
+  28. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/blog/index.html
+  29. http://redditor3a2spgd6.onion/about/
+  30. http://redditor3a2spgd6.onion/about/team/
+  31. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/code/index.html
+  32. http://redditor3a2spgd6.onion/advertising/
+  33. http://redditor3a2spgd6.onion/jobs/
+  34. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/rules/index.html
+  35. http://redditor3a2spgd6.onion/wiki/faq/
+  36. http://redditor3a2spgd6.onion/wiki/
+  37. http://redditor3a2spgd6.onion/wiki/reddiquette/
+  38. http://redditor3a2spgd6.onion/wiki/transparency/
+  39. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/contact/index.html
+  40. http://alienblue.org/
+  41. http://redditama.reddit.com/
+  42. https://m.reddit.com/
+  43. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/buttons/index.html
+  44. http://redditor3a2spgd6.onion/gold/about/
+  45. http://redditmarket.com/
+  46. http://redditgifts.com/
+  47. http://reddit.tv/
+  48. http://radioreddit.com/
+  49. http://www.reddit.com/code/
+  50. http://redditor3a2spgd6.onion/help/useragreement
+  51. http://redditor3a2spgd6.onion/help/privacypolicy
+  52. https://simple.redditor3a2spgd6.onion/
+  53. http://redditor3a2spgd6.onion/.rss
+  54. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html#content
+  55. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html
+  56. http://redditor3a2spgd6.onion/r/all
+  57. http://redditor3a2spgd6.onion/r/random/
+  58. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/subreddits/index.html
+  59. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html
+  60. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/index.html
+  61. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/new/index.html
+  62. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/rising/index.html
+  63. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/controversial/index.html
+  64. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/top/index.html
+  65. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/gilded/index.html
+  66. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/ads/index.html
+  67. http://redditor3a2spgd6.onion/login
+  68. javascript:void(0)
+  69. https://www.reddit.com/wiki/search
+  70. https://www.reddit.com/wiki/search
+  71. http://redditor3a2spgd6.onion/password
+  72. http://redditor3a2spgd6.onion/submit
+  73. http://redditor3a2spgd6.onion/submit?selftext=true
+  74. http://redditor3a2spgd6.onion/about
+  75. http://redditor3a2spgd6.onion/r/random
+  76. http://www.reddit.com/wiki/selfserve
+  77. http://redditor3a2spgd6.onion/advertising
+  78. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/subreddits/index.html
+  79. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/blog/index.html
+  80. http://redditor3a2spgd6.onion/about/
+  81. http://redditor3a2spgd6.onion/about/team/
+  82. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/code/index.html
+  83. http://redditor3a2spgd6.onion/advertising/
+  84. http://redditor3a2spgd6.onion/jobs/
+  85. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/rules/index.html
+  86. http://redditor3a2spgd6.onion/wiki/faq/
+  87. http://redditor3a2spgd6.onion/wiki/
+  88. http://redditor3a2spgd6.onion/wiki/reddiquette/
+  89. http://redditor3a2spgd6.onion/wiki/transparency/
+  90. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/contact/index.html
+  91. http://alienblue.org/
+  92. http://redditama.reddit.com/
+  93. https://m.reddit.com/
+  94. file:///home/UNIVERSIDAD/redditor3a2spgd6.onion/buttons/index.html
+  95. http://redditor3a2spgd6.onion/gold/about/
+  96. http://redditmarket.com/
+  97. http://redditgifts.com/
+  98. http://reddit.tv/
+  99. http://radioreddit.com/
+ 100. http://www.reddit.com/code/
+ 101. http://redditor3a2spgd6.onion/help/useragreement
+ 102. http://redditor3a2spgd6.onion/help/privacypolicy

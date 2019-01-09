@@ -1,0 +1,816 @@
+
+
+   [6]Logo
+
+   [7]cryptostorm.is [8]Chat [9]Sitemap [10]Github
+
+     * [11]cryptostorm forum
+
+     * [12]FAQ
+
+     * [13]Register
+
+     * [14]Login
+
+
+
+     * [15]Quick links
+
+          + [16]Unanswered topics
+
+          + [17]Active topics
+
+          + [18]Search
+
+          + [19]The team
+
+     * [20]FAQ
+
+     * [21]Login
+
+     * [22]Register
+
+     * Styles
+
+          + [23]Preset 1
+
+          + [24]Preset 2
+
+          + [25]Preset 3
+
+          + [26]Preset 4
+
+          + [27]Preset 5
+
+          + [28]Preset 6
+
+          + [29]Preset 7
+
+          + [30]Preset 8
+
+          + [31]Preset 9
+
+          + [32]Preset 10
+
+
+
+   Ξ welcome to cryptostorm's member forums ~ you don't have to be a
+
+   cryptostorm member to post here Ξ
+
+   ∞ take a peek at our legendary [33]cryptostorm_is twitter feed if
+
+   you're into that kind of thing ∞
+
+   Ξ we're rolling out [34]voodoo network security across cryptostorm -
+
+   [35]big things happening, indeed! Ξ
+
+   Ξ any OpenVPN configs found on the forum are likely outdated. For the
+
+   latest, visit [36]GitHub Ξ
+
+     *
+
+
+
+        Forum
+
+                Topics
+
+                Posts
+
+                Last post
+
+
+
+     * User avatar
+
+
+
+        [37]member support & tech assistance
+
+                Looking for assistance with a cryptostorm connection
+
+                issue? Post here & we'll help out. Also: if you're not
+
+                sure where to post, do so here & we'll move things around
+
+                as needed. Also: for quickest support, email our oddly
+
+                calm & easygoing support reps at
+
+                [38]support@cryptostorm.is :)
+
+
+
+                Topics: 335
+
+                335Topics
+
+                2053 Posts
+
+                Last post [39]Re: Linux Not Connecting: Ple… by
+
+                [40]parityboy [41]View the latest post
+
+                Thu Aug 11, 2016 8:21 pm
+
+
+
+     * User avatar
+
+
+
+        [42]general chat, suggestions, industry news
+
+                Freewheeling spot to chew the fat on anything
+
+                cryptostorm-related that doesn't fit elsewhere (i.e.
+
+                support, howto, &c.). Criticism & praise & brainstorming &
+
+                requests for explanation... this is where it goes when
+
+                it's hot & ready for action! :-)
+
+
+
+                Topics: 387
+
+                387Topics
+
+                1373 Posts
+
+                Last post [43]Re: Concerns re: distribution… by
+
+                [44]parityboy [45]View the latest post
+
+                Thu Aug 11, 2016 8:06 pm
+
+
+
+     * User avatar
+
+
+
+        [46]cryptostorm in-depth: announcements, how it works, what it is
+
+                Looking for a bit more than customer support, and want to
+
+                learn more about what cryptostorm is , what we've been
+
+                announcing lately, and how the cryptostorm network makes
+
+                the magic? This is a great place to start, so make
+
+                yourself at home!
+
+
+
+                Topics: 172
+
+                172Topics
+
+                1998 Posts
+
+                Last post [47]Re: HOWTO: OpenWRT Routers by [48]hashtable
+
+                [49]View the latest post
+
+                Sun Aug 07, 2016 7:05 am
+
+
+
+     * User avatar
+
+
+
+        [50]cryptostorm reborn: voodoo networking, stormtokens, PostVPN
+
+                exotic netsecurity
+
+                To stay ahead of new and evolving threats, cryptostorm has
+
+                always looked out past standard network security tools.
+
+                Here, we discuss and fine-tune our work in bringing
+
+                newly-created capabilities and newly-discovered knowledge
+
+                to bear as we keep cryptostorm in the forefront of
+
+                tomorrow's network security landscape.
+
+
+
+                Topics: 52
+
+                52Topics
+
+                382 Posts
+
+                Last post [51]Re: Developer of anonymous To… by
+
+                [52]parityboy [53]View the latest post
+
+                Tue Jun 14, 2016 4:05 pm
+
+
+
+     * User avatar
+
+
+
+        [54]DeepDNS.net - cryptostorm's no-compromise DNS resolver
+
+                framework
+
+                A core mission of cryptostorm is ensuring consistent,
+
+                reliable network security with minimal fuss & drama. From
+
+                DNS-based services like our DeepDNS in-browser native
+
+                .onion/.i2p site access, through grounbreaking research on
+
+                IP6 leakblocking, & to firewall-based structures to enable
+
+                "fail-closed" security, this is where we discuss & develop
+
+                cryptostorm-style leakblock tech.
+
+
+
+                Topics: 38
+
+                38Topics
+
+                312 Posts
+
+                Last post [55]Re: TrackerSmacker: philosoph… by
+
+                [56]parityboy [57]View the latest post
+
+                Sun Jul 31, 2016 7:43 pm
+
+
+
+     * User avatar I
+
+
+
+        [58]independent cryptostorm token resellers, & tokens 101
+
+                This subforum is both a place to find & discuss
+
+                independent cryptostorm token resellers, as well as to
+
+                discuss cryptocoin related topics such as buying bitcoins,
+
+                altcoins such as darkcoins and dogecoins, "tumbling"
+
+                coins, theoretical/mathematical topics, etc.
+
+
+
+                Topics: 67
+
+                67Topics
+
+                329 Posts
+
+                Last post [59]Re: Annual token for sale by [60]Tripped
+
+                [61]View the latest post
+
+                Sun Aug 07, 2016 5:15 am
+
+
+
+     * User avatar C
+
+
+
+        [62]cryptofree: no-cost cryptostorm network access
+
+                cryptofree: full-bore cryptostorm protection... for free!
+
+                Capped to 1 megabit down / 500kb up, it's a great way to
+
+                use cryptostorm in a pinch. Play nice & be safe, ok?
+
+
+
+                Topics: 13
+
+                13Topics
+
+                95 Posts
+
+                Last post [63]Re: .onion sites not loading by [64]Zing
+
+                [65]View the latest post
+
+                Fri Apr 01, 2016 7:26 pm
+
+
+
+     * User avatar
+
+       LINK
+
+       J
+
+
+
+        [66]join cryptostorm ~ network access tokens available here
+
+                ☂ full protection within cryptostorm's secure network
+
+                doesn't require you expose personal details - our
+
+                [67]token-based auth keeps you safe and private ☂ ☂
+
+
+
+                Total redirects: 138018
+
+                Total redirects: 138018
+
+
+
+     * User avatar
+
+
+
+        [68]#cleanVPN ∴ encouraging transparency & clean code in network
+
+                privacy service
+
+                Encouraging best practices in the VPN industry via
+
+                independent, community-certified verification of clean
+
+                installers and clean basic service operations. Let's
+
+                reward the good, and make the bad a little bit less
+
+                tempting 〰 [69]github repo 〰 [70]#cleanVPN
+
+
+
+                Topics: 43
+
+                43Topics
+
+                189 Posts
+
+                Last post [71]Re: "VPN review" websites: Go… by
+
+                [72]marzametal [73]View the latest post
+
+                Tue May 17, 2016 8:37 am
+
+
+
+     * User avatar S
+
+
+
+        [74]stormphone - the "cryptostorm phone" project
+
+                [cryptostorm.org/stormphone]
+
+                Support for cstorm connection questions relating to mobile
+
+                platforms: Android, iOS, etc. Also: our team is working on
+
+                [75]stormphone in this area & we'll post public data on
+
+                that project here as it becomes available. Cheers!
+
+
+
+                Topics: 6
+
+                6Topics
+
+                21 Posts
+
+                Last post [76]Re: Talking about IMEIs will … by
+
+                [77]Captain Blackberry [78]View the latest post
+
+                Thu Oct 15, 2015 5:58 pm
+
+
+
+     * User avatar
+
+
+
+        [79]stormlink - cryptostorm's secure "entry node" gateway
+
+                [cryptostorm.org/stormlink]
+
+                twitter: [80]@stormlink_is | web: [81]stormlink.is (in
+
+                process)
+
+
+
+                Topics: 1
+
+                1Topics
+
+                15 Posts
+
+                Last post [82]Re: stormlink: the "cryptosto… by
+
+                [83]parityboy [84]View the latest post
+
+                Mon Nov 16, 2015 1:25 am
+
+
+
+     * User avatar P
+
+
+
+        [85]privacy seppuku: data, tasks, brainstorming
+
+                "Privacy seppuku" is the decision by privacy-oriented
+
+                projects to voluntarily shut down, rather than be coerced
+
+                into collaboration with the surveillance regime and
+
+                concomitant betrayal of customer trust. The [86]'seppuku
+
+                pledge' is a public pre-commitment to the principles of
+
+                privacy seppuku, This is a place to review & discuss...
+
+
+
+                Topics: 6
+
+                6Topics
+
+                36 Posts
+
+                Last post [87]Re: Privacy Seppuku via key "… by
+
+                [88]mustardman [89]View the latest post
+
+                Thu May 28, 2015 12:23 am
+
+
+
+     *
+
+
+
+        [90]miscl.
+
+                Topics
+
+                Posts
+
+                Last post
+
+
+
+     * User avatar D
+
+
+
+        [91]Dumping_Ground
+
+                For spammy stuff, and any other threads or posts that get
+
+                far enough away from being constructive that it's best for
+
+                them to have a bit of a time-out...
+
+
+
+                Topics: 35
+
+                35Topics
+
+                78 Posts
+
+                Last post [92]Games that make you money eve… by [93]nuning
+
+                [94]View the latest post
+
+                Mon Aug 08, 2016 12:58 pm
+
+
+
+
+
+
+
+
+
+   ____________________
+
+   [95]Advanced search
+
+     * Total posts 8397
+
+     * Total topics 1485
+
+     * Total members 1352
+
+     * Our newest member [96]kaoliang
+
+
+
+Login
+
+
+
+   Username____________
+
+
+
+   ____________________
+
+
+
+   [ ] Remember me
+
+   Login
+
+
+
+     * [97]cryptostorm.org [98]cryptostorm forum
+
+     * All times are UTC+05:00
+
+     * [99]Reset
+
+     * [100]Delete all board cookies
+
+     * [101]The team
+
+     * [102]Contact us
+
+
+
+   [103]Top
+
+     * [104]cryptostorm.org [105]cryptostorm forum
+
+     * All times are UTC+05:00
+
+     * [106]Delete all board cookies
+
+     * [107]The team
+
+     * [108]Contact us
+
+
+
+References
+
+
+
+   Visible links
+
+   1. https://cryptostorm.org/feed.php
+
+   2. https://cryptostorm.org/feed.php?mode=news
+
+   3. https://cryptostorm.org/feed.php?mode=forums
+
+   4. https://cryptostorm.org/feed.php?mode=topics
+
+   5. https://cryptostorm.org/feed.php?mode=topics_active
+
+   6. https://cryptostorm.org/
+
+   7. https://cryptostorm.is/
+
+   8. https://cryptostorm.nu/chat
+
+   9. https://cryptostorm.is/map
+
+  10. https://github.com/cryptostorm
+
+  11. https://cryptostorm.org/
+
+  12. file:///opt/HTML/faq.php?sid=ac42b94dabe6176031a68a80b495a488
+
+  13. file:///opt/HTML/ucp.php?mode=register&sid=ac42b94dabe6176031a68a80b495a488
+
+  14. file:///opt/HTML/ucp.php?mode=login&sid=ac42b94dabe6176031a68a80b495a488
+
+  15. file:///opt/HTML/cstorm5dzz7vgmvo.onion.html
+
+  16. file:///opt/HTML/search.php?search_id=unanswered&sid=ac42b94dabe6176031a68a80b495a488
+
+  17. file:///opt/HTML/search.php?search_id=active_topics&sid=ac42b94dabe6176031a68a80b495a488
+
+  18. file:///opt/HTML/search.php?sid=ac42b94dabe6176031a68a80b495a488
+
+  19. file:///opt/HTML/memberlist.php?mode=team&sid=ac42b94dabe6176031a68a80b495a488
+
+  20. file:///opt/HTML/faq.php?sid=ac42b94dabe6176031a68a80b495a488
+
+  21. file:///opt/HTML/ucp.php?mode=login&sid=ac42b94dabe6176031a68a80b495a488
+
+  22. file:///opt/HTML/ucp.php?mode=register&sid=ac42b94dabe6176031a68a80b495a488
+
+  23. file:///opt/HTML/index.php?presets=preset1
+
+  24. file:///opt/HTML/index.php?presets=preset2
+
+  25. file:///opt/HTML/index.php?presets=preset3
+
+  26. file:///opt/HTML/index.php?presets=preset4
+
+  27. file:///opt/HTML/index.php?presets=preset5
+
+  28. file:///opt/HTML/index.php?presets=preset6
+
+  29. file:///opt/HTML/index.php?presets=preset7
+
+  30. file:///opt/HTML/index.php?presets=preset8
+
+  31. file:///opt/HTML/index.php?presets=preset9
+
+  32. file:///opt/HTML/index.php?presets=preset10
+
+  33. https://twitter.com/cryptostorm_is
+
+  34. http://voodoo.network/
+
+  35. https://cryptostorm.org/viewtopic.php?f=51&t=8995
+
+  36. https://github.com/cryptostorm/cryptostorm_client_configuration_files
+
+  37. file:///opt/HTML/viewforum.php?f=32&sid=ac42b94dabe6176031a68a80b495a488
+
+  38. mailto:support@cryptostorm.is
+
+  39. file:///opt/HTML/viewtopic.php?f=32&p=16237&sid=ac42b94dabe6176031a68a80b495a488#p16237
+
+  40. file:///opt/HTML/memberlist.php?mode=viewprofile&u=1922&sid=ac42b94dabe6176031a68a80b495a488
+
+  41. file:///opt/HTML/viewtopic.php?f=32&p=16237&sid=ac42b94dabe6176031a68a80b495a488#p16237
+
+  42. file:///opt/HTML/viewforum.php?f=51&sid=ac42b94dabe6176031a68a80b495a488
+
+  43. file:///opt/HTML/viewtopic.php?f=51&p=16236&sid=ac42b94dabe6176031a68a80b495a488#p16236
+
+  44. file:///opt/HTML/memberlist.php?mode=viewprofile&u=1922&sid=ac42b94dabe6176031a68a80b495a488
+
+  45. file:///opt/HTML/viewtopic.php?f=51&p=16236&sid=ac42b94dabe6176031a68a80b495a488#p16236
+
+  46. file:///opt/HTML/viewforum.php?f=37&sid=ac42b94dabe6176031a68a80b495a488
+
+  47. file:///opt/HTML/viewtopic.php?f=37&p=16227&sid=ac42b94dabe6176031a68a80b495a488#p16227
+
+  48. file:///opt/HTML/memberlist.php?mode=viewprofile&u=2871&sid=ac42b94dabe6176031a68a80b495a488
+
+  49. file:///opt/HTML/viewtopic.php?f=37&p=16227&sid=ac42b94dabe6176031a68a80b495a488#p16227
+
+  50. file:///opt/HTML/viewforum.php?f=67&sid=ac42b94dabe6176031a68a80b495a488
+
+  51. file:///opt/HTML/viewtopic.php?f=67&p=16009&sid=ac42b94dabe6176031a68a80b495a488#p16009
+
+  52. file:///opt/HTML/memberlist.php?mode=viewprofile&u=1922&sid=ac42b94dabe6176031a68a80b495a488
+
+  53. file:///opt/HTML/viewtopic.php?f=67&p=16009&sid=ac42b94dabe6176031a68a80b495a488#p16009
+
+  54. file:///opt/HTML/viewforum.php?f=46&sid=ac42b94dabe6176031a68a80b495a488
+
+  55. file:///opt/HTML/viewtopic.php?f=46&p=16197&sid=ac42b94dabe6176031a68a80b495a488#p16197
+
+  56. file:///opt/HTML/memberlist.php?mode=viewprofile&u=1922&sid=ac42b94dabe6176031a68a80b495a488
+
+  57. file:///opt/HTML/viewtopic.php?f=46&p=16197&sid=ac42b94dabe6176031a68a80b495a488#p16197
+
+  58. file:///opt/HTML/viewforum.php?f=49&sid=ac42b94dabe6176031a68a80b495a488
+
+  59. file:///opt/HTML/viewtopic.php?f=49&p=16226&sid=ac42b94dabe6176031a68a80b495a488#p16226
+
+  60. file:///opt/HTML/memberlist.php?mode=viewprofile&u=3058&sid=ac42b94dabe6176031a68a80b495a488
+
+  61. file:///opt/HTML/viewtopic.php?f=49&p=16226&sid=ac42b94dabe6176031a68a80b495a488#p16226
+
+  62. file:///opt/HTML/viewforum.php?f=58&sid=ac42b94dabe6176031a68a80b495a488
+
+  63. file:///opt/HTML/viewtopic.php?f=58&p=15722&sid=ac42b94dabe6176031a68a80b495a488#p15722
+
+  64. file:///opt/HTML/memberlist.php?mode=viewprofile&u=2774&sid=ac42b94dabe6176031a68a80b495a488
+
+  65. file:///opt/HTML/viewtopic.php?f=58&p=15722&sid=ac42b94dabe6176031a68a80b495a488#p15722
+
+  66. file:///opt/HTML/viewforum.php?f=43&sid=ac42b94dabe6176031a68a80b495a488
+
+  67. https://cryptostorm.org/tokens
+
+  68. file:///opt/HTML/viewforum.php?f=60&sid=ac42b94dabe6176031a68a80b495a488
+
+  69. https://github.com/cryptostorm/cleanvpn.org
+
+  70. https://twitter.com/cryptostorm_is/status/571659059465740289
+
+  71. file:///opt/HTML/viewtopic.php?f=60&p=15946&sid=ac42b94dabe6176031a68a80b495a488#p15946
+
+  72. file:///opt/HTML/memberlist.php?mode=viewprofile&u=1660&sid=ac42b94dabe6176031a68a80b495a488
+
+  73. file:///opt/HTML/viewtopic.php?f=60&p=15946&sid=ac42b94dabe6176031a68a80b495a488#p15946
+
+  74. file:///opt/HTML/viewforum.php?f=45&sid=ac42b94dabe6176031a68a80b495a488
+
+  75. http://stormphone.net/
+
+  76. file:///opt/HTML/viewtopic.php?f=45&p=14876&sid=ac42b94dabe6176031a68a80b495a488#p14876
+
+  77. file:///opt/HTML/memberlist.php?mode=viewprofile&u=2591&sid=ac42b94dabe6176031a68a80b495a488
+
+  78. file:///opt/HTML/viewtopic.php?f=45&p=14876&sid=ac42b94dabe6176031a68a80b495a488#p14876
+
+  79. file:///opt/HTML/viewforum.php?f=54&sid=ac42b94dabe6176031a68a80b495a488
+
+  80. https://twitter.com/stormlink_is
+
+  81. http://stormlink.is/
+
+  82. file:///opt/HTML/viewtopic.php?f=54&p=15015&sid=ac42b94dabe6176031a68a80b495a488#p15015
+
+  83. file:///opt/HTML/memberlist.php?mode=viewprofile&u=1922&sid=ac42b94dabe6176031a68a80b495a488
+
+  84. file:///opt/HTML/viewtopic.php?f=54&p=15015&sid=ac42b94dabe6176031a68a80b495a488#p15015
+
+  85. file:///opt/HTML/viewforum.php?f=63&sid=ac42b94dabe6176031a68a80b495a488
+
+  86. http://seppukupledge.org/
+
+  87. file:///opt/HTML/viewtopic.php?f=63&p=14042&sid=ac42b94dabe6176031a68a80b495a488#p14042
+
+  88. file:///opt/HTML/memberlist.php?mode=viewprofile&u=2305&sid=ac42b94dabe6176031a68a80b495a488
+
+  89. file:///opt/HTML/viewtopic.php?f=63&p=14042&sid=ac42b94dabe6176031a68a80b495a488#p14042
+
+  90. file:///opt/HTML/viewforum.php?f=42&sid=ac42b94dabe6176031a68a80b495a488
+
+  91. file:///opt/HTML/viewforum.php?f=18&sid=ac42b94dabe6176031a68a80b495a488
+
+  92. file:///opt/HTML/viewtopic.php?f=18&p=16229&sid=ac42b94dabe6176031a68a80b495a488#p16229
+
+  93. file:///opt/HTML/memberlist.php?mode=viewprofile&u=3041&sid=ac42b94dabe6176031a68a80b495a488
+
+  94. file:///opt/HTML/viewtopic.php?f=18&p=16229&sid=ac42b94dabe6176031a68a80b495a488#p16229
+
+  95. file:///opt/HTML/cstorm5dzz7vgmvo.onion.html
+
+  96. file:///opt/HTML/memberlist.php?mode=viewprofile&u=3062&sid=ac42b94dabe6176031a68a80b495a488
+
+  97. https://cryptostorm.org/
+
+  98. file:///opt/HTML/index.php?sid=ac42b94dabe6176031a68a80b495a488
+
+  99. file:///opt/HTML/index.php?delete_cookies=true
+
+ 100. file:///opt/HTML/ucp.php?mode=delete_cookies&sid=ac42b94dabe6176031a68a80b495a488
+
+ 101. file:///opt/HTML/memberlist.php?mode=team&sid=ac42b94dabe6176031a68a80b495a488
+
+ 102. file:///opt/HTML/memberlist.php?mode=contactadmin&sid=ac42b94dabe6176031a68a80b495a488
+
+ 103. file:///opt/HTML/cstorm5dzz7vgmvo.onion.html#top
+
+ 104. https://cryptostorm.org/
+
+ 105. file:///opt/HTML/index.php?sid=ac42b94dabe6176031a68a80b495a488
+
+ 106. file:///opt/HTML/ucp.php?mode=delete_cookies&sid=ac42b94dabe6176031a68a80b495a488
+
+ 107. file:///opt/HTML/memberlist.php?mode=team&sid=ac42b94dabe6176031a68a80b495a488
+
+ 108. file:///opt/HTML/memberlist.php?mode=contactadmin&sid=ac42b94dabe6176031a68a80b495a488
+
+
+
+   Hidden links:
+
+ 110. https://twitter.com/cryptostorm_is
+
+ 111. https://plus.google.com/104226483259232722176/
+
+ 112. https://cryptostorm.org/feed.php
+
+ 113. file://localhost/boardannouncements/close?hash=24e9922b&sid=ac42b94dabe6176031a68a80b495a488
+
+ 114. file://localhost/opt/HTML/cstorm5dzz7vgmvo.onion.html
+
+ 115. file://localhost/opt/HTML/cstorm5dzz7vgmvo.onion.html
+

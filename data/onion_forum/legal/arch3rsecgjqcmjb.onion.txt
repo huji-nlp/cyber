@@ -1,0 +1,548 @@
+
+
+arch3rsec
+
+
+
+   Security. Focused. Uncensored.
+
+
+
+   [1]Skip to content
+
+
+
+   ____________________ (BUTTON) Search [2]Advanced search
+
+
+
+     * [3]Quick links
+
+          +
+
+          + [4]Unanswered posts
+
+          + [5]Active topics
+
+          +
+
+          + [6]Search
+
+          +
+
+          + [7]The team
+
+          +
+
+     * [8]FAQ
+
+     * [9]Login
+
+     * [10]Register
+
+
+
+     * [11]Board index
+
+     * [12]Search
+
+
+
+   It is currently Fri Aug 12, 2016 11:41 am
+
+     *
+
+
+
+        [13]Discussions
+
+                Topics
+
+                Posts
+
+                Last post
+
+
+
+     *
+
+
+
+        [14]Tor Network
+
+                News, vulnerabilities, and exploits in the Tor network
+
+                itself, including hidden services in general. Please see
+
+                the other section on specific hidden services.
+
+
+
+                Topics: 1
+
+                1 Topics
+
+                2 Posts
+
+                Last post [15]Re: What happen with Vidalia?
+
+                by [16]Knox Boxer [17]View the latest post
+
+                Fri May 20, 2016 1:06 pm
+
+
+
+     *
+
+
+
+        [18]Hidden Services
+
+                Discussion about security issues with specific hidden
+
+                services. For more general hidden service stuff, see the
+
+                Tor Network section. As with the rest of this board,
+
+                spamming is not allowed and subject to removal.
+
+
+
+                Topics: 2
+
+                2 Topics
+
+                2 Posts
+
+                Last post [19]BTC Mixing services links
+
+                by [20]whosyours [21]View the latest post
+
+                Sun May 22, 2016 8:31 pm
+
+
+
+     *
+
+
+
+        [22]Cryptography
+
+                Encryption, decryption, signing, verifying, and obscuring.
+
+
+
+                Topics: 1
+
+                1 Topics
+
+                3 Posts
+
+                Last post [23]Re: Kelopatra
+
+                by [24]N0SiS11 [25]View the latest post
+
+                Sun Mar 27, 2016 4:16 am
+
+
+
+     *
+
+
+
+        [26]Hardware
+
+                Everything chips, boards, and other stuff, including
+
+                Arduinos, embedded systems, and the renowned Raspberry Pi.
+
+
+
+                Topics: 1
+
+                1 Topics
+
+                2 Posts
+
+                Last post [27]Re: tor router
+
+                by [28]arch3r [29]View the latest post
+
+                Tue Feb 23, 2016 1:55 am
+
+
+
+     *
+
+
+
+        [30]Software
+
+                Tricking software into doing things it shouldn't.
+
+
+
+                Topics: 1
+
+                1 Topics
+
+                1 Posts
+
+                Last post [31]Linux Kernel Info
+
+                by [32]N0SiS11 [33]View the latest post
+
+                Fri Mar 04, 2016 5:36 pm
+
+
+
+     *
+
+
+
+        [34]Networks
+
+                Attacks and tricks on networks not including the Tor
+
+                network. For attacks on Tor, visit the Tor Network
+
+                section.
+
+
+
+                0 Topics
+
+                0 Posts
+
+                No posts
+
+
+
+
+
+     *
+
+
+
+        [35]Social Engineering
+
+                Possibly the funnest attack of them all: tricking people
+
+                into doing things for you or giving you information that
+
+                they normally wouldn't.
+
+
+
+                0 Topics
+
+                0 Posts
+
+                No posts
+
+
+
+
+
+     *
+
+
+
+        [36]Other
+
+                Any hacking topic that doesn't belong in any other section
+
+                can go here. If there are enough posts about a certain
+
+                topic here that can all fit into one group, an
+
+                administrator will make a new section out of it.
+
+
+
+                Topics: 1
+
+                1 Topics
+
+                1 Posts
+
+                Last post [37]XSS Help
+
+                by [38]N0SiS11 [39]View the latest post
+
+                Wed Mar 16, 2016 10:39 pm
+
+
+
+     *
+
+
+
+        [40]Off Topic
+
+                Just want to chat? We're here for you. Anything that fits
+
+                into another section of the forum should go there. As
+
+                always, spam content will be deleted.
+
+
+
+                Topics: 3
+
+                3 Topics
+
+                9 Posts
+
+                Last post [41]Re: New User
+
+                by [42]arch3r [43]View the latest post
+
+                Mon Mar 07, 2016 5:14 am
+
+
+
+     *
+
+
+
+        [44]Meta
+
+                Topics
+
+                Posts
+
+                Last post
+
+
+
+     *
+
+
+
+        [45]Announcements
+
+
+
+                0 Topics
+
+                0 Posts
+
+                No posts
+
+
+
+
+
+     *
+
+
+
+        [46]Post Archive
+
+                Where the old threads go to die.
+
+
+
+                Topics: 1
+
+                1 Topics
+
+                9 Posts
+
+                Last post [47]Re: Looking for moderators!
+
+                by [48]ass1 [49]View the latest post
+
+                Fri Feb 26, 2016 10:32 pm
+
+
+
+[50]Login  •  [51]Register
+
+
+
+   Username: __________ Password: __________ | Remember me [ ] Login
+
+
+
+Who is online
+
+
+
+   In total there is 1 user online :: 0 registered, 0 hidden and 1 guest
+
+   (based on users active over the past 5 minutes)
+
+   Most users ever online was 2 on Sun Mar 29, 2015 4:05 am
+
+   Registered users: No registered users
+
+   Legend: [52]Administrators, [53]Global moderators
+
+
+
+Statistics
+
+
+
+   Total posts 30 • Total topics 12 • Total members 44 • Our newest member
+
+   [54]daddy
+
+     * [55]Board index
+
+     * All times are UTC
+
+     * [56]Delete all board cookies
+
+     * [57]The team
+
+
+
+
+
+
+
+
+
+   Powered by [58]phpBB® Forum Software © phpBB Limited
+
+
+
+   cron
+
+
+
+References
+
+
+
+   Visible links
+
+   1. file:///opt/HTML/arch3rsecgjqcmjb.onion.html#start_here
+
+   2. file:///opt/HTML/search.php?sid=12dbcdb96a68c082225cb80a056d70b6
+
+   3. file:///opt/HTML/arch3rsecgjqcmjb.onion.html
+
+   4. file:///opt/HTML/search.php?search_id=unanswered&sid=12dbcdb96a68c082225cb80a056d70b6
+
+   5. file:///opt/HTML/search.php?search_id=active_topics&sid=12dbcdb96a68c082225cb80a056d70b6
+
+   6. file:///opt/HTML/search.php?sid=12dbcdb96a68c082225cb80a056d70b6
+
+   7. file:///opt/HTML/memberlist.php?mode=team&sid=12dbcdb96a68c082225cb80a056d70b6
+
+   8. file:///opt/HTML/faq.php?sid=12dbcdb96a68c082225cb80a056d70b6
+
+   9. file:///opt/HTML/ucp.php?mode=login&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  10. file:///opt/HTML/ucp.php?mode=register&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  11. file:///opt/HTML/index.php?sid=12dbcdb96a68c082225cb80a056d70b6
+
+  12. file:///opt/HTML/search.php?sid=12dbcdb96a68c082225cb80a056d70b6
+
+  13. file:///opt/HTML/viewforum.php?f=11&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  14. file:///opt/HTML/viewforum.php?f=12&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  15. file:///opt/HTML/viewtopic.php?f=12&p=33&sid=12dbcdb96a68c082225cb80a056d70b6#p33
+
+  16. file:///opt/HTML/memberlist.php?mode=viewprofile&u=78&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  17. file:///opt/HTML/viewtopic.php?f=12&p=33&sid=12dbcdb96a68c082225cb80a056d70b6#p33
+
+  18. file:///opt/HTML/viewforum.php?f=13&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  19. file:///opt/HTML/viewtopic.php?f=13&p=34&sid=12dbcdb96a68c082225cb80a056d70b6#p34
+
+  20. file:///opt/HTML/memberlist.php?mode=viewprofile&u=79&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  21. file:///opt/HTML/viewtopic.php?f=13&p=34&sid=12dbcdb96a68c082225cb80a056d70b6#p34
+
+  22. file:///opt/HTML/viewforum.php?f=20&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  23. file:///opt/HTML/viewtopic.php?f=20&p=32&sid=12dbcdb96a68c082225cb80a056d70b6#p32
+
+  24. file:///opt/HTML/memberlist.php?mode=viewprofile&u=69&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  25. file:///opt/HTML/viewtopic.php?f=20&p=32&sid=12dbcdb96a68c082225cb80a056d70b6#p32
+
+  26. file:///opt/HTML/viewforum.php?f=14&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  27. file:///opt/HTML/viewtopic.php?f=14&p=18&sid=12dbcdb96a68c082225cb80a056d70b6#p18
+
+  28. file:///opt/HTML/memberlist.php?mode=viewprofile&u=2&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  29. file:///opt/HTML/viewtopic.php?f=14&p=18&sid=12dbcdb96a68c082225cb80a056d70b6#p18
+
+  30. file:///opt/HTML/viewforum.php?f=15&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  31. file:///opt/HTML/viewtopic.php?f=15&p=23&sid=12dbcdb96a68c082225cb80a056d70b6#p23
+
+  32. file:///opt/HTML/memberlist.php?mode=viewprofile&u=69&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  33. file:///opt/HTML/viewtopic.php?f=15&p=23&sid=12dbcdb96a68c082225cb80a056d70b6#p23
+
+  34. file:///opt/HTML/viewforum.php?f=16&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  35. file:///opt/HTML/viewforum.php?f=17&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  36. file:///opt/HTML/viewforum.php?f=18&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  37. file:///opt/HTML/viewtopic.php?f=18&p=27&sid=12dbcdb96a68c082225cb80a056d70b6#p27
+
+  38. file:///opt/HTML/memberlist.php?mode=viewprofile&u=69&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  39. file:///opt/HTML/viewtopic.php?f=18&p=27&sid=12dbcdb96a68c082225cb80a056d70b6#p27
+
+  40. file:///opt/HTML/viewforum.php?f=19&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  41. file:///opt/HTML/viewtopic.php?f=19&p=26&sid=12dbcdb96a68c082225cb80a056d70b6#p26
+
+  42. file:///opt/HTML/memberlist.php?mode=viewprofile&u=2&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  43. file:///opt/HTML/viewtopic.php?f=19&p=26&sid=12dbcdb96a68c082225cb80a056d70b6#p26
+
+  44. file:///opt/HTML/viewforum.php?f=8&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  45. file:///opt/HTML/viewforum.php?f=9&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  46. file:///opt/HTML/viewforum.php?f=10&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  47. file:///opt/HTML/viewtopic.php?f=10&p=21&sid=12dbcdb96a68c082225cb80a056d70b6#p21
+
+  48. file:///opt/HTML/memberlist.php?mode=viewprofile&u=61&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  49. file:///opt/HTML/viewtopic.php?f=10&p=21&sid=12dbcdb96a68c082225cb80a056d70b6#p21
+
+  50. file:///opt/HTML/ucp.php?mode=login&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  51. file:///opt/HTML/ucp.php?mode=register&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  52. file:///opt/HTML/memberlist.php?mode=group&g=5&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  53. file:///opt/HTML/memberlist.php?mode=group&g=4&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  54. file:///opt/HTML/memberlist.php?mode=viewprofile&u=90&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  55. file:///opt/HTML/index.php?sid=12dbcdb96a68c082225cb80a056d70b6
+
+  56. file:///opt/HTML/ucp.php?mode=delete_cookies&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  57. file:///opt/HTML/memberlist.php?mode=team&sid=12dbcdb96a68c082225cb80a056d70b6
+
+  58. https://www.phpbb.com/
+
+
+
+   Hidden links:
+
+  60. file://localhost/opt/HTML/index.php?sid=12dbcdb96a68c082225cb80a056d70b6
+
+  61. file://localhost/opt/HTML/arch3rsecgjqcmjb.onion.html
+
+  62. file://localhost/opt/HTML/arch3rsecgjqcmjb.onion.html
+

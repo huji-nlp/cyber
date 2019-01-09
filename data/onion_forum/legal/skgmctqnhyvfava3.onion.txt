@@ -1,0 +1,1334 @@
+   #[1]Dev.SN is dead developers [2]Search Dev.SN [3]Yesterday's News
+   [4]Dev.SN Atom [5]Dev.SN RSS
+
+   [6]Stories
+   [7]Slash Boxes
+   [8]Comments
+
+[9]Dev.SN
+
+     * [10]/dev/random
+     * [11]Rehash
+     * [12]News
+     * [13]Software
+     * [14]Mobile
+
+Dev.SN is dead developers
+
+Navigation
+
+     * [15]About
+     * [16]FAQ
+     * [17]Journals
+     * [18]Topics
+     * [19]Authors
+     * [20]Search
+     * [21]Polls
+     * [22]Hall of Fame
+     * [23]Submit Story
+     * [24]Buy Gift Sub
+     * [25]Create Account
+     * [26]Log In
+
+Sections
+
+     * [27]Dev.SN
+     * [28]Bewbs
+     * [29]Breaking News
+     * [30]Meta
+
+Dev.SN
+
+     * [31]Twitter
+     * [32]IRC
+     * [33]Wiki
+     * [34]Who's Who?
+     * [35]Bug List
+
+Log In
+
+   Log In
+
+   Nickname ____________________ Password ____________________ [ ] Public
+   Terminal
+   Log In
+     __________________________________________________________________
+
+   [36]Create Account  |  [37]Retrieve Password
+     __________________________________________________________________
+
+   [38]Gift a Subscription
+   [39]Why Gift
+
+Featured Articles
+
+     * [40]Welcome to SoylentNews!
+     * [41]Reworking Moderation Access
+     * [42]Massive Site Progress - Status for 02/16
+     * [43]Welcome to the World of Tomorrow... Today!
+     * [44]What We Are Doing: On Incorporation And Other News ...
+
+Site News
+
+   Attention Bitcoin Subscribers
+   [45]Please read this
+     __________________________________________________________________
+
+   [46]Base Funding Goal: $3,000
+   Progress So Far: $196
+   6%
+   [47]Stretch Funding Goal: $2,000
+   Progress So Far: $367
+   18%
+
+   Updated: 2015-05-31
+     __________________________________________________________________
+
+   Support us: [48]Subscribe Here
+   (Now accepting Bitcoin)
+     __________________________________________________________________
+
+   Buy [49]SoylentNews Swag
+     __________________________________________________________________
+
+   We always have a place for talented people, visit the [50]Get Involved
+   section on the wiki to see how you can make SoylentNews better.
+     __________________________________________________________________
+
+   [51]The First Draft of the SN manifesto is available
+     __________________________________________________________________
+
+Poll
+
+   what is (2 + 4) * (3 + 5)
+     * (*) 48
+     * ( ) 6 * 8
+     * ( ) 6 + 10 + 12 + 20
+     * ( ) other, please specify
+
+   Vote [ [52]Results | [53]Polls ]
+   Comments:1 | Votes:8
+
+[54]Most Recent Journal Entries
+
+     * [55][martyb] SUBJECT
+     * [56][crutchy] my dog has fleas
+     * [57][cmn32480] Your mother, Trebeck!
+     * [58][janrinok] test test test
+     * [59][paulej72] test journal
+     * [60][NCommander] thegerg
+     * [61][The Mighty Buzzard] 5 3 & 2 but 17, also " is a double quote
+     * [62][gishzida] Keeping Quiet in the face of Ignorance.
+     * [63][Papas Fritas] The POW Who Blinked 'Torture' In Morse Code
+     * [64][fliptop] Cheap surveillance w/ perl and IP cameras, part 5
+     * [65][Yog-Yogguth] Bacon trick
+     * [66][mcgrew] Progress update
+     * [67][prospectacle] Voting Script 3 - Borda Count
+     * [68][stderr] DST testing...
+     * [69][Ethanol-fueled] Mick the Mouse
+
+Older Stuff
+
+     *
+       [70]February 4
+          + [71]A Crane Just Collapsed in NYC (2)
+     *
+       [72]January 30
+          + [73]20160130a - Nested Comment tests (34)
+     *
+       [74]January 13
+          + [75]testing again for whitespace in urls (5)
+     *
+       [76]November 16
+          + [77]20151116a — submitting story to see what has been added to
+            editor interface, etc. (POT) (4)
+     *
+       [78]October 21
+          + [79]This is our Dev Server (0)
+     *
+       [80]October 2
+          + [81]20151002a - test post (4)
+     *
+       [82]August 20
+          + [83]checking topics and nexuses (2)
+     *
+       [84]August 10
+          + [85]photos of miniatures from blade runner (0)
+     *
+       [86]July 13
+          + [87]Merge: janrinok (07/13 19:22 GMT) (1)
+          + [88]BEGIN quote: &#34; ampersand: &amp; lessthan: &lt;
+            greaterthan: &gt; END (0)
+          + [89]Test of auto submissions Tue Jul 7 19:31:38 2015 (0)
+          + [90]Qualcomm retracts its DMCA takedown request, issues
+            apologies (0)
+          + [91]my 2¢ worth (0)
+     *
+       [92]June 18
+          + [93]Merge Story Test (6)
+     *
+       [94]June 12
+          + [95]Russian Arrested in Guam on Array of U.S. Hacking Charges
+            ࠃࠄࠅࠆ (2)
+
+   [96]Older Articles
+   [97]Yesterday's News
+
+Quick Links
+
+   Found a bug? Report it on the development tracker: [98]SoylentNews Dev
+   16/07/29/0238234 story
+
+[99]Meta: [100]meta meta - posting to meta section/nexus
+
+   posted by [101]martyb on Thursday July 28, @10:39PM   [102]
+   Printer-friendly
+   [103]/dev/random
+
+   [104]martyb writes:
+
+   Story posted to the meta section.
+
+   This is the second paragraph
+
+   This is the third, and last, paragraph.
+     __________________________________________________________________
+
+   [105]Original Submission
+     * [106]Read More...
+     * [107]0 comments
+     * [108]Meta
+
+   16/07/29/0036220 story
+
+[109]Meta: [110]Please ignore this story unless, of course, it does not get
+published
+
+   posted by [111]martyb on Thursday July 28, @08:37PM   [112]
+   Printer-friendly
+   from the meta-hyper-control-alt-cokebottle dept.
+   [113]Slash
+
+   [114]martyb writes:
+
+   Here's some text for the submission
+     __________________________________________________________________
+
+   [115]Original Submission
+     * [116]Read More...
+     * [117]0 comments
+     * [118]Meta
+
+   16/07/29/0030201 story
+
+[119]Breaking News: [120]AMD's high-end Zen CPU coming in late 2016
+
+   posted by [121]martyb on Thursday July 28, @08:30PM   [122]
+   Printer-friendly
+   from the testing-testing-testing dept.
+   [123]News
+
+   exec writes:
+
+   Story automatically generated by StoryBot Version 0.0.1f (Development).
+
+   Original URL:
+   [124]http://www.cnet.com/news/amds-high-end-zen-cpu-coming-in-late-2016
+   /#ftag=CAD590a51e
+
+   Title: AMD's high-end Zen CPU coming in late 2016 - CNET
+
+   AMD is finally ready to get back in the CPU fight against Intel,
+   preparing a new Zen line of processors for late 2016 or early 2017.
+
+   [...] Codenamed "Summit Ridge," the eight-core, 16 thread Zen CPU made
+   its first public appearance here in [125]Taipei at Computex. The
+   company claims the new processors will provide a 40 percent performance
+   increase from AMD's [126]Excavator chips.
+
+   Be sure to check [127]CNET's Computex hub for all the coverage from the
+   show floors.
+
+   -- submitted from IRC
+     __________________________________________________________________
+
+   [128]Original Submission
+     * [129]Read More...
+     * [130]0 comments
+     * [131]Breaking News
+
+   16/07/26/130245 story
+
+[132]Bewbs: [133]bewbs
+
+   posted by [134]The Mighty Buzzard on Tuesday July 26, @09:08AM   [135]
+   Printer-friendly
+   from the jiggle-jiggle-jiggle dept.
+   [136]/dev/random
+
+   [137]The Mighty Buzzard writes:
+
+   Welcome the best nexus evar!
+     __________________________________________________________________
+
+   [138]Original Submission
+     * [139]Read More...
+     * [140]0 comments
+     * [141]Bewbs
+
+   16/07/26/1118204 story
+
+[142]3 New York Police Commanders Are Arrested on Corruption Charges
+
+   posted by [143]The Mighty Buzzard on Tuesday July 26, @05:37AM   [144]
+   Printer-friendly
+   from the foo-bar-baz-bot dept.
+   [145]Bewbs
+
+   "x" writes:
+
+   The charges detail lavish gifts officials are accused of receiving and
+   stem from one of several continuing investigations into Mayor Bill de
+   Blasio’s fund-raising.
+
+   [146]http://www.nytimes.com/2016/06/21/nyregion/new-york-police-arrest.
+   html
+
+   -- submitted from IRC
+     __________________________________________________________________
+
+   [147]Original Submission
+     * [148]Read More...
+     * [149]0 comments
+
+   16/07/24/2353241 story
+
+[150]IT experts call for boost to NBN speeds
+
+   posted by [151]paulej72 on Saturday July 23, @08:00PM   [152]
+   Printer-friendly
+   [153]News
+
+   exec writes:
+
+   Australia needs to hasten the rollout of the National Broadband Network
+   and increase its ranks of cyber security experts, according to
+   Australia's IT sector.
+
+   [154]http://www.news.com.au/finance/business/breaking-news/it-experts-c
+   all-for-boost-to-nbn-speeds/news-story/894054755bce0cb85435651821b241f2
+
+   -- submitted from IRC
+     __________________________________________________________________
+
+   [155]Original Submission
+     * [156]Read More...
+     * [157]0 comments
+
+   16/05/21/135214 story
+
+[158]testing 20160521a
+
+   posted by [159]martyb on Saturday May 21, @09:20AM   [160]
+   Printer-friendly
+   [161]/dev/random
+
+   [162]martyb writes:
+
+   testing 20160521a
+
+   Adjust this story's "Release Time" and "Display" checkbox selection to
+   test the default for other story's default "Release Time".
+     __________________________________________________________________
+
+   [163]Original Submission
+     * [164]Read More...
+     * [165]2 comments
+
+   16/02/14/1628207 story
+
+[166]story to link to poll
+
+   posted by [167]martyb on Sunday February 14, @12:29PM   [168]
+   Printer-friendly
+   from the linky-linky-䑄; dept.
+   [169]/dev/random
+
+   [170]martyb writes:
+
+   Test story to try and link to a poll.
+     __________________________________________________________________
+
+   [171]Original Submission
+   [ ] More
+
+   This is the extended copy body text. This is test data that should
+   toggle open.
+     * [172]Read More...
+     * [173]28 words in story
+     * [174]0 comments
+
+   16/02/11/2217236 story
+
+[175]Test-o-rama
+
+   posted by [176]takyon on Thursday February 11, @06:16PM   [177]
+   Printer-friendly
+   from the huuuurrrrrr dept.
+   [178]/dev/random
+
+   (DOI: 10.1002/adhm.201500792)
+
+   [DOI: 10.1000/d1111-2222(66)01234-5]
+
+   [DOI: 10.1000/d1111-2222(66)01234-5]fail
+
+   Study [DOI: 10.1002/adhm.201500792.
+
+   Study (DOI: 10.1000/d1111-2222(66)01234-5).
+
+   Study [DOI: 10.1000/d1111-2222(66)01234-5].
+
+   dfdfddf(open, DOI: 10.1136/bmj.i788)
+
+   ddffdfd[open, DOI: 10.1136/bmj.i788]
+
+   Overspending driven by oversized single dose vials of cancer drugs
+   (open, DOI: 10.1136/bmj.i788)
+
+   A quantum Fredkin gate (open, DOI: 10.1126/sciadv.1501531)
+
+   [Continues...]
+
+   stuff
+   [ ] More
+   [EXTENDED COPY]
+
+   Overspending driven by oversized single dose vials of cancer drugs
+   (open, DOI: 10.1136/bmj.i788)
+
+   dfdfddf(open, doi: 10.1136/bmj.i788)
+
+   dfdfddf(open, dOi: 10.1136/bmj.i788)
+
+   ddffdfd[open, doi: 10.1136/bmj.i788]
+
+   ddffdfd[open, dOi: 10.1136/bmj.i788]
+     * [179]Read More...
+     * [180]74 words in story
+     * [181]3 comments
+
+   16/02/09/1251232 story
+
+[182]Fill er up
+
+   posted by [183]The Mighty Buzzard on Monday February 08, @09:11AM
+   [184] Printer-friendly
+   from the woot-woot dept.
+   [185]Rehash
+
+   [186]The Mighty Buzzard writes:
+
+   This is a story to hang a bunch of AC comments on so I can test
+   moderation on them.
+     __________________________________________________________________
+
+   [187]Original Submission
+     * [188]Read More...
+     * [189]26 comments
+
+   <  [190]Yesterday's News  >
+   I'm not a robot like you. I don't like having disks crammed into me...
+   unless they're Oreos, and then only in the mouth. -- Fry
+
+   ____________________ Search
+
+     * [191]Home
+     * [192]About
+     * [193]FAQ
+     * [194]Journals
+     * [195]Topics
+     * [196]Authors
+     * [197]Search
+     * [198]Polls
+     * [199]Submit Story
+     * [200]Buy Gift Sub
+     * [201]Create Account
+     * [202]Log In
+     * [203]Atom feed [204]RSS feed
+
+[205]Close
+
+   [206]Dev.SN is dead developers [207]Search Dev.SN [208]Yesterday's News
+   [209]Dev.SN Atom [210]Dev.SN RSS
+
+   [211]Stories
+   [212]Slash Boxes
+   [213]Comments
+
+[214]Dev.SN
+
+     * [215]/dev/random
+     * [216]Rehash
+     * [217]News
+     * [218]Software
+     * [219]Mobile
+
+Dev.SN is dead developers
+
+Navigation
+
+     * [220]About
+     * [221]FAQ
+     * [222]Journals
+     * [223]Topics
+     * [224]Authors
+     * [225]Search
+     * [226]Polls
+     * [227]Hall of Fame
+     * [228]Submit Story
+     * [229]Buy Gift Sub
+     * [230]Create Account
+     * [231]Log In
+
+Sections
+
+     * [232]Dev.SN
+     * [233]Bewbs
+     * [234]Breaking News
+     * [235]Meta
+
+Dev.SN
+
+     * [236]Twitter
+     * [237]IRC
+     * [238]Wiki
+     * [239]Who's Who?
+     * [240]Bug List
+
+Log In
+
+   Log In
+
+   Nickname ____________________ Password ____________________ [ ] Public
+   Terminal
+   Log In
+     __________________________________________________________________
+
+   [241]Create Account  |  [242]Retrieve Password
+     __________________________________________________________________
+
+   [243]Gift a Subscription
+   [244]Why Gift
+
+Featured Articles
+
+     * [245]Welcome to SoylentNews!
+     * [246]Reworking Moderation Access
+     * [247]Massive Site Progress - Status for 02/16
+     * [248]Welcome to the World of Tomorrow... Today!
+     * [249]What We Are Doing: On Incorporation And Other News ...
+
+Site News
+
+   Attention Bitcoin Subscribers
+   [250]Please read this
+     __________________________________________________________________
+
+   [251]Base Funding Goal: $3,000
+   Progress So Far: $196
+   6%
+   [252]Stretch Funding Goal: $2,000
+   Progress So Far: $367
+   18%
+
+   Updated: 2015-05-31
+     __________________________________________________________________
+
+   Support us: [253]Subscribe Here
+   (Now accepting Bitcoin)
+     __________________________________________________________________
+
+   Buy [254]SoylentNews Swag
+     __________________________________________________________________
+
+   We always have a place for talented people, visit the [255]Get Involved
+   section on the wiki to see how you can make SoylentNews better.
+     __________________________________________________________________
+
+   [256]The First Draft of the SN manifesto is available
+     __________________________________________________________________
+
+Poll
+
+   what is (2 + 4) * (3 + 5)
+     * (*) 48
+     * ( ) 6 * 8
+     * ( ) 6 + 10 + 12 + 20
+     * ( ) other, please specify
+
+   Vote [ [257]Results | [258]Polls ]
+   Comments:1 | Votes:8
+
+[259]Most Recent Journal Entries
+
+     * [260][martyb] SUBJECT
+     * [261][crutchy] my dog has fleas
+     * [262][cmn32480] Your mother, Trebeck!
+     * [263][janrinok] test test test
+     * [264][paulej72] test journal
+     * [265][NCommander] thegerg
+     * [266][The Mighty Buzzard] 5 3 & 2 but 17, also " is a double quote
+     * [267][gishzida] Keeping Quiet in the face of Ignorance.
+     * [268][Papas Fritas] The POW Who Blinked 'Torture' In Morse Code
+     * [269][fliptop] Cheap surveillance w/ perl and IP cameras, part 5
+     * [270][Yog-Yogguth] Bacon trick
+     * [271][mcgrew] Progress update
+     * [272][prospectacle] Voting Script 3 - Borda Count
+     * [273][stderr] DST testing...
+     * [274][Ethanol-fueled] Mick the Mouse
+
+Older Stuff
+
+     *
+       [275]February 4
+          + [276]A Crane Just Collapsed in NYC (2)
+     *
+       [277]January 30
+          + [278]20160130a - Nested Comment tests (34)
+     *
+       [279]January 13
+          + [280]testing again for whitespace in urls (5)
+     *
+       [281]November 16
+          + [282]20151116a — submitting story to see what has been added
+            to editor interface, etc. (POT) (4)
+     *
+       [283]October 21
+          + [284]This is our Dev Server (0)
+     *
+       [285]October 2
+          + [286]20151002a - test post (4)
+     *
+       [287]August 20
+          + [288]checking topics and nexuses (2)
+     *
+       [289]August 10
+          + [290]photos of miniatures from blade runner (0)
+     *
+       [291]July 13
+          + [292]Merge: janrinok (07/13 19:22 GMT) (1)
+          + [293]BEGIN quote: &#34; ampersand: &amp; lessthan: &lt;
+            greaterthan: &gt; END (0)
+          + [294]Test of auto submissions Tue Jul 7 19:31:38 2015 (0)
+          + [295]Qualcomm retracts its DMCA takedown request, issues
+            apologies (0)
+          + [296]my 2¢ worth (0)
+     *
+       [297]June 18
+          + [298]Merge Story Test (6)
+     *
+       [299]June 12
+          + [300]Russian Arrested in Guam on Array of U.S. Hacking Charges
+            ࠃࠄࠅࠆ (2)
+
+   [301]Older Articles
+   [302]Yesterday's News
+
+Quick Links
+
+   Found a bug? Report it on the development tracker: [303]SoylentNews Dev
+   16/07/29/0238234 story
+
+[304]Meta: [305]meta meta - posting to meta section/nexus
+
+   posted by [306]martyb on Thursday July 28, @10:39PM   [307]
+   Printer-friendly
+   [308]/dev/random
+
+   [309]martyb writes:
+
+   Story posted to the meta section.
+
+   This is the second paragraph
+
+   This is the third, and last, paragraph.
+     __________________________________________________________________
+
+   [310]Original Submission
+     * [311]Read More...
+     * [312]0 comments
+     * [313]Meta
+
+   16/07/29/0036220 story
+
+[314]Meta: [315]Please ignore this story unless, of course, it does not get
+published
+
+   posted by [316]martyb on Thursday July 28, @08:37PM   [317]
+   Printer-friendly
+   from the meta-hyper-control-alt-cokebottle dept.
+   [318]Slash
+
+   [319]martyb writes:
+
+   Here's some text for the submission
+     __________________________________________________________________
+
+   [320]Original Submission
+     * [321]Read More...
+     * [322]0 comments
+     * [323]Meta
+
+   16/07/29/0030201 story
+
+[324]Breaking News: [325]AMD's high-end Zen CPU coming in late 2016
+
+   posted by [326]martyb on Thursday July 28, @08:30PM   [327]
+   Printer-friendly
+   from the testing-testing-testing dept.
+   [328]News
+
+   exec writes:
+
+   Story automatically generated by StoryBot Version 0.0.1f (Development).
+
+   Original URL:
+   [329]http://www.cnet.com/news/amds-high-end-zen-cpu-coming-in-late-2016
+   /#ftag=CAD590a51e
+
+   Title: AMD's high-end Zen CPU coming in late 2016 - CNET
+
+   AMD is finally ready to get back in the CPU fight against Intel,
+   preparing a new Zen line of processors for late 2016 or early 2017.
+
+   [...] Codenamed "Summit Ridge," the eight-core, 16 thread Zen CPU made
+   its first public appearance here in [330]Taipei at Computex. The
+   company claims the new processors will provide a 40 percent performance
+   increase from AMD's [331]Excavator chips.
+
+   Be sure to check [332]CNET's Computex hub for all the coverage from the
+   show floors.
+
+   -- submitted from IRC
+     __________________________________________________________________
+
+   [333]Original Submission
+     * [334]Read More...
+     * [335]0 comments
+     * [336]Breaking News
+
+   16/07/26/130245 story
+
+[337]Bewbs: [338]bewbs
+
+   posted by [339]The Mighty Buzzard on Tuesday July 26, @09:08AM   [340]
+   Printer-friendly
+   from the jiggle-jiggle-jiggle dept.
+   [341]/dev/random
+
+   [342]The Mighty Buzzard writes:
+
+   Welcome the best nexus evar!
+     __________________________________________________________________
+
+   [343]Original Submission
+     * [344]Read More...
+     * [345]0 comments
+     * [346]Bewbs
+
+   16/07/26/1118204 story
+
+[347]3 New York Police Commanders Are Arrested on Corruption Charges
+
+   posted by [348]The Mighty Buzzard on Tuesday July 26, @05:37AM   [349]
+   Printer-friendly
+   from the foo-bar-baz-bot dept.
+   [350]Bewbs
+
+   "x" writes:
+
+   The charges detail lavish gifts officials are accused of receiving and
+   stem from one of several continuing investigations into Mayor Bill de
+   Blasio’s fund-raising.
+
+   [351]http://www.nytimes.com/2016/06/21/nyregion/new-york-police-arrest.
+   html
+
+   -- submitted from IRC
+     __________________________________________________________________
+
+   [352]Original Submission
+     * [353]Read More...
+     * [354]0 comments
+
+   16/07/24/2353241 story
+
+[355]IT experts call for boost to NBN speeds
+
+   posted by [356]paulej72 on Saturday July 23, @08:00PM   [357]
+   Printer-friendly
+   [358]News
+
+   exec writes:
+
+   Australia needs to hasten the rollout of the National Broadband Network
+   and increase its ranks of cyber security experts, according to
+   Australia's IT sector.
+
+   [359]http://www.news.com.au/finance/business/breaking-news/it-experts-c
+   all-for-boost-to-nbn-speeds/news-story/894054755bce0cb85435651821b241f2
+
+   -- submitted from IRC
+     __________________________________________________________________
+
+   [360]Original Submission
+     * [361]Read More...
+     * [362]0 comments
+
+   16/05/21/135214 story
+
+[363]testing 20160521a
+
+   posted by [364]martyb on Saturday May 21, @09:20AM   [365]
+   Printer-friendly
+   [366]/dev/random
+
+   [367]martyb writes:
+
+   testing 20160521a
+
+   Adjust this story's "Release Time" and "Display" checkbox selection to
+   test the default for other story's default "Release Time".
+     __________________________________________________________________
+
+   [368]Original Submission
+     * [369]Read More...
+     * [370]2 comments
+
+   16/02/14/1628207 story
+
+[371]story to link to poll
+
+   posted by [372]martyb on Sunday February 14, @12:29PM   [373]
+   Printer-friendly
+   from the linky-linky-䑄; dept.
+   [374]/dev/random
+
+   [375]martyb writes:
+
+   Test story to try and link to a poll.
+     __________________________________________________________________
+
+   [376]Original Submission
+   [ ] More
+
+   This is the extended copy body text. This is test data that should
+   toggle open.
+     * [377]Read More...
+     * [378]28 words in story
+     * [379]0 comments
+
+   16/02/11/2217236 story
+
+[380]Test-o-rama
+
+   posted by [381]takyon on Thursday February 11, @06:16PM   [382]
+   Printer-friendly
+   from the huuuurrrrrr dept.
+   [383]/dev/random
+
+   (DOI: 10.1002/adhm.201500792)
+
+   [DOI: 10.1000/d1111-2222(66)01234-5]
+
+   [DOI: 10.1000/d1111-2222(66)01234-5]fail
+
+   Study [DOI: 10.1002/adhm.201500792.
+
+   Study (DOI: 10.1000/d1111-2222(66)01234-5).
+
+   Study [DOI: 10.1000/d1111-2222(66)01234-5].
+
+   dfdfddf(open, DOI: 10.1136/bmj.i788)
+
+   ddffdfd[open, DOI: 10.1136/bmj.i788]
+
+   Overspending driven by oversized single dose vials of cancer drugs
+   (open, DOI: 10.1136/bmj.i788)
+
+   A quantum Fredkin gate (open, DOI: 10.1126/sciadv.1501531)
+
+   [Continues...]
+
+   stuff
+   [ ] More
+   [EXTENDED COPY]
+
+   Overspending driven by oversized single dose vials of cancer drugs
+   (open, DOI: 10.1136/bmj.i788)
+
+   dfdfddf(open, doi: 10.1136/bmj.i788)
+
+   dfdfddf(open, dOi: 10.1136/bmj.i788)
+
+   ddffdfd[open, doi: 10.1136/bmj.i788]
+
+   ddffdfd[open, dOi: 10.1136/bmj.i788]
+     * [384]Read More...
+     * [385]74 words in story
+     * [386]3 comments
+
+   16/02/09/1251232 story
+
+[387]Fill er up
+
+   posted by [388]The Mighty Buzzard on Monday February 08, @09:11AM
+   [389] Printer-friendly
+   from the woot-woot dept.
+   [390]Rehash
+
+   [391]The Mighty Buzzard writes:
+
+   This is a story to hang a bunch of AC comments on so I can test
+   moderation on them.
+     __________________________________________________________________
+
+   [392]Original Submission
+     * [393]Read More...
+     * [394]26 comments
+
+   <  [395]Yesterday's News  >
+   I'm not a robot like you. I don't like having disks crammed into me...
+   unless they're Oreos, and then only in the mouth. -- Fry
+
+   ____________________ Search
+
+     * [396]Home
+     * [397]About
+     * [398]FAQ
+     * [399]Journals
+     * [400]Topics
+     * [401]Authors
+     * [402]Search
+     * [403]Polls
+     * [404]Submit Story
+     * [405]Buy Gift Sub
+     * [406]Create Account
+     * [407]Log In
+     * [408]Atom feed [409]RSS feed
+
+[410]Close
+
+References
+
+   1. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+   2. https://dev.soylentnews.org/search.pl
+   3. https://dev.soylentnews.org/index.pl?issue=20160728
+   4. https://dev.soylentnews.org/index.pl?content_type=atom
+   5. https://dev.soylentnews.org/index.pl?content_type=rss
+   6. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html#main-articles
+   7. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html#blocks
+   8. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html#acomments
+   9. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+  10. https://dev.soylentnews.org/search.pl?tid=10
+  11. https://dev.soylentnews.org/search.pl?tid=25
+  12. https://dev.soylentnews.org/search.pl?tid=6
+  13. https://dev.soylentnews.org/search.pl?tid=16
+  14. https://dev.soylentnews.org/search.pl?tid=13
+  15. https://dev.soylentnews.org/about.pl
+  16. https://dev.soylentnews.org/faq.pl
+  17. https://dev.soylentnews.org/journal.pl
+  18. https://dev.soylentnews.org/topics.pl
+  19. https://dev.soylentnews.org/authors.pl
+  20. https://dev.soylentnews.org/search.pl
+  21. https://dev.soylentnews.org/pollBooth.pl
+  22. https://dev.soylentnews.org/hof.pl
+  23. https://dev.soylentnews.org/submit.pl
+  24. https://dev.soylentnews.org/subscribe.pl
+  25. https://dev.soylentnews.org/my/newuser
+  26. https://dev.soylentnews.org/my/
+  27. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+  28. https://dev.soylentnews.org/bewbs/
+  29. https://dev.soylentnews.org/breakingnews/
+  30. https://dev.soylentnews.org/meta/
+  31. https://twitter.com/soylentnews/
+  32. http://chat.soylentnews.org/
+  33. http://wiki.soylentnews.org/wiki/SoylentNews
+  34. http://wiki.soylentnews.org/wiki/WhosWho
+  35. https://github.com/SoylentNews/rehash/issues
+  36. https://dev.soylentnews.org/my/newuser
+  37. https://dev.soylentnews.org/my/mailpassword
+  38. https://dev.soylentnews.org/subscribe.pl
+  39. https://dev.soylentnews.org/faq.pl?op=subscribe
+  40. http://soylntnews.org/article.pl?sid=14/02/12/0715245
+  41. http://dev.soylentnews.org/article.pl?sid=14/02/13/0412219
+  42. http://dev.soylentnews.org/article.pl?sid=14/02/16/1331209
+  43. http://dev.soylentnews.org/article.pl?sid=14/02/17/0148235
+  44. http://dev.soylentnews.org/article.pl?sid=14/03/24/080215
+  45. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+  46. http://wiki.soylentnews.org/wiki/Finances
+  47. https://soylentnews.org/meta/article.pl?sid=15/10/21/1516247
+  48. https://soylentnews.org/subscribe.pl
+  49. http://www.zazzle.com/soylentnews*
+  50. http://wiki.soylentnews.org/wiki/SoylentNews#Get_Involved
+  51. https://dev.soylentnews.org/article.pl?sid=14/05/12/0335243
+  52. https://dev.soylentnews.org/pollBooth.pl?qid=23&aid=-1
+  53. https://dev.soylentnews.org/pollBooth.pl
+  54. https://dev.soylentnews.org/journal.pl?op=top
+  55. https://dev.soylentnews.org/~martyb/journal/
+  56. https://dev.soylentnews.org/~crutchy/journal/
+  57. https://dev.soylentnews.org/~cmn32480/journal/
+  58. https://dev.soylentnews.org/~janrinok/journal/
+  59. https://dev.soylentnews.org/~paulej72/journal/
+  60. https://dev.soylentnews.org/~NCommander/journal/
+  61. https://dev.soylentnews.org/~The+Mighty+Buzzard/journal/
+  62. https://dev.soylentnews.org/~gishzida/journal/
+  63. https://dev.soylentnews.org/~Papas+Fritas/journal/
+  64. https://dev.soylentnews.org/~fliptop/journal/
+  65. https://dev.soylentnews.org/~Yog-Yogguth/journal/
+  66. https://dev.soylentnews.org/~mcgrew/journal/
+  67. https://dev.soylentnews.org/~prospectacle/journal/
+  68. https://dev.soylentnews.org/~stderr/journal/
+  69. https://dev.soylentnews.org/~Ethanol-fueled/journal/
+  70. https://dev.soylentnews.org/index.pl?issue=20160204
+  71. https://dev.soylentnews.org/article.pl?sid=16/02/06/0020224
+  72. https://dev.soylentnews.org/index.pl?issue=20160130
+  73. https://dev.soylentnews.org/article.pl?sid=16/01/30/1419211
+  74. https://dev.soylentnews.org/index.pl?issue=20160113
+  75. https://dev.soylentnews.org/article.pl?sid=16/01/13/148201
+  76. https://dev.soylentnews.org/index.pl?issue=20151116
+  77. https://dev.soylentnews.org/article.pl?sid=15/11/17/0126226
+  78. https://dev.soylentnews.org/index.pl?issue=20151021
+  79. https://dev.soylentnews.org/article.pl?sid=15/10/21/189219
+  80. https://dev.soylentnews.org/index.pl?issue=20151002
+  81. https://dev.soylentnews.org/article.pl?sid=15/10/02/1634210
+  82. https://dev.soylentnews.org/index.pl?issue=20150820
+  83. https://dev.soylentnews.org/meta/article.pl?sid=15/08/20/1143237
+  84. https://dev.soylentnews.org/index.pl?issue=20150810
+  85. https://dev.soylentnews.org/meta/article.pl?sid=15/08/10/1538217
+  86. https://dev.soylentnews.org/index.pl?issue=20150713
+  87. https://dev.soylentnews.org/article.pl?sid=15/07/13/1924214
+  88. https://dev.soylentnews.org/article.pl?sid=15/07/13/1918239
+  89. https://dev.soylentnews.org/article.pl?sid=15/07/13/1753242
+  90. https://dev.soylentnews.org/article.pl?sid=15/07/13/1745202
+  91. https://dev.soylentnews.org/article.pl?sid=15/07/13/1648255
+  92. https://dev.soylentnews.org/index.pl?issue=20150618
+  93. https://dev.soylentnews.org/article.pl?sid=15/06/19/0312208
+  94. https://dev.soylentnews.org/index.pl?issue=20150612
+  95. https://dev.soylentnews.org/breakingnews/article.pl?sid=15/06/09/1431212
+  96. https://dev.soylentnews.org/search.pl?sort=2&start=15
+  97. https://dev.soylentnews.org/index.pl?issue=20160728
+  98. https://dev.dev.soylentnews.org/projects/soylentnews/
+  99. https://dev.soylentnews.org/meta/
+ 100. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0238234
+ 101. https://dev.soylentnews.org/~martyb/
+ 102. https://dev.soylentnews.org/print.pl?sid=16/07/29/0238234
+ 103. https://dev.soylentnews.org/search.pl?tid=10
+ 104. https://dev.soylentnews.org/~martyb/
+ 105. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1457
+ 106. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0238234
+ 107. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0238234
+ 108. https://dev.soylentnews.org/meta/
+ 109. https://dev.soylentnews.org/meta/
+ 110. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0036220
+ 111. https://dev.soylentnews.org/~martyb/
+ 112. https://dev.soylentnews.org/print.pl?sid=16/07/29/0036220
+ 113. https://dev.soylentnews.org/search.pl?tid=4
+ 114. https://dev.soylentnews.org/~martyb/
+ 115. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1456
+ 116. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0036220
+ 117. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0036220
+ 118. https://dev.soylentnews.org/meta/
+ 119. https://dev.soylentnews.org/breakingnews/
+ 120. https://dev.soylentnews.org/breakingnews/article.pl?sid=16/07/29/0030201
+ 121. https://dev.soylentnews.org/~martyb/
+ 122. https://dev.soylentnews.org/print.pl?sid=16/07/29/0030201
+ 123. https://dev.soylentnews.org/search.pl?tid=6
+ 124. http://www.cnet.com/news/amds-high-end-zen-cpu-coming-in-late-2016/#ftag=CAD590a51e
+ 125. https://dev.soylentnews.org/computex/
+ 126. https://dev.soylentnews.org/news/amds-newest-a-series-notebooks-will-have-up-to-12-cores/
+ 127. http://www.cnet.com/computex/
+ 128. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1448
+ 129. https://dev.soylentnews.org/breakingnews/article.pl?sid=16/07/29/0030201
+ 130. https://dev.soylentnews.org/breakingnews/article.pl?sid=16/07/29/0030201
+ 131. https://dev.soylentnews.org/breakingnews/
+ 132. https://dev.soylentnews.org/bewbs/
+ 133. https://dev.soylentnews.org/bewbs/article.pl?sid=16/07/26/130245
+ 134. https://dev.soylentnews.org/~The+Mighty+Buzzard/
+ 135. https://dev.soylentnews.org/print.pl?sid=16/07/26/130245
+ 136. https://dev.soylentnews.org/search.pl?tid=10
+ 137. http://{themightybuzzard} {at} {soylentnews.org}/
+ 138. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1455
+ 139. https://dev.soylentnews.org/bewbs/article.pl?sid=16/07/26/130245
+ 140. https://dev.soylentnews.org/bewbs/article.pl?sid=16/07/26/130245
+ 141. https://dev.soylentnews.org/bewbs/
+ 142. https://dev.soylentnews.org/article.pl?sid=16/07/26/1118204
+ 143. https://dev.soylentnews.org/~The+Mighty+Buzzard/
+ 144. https://dev.soylentnews.org/print.pl?sid=16/07/26/1118204
+ 145. https://dev.soylentnews.org/search.pl?tid=26
+ 146. http://www.nytimes.com/2016/06/21/nyregion/new-york-police-arrest.html
+ 147. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1450
+ 148. https://dev.soylentnews.org/article.pl?sid=16/07/26/1118204
+ 149. https://dev.soylentnews.org/article.pl?sid=16/07/26/1118204
+ 150. https://dev.soylentnews.org/article.pl?sid=16/07/24/2353241
+ 151. https://dev.soylentnews.org/~paulej72/
+ 152. https://dev.soylentnews.org/print.pl?sid=16/07/24/2353241
+ 153. https://dev.soylentnews.org/search.pl?tid=6
+ 154. http://www.news.com.au/finance/business/breaking-news/it-experts-call-for-boost-to-nbn-speeds/news-story/894054755bce0cb85435651821b241f2
+ 155. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1452
+ 156. https://dev.soylentnews.org/article.pl?sid=16/07/24/2353241
+ 157. https://dev.soylentnews.org/article.pl?sid=16/07/24/2353241
+ 158. https://dev.soylentnews.org/article.pl?sid=16/05/21/135214
+ 159. https://dev.soylentnews.org/~martyb/
+ 160. https://dev.soylentnews.org/print.pl?sid=16/05/21/135214
+ 161. https://dev.soylentnews.org/search.pl?tid=10
+ 162. https://dev.soylentnews.org/~martyb/
+ 163. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1422
+ 164. https://dev.soylentnews.org/article.pl?sid=16/05/21/135214
+ 165. https://dev.soylentnews.org/article.pl?sid=16/05/21/135214
+ 166. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 167. https://dev.soylentnews.org/~martyb/
+ 168. https://dev.soylentnews.org/print.pl?sid=16/02/14/1628207
+ 169. https://dev.soylentnews.org/search.pl?tid=10
+ 170. https://dev.soylentnews.org/~martyb/
+ 171. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1419
+ 172. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 173. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 174. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 175. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 176. https://dev.soylentnews.org/~takyon/
+ 177. https://dev.soylentnews.org/print.pl?sid=16/02/11/2217236
+ 178. https://dev.soylentnews.org/search.pl?tid=10
+ 179. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 180. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 181. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 182. https://dev.soylentnews.org/article.pl?sid=16/02/09/1251232
+ 183. https://dev.soylentnews.org/~The+Mighty+Buzzard/
+ 184. https://dev.soylentnews.org/print.pl?sid=16/02/09/1251232
+ 185. https://dev.soylentnews.org/search.pl?tid=25
+ 186. mailto:themightybuzzardNO@SPAMsoylentnews.org
+ 187. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1418
+ 188. https://dev.soylentnews.org/article.pl?sid=16/02/09/1251232
+ 189. https://dev.soylentnews.org/article.pl?sid=16/02/09/1251232
+ 190. https://dev.soylentnews.org/index.pl?issue=20160728
+ 191. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+ 192. https://dev.soylentnews.org/about.pl
+ 193. https://dev.soylentnews.org/faq.pl
+ 194. https://dev.soylentnews.org/journal.pl
+ 195. https://dev.soylentnews.org/topics.pl
+ 196. https://dev.soylentnews.org/authors.pl
+ 197. https://dev.soylentnews.org/search.pl
+ 198. https://dev.soylentnews.org/pollBooth.pl
+ 199. https://dev.soylentnews.org/submit.pl
+ 200. https://dev.soylentnews.org/subscribe.pl
+ 201. https://dev.soylentnews.org/my/newuser
+ 202. https://dev.soylentnews.org/my/
+ 203. https://dev.soylentnews.org/index.pl?content_type=atom
+ 204. https://dev.soylentnews.org/index.pl?content_type=rss
+ 205. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+ 206. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+ 207. https://dev.soylentnews.org/search.pl
+ 208. https://dev.soylentnews.org/index.pl?issue=20160728
+ 209. https://dev.soylentnews.org/index.pl?content_type=atom
+ 210. https://dev.soylentnews.org/index.pl?content_type=rss
+ 211. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html#main-articles
+ 212. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html#blocks
+ 213. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html#acomments
+ 214. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+ 215. https://dev.soylentnews.org/search.pl?tid=10
+ 216. https://dev.soylentnews.org/search.pl?tid=25
+ 217. https://dev.soylentnews.org/search.pl?tid=6
+ 218. https://dev.soylentnews.org/search.pl?tid=16
+ 219. https://dev.soylentnews.org/search.pl?tid=13
+ 220. https://dev.soylentnews.org/about.pl
+ 221. https://dev.soylentnews.org/faq.pl
+ 222. https://dev.soylentnews.org/journal.pl
+ 223. https://dev.soylentnews.org/topics.pl
+ 224. https://dev.soylentnews.org/authors.pl
+ 225. https://dev.soylentnews.org/search.pl
+ 226. https://dev.soylentnews.org/pollBooth.pl
+ 227. https://dev.soylentnews.org/hof.pl
+ 228. https://dev.soylentnews.org/submit.pl
+ 229. https://dev.soylentnews.org/subscribe.pl
+ 230. https://dev.soylentnews.org/my/newuser
+ 231. https://dev.soylentnews.org/my/
+ 232. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+ 233. https://dev.soylentnews.org/bewbs/
+ 234. https://dev.soylentnews.org/breakingnews/
+ 235. https://dev.soylentnews.org/meta/
+ 236. https://twitter.com/soylentnews/
+ 237. http://chat.soylentnews.org/
+ 238. http://wiki.soylentnews.org/wiki/SoylentNews
+ 239. http://wiki.soylentnews.org/wiki/WhosWho
+ 240. https://github.com/SoylentNews/rehash/issues
+ 241. https://dev.soylentnews.org/my/newuser
+ 242. https://dev.soylentnews.org/my/mailpassword
+ 243. https://dev.soylentnews.org/subscribe.pl
+ 244. https://dev.soylentnews.org/faq.pl?op=subscribe
+ 245. http://soylntnews.org/article.pl?sid=14/02/12/0715245
+ 246. http://dev.soylentnews.org/article.pl?sid=14/02/13/0412219
+ 247. http://dev.soylentnews.org/article.pl?sid=14/02/16/1331209
+ 248. http://dev.soylentnews.org/article.pl?sid=14/02/17/0148235
+ 249. http://dev.soylentnews.org/article.pl?sid=14/03/24/080215
+ 250. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+ 251. http://wiki.soylentnews.org/wiki/Finances
+ 252. https://soylentnews.org/meta/article.pl?sid=15/10/21/1516247
+ 253. https://soylentnews.org/subscribe.pl
+ 254. http://www.zazzle.com/soylentnews*
+ 255. http://wiki.soylentnews.org/wiki/SoylentNews#Get_Involved
+ 256. https://dev.soylentnews.org/article.pl?sid=14/05/12/0335243
+ 257. https://dev.soylentnews.org/pollBooth.pl?qid=23&aid=-1
+ 258. https://dev.soylentnews.org/pollBooth.pl
+ 259. https://dev.soylentnews.org/journal.pl?op=top
+ 260. https://dev.soylentnews.org/~martyb/journal/
+ 261. https://dev.soylentnews.org/~crutchy/journal/
+ 262. https://dev.soylentnews.org/~cmn32480/journal/
+ 263. https://dev.soylentnews.org/~janrinok/journal/
+ 264. https://dev.soylentnews.org/~paulej72/journal/
+ 265. https://dev.soylentnews.org/~NCommander/journal/
+ 266. https://dev.soylentnews.org/~The+Mighty+Buzzard/journal/
+ 267. https://dev.soylentnews.org/~gishzida/journal/
+ 268. https://dev.soylentnews.org/~Papas+Fritas/journal/
+ 269. https://dev.soylentnews.org/~fliptop/journal/
+ 270. https://dev.soylentnews.org/~Yog-Yogguth/journal/
+ 271. https://dev.soylentnews.org/~mcgrew/journal/
+ 272. https://dev.soylentnews.org/~prospectacle/journal/
+ 273. https://dev.soylentnews.org/~stderr/journal/
+ 274. https://dev.soylentnews.org/~Ethanol-fueled/journal/
+ 275. https://dev.soylentnews.org/index.pl?issue=20160204
+ 276. https://dev.soylentnews.org/article.pl?sid=16/02/06/0020224
+ 277. https://dev.soylentnews.org/index.pl?issue=20160130
+ 278. https://dev.soylentnews.org/article.pl?sid=16/01/30/1419211
+ 279. https://dev.soylentnews.org/index.pl?issue=20160113
+ 280. https://dev.soylentnews.org/article.pl?sid=16/01/13/148201
+ 281. https://dev.soylentnews.org/index.pl?issue=20151116
+ 282. https://dev.soylentnews.org/article.pl?sid=15/11/17/0126226
+ 283. https://dev.soylentnews.org/index.pl?issue=20151021
+ 284. https://dev.soylentnews.org/article.pl?sid=15/10/21/189219
+ 285. https://dev.soylentnews.org/index.pl?issue=20151002
+ 286. https://dev.soylentnews.org/article.pl?sid=15/10/02/1634210
+ 287. https://dev.soylentnews.org/index.pl?issue=20150820
+ 288. https://dev.soylentnews.org/meta/article.pl?sid=15/08/20/1143237
+ 289. https://dev.soylentnews.org/index.pl?issue=20150810
+ 290. https://dev.soylentnews.org/meta/article.pl?sid=15/08/10/1538217
+ 291. https://dev.soylentnews.org/index.pl?issue=20150713
+ 292. https://dev.soylentnews.org/article.pl?sid=15/07/13/1924214
+ 293. https://dev.soylentnews.org/article.pl?sid=15/07/13/1918239
+ 294. https://dev.soylentnews.org/article.pl?sid=15/07/13/1753242
+ 295. https://dev.soylentnews.org/article.pl?sid=15/07/13/1745202
+ 296. https://dev.soylentnews.org/article.pl?sid=15/07/13/1648255
+ 297. https://dev.soylentnews.org/index.pl?issue=20150618
+ 298. https://dev.soylentnews.org/article.pl?sid=15/06/19/0312208
+ 299. https://dev.soylentnews.org/index.pl?issue=20150612
+ 300. https://dev.soylentnews.org/breakingnews/article.pl?sid=15/06/09/1431212
+ 301. https://dev.soylentnews.org/search.pl?sort=2&start=15
+ 302. https://dev.soylentnews.org/index.pl?issue=20160728
+ 303. https://dev.dev.soylentnews.org/projects/soylentnews/
+ 304. https://dev.soylentnews.org/meta/
+ 305. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0238234
+ 306. https://dev.soylentnews.org/~martyb/
+ 307. https://dev.soylentnews.org/print.pl?sid=16/07/29/0238234
+ 308. https://dev.soylentnews.org/search.pl?tid=10
+ 309. https://dev.soylentnews.org/~martyb/
+ 310. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1457
+ 311. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0238234
+ 312. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0238234
+ 313. https://dev.soylentnews.org/meta/
+ 314. https://dev.soylentnews.org/meta/
+ 315. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0036220
+ 316. https://dev.soylentnews.org/~martyb/
+ 317. https://dev.soylentnews.org/print.pl?sid=16/07/29/0036220
+ 318. https://dev.soylentnews.org/search.pl?tid=4
+ 319. https://dev.soylentnews.org/~martyb/
+ 320. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1456
+ 321. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0036220
+ 322. https://dev.soylentnews.org/meta/article.pl?sid=16/07/29/0036220
+ 323. https://dev.soylentnews.org/meta/
+ 324. https://dev.soylentnews.org/breakingnews/
+ 325. https://dev.soylentnews.org/breakingnews/article.pl?sid=16/07/29/0030201
+ 326. https://dev.soylentnews.org/~martyb/
+ 327. https://dev.soylentnews.org/print.pl?sid=16/07/29/0030201
+ 328. https://dev.soylentnews.org/search.pl?tid=6
+ 329. http://www.cnet.com/news/amds-high-end-zen-cpu-coming-in-late-2016/#ftag=CAD590a51e
+ 330. https://dev.soylentnews.org/computex/
+ 331. https://dev.soylentnews.org/news/amds-newest-a-series-notebooks-will-have-up-to-12-cores/
+ 332. http://www.cnet.com/computex/
+ 333. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1448
+ 334. https://dev.soylentnews.org/breakingnews/article.pl?sid=16/07/29/0030201
+ 335. https://dev.soylentnews.org/breakingnews/article.pl?sid=16/07/29/0030201
+ 336. https://dev.soylentnews.org/breakingnews/
+ 337. https://dev.soylentnews.org/bewbs/
+ 338. https://dev.soylentnews.org/bewbs/article.pl?sid=16/07/26/130245
+ 339. https://dev.soylentnews.org/~The+Mighty+Buzzard/
+ 340. https://dev.soylentnews.org/print.pl?sid=16/07/26/130245
+ 341. https://dev.soylentnews.org/search.pl?tid=10
+ 342. http://{themightybuzzard} {at} {soylentnews.org}/
+ 343. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1455
+ 344. https://dev.soylentnews.org/bewbs/article.pl?sid=16/07/26/130245
+ 345. https://dev.soylentnews.org/bewbs/article.pl?sid=16/07/26/130245
+ 346. https://dev.soylentnews.org/bewbs/
+ 347. https://dev.soylentnews.org/article.pl?sid=16/07/26/1118204
+ 348. https://dev.soylentnews.org/~The+Mighty+Buzzard/
+ 349. https://dev.soylentnews.org/print.pl?sid=16/07/26/1118204
+ 350. https://dev.soylentnews.org/search.pl?tid=26
+ 351. http://www.nytimes.com/2016/06/21/nyregion/new-york-police-arrest.html
+ 352. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1450
+ 353. https://dev.soylentnews.org/article.pl?sid=16/07/26/1118204
+ 354. https://dev.soylentnews.org/article.pl?sid=16/07/26/1118204
+ 355. https://dev.soylentnews.org/article.pl?sid=16/07/24/2353241
+ 356. https://dev.soylentnews.org/~paulej72/
+ 357. https://dev.soylentnews.org/print.pl?sid=16/07/24/2353241
+ 358. https://dev.soylentnews.org/search.pl?tid=6
+ 359. http://www.news.com.au/finance/business/breaking-news/it-experts-call-for-boost-to-nbn-speeds/news-story/894054755bce0cb85435651821b241f2
+ 360. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1452
+ 361. https://dev.soylentnews.org/article.pl?sid=16/07/24/2353241
+ 362. https://dev.soylentnews.org/article.pl?sid=16/07/24/2353241
+ 363. https://dev.soylentnews.org/article.pl?sid=16/05/21/135214
+ 364. https://dev.soylentnews.org/~martyb/
+ 365. https://dev.soylentnews.org/print.pl?sid=16/05/21/135214
+ 366. https://dev.soylentnews.org/search.pl?tid=10
+ 367. https://dev.soylentnews.org/~martyb/
+ 368. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1422
+ 369. https://dev.soylentnews.org/article.pl?sid=16/05/21/135214
+ 370. https://dev.soylentnews.org/article.pl?sid=16/05/21/135214
+ 371. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 372. https://dev.soylentnews.org/~martyb/
+ 373. https://dev.soylentnews.org/print.pl?sid=16/02/14/1628207
+ 374. https://dev.soylentnews.org/search.pl?tid=10
+ 375. https://dev.soylentnews.org/~martyb/
+ 376. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1419
+ 377. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 378. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 379. https://dev.soylentnews.org/article.pl?sid=16/02/14/1628207
+ 380. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 381. https://dev.soylentnews.org/~takyon/
+ 382. https://dev.soylentnews.org/print.pl?sid=16/02/11/2217236
+ 383. https://dev.soylentnews.org/search.pl?tid=10
+ 384. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 385. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 386. https://dev.soylentnews.org/article.pl?sid=16/02/11/2217236
+ 387. https://dev.soylentnews.org/article.pl?sid=16/02/09/1251232
+ 388. https://dev.soylentnews.org/~The+Mighty+Buzzard/
+ 389. https://dev.soylentnews.org/print.pl?sid=16/02/09/1251232
+ 390. https://dev.soylentnews.org/search.pl?tid=25
+ 391. mailto:themightybuzzardNO@SPAMsoylentnews.org
+ 392. https://dev.soylentnews.org/submit.pl?op=viewsub&subid=1418
+ 393. https://dev.soylentnews.org/article.pl?sid=16/02/09/1251232
+ 394. https://dev.soylentnews.org/article.pl?sid=16/02/09/1251232
+ 395. https://dev.soylentnews.org/index.pl?issue=20160728
+ 396. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
+ 397. https://dev.soylentnews.org/about.pl
+ 398. https://dev.soylentnews.org/faq.pl
+ 399. https://dev.soylentnews.org/journal.pl
+ 400. https://dev.soylentnews.org/topics.pl
+ 401. https://dev.soylentnews.org/authors.pl
+ 402. https://dev.soylentnews.org/search.pl
+ 403. https://dev.soylentnews.org/pollBooth.pl
+ 404. https://dev.soylentnews.org/submit.pl
+ 405. https://dev.soylentnews.org/subscribe.pl
+ 406. https://dev.soylentnews.org/my/newuser
+ 407. https://dev.soylentnews.org/my/
+ 408. https://dev.soylentnews.org/index.pl?content_type=atom
+ 409. https://dev.soylentnews.org/index.pl?content_type=rss
+ 410. file:///home/UNIVERSIDAD/skgmctqnhyvfava3.onion/index.html
