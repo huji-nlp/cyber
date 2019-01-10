@@ -1,0 +1,87 @@
+Ks welcome to cryptostorm's member forums you don't have to be a
+cryptostorm member to post here Ks
+? take a peek at our legendary 33 cryptostorm is twitter feed if
+you're into that kind of thing ?
+Ks we're rolling out 34 voodoo network security across cryptostorm -
+Ks any OpenVPN configs found on the forum are likely outdated. For the
+latest, visit 36 GitHub Ks
+Looking for assistance with a cryptostorm connection
+issue? Post here & we'll help out. Also: if you're not
+sure where to post, do so here & we'll move things around
+as needed. Also: for quickest support, email our oddly
+calm & easygoing support reps at
+Last post 39 Re: Linux Not Connecting: Ple... by
+Thu Aug 11, 2016 8:21 pm
+Freewheeling spot to chew the fat on anything
+cryptostorm-related that doesn't fit elsewhere (i.e.
+support, howto, &c.). Criticism & praise & brainstorming &
+requests for explanation... this is where it goes when
+it's hot & ready for action! :-)
+Last post 43 Re: Concerns re: distribution... by
+Thu Aug 11, 2016 8:06 pm
+Looking for a bit more than customer support, and want to
+learn more about what cryptostorm is , what we've been
+announcing lately, and how the cryptostorm network makes
+the magic? This is a great place to start, so make
+Last post 47 Re: HOWTO: OpenWRT Routers by 48 hashtable
+Sun Aug 07, 2016 7:05 am
+To stay ahead of new and evolving threats, cryptostorm has
+always looked out past standard network security tools.
+Here, we discuss and fine-tune our work in bringing
+newly-created capabilities and newly-discovered knowledge
+to bear as we keep cryptostorm in the forefront of
+tomorrow's network security landscape.
+Last post 51 Re: Developer of anonymous To... by
+Tue Jun 14, 2016 4:05 pm
+A core mission of cryptostorm is ensuring consistent,
+reliable network security with minimal fuss & drama. From
+DNS-based services like our DeepDNS in-browser native
+.onion/.i2p site access, through grounbreaking research on
+IP6 leakblocking, & to firewall-based structures to enable
+"fail-closed" security, this is where we discuss & develop
+Last post 55 Re: TrackerSmacker: philosoph... by
+Sun Jul 31, 2016 7:43 pm
+This subforum is both a place to find & discuss
+independent cryptostorm token resellers, as well as to
+discuss cryptocoin related topics such as buying bitcoins,
+altcoins such as darkcoins and dogecoins, "tumbling"
+coins, theoretical/mathematical topics, etc.
+Last post 59 Re: Annual token for sale by 60 Tripped
+Sun Aug 07, 2016 5:15 am
+cryptofree: full-bore cryptostorm protection... for free!
+Capped to 1 megabit down / 500kb up, it's a great way to
+use cryptostorm in a pinch. Play nice & be safe, ok?
+Last post 63 Re: .onion sites not loading by 64 Zing
+Fri Apr 01, 2016 7:26 pm
+full protection within cryptostorm's secure network
+doesn't require you expose personal details - our
+Encouraging best practices in the VPN industry via
+independent, community-certified verification of clean
+installers and clean basic service operations. Let's
+reward the good, and make the bad a little bit less
+tempting 69 github repo 70 cleanVPN
+Last post 71 Re: "VPN review" websites: Go... by
+Tue May 17, 2016 8:37 am
+Support for cstorm connection questions relating to mobile
+platforms: Android, iOS, etc. Also: our team is working on
+that project here as it becomes available. Cheers!
+Last post 76 Re: Talking about IMEIs will ... by
+Thu Oct 15, 2015 5:58 pm
+twitter: 80 @stormlink is | web: 81 stormlink.is (in
+Last post 82 Re: stormlink: the "cryptosto... by
+Mon Nov 16, 2015 1:25 am
+"Privacy seppuku" is the decision by privacy-oriented
+projects to voluntarily shut down, rather than be coerced
+into collaboration with the surveillance regime and
+concomitant betrayal of customer trust. The 86 'seppuku
+pledge' is a public pre-commitment to the principles of
+privacy seppuku, This is a place to review & discuss...
+Last post 87 Re: Privacy Seppuku via key "... by
+Thu May 28, 2015 12:23 am
+For spammy stuff, and any other threads or posts that get
+far enough away from being constructive that it's best for
+them to have a bit of a time-out...
+Last post 92 Games that make you money eve... by 93 nuning
+Mon Aug 08, 2016 12:58 pm
+Our newest member 96 kaoliang
+All times are UTC05:00

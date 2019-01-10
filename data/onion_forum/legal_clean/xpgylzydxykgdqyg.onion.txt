@@ -1,0 +1,26 @@
+Please activate JavaScript in your web browser
+New List Accounts: To create a list account, fill out the 14 new list account form. If you want to create a new riseup.net mail account, please visit
+Logging In: When you login, specify your full email address. If you don't remember your password, 16 you can have it sent to you.
+Subscribing: To subscribe to a list, send mail to listname-subscribe@lists.riseup.net, where listname is the name of the list.
+Unsubscribing: To unsubscribe from a list, send mail to listname-unsubscribe@lists.riseup.net, where listname is the name of the list. Alternately, you can login, click on the list name under Your Lists, and then click Unsubscribe.
+Creating Lists: To 17 create a list, you must first create a list account by subscribing to a list or by 18 filling out this form. After you are logged in, click Create list near the top of the page.
+List Abuse: To report list abuse, send mail to abuse@riseup.net
+Frequently Asked Questions: Your question has probably been asked before! Check out the FAQs for
+Language Selection English Set language
+Lists: 18,202(2,304 visible) Subscriptions: 7,814,889 Users: 6,749,459 Lists by topic
+Check on the server status To check on the status of lists.riseup.net, visit
+post them there. We need your support If you value radical alternatives to the corporate internet, and you want to see us stay around, then we need your donation! Our list service is paid for entirely by small donations from users like you. Please see our 53 donation page for more information.
+favicon sympa 54 Sympa
+Please activate JavaScript in your web browser
+New List Accounts: To create a list account, fill out the 68 new list account form. If you want to create a new riseup.net mail account, please visit
+Logging In: When you login, specify your full email address. If you don't remember your password, 70 you can have it sent to you.
+Subscribing: To subscribe to a list, send mail to listname-subscribe@lists.riseup.net, where listname is the name of the list.
+Unsubscribing: To unsubscribe from a list, send mail to listname-unsubscribe@lists.riseup.net, where listname is the name of the list. Alternately, you can login, click on the list name under Your Lists, and then click Unsubscribe.
+Creating Lists: To 71 create a list, you must first create a list account by subscribing to a list or by 72 filling out this form. After you are logged in, click Create list near the top of the page.
+List Abuse: To report list abuse, send mail to abuse@riseup.net
+Frequently Asked Questions: Your question has probably been asked before! Check out the FAQs for
+Language Selection English Set language
+Lists: 18,202(2,304 visible) Subscriptions: 7,814,889 Users: 6,749,459 Lists by topic
+Check on the server status To check on the status of lists.riseup.net, visit
+post them there. We need your support If you value radical alternatives to the corporate internet, and you want to see us stay around, then we need your donation! Our list service is paid for entirely by small donations from users like you. Please see our 107 donation page for more information.
+favicon sympa 108 Sympa
