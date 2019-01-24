@@ -7,8 +7,7 @@ import numpy as np
 
 sys.path.append("/cs/snapless/oabend/borgr/cyber")
 
-from cyber.util.clean_text import clean_directory
-
+from cyber.util.clean_text import clean_directory, detect_duplicates
 
 DATA_DIR = "data"
 DATA_SUBDIRS = (
@@ -29,11 +28,14 @@ def clean_file_path(subdir, div):
 
 
 def get_clean_lines(subdir):
+    lines_set = set()
     lines = []
     deleted = Counter()
     for l in clean_directory(os.path.join(DATA_DIR, *subdir), print_files=False):
-        if len(l) <= MAX_LENGTH and l not in lines:
+        key = detect_duplicates(l)
+        if len(l) <= MAX_LENGTH and key not in lines_set:
             lines.append(l)
+            lines_set.add(key)
         else:
             deleted.update([l])
     print("%s: %d filtered duplicates, duplicity histogram: %s" % (

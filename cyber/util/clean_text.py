@@ -38,55 +38,45 @@ def new_line(s):
     return bool(s)
 
 
+DELETE_ROW_PATTERNS = (r'View the latest post [a-zA-Z0-9,: ]* [ap]m', r'(asked|edited) \d* \w* ago in \d*', r'\d{6,}')
+DELETE_PATTERN1 = (
+    r'\b(?:(?:https?|ftp|file):/+)+\S*', r'\b(?:(?:https?|ftp|file):\b/)+\S*',  # remove urls
+    r'\b(?:(\.jpg|\.png|\.JPG|\.PNG|\.html))',  # remove pictures/html
+    r'\b(d=|fbid=)+\S*', r'\(\d+ points\)',
+)
+DELETE_WORD1 = ('xcxbb', 'xexac', 'xex', 'xbb', 'xac', '//', '[', ']', '*', '#', '\\', '(BUTTON)')
+DELETE_PATTERN_IGNORECASE = (
+    r"\b(buy now|(add )?to cart|comments feed)\b",
+)
+DELETE_PATTERN2 = (
+    r'1_ X\b', r'javascript:\S*', r'BUTTON\s*(Input)?\s*(\(not)?\s*(implemented\))?',
+)
+DELETE_WORD2 = (
+    '_', '13abJg9Rc2uRgWN7NLRmeM5Q1jkh7wfcMh', 'c607a2f21680e3777808d3f320e551ab', '~', '+', 'xb1ol', '0 item(s)',
+)
+DELETE_PATTERN3 = (
+    r'Powered by+\S*', r'\b(?:(\.onion))', r'File:+\S*', r'\./ucp+S*',
+)
+
+
 def clean(text):
-    # remove urls
-    text = re.sub(r'\b(?:(?:https?|ftp|file):/+)+\S*', ' ', text)
-    text = re.sub(r'\b(?:(?:https?|ftp|file):\b/)+\S*', ' ', text)
-
-    # remove pictures/html
-    text = re.sub(r'\b(?:(\.jpg|\.png|\.JPG|\.PNG|\.html))', ' ', text)
-
+    for pattern in DELETE_ROW_PATTERNS:
+        if re.search(pattern, text):
+            return ""
     # remove non-ascii characters
     # text = ''.join(char for char in text if ord(char) < 128)
-
-    # others
-    text = text.replace('xcxbb', ' ')
-    text = text.replace('xexac', ' ')
-    text = text.replace('xex', ' ')
-    # text = text.replace('xc2',' ')
-    text = text.replace('xbb', ' ')
-    # text = re.sub(r'\b(x\d\d|x\D\d|x\d\D)', ' ', text)
-    text = re.sub(r'\b(d=|fbid=)+\S*', ' ', text)
-    # text = text.replace('xe2',' ')
-    # text = text.replace('x82',' ')
-    text = text.replace('xac', ' ')
-    text = text.replace('//', ' ')
-    text = text.replace('[', ' ')
-    text = text.replace(']', ' ')
-    text = text.replace('*', ' ')
-    text = text.replace('#', ' ')
-    text = text.replace('\\', ' ')
-    text = text.replace('(BUTTON)', ' ')
-    text = re.sub(r"\b(buy now|(add )?to cart|comments feed)\b", ' ', text, flags=re.IGNORECASE)
-    text = re.sub(r'1_ X\b', ' ', text)
-    text = re.sub(r'javascript:\S*', ' ', text)
-    text = re.sub(r'BUTTON\s*(Input)?\s*(\(not)?\s*(implemented\))?', ' ', text)
-    text = text.replace('_', ' ')
-    text = text.replace('13abJg9Rc2uRgWN7NLRmeM5Q1jkh7wfcMh', '')
-    text = text.replace('c607a2f21680e3777808d3f320e551ab', '')
-    # text = text.replace('x99','')
-    # text = text.replace('x94','')
-    # text = text.replace('x93','')
-    # text = text.replace('xa1','')
-    # text = text.replace('x80','')
-    text = text.replace('~', '')
-    text = text.replace('+', '')
-    text = text.replace('xb1ol', '')
-    text = text.replace('0 item(s)', '')
-    text = re.sub(r'Powered by+\S*', '', text)
-    text = re.sub(r'\b(?:(\.onion))', ' ', text)
-    text = re.sub(r'File:+\S*', '', text)
-    text = re.sub(r'\./ucp+S*', '', text)
+    for pattern in DELETE_PATTERN1:
+        text = re.sub(pattern, ' ', text)
+    for word in DELETE_WORD1:
+        text = text.replace(word, ' ')
+    for pattern in DELETE_PATTERN_IGNORECASE:
+        text = re.sub(pattern, ' ', text, flags=re.IGNORECASE)
+    for pattern in DELETE_PATTERN2:
+        text = re.sub(pattern, ' ', text)
+    for word in DELETE_WORD2:
+        text = text.replace(word, ' ')
+    for pattern in DELETE_PATTERN3:
+        text = re.sub(pattern, ' ', text)
 
     # remove consecutive spaces
     text = re.sub(r'[\s=]+', ' ', text)
