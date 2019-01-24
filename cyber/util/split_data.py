@@ -1,7 +1,7 @@
 import os
 import sys
 from collections import Counter
-from random import sample
+from random import sample, seed
 
 import numpy as np
 
@@ -70,4 +70,5 @@ def split_data(subdirs):
 
 if __name__ == "__main__":
     np.random.seed(0)
+    seed(0)
     split_data(DATA_SUBDIRS)
