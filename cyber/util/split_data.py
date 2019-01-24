@@ -1,10 +1,10 @@
 import os
+import sys
 from collections import Counter
-from itertools import groupby
-from random import shuffle, sample
+from random import sample
 
 import numpy as np
-import sys
+
 sys.path.append("/cs/snapless/oabend/borgr/cyber")
 
 from cyber.util.clean_text import clean_directory
