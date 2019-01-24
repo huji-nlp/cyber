@@ -4,8 +4,11 @@ from itertools import groupby
 from random import shuffle, sample
 
 import numpy as np
+import sys
+sys.path.append("/cs/snapless/oabend/borgr/cyber")
 
 from cyber.util.clean_text import clean_directory
+
 
 DATA_DIR = "data"
 DATA_SUBDIRS = (
@@ -24,8 +27,15 @@ def clean_file_path(subdir, div):
 
 
 def get_clean_lines(subdir):
-    return [l for l, _ in groupby(sorted(clean_directory(os.path.join(DATA_DIR, *subdir), print_files=False)))
-            if len(l) <= MAX_LENGTH]
+    lines = []
+    deleted = Counter()
+    for l in clean_directory(os.path.join(DATA_DIR, *subdir), print_files=False):
+        if len(l) <= MAX_LENGTH and l not in lines:
+            lines.append(l)
+        else:
+            deleted.update([l])
+    print("number of filtered duplicates and their counts frequency:", len(deleted), Counter([val for val in deleted.values()]))
+    return lines
 
 
 def split_data(subdirs):
@@ -35,10 +45,13 @@ def split_data(subdirs):
     validation = train + int(VALIDATION_RATIO * min_num)
     for subdir, lines in clean.items():
         print("%s: sampling %d out of %d instances" % ("_".join(subdir), min_num, len(lines)))
-        lines = sample(lines, min_num)
+        line_nums = sample(list(range(len(lines))), min_num)
+        line_nums = sorted(line_nums)
+        lines = np.array(lines)[line_nums]
         len_hist = Counter()
         for div, start, end in ("train", 0, train), ("validation", train, validation), ("test", validation, min_num):
             file_path = clean_file_path(subdir, div)
+            print("Writing to ", file_path)
             with open(file_path, "w", encoding="utf-8") as f:
                 for line in lines[start:end]:
                     len_hist[len(line)] += 1
