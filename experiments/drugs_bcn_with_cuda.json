@@ -9,7 +9,7 @@
         "type": "elmo_characters"
       }
     },
-    "categories": ["onion/legal", "onion/illegal"]
+    "categories": ["onion/drugs/legal", "onion/drugs/illegal"]
   },
   "train_data_path": "train",
   "validation_data_path": "validation",

@@ -13,8 +13,10 @@ from cyber.util.clean_text import clean_directory
 DATA_DIR = "data"
 DATA_SUBDIRS = (
     ("ebay",),
-    ("onion", "legal"),
-    ("onion", "illegal"),
+    ("onion", "drugs", "legal"),
+    ("onion", "drugs", "illegal"),
+    ("onion", "forums", "legal"),
+    ("onion", "forums", "illegal"),
 )
 
 TRAIN_RATIO = .8

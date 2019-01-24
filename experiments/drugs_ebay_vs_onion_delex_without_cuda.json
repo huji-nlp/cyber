@@ -8,7 +8,7 @@
         "pos_tags": true
       }
     },
-    "categories": ["ebay", "onion/legal"],
+    "categories": ["ebay", "onion/drugs/legal"],
     "mask": ["ADJ", "ADV", "NOUN", "PROPN", "VERB"]
   },
   "train_data_path": "train",

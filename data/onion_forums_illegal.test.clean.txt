@@ -1,0 +1,63 @@
+During the payment process, you have to enter your wallet address to receive your bitcoins. Now the bitcoins should have have arrived in your wallet.
+As you can see, there are not many ways to buy bitcoins anonymously because of the payment options.
+Buying bitcoins is legal according to the law.
+That makes it really hard to trace the btc. These tumbling services are not for free. You have to pay a fee.
+Customers who have a online Blockchain-Wallet can use the embedded 'Shared Coin' option to tumble Bitcoins (easiest and fastest way):
+If you are very paranoid, buy very huge amounts of dope or live in a very restrictive country you should tumble.
+IV. How to use my bitcoins at Elherbolarios Personal Shop
+But if this message pops up, click "not now" always when it appears.
+Select how often you want your preferred quantity. For example in the picture below:
+Now you can check out your cart
+Now you'll be asked to send your bitcoins to a specific address. Make sure you copy and paste the values to avoid typing errors.
+After sending the right value of bitcoins punctually to the right address, your order will be processd. Lean back and wait for el Herbos nice herbs.
+Leave a Reply 991 Cancel reply
+You must be 992 logged in to post a comment. (c) Elherbolario 2016
+Leave a Reply 1037 Cancel reply
+You must be 1038 logged in to post a comment. (c) Elherbolario 2016
+Jabber: elherbolario@wtfismyip.com (Daily online to assist you)
+e-mail: elherbolario@sigaint.org (I do not check it often)
+ElHerbolario (c) Elherbolario 2016
+Welcome to my personal shop for cannabis products!
+We recommend 1125 Happycoins for immediate coin receive or
+4. Is it safe to order at your shop and what happens with my shipping
+Yes, it is absolutely safe! Otherwise I would not be doing this for so long:). Two weeks after your order is shipped (and there are no complains from your side) your PGP encrypted address gets automatically deleted from the shop's database. That's why you have to put in your address in the according field each time you place a new order.
+Please understand that due to security reasons I can't give out many information about the used stealth. But here are some important facts: I use business envelopes with printed sender and return addresses All products are double vacuum sealed. You will not be able to smell anything until you open the package. The package will blend in perfectly with your daily mail. All my packages fit into the standard mailbox slots.
+8. I have paid, but order status still pending after 1 hour, what
+Now payment verification is fully automated by the shop, if your payment is still pending after 1 hour, this means that some coin are missing. Check it again on Blockchain if the address has received the full amount (also works if you send more hahaha) For example, if payment is missing 0.0001 Bitcoins to be complete, system can't detect it as paid. Please, double check your payment to avoid unnecessary inconveniences.
+9. How much time do I have to pay after checkout?
+10. How long does it take until I receive my product?
+If you haven't received your product within 15 days from set as "Sent" please contact us opening a support request ticket from inside your order. This does not guarantee anything. Refunds/reships always depend on the customer's trustworthy.
+12. Is JavaScript necessary to view the shop?
+15. I have some more questions before buying. How can I contact you?
+Well, I have redesigned the site completely. Also server config and hosting. I know that it is always a risk, nobody is risk free to be attacked on this places (also happens a lot on clearnet sites, so imagine how it is on the darknet...) but I have learned a lot from the past and now the site auto-backups on a safe emergency server daily. So, if something bad happens, I can restore all the site without loosing anything.
+Forum Topics Posts Freshness
+In dieser Anleitung wird im ersten Schritt der Kauf von Bitcoins erklart. Danach wird einem gezeigt, wie man Produkte hier im Shop kauft.
+Sie bekommen nun eine E-Mail mit einer URL um Ihren neu erstellten Account freizuschalten.
+Gucken Sie zur Sicherheit auch in Ihr SPAM-Postfach, manchmal landet die Mail auch dort.
+Klicken Sie auf den Link in der Email und melden Sie sich dann mit Ihren Daten an.
+Sie werden nun durch einen Prozess geleitet um Ihre Bankverbindung zu Verifizieren. Da dieser Schritt sehr gut von der Website begleitet wird, habe ich hierzu keine Bilder erstellt. (Falls doch jemand Hilfe braucht, stehe ich jederzeit zur Verfugung, schreib mir einfach
+Geschafft! Nun wollen wir also unsere ersten Bitcoins kaufen! Klicken Sie dazu in der Menuleiste auf den Marktplatz, mit ,,1." gekennzeichnet. Danach setzen Sie bitte das Hakchen, auf dem Bild mit der ,,2." Gekennzeichnet.
+Wahlen Sie nun ein Angebot welches Sie interessiert, aus, und klicken sie auch den roten Schriftzug ,,Kaufen".
+Geben Sie bei ,,1." die Menge Bitcoins an, die Sie kaufen mochten und klicken Sie dann auf ,,2." Jetzt Kaufen. Sie werden nun auf eine neue Seite weitergeleitet auf der Informationen zum Kauf zusammengefasst stehen.
+Fuhren Sie die angezeigten Schritte durch, sie werden von der Website durch den Vorgang begleitet.
+Sobald Ihre Mobilfunknummer Verifiziert wurde:
+Klicken Sie auf den Reiter ,,Auszahlung" um BTC an eine Adresse Ihrer Wahl zu Uberweisen. Sie konnen nun den Betrag und die Empfangeradresse eingeben, ausserdem mussen Sie ihr aktuelles Passwort eingeben. Ihnen wird nun per SMS eine sogenannte mtan ubermittelt sobald Sie auf ,,mTAN anfordern" klicken.
+Ihnen wird der Betrag den Sie eingegeben haben von Ihrem Konto abgebucht und auf die Empfangeradresse uberwiesen. Also entweder direkt an ElHerbolario oder an Ihr Wallet.
+Bitcoin Core - Ihr eigenes Wallet
+Laden Sie sich Bitcoin Core von 1234 herunter und installieren Sie das Programm.
+Um BTC zu empfangen, klicken Sie auf Empfangen. Geben Sie irgendeine Bezeichnung an, und den Betrag (minus der netzwerk-Gebuhr die bitcoin.de erhebt, gucken Sie am besten vorher wieviel das ist) ein der Empfangen werden soll.
+Klicken Sie auf ,,Uberweisen".
+Um einen Account zu registrieren, klicke auf ,,My Account".
+Klickt nun auf ,,Shop".
+Wahlt eure gewunschte Kategorie.
+Ansonsten klickt Ihr oben rechts das rot markierte Shopping cart.
+Klickt nun auf ,,proceed to checkout".
+Es gibt ein sehr gutes PGP Tut auf
+Gebt eure PGP verschlusselte Adresse unter ,,shipping address" ein und klickt auf ,,place order"(der grune button).
+Ihr gelangt nun auf eine Seite wo euch die genaue Menge an BTC die Ihr uberweisen musst angezeigt wird sowie die Addresse an die die BTC geschickt werden mussen.
+Leave a Reply 1236 Cancel reply
+You must be 1237 logged in to post a comment. (c) Elherbolario 2016
+beatiful..Also your weed and all i orderd in your shop is verry beatiful.. Thanks and best greets ANDI123
+Leave a Reply 1285 Cancel reply
+TQC is Active 24 hours! EVERYDAY!!!
+WE ARE ACTIVE 24 HOURS! < We have staff in all timezones > EMAIL US: queenofcards@torguard.tg TQC is the 1 reliable Carding Onion forum site since 2011! We provide Credit Cards, Western Union & Money Gram transfers and more. Please read our Frequently Asked Questions before contacting us!!! Visit our 187 F.A.Q Discussion Started By Replies Views Most Recent

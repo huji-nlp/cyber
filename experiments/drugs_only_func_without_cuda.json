@@ -8,7 +8,7 @@
         "pos_tags": true
       }
     },
-    "categories": ["onion/legal", "onion/illegal"],
+    "categories": ["onion/drugs/legal", "onion/drugs/illegal"],
     "mask": ["ADJ", "ADV", "NOUN", "PROPN", "VERB"],
     "drop_masked": true
   },
