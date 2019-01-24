@@ -69,4 +69,5 @@ def split_data(subdirs):
 
 
 if __name__ == "__main__":
+    np.random.seed(0)
     split_data(DATA_SUBDIRS)
