@@ -34,7 +34,8 @@ def get_clean_lines(subdir):
             lines.append(l)
         else:
             deleted.update([l])
-    print("number of filtered duplicates and their counts frequency:", len(deleted), Counter([val for val in deleted.values()]))
+    print("%s: %d filtered duplicates, duplicity histogram: %s" % (
+        os.path.join(*subdir), len(deleted), sorted(Counter(deleted.values()).items())))
     return lines
 
 
