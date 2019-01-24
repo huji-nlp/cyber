@@ -2,8 +2,8 @@ import contextlib
 import os
 import re
 from itertools import groupby
-from unidecode import unidecode
 
+from unidecode import unidecode
 
 # Indicate we should stop reading this file
 STOP = (
@@ -73,6 +73,7 @@ def clean(text):
     text = re.sub(r'BUTTON\s*(Input)?\s*(\(not)?\s*(implemented\))?', ' ', text)
     text = text.replace('_', ' ')
     text = text.replace('13abJg9Rc2uRgWN7NLRmeM5Q1jkh7wfcMh', '')
+    text = text.replace('c607a2f21680e3777808d3f320e551ab', '')
     # text = text.replace('x99','')
     # text = text.replace('x94','')
     # text = text.replace('x93','')
@@ -82,6 +83,10 @@ def clean(text):
     text = text.replace('+', '')
     text = text.replace('xb1ol', '')
     text = text.replace('0 item(s)', '')
+    text = re.sub(r'Powered by+\S*', '', text)
+    text = re.sub(r'\b(?:(\.onion))', ' ', text)
+    text = re.sub(r'File:+\S*', '', text)
+    text = re.sub(r'\./ucp+S*', '', text)
 
     # remove consecutive spaces
     text = re.sub(r'[\s=]+', ' ', text)
