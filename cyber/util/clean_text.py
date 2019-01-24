@@ -38,7 +38,8 @@ def new_line(s):
     return bool(s)
 
 
-DELETE_ROW_PATTERNS = (r'View the latest post [a-zA-Z0-9,: ]* [ap]m', r'(asked|edited) \d* \w* ago in \d*', r'\d{6,}')
+DELETE_ROW_PATTERNS = (r'View the latest post [a-zA-Z0-9,: ]* [ap]m', r'(asked|edited) \d* \w* ago in \d*', r'\d{6,}',
+                       r'PGP SIGNATURE')
 DELETE_PATTERN1 = (
     r'\b(?:(?:https?|ftp|file):/+)+\S*', r'\b(?:(?:https?|ftp|file):\b/)+\S*',  # remove urls
     r'\b(?:(\.jpg|\.png|\.JPG|\.PNG|\.html))',  # remove pictures/html

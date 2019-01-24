@@ -1,57 +1,57 @@
-For web based storing and controlling 980 is one of the biggest providers. You are also able to download your wallet, and store it on an usb-drive for example. The site is also accessible via tor. The link you will find here
-After the creation process, you will get an address to your wallet.
-Note: Please follow the instructions during the wallet creation process carefully and attentively!
-Now your wallets are created and waiting to get filled.
-II. How to buy bitcoins
-First you have to search for a seller for your bitcoins. (You can search via 983 for example). Please note, that some sellers are restricted in some countries.
-Some examples for reliable sellers:
-German banks have issues with it. Commercial seller)
-restricted in many countries
-Answer: Yes and no. Some vendors on localbitcoins offer this option but most of the vendors do not offer paypal as payment option. There is a simple reason. BTC transactions cannot be reversed, if they were sent to a correct wallet address. But paypal payments can be reversed. To avoid this scam-opportunity the most of the BTC-Sellers do not offer to buy bitcoins with paypal.
-During the payment process, you have to enter your wallet address to receive your bitcoins. Now the bitcoins should have have arrived in your wallet.
-As you can see, there are not many ways to buy bitcoins anonymously because of the payment options.
 But all Bitcoin transactions are public, traceable, and permanently stored in the bitcoin network.
 III. Tumbling or not
 Tumbling your bitcoins is like to put them in a big washing machine with tons of other bitcoins from other people. At the end you'll get randomized bitcoins. To receive the washed btc you should create a second wallet. (One wallet for the regular bought bitcoins and one virgin wallet only for the washed ones)
 That makes it really hard to trace the btc. These tumbling services are not for free. You have to pay a fee.
+Also note that these tumbling services are usually illegal. In the past, there were confirmed scams committed by some of the tumbling services. To check the actual status of the different services use the following link
 For further information about bitcoin anonymity check this link:
 Customers who have a online Blockchain-Wallet can use the embedded 'Shared Coin' option to tumble Bitcoins (easiest and fastest way):
 If you are very paranoid, buy very huge amounts of dope or live in a very restrictive country you should tumble.
+IV. How to use my bitcoins at Elherbolarios Personal Shop
+It is very easy. At first click the category you prefer.
 Please note: For bugfree using you must deactivate No Script
 But if this message pops up, click "not now" always when it appears.
 Choose one of these nice strains by clicking "select options"
+Select your preferred quantity.
 Select how often you want your preferred quantity. For example in the picture below:
+Add it to you cart.
 Now you can check out your cart
 If you have a coupon code, you can redeem it now. You also have to specify your address, pgp encrypted of course. El Herbos public key you'll find at the bottom of the page. Copy and paste it. Save it in a text file to import it to your pgp tool to encrypt your address. Your encrypted address can be pasted in the order form now. Then click "Place order"
 Now you'll be asked to send your bitcoins to a specific address. Make sure you copy and paste the values to avoid typing errors.
 Also note that you have to send your payment within two hours. Otherwise your order will be canceled.
 After sending the right value of bitcoins punctually to the right address, your order will be processd. Lean back and wait for el Herbos nice herbs.
 In the 'How To Buy' menu you will find some detailed tutorials on how to buy Bitcoins and products at my shop.
+Jabber: elherbolario@wtfismyip.com (Daily online to assist you)
 e-mail: elherbolario@sigaint.org (I do not check it often)
-ElHerbolario (c) Elherbolario 2016
-Welcome to my personal shop for cannabis products!
 I am an experienced dark market vendor/grower located in Spain. My main goal is to provide my customers with probably the best cannabis products in Europe at the lowest prices possible. After all the struggles and losses on the dark-net markets I decided to open up my own shop. I think that this is a win-win situation. This way you profit from lower prices on all your favorite products (as there are no additional fees) and I am more secure of market exit scams and falling Bitcoin rates.
 I am doing this for living and to feed my family, so always expect from me professionalism and continuity. Happy and returning customers is what I want!:)
-We only accept Bitcoins for payments.
+1. Which payment methods do you accept?
 2. Can I pay in hand?
+Yes, you can go to pick and pay the order at your nearest police station...LOL! NO! OF COURSE NOT!
 We recommend 1125 Happycoins for immediate coin receive or
+4. Is it safe to order at your shop and what happens with my shipping
 address after i received my order?
 Yes, it is absolutely safe! Otherwise I would not be doing this for so long:). Two weeks after your order is shipped (and there are no complains from your side) your PGP encrypted address gets automatically deleted from the shop's database. That's why you have to put in your address in the according field each time you place a new order.
-5. What about your shipping stealth? Can the product be smelled from
 Please understand that due to security reasons I can't give out many information about the used stealth. But here are some important facts: I use business envelopes with printed sender and return addresses All products are double vacuum sealed. You will not be able to smell anything until you open the package. The package will blend in perfectly with your daily mail. All my packages fit into the standard mailbox slots.
 6. Do I have to sign for my package when it arrives?
-7. What are the next steps after purchase?
+No, you don't need to sign for it. It will be dropped into your mailbox.
 As soon as your payment is received in full, your order status will be set as "Procesing". You can check the status anytime on you account page.
-8. I have paid, but order status still pending after 1 hour, what
+Now payment verification is fully automated by the shop, if your payment is still pending after 1 hour, this means that some coin are missing. Check it again on Blockchain if the address has received the full amount (also works if you send more hahaha) For example, if payment is missing 0.0001 Bitcoins to be complete, system can't detect it as paid. Please, double check your payment to avoid unnecessary inconveniences.
 9. How much time do I have to pay after checkout?
 I recommend no more than 2 hours. Sometimes Bitcoins price is very volatile. If the Bitcoin rate falls extremely I can put your order on hold or refund it if the price has varied significantly. Note that the shop updates the Bitcoin price each 10 minutes to keep it as accurate as possible.
 10. How long does it take until I receive my product?
 It depends, take note that we don't ship on weekends (postal service don't work) But to give an idea: GER 3-7 days FR 3-7 days UK 7-12 days
 If you haven't received your product within 15 days from set as "Sent" please contact us opening a support request ticket from inside your order. This does not guarantee anything. Refunds/reships always depend on the customer's trustworthy.
+11. Can I purchase products without shop registration?
+Yes, products are "variable" this means they have multiple prices depending on the selected amount. This is a JavaScript function and you can't add products to the cart without JavaScript being enabled (you can just enable it to and then disable again).
 13. I lost my account password. Can I recover it?
 Usually no, due to security reasons email password recovery is turned off. Please create a new account or contact us giving some ownership proof to reset password.
-14. Can I have a discount for big orders?
-Usually no, the prices are already very good. Anyway you may contact me and I can evaluate depending on multiple factors.
 15. I have some more questions before buying. How can I contact you?
-16. I'm afraid to order and don't receive it...
+Create an user account and then open a support ticket.
+I can't help with this if you aren't convinced, but keep in mind that I do this to support my family, so it will not be very smart to scam people. Maybe you should check forums, reddit, deepdotweb about me first... my advice is keep yourself always informed before buying from any darknet vendor.
 17. Last time I had ordered the site was offline for many days. Can
+18. What about the quality of your products? I want to know what I'm
+My products always come from very qualified growers. I do not buy anywhere and every batch I purchase is checked under the microscope. If it does not meet my quality standards I don't buy it, no matter whether it is a trusted provider or not. There are times when a batch is not as good as expected. (c) Elherbolario 2016
+Forum Topics Posts Freshness
+Latest news about my shop and new products
+Review your purchases here
+Discuss here products, product quality and product wishes

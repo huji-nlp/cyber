@@ -1,17 +1,13 @@
-Well, I have redesigned the site completely. Also server config and hosting. I know that it is always a risk, nobody is risk free to be attacked on this places (also happens a lot on clearnet sites, so imagine how it is on the darknet...) but I have learned a lot from the past and now the site auto-backups on a safe emergency server daily. So, if something bad happens, I can restore all the site without loosing anything.
-18. What about the quality of your products? I want to know what I'm
-My products always come from very qualified growers. I do not buy anywhere and every batch I purchase is checked under the microscope. If it does not meet my quality standards I don't buy it, no matter whether it is a trusted provider or not. There are times when a batch is not as good as expected. (c) Elherbolario 2016
-Forum Topics Posts Freshness
-Latest news about my shop and new products
 Have a question about ordering, shipping or security issues? Post here...
-Here you can regularly find news about scheduled deals. Also comment or suggest that you would like. ( be realistic please, no free weed ;) )
-Discuss here topics not related to the shop
+In dieser Anleitung wird im ersten Schritt der Kauf von Bitcoins erklart. Danach wird einem gezeigt, wie man Produkte hier im Shop kauft.
 Navigieren Sie mit Ihrem Internet Browser zu 1233 www.bitcoin.de und erstellen Sie sich einen Account indem Sie in der oberen rechten Ecke auf "Registrieren" klickt.
 Entscheidet Sie selbst, ob es Ihnen die 0,001 Bitcoins Wert sind, mit Newslettermails zugespammed zu werden, ich habe erstmal kein Hakchen beim Newsletter gesetzt. Das bleibt aber jedem selbst uberlassen!
 Sie bekommen nun eine E-Mail mit einer URL um Ihren neu erstellten Account freizuschalten.
 Gucken Sie zur Sicherheit auch in Ihr SPAM-Postfach, manchmal landet die Mail auch dort.
 Klicken Sie auf den Link in der Email und melden Sie sich dann mit Ihren Daten an.
-Sie werden nun durch einen Prozess geleitet um Ihre Bankverbindung zu Verifizieren. Da dieser Schritt sehr gut von der Website begleitet wird, habe ich hierzu keine Bilder erstellt. (Falls doch jemand Hilfe braucht, stehe ich jederzeit zur Verfugung, schreib mir einfach
+Ihnen wird nun per Email eine Login-Tan zugesendet, die Sie eingeben mussen.
+Geschafft! Nun wollen wir also unsere ersten Bitcoins kaufen! Klicken Sie dazu in der Menuleiste auf den Marktplatz, mit ,,1." gekennzeichnet. Danach setzen Sie bitte das Hakchen, auf dem Bild mit der ,,2." Gekennzeichnet.
+Wahlen Sie nun ein Angebot welches Sie interessiert, aus, und klicken sie auch den roten Schriftzug ,,Kaufen".
 Sie sehen nun folgendes
 Geben Sie bei ,,1." die Menge Bitcoins an, die Sie kaufen mochten und klicken Sie dann auf ,,2." Jetzt Kaufen. Sie werden nun auf eine neue Seite weitergeleitet auf der Informationen zum Kauf zusammengefasst stehen.
 Uberweisen Sie nun den Betrag auf das angegebene Konto, ich habe personliche Informationen rot gestrichen.
@@ -19,40 +15,44 @@ WICHTIG! Markieren Sie UNBEDINGT innerhalb von 60 Minuten den Kauf als ,,Bezahlt
 Dies kann einige Tage dauern, aber meist geschieht es schon am Tag darauf.
 Herzlichen Gluckwunsch! Sie haben nun BTC gekauft und diese sind Ihrem Konto gutgeschrieben worden!
 Falls Sie wollen, dass Ihre BTC schwieriger zuruckzuverfolgen sind, laden Sie sich das Programm Bitcoin Core herunter. Damit besitzen Sie auf Ihrem PC ein eigenes Wallet, auf das Sie BTC von Bitcoin.de Einzahlen konnen. Bitte lesen Sie hierzu am Ende den Bitcoin Core Teil.
+Beginnen wir also nun mit dem Auszahlungsprozess! Dazu benotigen Sie eine verifizierte Mobilfunknummer. Navigieren Sie dazu zu ,,Einstellungen" und dann ,,Mobilfunknummer".
 Fuhren Sie die angezeigten Schritte durch, sie werden von der Website durch den Vorgang begleitet.
 Sobald Ihre Mobilfunknummer Verifiziert wurde:
-Melden Sie sich bei Bitcoin.de an, und Navigieren Sie zu ,,Ein-/Auszahlungen".
 Klicken Sie auf den Reiter ,,Auszahlung" um BTC an eine Adresse Ihrer Wahl zu Uberweisen. Sie konnen nun den Betrag und die Empfangeradresse eingeben, ausserdem mussen Sie ihr aktuelles Passwort eingeben. Ihnen wird nun per SMS eine sogenannte mtan ubermittelt sobald Sie auf ,,mTAN anfordern" klicken.
 Geben Sie diese in das rot markierte Feld ein und klicken Sie auf ,,Uberweisung bestatigen".
 Ihnen wird der Betrag den Sie eingegeben haben von Ihrem Konto abgebucht und auf die Empfangeradresse uberwiesen. Also entweder direkt an ElHerbolario oder an Ihr Wallet.
+Bitcoin Core - Ihr eigenes Wallet
 Dieser Teil ist fur diejenigen, die Sicherheit uber alles stellen und nicht mochten, dass Ihre BTC leicht zuruckzuverfolgen sind.
 Laden Sie sich Bitcoin Core von 1234 herunter und installieren Sie das Programm.
-Starten Sie das Programm.
 Warten Sie bis sich das Netzwerk Synchronisiert hat.(der Balken unten) Dies kann unter Umstanden lange dauern, je nach Geschwindigkeit Ihrer Internetleitung und Computers.
+Sie sehen im unteren Teil des Fensters den Fortschritt der Synchronisierung.
+Um BTC zu empfangen, klicken Sie auf Empfangen. Geben Sie irgendeine Bezeichnung an, und den Betrag (minus der netzwerk-Gebuhr die bitcoin.de erhebt, gucken Sie am besten vorher wieviel das ist) ein der Empfangen werden soll.
 Klicken Sie nun auf Zahlung anfordern.
-Kopieren Sie die Adresse und geben Sie diese bei Bitcoin.de ein, die Schritte sind oben verzeichnet.
+Sie haben bei Ihrem Kauf bei Elherbolario eine Empangeradresse bekommen.
 Um an diese Adresse von Ihrem Bitcoin Core Wallet aus BTC zu uberweisen, gehen Sie wie folgt vor:
 Klicken Sie auf ,,Uberweisen".
-Geben Sie die Adresse die Sie bei Ihrem Kauf bei Elherbolario bekommen haben, und schliesslich die Menge, die Sie uberweisen mussen.
 Die Menge BTC die Sie uberweisen mussen steht auch in der Rechnung bei Elherbolario.
 Stellen Sie also sicher dass Sie genugend BTC zur Verfugung haben um sowohl Transaktionsgebuhr als auch den Betrag fur Elherbolario zahlen zu konnen.
 Um die Transaktionsgebuhr festzulegen klicken sie auf ,,Auswahlen".
-Falls dennoch jemand Fragen hat, bitte stellt Sie, ich werde dann den Walkthrough entsprechend deutlicher machen :)
+Sie konnen nun diverse Dinge festsetzen. Ich bin der Meinung, es ist selbsterklarend.
 Cannabis von Elherbolario beziehen:
 Um einen Account zu registrieren, klicke auf ,,My Account".
 Registriert euch auf der linken Seite mit eurem gewunschtem Nutzernamen und eurem gewunschtem Passwort. Lost die Aufgabe um zu beweisen dass Ihr kein Bot seid.
+Klickt nun auf ,,Shop".
 Wahlt eure gewunschte Kategorie.
 Fur dieses Tutorial nehmen wir uns ein Indoor-Strain vor.
-Klickt auf euer gewunschtes Produkt.
 Als Beispiel haben wir uns 10g Amnesia Haze vorgeknopft :)
+Bei ,,1" konnt ihr die Quantitat auswahlen, und mit ,,2" konnt Ihr das Produkt bestellen.
+Normalerweise sieht das Ganze aber so aus, unter ,,choose option" konnt ihr wahlen wieviel Ihr haben mochtet. Nachdem Ihr ,, " geklickt habt, kommt Ihr hierhin:
 Ansonsten klickt Ihr oben rechts das rot markierte Shopping cart.
-Es gibt ein sehr gutes PGP Tut auf
+Klickt nun auf ,,proceed to checkout".
 Falls euer Englisch nicht gut sein sollte gibt es aber auch genugend Deutsche guides zu pgp. Sucht euch einen.
 Gebt eure PGP verschlusselte Adresse unter ,,shipping address" ein und klickt auf ,,place order"(der grune button).
 Ihr gelangt nun auf eine Seite wo euch die genaue Menge an BTC die Ihr uberweisen musst angezeigt wird sowie die Addresse an die die BTC geschickt werden mussen.
 Ich hoffe das hilft etwas, wenn fragen bestehen fragt einfach
-One thought on "Test"
-I am an experienced dark market vendor/grower located in Spain. My main goal is to provide my customers with probably the best cannabis products in Europe at the lowest prices possible. After all the struggles and losses on the dark-net markets I decided to open up my own shop. I think that this is a win-win situation. This way you profit from lower prices on all your favorite products (as there are no additional fees) and I am more secured of market exit scams and falling Bitcoin rates.
+Hello I had to say it now you are the best cannabis vendor in the
+beatiful..Also your weed and all i orderd in your shop is verry beatiful.. Thanks and best greets ANDI123
 It looks like you're new here. If you want to get involved, click one of these buttons!
 GREAT NEWS! We've decided to make TQC forum a Customers Only Community! It is important that we keep our community secure from Trolls, Spam, Phishing, Solicitation, & other crap! In order to contribute to our community, a member must first be granted "Customer" status. Within 24 hours of placing first order a member will be upgraded to "Customer"!!!!! This message is brought to you by: King James / Queen / Anonymiss / Lady Luck & other staff members...
 TQC is Active 24 hours! EVERYDAY!!!
+WE ARE ACTIVE 24 HOURS! < We have staff in all timezones > EMAIL US: queenofcards@torguard.tg TQC is the 1 reliable Carding Onion forum site since 2011! We provide Credit Cards, Western Union & Money Gram transfers and more. Please read our Frequently Asked Questions before contacting us!!! Visit our 22 F.A.Q Discussion Started By Replies Views Most Recent
