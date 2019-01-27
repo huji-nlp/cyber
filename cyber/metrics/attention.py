@@ -38,7 +38,7 @@ class AttentionMetric(Metric):
         average_attention = Counter(**{k: v / self._occurrences[k] for k, v in self._cumulative_attention.items()})
         if reset:
             self.reset()
-        return average_attention.most_common(100)
+        return average_attention.most_common(1)
 
     @overrides
     def reset(self):
