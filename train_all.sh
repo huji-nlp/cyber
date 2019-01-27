@@ -10,9 +10,10 @@ if [[ -n "${SLURM_ARRAY_TASK_ID}" ]]; then
 fi
 
 for JSON in ${JSONS[@]}; do
-    SETTING=$(basename $(dirname ${JSON}))
-    EXPERIMENT=$(basename ${JSON} .json)
-    MODEL=models/${SETTING}/${EXPERIMENT}
-    python run.py train ${JSON} --include-package cyber.dataset_readers --include-package cyber.models -s ${MODEL}
+    SETTING="$(basename $(dirname ${JSON}))"
+    EXPERIMENT="$(basename ${JSON} .json)"
+    mkdir -p "models/${SETTING}"
+    MODEL="models/${SETTING}/${EXPERIMENT}"
+    python run.py train "${JSON}" --include-package cyber.dataset_readers --include-package cyber.models -s "${MODEL}"
     echo "${EXPERIMENT}$(grep -h test_f1 ${MODEL}/stdout.log | sed 's/.*://;s/,//')" >> f1.txt
 done
