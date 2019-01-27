@@ -14,6 +14,7 @@ for JSON in ${JSONS[@]}; do
     EXPERIMENT="$(basename ${JSON} .json)"
     mkdir -p "models/${SETTING}"
     MODEL="models/${SETTING}/${EXPERIMENT}"
-    python run.py train "${JSON}" --include-package cyber.dataset_readers --include-package cyber.models -s "${MODEL}"
+    python run.py train "${JSON}" --include-package cyber.dataset_readers --include-package cyber.models -s "${MODEL}" \
+        || grep Error "${MODEL}/stderr.log" >> f1.txt
     echo -e "${SETTING}\t${EXPERIMENT}\t$(grep -h test_f1 ${MODEL}/stdout.log | sed 's/.*://;s/,//;s/ //g')" >> f1.txt
 done
