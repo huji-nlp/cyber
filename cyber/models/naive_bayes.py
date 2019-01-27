@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Optional, List, Any
 
 import numpy as np
 import torch
@@ -23,7 +23,9 @@ class NaiveBayes(DocumentClassifier):
         self.dummy = nn.Parameter(torch.tensor(0.0))
 
     @overrides
-    def forward(self, text: Dict[str, torch.LongTensor], label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
+    def forward(self, text: Dict[str, torch.LongTensor],
+                label: torch.LongTensor = None,
+                metadata: Optional[List[Dict[str, Any]]] = None) -> Dict[str, torch.Tensor]:
         text_mask = util.get_text_field_mask(text)
         tokens = text["tokens"]
         bow = torch.zeros((tokens.size(0), self.vocab_size))

@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import Dict, Optional, List, Any
 
 import numpy
 import torch
@@ -65,7 +65,8 @@ class Seq2VecClassifier(DocumentClassifier):
     @overrides
     def forward(self,  # type: ignore
                 text: Dict[str, torch.LongTensor],
-                label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
+                label: torch.LongTensor = None,
+                metadata: Optional[List[Dict[str, Any]]] = None) -> Dict[str, torch.Tensor]:
         embedded_text = self.model_text_field_embedder(text)
         text_mask = util.get_text_field_mask(text)
         encoded_text = self.internal_text_encoder(embedded_text, text_mask)
