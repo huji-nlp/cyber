@@ -2,7 +2,7 @@
 #SBATCH --mem=15G
 #SBATCH --time=0-6
 #SBATCH --gres=gpu:1
-#SBATCH --array=0-25
+#SBATCH --array=0-47
 
 JSONS=($(cat experiments.txt))
 if [[ -n "${SLURM_ARRAY_TASK_ID}" ]]; then
