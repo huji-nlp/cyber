@@ -38,12 +38,11 @@ class DocumentDatasetReader(DatasetReader):
 
     @overrides
     def text_to_instance(self, text: str, target: int = None) -> Instance:
-        text_field = TextField(self._tokenizer.tokenize(text), self._token_indexers)
-        metadata = {
-            "tokens": [token.text for token in text_field.tokens],
-        }
-        text_field.tokens = list(filter(None, (self.mask_token(token) for token in text_field.tokens)))
-        metadata["masked_tokens"] = [token.text for token in text_field.tokens]
+        tokens = self._tokenizer.tokenize(text)
+        masked_tokens = list(filter(None, (self.mask_token(token) for token in tokens)))
+        text_field = TextField(masked_tokens, self._token_indexers)
+        metadata = {"tokens": [token.text for token in tokens],
+                    "masked_tokens": [token.text for token in masked_tokens]}
         fields: Dict[str, Field] = {"text": text_field}
         if target is not None:
             fields["label"] = LabelField(target)
