@@ -13,7 +13,6 @@ for JSON in ${JSONS[@]}; do
     SETTING=$(basename $(dirname ${JSON}))
     EXPERIMENT=$(basename ${JSON} .json)
     MODEL=models/${SETTING}/${EXPERIMENT}
-    echo -n ${EXPERIMENT} >> f1.txt
     python run.py train ${JSON} --include-package cyber.dataset_readers --include-package cyber.models -s ${MODEL}
-    grep -h test_f1 ${MODEL}/stdout.log | sed 's/.*://;s/,//' >> f1.txt
+    echo "${EXPERIMENT}$(grep -h test_f1 ${MODEL}/stdout.log | sed 's/.*://;s/,//')" >> f1.txt
 done
