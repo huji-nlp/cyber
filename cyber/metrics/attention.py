@@ -20,7 +20,7 @@ class AttentionMetric(Metric):
                  labels: List[torch.Tensor],
                  mask: Optional[torch.Tensor] = None):
         self_weights, mask = self.unwrap_to_tensors(self_weights, mask)
-        weights = self_weights * self_weights.eq(0).eq(0).sum(1)  # Normalize by the length of the sentence
+        weights = self_weights * self_weights.eq(0).eq(0).sum(1).unsqueeze(1)  # Normalize by the length of the sentence
         for instance_tokens, instance_weights, label, instance_mask in zip(tokens, weights, labels,
                                                                            repeat(None) if mask is None else mask):
             for token, weight, token_mask in zip(instance_tokens, instance_weights, instance_mask):
