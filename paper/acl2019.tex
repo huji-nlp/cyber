@@ -52,36 +52,68 @@
 
 
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
 
+Elior
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Datasets}
 
 DUTA \citep{AlNabki17}
 
+\paragraph{Cleaning.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Analysis}
 
-\subsection{Distances between domains}
+\subsection{Distances between Domains}
 
-\subsection{Wikification}
+Leshem
 
+
+
+\subsection{NER and Wikification}
+
+Dan: experimental setup, results and 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classification Experiments}
 
-\section{Results}
+Daniel
 
-\subsection{Legal vs. Illegal}
+\subsection{Results}
 
-\subsection{Legal Onion vs. Ebay}
+\paragraph{Legal vs. Illegal}
 
+\paragraph{Legal Onion vs. Ebay}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
+The legal and illegal are pretty distant, which is evident in a few ways: word distribution is different, NER and Wikification work less well
+for illegal. This has practical implications: we need to adapt our tools to deal with illegal Tor data. 
+
+Looking at specific sentences, we see that it's hard distinguishing them based on the identity of the words, which means that
+looking at the wordforms is a very poor solution for tackling this. However, using modern text classification, they can be distinguished
+in a 72\%. 
+
+Looking at how different types of language influence results: given that replacing all words with their POS tags gives
+the same performance, this tells us their syntax is different as well.
+
+Methological: Legal and illegal in Onion are distinct enough to be considered different domains (as distant as Legal and Ebay). 
+Therefore, Tor could be a good testbed for working on legal and illegal classification.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
  
-
 
 
 
