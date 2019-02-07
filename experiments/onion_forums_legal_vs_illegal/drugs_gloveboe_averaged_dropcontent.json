@@ -1,0 +1,58 @@
+{
+  "dataset_reader": {
+    "type": "document",
+    "tokenizer": {
+      "type": "word",
+      "word_splitter": {
+        "type": "spacy",
+        "pos_tags": true
+      }
+    },
+    "categories": ["onion/forums/legal", "onion/forums/illegal"],
+    "mask": ["ADJ", "ADV", "NOUN", "PROPN", "VERB"],
+    "drop_masked": true
+  },
+  "train_data_path": "train",
+  "validation_data_path": "validation",
+  "test_data_path": "test",
+  "evaluate_on_test": true,
+  "model": {
+    "type": "seq2vec_classifier",
+    "model_text_field_embedder": {
+      "tokens": {
+        "type": "embedding",
+        "pretrained_file": "https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.6B.100d.txt.gz",
+        "embedding_dim": 100,
+        "trainable": false
+      }
+    },
+    "internal_text_encoder": {
+      "type": "boe",
+      "embedding_dim": 100,
+      "averaged": true
+    },
+    "output_layer": {
+      "input_dim": 100,
+      "num_layers": 2,
+      "hidden_dims": [200, 3],
+      "activations": ["relu", "linear"],
+      "dropout": [0.2, 0.0]
+    }
+  },
+  "iterator": {
+    "type": "bucket",
+    "sorting_keys": [["text", "num_tokens"]],
+    "batch_size": 32
+  },
+  "trainer": {
+    "num_epochs": 30,
+    "patience": 3,
+    "cuda_device": -1,
+    "grad_clipping": 5.0,
+    "validation_metric": "+accuracy",
+    "optimizer": {
+      "type": "adam",
+      "lr": 0.001
+    }
+  }
+}

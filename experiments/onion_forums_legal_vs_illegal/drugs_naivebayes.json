@@ -1,0 +1,28 @@
+{
+  "dataset_reader": {
+    "type": "document",
+    "categories": ["onion/forums/legal", "onion/forums/illegal"]
+  },
+  "train_data_path": "train",
+  "validation_data_path": "validation",
+  "test_data_path": "test",
+  "evaluate_on_test": true,
+  "model": {
+    "type": "naive_bayes"
+  },
+  "iterator": {
+    "type": "bucket",
+    "sorting_keys": [["text", "num_tokens"]],
+    "batch_size": 32
+  },
+  "trainer": {
+    "num_epochs": 30,
+    "patience": 3,
+    "cuda_device": -1,
+    "validation_metric": "+accuracy",
+    "optimizer": {
+      "type": "sgd",
+      "lr": 0.001,
+    }
+  }
+}
