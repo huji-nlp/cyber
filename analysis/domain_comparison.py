@@ -1,14 +1,15 @@
-from scipy import spatial, stats
-# from scipy.spatial import jensenshannon
-import random
 import itertools
 import os
+# from scipy.spatial import jensenshannon
+import random
 from collections import Counter
+
+import matplotlib as mpl
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib as mpl
+from scipy import spatial, stats
+
 mpl.style.use('classic')
 
 sns.set()

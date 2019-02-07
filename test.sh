@@ -4,10 +4,10 @@
 #SBATCH --gres=gpu:1
 
 EXPERIMENT=$1
-MODEL=models/${EXPERIMENT}
+MODEL=models/${EXPERIMENT}/model.tar.gz
 
 if [[ ! -f ${MODEL} ]]; then
     echo "Not found: ${MODEL}"
 fi
 
-python run.py evaluate ${MODEL}/model.tar.gz test
+python run.py evaluate --include-package cyber.dataset_readers --include-package cyber.models ${MODEL} test
