@@ -5,10 +5,10 @@
 
 EXPERIMENT=$1
 INPUT=$2
-MODEL=models/${EXPERIMENT}
+MODEL=models/${EXPERIMENT}/model.tar.gz
 
 if [[ ! -f ${MODEL} ]]; then
     echo "Not found: ${MODEL}"
 fi
 
-python run.py predict ${MODEL}/model.tar.gz ${INPUT}
+python run.py predict ${MODEL} ${INPUT}
