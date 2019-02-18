@@ -1,11 +1,10 @@
 {
   "dataset_reader": {
-    "type": "document",
-    "categories": ["ebay", "onion/drugs/legal"]
+    "type": "document"
   },
-  "train_data_path": "train",
-  "validation_data_path": "validation",
-  "test_data_path": "test",
+  "train_data_path": ["data/train/ebay.txt", "data/train/onion_drugs_legal.txt"],
+  "validation_data_path": ["data/validation/ebay.txt", "data/validation/onion_drugs_legal.txt"],
+  "test_data_path": ["data/test/ebay.txt", "data/test/onion_drugs_legal.txt"],
   "evaluate_on_test": true,
   "model": {
     "type": "naive_bayes"
