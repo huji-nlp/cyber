@@ -15,3 +15,5 @@ for EXPERIMENT in experiments/ebay_vs_onion_drugs_legal/*; do
   sed "/test/s/drugs/forums/" experiments/onion_drugs_legal_vs_illegal/${BASENAME} > ${OUTDIR}/${BASENAME}
   echo ${OUTDIR}/${BASENAME} >> experiments.txt
 done
+NUM_EXPERIMENTS=$(($(cat experiments.txt | wc -l) - 1))
+sed -i "s/--array=0-.*/--array=0-${NUM_EXPERIMENTS}/" train_all.sh
