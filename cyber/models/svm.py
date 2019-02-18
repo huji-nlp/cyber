@@ -38,20 +38,11 @@ class Svm(DocumentClassifier):
             (text_mask.size(0), self.vocab_size)))
         bow *= mask
         bow = bow.numpy()
-        # label = torch.ones(label.size())
-        # label[-1] = 0
-        self.svm.fit(bow, label)  # , classes=list(range(self.num_classes)))
+        self.svm.fit(bow, label)
         predict = torch.tensor(self.svm.predict(bow))
-        # print("----")
-        # print("labels", label)
-        # print(predict)
-        # labels_num = predict.max()+1
-        labels_num = 2
+        # labels_num = 2
+        labels_num = predict.max()+1
         predict = torch.zeros(len(predict), labels_num).scatter_(1, predict.unsqueeze(1), 1.)
-        # print(predict)
-
-        # print("shapes", predict.shape, bow.shape, label.shape)
-        # raise
         output_dict = {"predict": predict}
         if label is not None:
             for metric in self.metrics.values():
