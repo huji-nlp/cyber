@@ -11,4 +11,5 @@ if [[ ! -f ${MODEL} ]]; then
     echo "Not found: ${MODEL}"
 fi
 
-python run.py predict --include-package cyber.dataset_readers --include-package cyber.models ${MODEL} ${INPUT}
+python run.py predict --include-package cyber.dataset_readers --include-package cyber.models \
+    --include-package cyber.predictors ${MODEL} ${INPUT}
