@@ -1,13 +1,13 @@
 import os
 
 import spacy
-from spacy.symbols import ADJ, ADV, NOUN, PROPN, VERB
+from spacy.symbols import ADJ, ADV, NOUN, PROPN, VERB, X, NUM
 
 from cyber.util.split_data import DATA_SUBDIRS, clean_file_path
 
 nlp = spacy.load("en")
 
-CONTENT_POS = {ADJ, ADV, NOUN, PROPN, VERB}  # TODO , X, NUM}
+CONTENT_POS = {ADJ, ADV, NOUN, PROPN, VERB, X, NUM}
 
 
 def mask(tok, drop=False, content=False, func=False):
