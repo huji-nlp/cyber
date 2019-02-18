@@ -3,20 +3,20 @@ Review your purchases here
 Discuss here products PUNCT product quality CCONJ product wishes
 Here PRON can regularly find news ADP scheduled deals PUNCT Also comment CCONJ suggest ADP PRON would like PUNCT PUNCT be realistic INTJ PUNCT DET free weed PUNCT PUNCT
 Discuss here topics not related ADP DET shop
-ADP dieser Anleitung wird PRON m ersten Schritt der Kauf von Bitcoins erklart PUNCT Danach wird einem gezeigt PUNCT NUM man Produkte hier PRON m Shop kauft PUNCT
-Navigieren Sie mit Ihrem Internet Browser zu NUM www.bitcoin.de und erstellen Sie sich einen Account indem Sie ADP der oberen rechten Ecke auf PUNCT Registrieren PUNCT klickt PUNCT
+ADP dieser Anleitung wird PRON m ersten Schritt der Kauf von Bitcoins erklart PUNCT Danach wird einem gezeigt PUNCT wie man Produkte hier PRON m Shop kauft PUNCT
+Navigieren Sie mit Ihrem Internet Browser zu 1233 www.bitcoin.de und erstellen Sie sich einen Account indem Sie ADP der oberen rechten Ecke auf PUNCT Registrieren PUNCT klickt PUNCT
 Fullen Sie die folgenden Felder mit Ihrem gewunschtem Benutzernamen PUNCT Ihrer Email und Ihrem gewunschtem Passwort aus(Am besten eines mit Gross und Kleinbuchstaben PUNCT einer Zahl und einem Sonderzeichen PUNCT PUNCT Geben Sie den Sicherheitscode ein bei PUNCT PUNCT Ich bin kein Roboter PUNCT und setzen Sie die Hackchen PUNCT
-Entscheidet Sie selbst PUNCT ADP X Ihnen die NUM Bitcoins Wert sind PUNCT mit Newslettermails zugespammed zu werden PUNCT ich habe erstmal kein Hakchen beim Newsletter gesetzt PUNCT Das bleibt aber jedem selbst uberlassen PUNCT
+Entscheidet Sie selbst PUNCT ADP es Ihnen die 0,001 Bitcoins Wert sind PUNCT mit Newslettermails zugespammed zu werden PUNCT ich habe erstmal kein Hakchen beim Newsletter gesetzt PUNCT Das bleibt aber jedem selbst uberlassen PUNCT
 Klicken Sie auf den Link ADP der Email und melden Sie sich dann mit Ihren Daten DET PUNCT
 Ihnen wird nun ADP Email eine Login PUNCT Tan zugesendet PUNCT die Sie eingeben mussen PUNCT
 Sie werden nun durch einen Prozess geleitet INTJ Ihre Bankverbindung zu Verifizieren PUNCT Da dieser Schritt sehr gut von der Website begleitet wird PUNCT habe ich hierzu keine Bilder erstellt PUNCT PUNCT Falls doch jemand Hilfe braucht PUNCT stehe ich jederzeit zur Verfugung PUNCT schreib mir einfach
-Geschafft PUNCT Nun wollen wir also unsere ersten Bitcoins kaufen PUNCT Klicken Sie dazu ADP der Menuleiste auf den Marktplatz PUNCT mit PUNCT PUNCT NUM PUNCT PUNCT gekennzeichnet PUNCT Danach setzen Sie bitte das Hakchen PUNCT INTJ INTJ Bild mit der PUNCT PUNCT NUM PUNCT PUNCT Gekennzeichnet PUNCT
-Geben Sie bei PUNCT PUNCT NUM PUNCT PUNCT die Menge Bitcoins DET PUNCT die Sie kaufen mochten und klicken Sie dann auf PUNCT PUNCT NUM PUNCT PUNCT Jetzt Kaufen PUNCT Sie werden nun auf eine neue Seite weitergeleitet auf der Informationen zum Kauf zusammengefasst stehen PUNCT
+Geschafft PUNCT Nun wollen wir also unsere ersten Bitcoins kaufen PUNCT Klicken Sie dazu ADP der Menuleiste auf den Marktplatz PUNCT mit PUNCT PUNCT 1 PUNCT PUNCT gekennzeichnet PUNCT Danach setzen Sie bitte das Hakchen PUNCT INTJ INTJ Bild mit der PUNCT PUNCT 2 PUNCT PUNCT Gekennzeichnet PUNCT
+Geben Sie bei PUNCT PUNCT 1 PUNCT PUNCT die Menge Bitcoins DET PUNCT die Sie kaufen mochten und klicken Sie dann auf PUNCT PUNCT 2 PUNCT PUNCT Jetzt Kaufen PUNCT Sie werden nun auf eine neue Seite weitergeleitet auf der Informationen zum Kauf zusammengefasst stehen PUNCT
 Uberweisen Sie nun den Betrag auf das angegebene Konto PUNCT ich habe personliche Informationen rot gestrichen PUNCT
-WICHTIG PUNCT Markieren Sie UNBEDINGT innerhalb von NUM Minuten den Kauf als PUNCT PUNCT Bezahlt PUNCT PUNCT Gelber Knopf ADP der Mitte obigen Bildes PUNCT PUNCT
+WICHTIG PUNCT Markieren Sie UNBEDINGT innerhalb von 60 Minuten den Kauf als PUNCT PUNCT Bezahlt PUNCT PUNCT Gelber Knopf ADP der Mitte obigen Bildes PUNCT PUNCT
 Sobald der Verkaufer den Zahlungseingang bestatigt hat PUNCT werden Ihrem PART die BTC gutgeschrieben PUNCT
 Herzlichen Gluckwunsch PUNCT Sie haben nun BTC gekauft und diese sind Ihrem Konto gutgeschrieben worden PUNCT
-Falls Sie wollen PUNCT dass Ihre BTC schwieriger zuruckzuverfolgen sind PUNCT laden Sie sich das Programm Bitcoin Core herunter PUNCT Damit besitzen Sie auf Ihrem PC ein eigenes Wallet PUNCT X X Sie BTC von Bitcoin.de Einzahlen konnen PUNCT Bitte lesen Sie hierzu am Ende den Bitcoin Core Teil PUNCT
+Falls Sie wollen PUNCT dass Ihre BTC schwieriger zuruckzuverfolgen sind PUNCT laden Sie sich das Programm Bitcoin Core herunter PUNCT Damit besitzen Sie auf Ihrem PC ein eigenes Wallet PUNCT auf das Sie BTC von Bitcoin.de Einzahlen konnen PUNCT Bitte lesen Sie hierzu am Ende den Bitcoin Core Teil PUNCT
 Beginnen wir also nun mit dem Auszahlungsprozess PUNCT Dazu benotigen Sie eine verifizierte Mobilfunknummer PUNCT Navigieren Sie dazu zu PUNCT PUNCT Einstellungen PUNCT und dann PUNCT PUNCT Mobilfunknummer PUNCT PUNCT
 Fuhren Sie die angezeigten Schritte durch PUNCT sie werden von der Website durch den Vorgang begleitet PUNCT
 Sobald Ihre Mobilfunknummer Verifiziert wurde PUNCT
@@ -25,10 +25,10 @@ Geben Sie diese ADP das rot markierte Feld ein und klicken Sie auf PUNCT PUNCT U
 Ihnen wird der Betrag den Sie eingegeben haben von Ihrem Konto abgebucht und auf die Empfangeradresse uberwiesen PUNCT Also entweder direkt DET ElHerbolario oder DET Ihr Wallet PUNCT
 Bitcoin Core PUNCT Ihr eigenes Wallet
 Dieser Teil ist fur diejenigen PUNCT die Sicherheit uber alles stellen und nicht mochten PUNCT dass Ihre BTC leicht zuruckzuverfolgen sind PUNCT
-Laden Sie sich Bitcoin Core von NUM herunter und installieren Sie das Programm PUNCT
+Laden Sie sich Bitcoin Core von 1234 herunter und installieren Sie das Programm PUNCT
 Starten Sie das Programm PUNCT
 Warten Sie bis sich das Netzwerk Synchronisiert ADP Balken unten PUNCT Dies kann unter Umstanden lange dauern PUNCT je nach Geschwindigkeit Ihrer Internetleitung und Computers PUNCT
-Sie sehen PRON m unteren Teil X Fensters den Fortschritt der Synchronisierung PUNCT
+Sie sehen PRON m unteren Teil des Fensters den Fortschritt der Synchronisierung PUNCT
 INTJ BTC zu empfangen PUNCT klicken Sie auf Empfangen PUNCT Geben Sie irgendeine Bezeichnung DET PUNCT und den Betrag PUNCT CCONJ der netzwerk PUNCT Gebuhr die PUNCT erhebt PUNCT gucken Sie am besten vorher wieviel das ist PUNCT ein der Empfangen werden soll PUNCT
 Kopieren Sie die Adresse und geben Sie diese bei Bitcoin.de ein PUNCT die Schritte sind oben verzeichnet PUNCT
 INTJ DET diese Adresse von Ihrem Bitcoin Core Wallet aus BTC zu uberweisen PUNCT gehen Sie CCONJ folgt vor PUNCT
@@ -43,16 +43,16 @@ INTJ einen Account zu registrieren PUNCT klicke auf PUNCT PUNCT My Account PUNCT
 Registriert euch auf der linken Seite mit eurem gewunschtem Nutzernamen und eurem gewunschtem Passwort PUNCT Lost die Aufgabe INTJ zu beweisen dass Ihr kein Bot seid PUNCT
 Wahlt eure gewunschte Kategorie PUNCT
 Klickt auf euer gewunschtes Produkt PUNCT
-Als Beispiel haben wir uns NUM g Amnesia Haze vorgeknopft PUNCT
+Als Beispiel haben wir uns 10g Amnesia Haze vorgeknopft PUNCT
 Normalerweise sieht das Ganze aber so aus PUNCT unter PUNCT PUNCT choose option PUNCT konnt ihr wahlen wieviel Ihr haben mochtet PUNCT Nachdem Ihr PUNCT PUNCT PUNCT geklickt habt PUNCT kommt Ihr ADP PUNCT
 Ansonsten klickt Ihr oben rechts das rot markierte Shopping cart PUNCT
 Klickt nun auf PUNCT PUNCT proceed PART checkout PUNCT PUNCT
-Falls euer Englisch nicht gut sein sollte gibt X aber auch genugend Deutsche guides zu pgp PUNCT Sucht euch einen PUNCT
+Falls euer Englisch nicht gut sein sollte gibt es aber auch genugend Deutsche guides zu pgp PUNCT Sucht euch einen PUNCT
 Gebt eure PGP verschlusselte Adresse unter PUNCT PUNCT shipping address PUNCT ein und klickt auf PUNCT PUNCT place order"(der grune button PUNCT PUNCT
 Ihr gelangt nun auf eine Seite wo euch die genaue Menge DET BTC die Ihr uberweisen musst angezeigt wird sowie die Addresse DET die die BTC geschickt werden mussen PUNCT
 Ich hoffe das hilft etwas PUNCT wenn fragen bestehen fragt einfach
-NUM thought ADP PUNCT Test PUNCT
+One thought ADP PUNCT Test PUNCT
 INTJ PRON had PART say PRON now PRON are DET best cannabis vendor ADP DET
 PRON am DET experienced dark market vendor SYM grower located ADP Spain PUNCT My main goal is PART provide my customers ADP probably DET best cannabis products ADP Europe ADP DET lowest prices possible PUNCT ADP all DET struggles CCONJ losses ADP DET dark PUNCT net markets PRON decided PART open PART my own shop PUNCT PRON think ADP DET is DET win PUNCT win situation PUNCT DET way PRON profit ADP lower prices ADP DET your favorite products PUNCT ADP there are DET additional fees PUNCT CCONJ PRON am more secured ADP market exit scams CCONJ falling Bitcoin rates PUNCT
-PRON looks ADP PRON 're new here PUNCT ADP PRON want PART get involved PUNCT click NUM ADP DET buttons PUNCT
-GREAT NEWS PUNCT PRON 've decided PART make TQC forum DET Customers Only Community PUNCT PRON is important ADP PRON keep our community secure ADP Trolls PUNCT Spam PUNCT Phishing PUNCT Solicitation PUNCT CCONJ other crap PUNCT ADP order PART contribute ADP our community PUNCT DET member must first be granted PUNCT Customer PUNCT status PUNCT ADP NUM hours ADP placing first order DET member will be upgraded ADP PUNCT Customer PUNCT PUNCT PUNCT PUNCT PUNCT PUNCT DET message is brought ADP PRON ADP PUNCT King James SYM Queen SYM Anonymiss SYM Lady Luck CCONJ other staff members PUNCT
+PRON looks ADP PRON 're new here PUNCT ADP PRON want PART get involved PUNCT click one ADP DET buttons PUNCT
+GREAT NEWS PUNCT PRON 've decided PART make TQC forum DET Customers Only Community PUNCT PRON is important ADP PRON keep our community secure ADP Trolls PUNCT Spam PUNCT Phishing PUNCT Solicitation PUNCT CCONJ other crap PUNCT ADP order PART contribute ADP our community PUNCT DET member must first be granted PUNCT Customer PUNCT status PUNCT ADP 24 hours ADP placing first order DET member will be upgraded ADP PUNCT Customer PUNCT PUNCT PUNCT PUNCT PUNCT PUNCT DET message is brought ADP PRON ADP PUNCT King James SYM Queen SYM Anonymiss SYM Lady Luck CCONJ other staff members PUNCT
