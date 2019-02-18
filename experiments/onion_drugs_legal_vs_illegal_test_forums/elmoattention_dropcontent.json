@@ -1,13 +1,6 @@
 {
   "dataset_reader": {
     "type": "document",
-    "tokenizer": {
-      "type": "word",
-      "word_splitter": {
-        "type": "spacy",
-        "pos_tags": true
-      }
-    },
     "token_indexers": {
       "tokens": {
         "type": "single_id"
@@ -15,19 +8,18 @@
       "elmo": {
         "type": "elmo_characters"
       }
-    },    "mask": ["ADJ", "ADV", "NOUN", "PROPN", "VERB"],
-    "drop_masked": true
+    }
   },
-  "train_data_path": ["data/train/onion_drugs_legal.txt", "data/train/onion_drugs_illegal.txt"],
-  "validation_data_path": ["data/validation/onion_drugs_legal.txt", "data/validation/onion_drugs_illegal.txt"],
-  "test_data_path": ["data/test/onion_forums_legal.txt", "data/test/onion_drugs_illegal.txt"],
+  "train_data_path": ["data/train/onion_drugs_legal.dropcontent.txt", "data/train/onion_drugs_illegal.dropcontent.txt"],
+  "validation_data_path": ["data/validation/onion_drugs_legal.dropcontent.txt", "data/validation/onion_drugs_illegal.dropcontent.txt"],
+  "test_data_path": ["data/test/onion_forums_legal.dropcontent.txt", "data/test/onion_drugs_illegal.dropcontent.txt"],
   "evaluate_on_test": true,
   "model": {
     "type": "attention_classifier",
     "text_field_embedder": {
       "token_embedders": {
         "tokens": {
-            "pretrained_file": "https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.840B.300d.txt.gz",
+            "pretrained_file": "https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.840B.300d.dropcontent.txt.gz",
             "type": "embedding",
             "embedding_dim": 300,
             "trainable": false

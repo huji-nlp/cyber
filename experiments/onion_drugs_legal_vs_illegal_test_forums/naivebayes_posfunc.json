@@ -7,27 +7,7 @@
   "test_data_path": ["data/test/onion_forums_legal.posfunc.txt", "data/test/onion_drugs_illegal.posfunc.txt"],
   "evaluate_on_test": true,
   "model": {
-    "type": "seq2vec_classifier",
-    "model_text_field_embedder": {
-      "tokens": {
-        "type": "embedding",
-        "pretrained_file": "https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.6B.100d.posfunc.txt.gz",
-        "embedding_dim": 100,
-        "trainable": false
-      }
-    },
-    "internal_text_encoder": {
-      "type": "boe",
-      "embedding_dim": 100,
-      "averaged": true
-    },
-    "output_layer": {
-      "input_dim": 100,
-      "num_layers": 2,
-      "hidden_dims": [200, 3],
-      "activations": ["relu", "linear"],
-      "dropout": [0.2, 0.0]
-    }
+    "type": "naive_bayes"
   },
   "iterator": {
     "type": "bucket",
@@ -38,11 +18,10 @@
     "num_epochs": 30,
     "patience": 3,
     "cuda_device": -1,
-    "grad_clipping": 5.0,
     "validation_metric": "+accuracy",
     "optimizer": {
-      "type": "adam",
-      "lr": 0.001
+      "type": "sgd",
+      "lr": 0.001,
     }
   }
 }
