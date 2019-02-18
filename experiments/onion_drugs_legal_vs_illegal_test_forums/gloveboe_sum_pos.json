@@ -18,8 +18,7 @@
     },
     "internal_text_encoder": {
       "type": "boe",
-      "embedding_dim": 100,
-      "averaged": true
+      "embedding_dim": 100
     },
     "output_layer": {
       "input_dim": 100,

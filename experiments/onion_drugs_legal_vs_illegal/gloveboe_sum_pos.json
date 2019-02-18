@@ -4,7 +4,7 @@
   },
   "train_data_path": ["data/train/onion_drugs_legal.pos.txt", "data/train/onion_drugs_illegal.pos.txt"],
   "validation_data_path": ["data/validation/onion_drugs_legal.pos.txt", "data/validation/onion_drugs_illegal.pos.txt"],
-  "test_data_path": ["data/test/onion_forums_legal.pos.txt", "data/test/onion_drugs_illegal.pos.txt"],
+  "test_data_path": ["data/test/onion_drugs_legal.pos.txt", "data/test/onion_drugs_illegal.pos.txt"],
   "evaluate_on_test": true,
   "model": {
     "type": "seq2vec_classifier",
@@ -18,8 +18,7 @@
     },
     "internal_text_encoder": {
       "type": "boe",
-      "embedding_dim": 100,
-      "averaged": true
+      "embedding_dim": 100
     },
     "output_layer": {
       "input_dim": 100,
