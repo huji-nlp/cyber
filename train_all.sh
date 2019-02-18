@@ -15,7 +15,6 @@ for JSON in ${JSONS[@]}; do
     mkdir -p "models/${SETTING}"
     MODEL="models/${SETTING}/${EXPERIMENT}"
     python run.py train "${JSON}" --include-package cyber.dataset_readers --include-package cyber.models -s "${MODEL}" \
-        || grep Error "${MODEL}/stderr.log" >> accuracy.tsv
-    echo -e "${SETTING}\t${EXPERIMENT}\t$(grep -h test_accuracy ${MODEL}/stdout.log | sed 's/.*://;s/,//;s/ //g')" \
-        >> accuracy.tsv
+        || grep Error "${MODEL}/stderr.log" >> ${SETTING}_${EXPERIMENT}_accuracy.tsv
+    grep -h test_accuracy ${MODEL}/stdout.log | sed 's/.*://;s/,//;s/ //g' >> ${SETTING}_${EXPERIMENT}_accuracy.tsv
 done
