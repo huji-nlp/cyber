@@ -118,3 +118,7 @@ experiments/ebay_vs_onion_drugs_legal/naivebayes_pos.json
 experiments/onion_drugs_legal_vs_illegal/naivebayes_pos.json
 experiments/onion_forums_legal_vs_illegal/naivebayes_pos.json
 experiments/onion_drugs_legal_vs_illegal_test_forums/naivebayes_pos.json
+experiments/ebay_vs_onion_drugs_legal/svm.json
+experiments/onion_drugs_legal_vs_illegal/svm.json
+experiments/onion_forums_legal_vs_illegal/svm.json
+experiments/onion_drugs_legal_vs_illegal_test_forums/svm.json
