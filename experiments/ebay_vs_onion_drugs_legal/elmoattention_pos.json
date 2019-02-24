@@ -1,13 +1,6 @@
 {
   "dataset_reader": {
     "type": "document",
-    "tokenizer": {
-      "type": "word",
-      "word_splitter": {
-        "type": "spacy",
-        "pos_tags": true
-      }
-    },
     "token_indexers": {
       "tokens": {
         "type": "single_id"
@@ -15,13 +8,11 @@
       "elmo": {
         "type": "elmo_characters"
       }
-    },
-    "categories": ["ebay", "onion/drugs/legal"],
-    "mask": []
+    }
   },
-  "train_data_path": "train",
-  "validation_data_path": "validation",
-  "test_data_path": "test",
+  "train_data_path": ["data/train/ebay.pos.txt", "data/train/onion_drugs_legal.pos.txt"],
+  "validation_data_path": ["data/validation/ebay.pos.txt", "data/validation/onion_drugs_legal.pos.txt"],
+  "test_data_path": ["data/test/ebay.pos.txt", "data/test/onion_drugs_legal.pos.txt"],
   "evaluate_on_test": true,
   "model": {
     "type": "attention_classifier",

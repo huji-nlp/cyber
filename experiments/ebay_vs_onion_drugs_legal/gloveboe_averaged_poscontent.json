@@ -1,19 +1,10 @@
 {
   "dataset_reader": {
-    "type": "document",
-    "tokenizer": {
-      "type": "word",
-      "word_splitter": {
-        "type": "spacy",
-        "pos_tags": true
-      }
-    },
-    "categories": ["ebay", "onion/drugs/legal"],
-    "mask": ["ADJ", "ADV", "NOUN", "PROPN", "VERB"]
+    "type": "document"
   },
-  "train_data_path": "train",
-  "validation_data_path": "validation",
-  "test_data_path": "test",
+  "train_data_path": ["data/train/ebay.poscontent.txt", "data/train/onion_drugs_legal.poscontent.txt"],
+  "validation_data_path": ["data/validation/ebay.poscontent.txt", "data/validation/onion_drugs_legal.poscontent.txt"],
+  "test_data_path": ["data/test/ebay.poscontent.txt", "data/test/onion_drugs_legal.poscontent.txt"],
   "evaluate_on_test": true,
   "model": {
     "type": "seq2vec_classifier",

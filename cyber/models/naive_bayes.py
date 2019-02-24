@@ -20,27 +20,25 @@ class NaiveBayes(DocumentClassifier):
         self.vocab_size = self.vocab.get_vocab_size("tokens")
         self.num_classes = self.vocab.get_vocab_size("labels")
         self.nb = BernoulliNB()
+        # noinspection PyCallingNonCallable
         self.dummy = nn.Parameter(torch.tensor(0.0))
 
     @overrides
     def forward(self, text: Dict[str, torch.LongTensor],
                 label: torch.LongTensor = None,
                 metadata: Optional[List[Dict[str, Any]]] = None) -> Dict[str, torch.Tensor]:
-        text_mask = util.get_text_field_mask(text)
-        tokens = text["tokens"]
-        bow = torch.zeros((tokens.size(0), self.vocab_size))
-        bow.scatter_(1, tokens, torch.ones((tokens.size(0), self.vocab_size)))
-        mask = torch.zeros((tokens.size(0), self.vocab_size))
-        mask.scatter_(1, text_mask, torch.ones((text_mask.size(0), self.vocab_size)))
-        bow *= mask
-        bow = bow.numpy()
+        text_mask = util.get_text_field_mask(text).numpy()
+        tokens = text["tokens"].numpy()
+        bow = np.eye(self.vocab_size + 1, dtype=int)[text_mask * (tokens + 1)].sum(1)[:, 1:]
         self.nb.partial_fit(bow, label, classes=list(range(self.num_classes)))
+        # noinspection PyCallingNonCallable
         log_proba = torch.tensor(self.nb.predict_log_proba(bow))
 
         output_dict = {"log_proba": log_proba}
         if label is not None:
             for metric in self.metrics.values():
                 metric(log_proba, label)
+            # noinspection PyCallingNonCallable
             output_dict["loss"] = torch.tensor(self.nb.score(bow, label)) + self.dummy
 
         return output_dict
