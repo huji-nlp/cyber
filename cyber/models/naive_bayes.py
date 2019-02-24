@@ -29,7 +29,7 @@ class NaiveBayes(DocumentClassifier):
                 metadata: Optional[List[Dict[str, Any]]] = None) -> Dict[str, torch.Tensor]:
         text_mask = util.get_text_field_mask(text).numpy()
         tokens = text["tokens"].numpy()
-        bow = np.eye(self.vocab_size + 1, dtype=int)[text_mask * (tokens + 1)].sum(2)[:, 1:]
+        bow = np.eye(self.vocab_size + 1, dtype=int)[text_mask * (tokens + 1)].sum(1)[:, 1:]
         self.nb.partial_fit(bow, label, classes=list(range(self.num_classes)))
         # noinspection PyCallingNonCallable
         log_proba = torch.tensor(self.nb.predict_log_proba(bow))

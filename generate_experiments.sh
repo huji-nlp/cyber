@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SOURCE_DIR=experiments/ebay_vs_onion_drugs_legal
-for MODEL in elmoattention gloveboe_averaged gloveboe_sum gloveseq2vec naivebayes; do
+for MODEL in elmoattention gloveboe_averaged gloveboe_sum gloveseq2vec naivebayes svm; do
   EXPERIMENT=${SOURCE_DIR}/${MODEL}.json
   for MASK in dropcontent dropfunc poscontent posfunc pos; do
     sed "s/\(data\/\S*\)\(\.txt\)/\1.${MASK}\2/g" ${EXPERIMENT} > ${SOURCE_DIR}/${MODEL}_${MASK}.json
