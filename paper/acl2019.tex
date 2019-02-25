@@ -92,6 +92,21 @@ DUTA \citep{AlNabki17}
 
 \paragraph{Cleaning.} Elior + Daniel
 
+As preprocessing for all experiments, we apply some cleaning to the text
+of web pages in our corpus.
+HTML markup is already removed in the original dataset,
+but many nonlinguistic content remains, such as
+buttons, encryption keys, metadata and URLs.
+We remove such text from the web pages, and also join paragraphs to single lines
+(as newlines are sometimes present in the original dataset for display purposes
+only).
+We then remove any duplicate paragraphs, where paragraphs are considered
+identical if they share all but numbers
+(to avoid an over-representation of some remaining surrounding text from the
+websites, e.g. ``Showing all 9 results Search for
+...'').\footnote{Our preprocessing code is included in the supplementary
+material, and will be publicly available upon publication.}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Analysis}
 
