@@ -28,6 +28,11 @@
 % in the camera-ready version and ask you to change it back.
 
 \newcommand\BibTeX{B\textsc{ib}\TeX}
+\newcommand{\oa}[1]{\footnote{\color{red}OA: #1}}
+\newcommand{\oamod}[1]{{\color{red}#1}}
+\newcommand{\lc}[1]{\footnote{\color{blue}LC: #1}}
+\newcommand{\lcmod}[1]{{\color{blue}#1}}
+
 
 \title{The Language of Legal and Illegal Activity on DarkNet}
 
@@ -46,8 +51,20 @@
 
 \begin{document}
 \maketitle
+
 \begin{abstract}
-  
+  The non-indexed parts of the Internet (the DarkNet)
+   have become a haven for both legal and illegal annonymized activity.
+  Given the magnitude of these networks, scalably monitoring activity necessarily relies
+    on automated tools, and notably on NLP tools.
+  However, little is known about what characteristics texts communicated through DarkNet have, 
+    and how well do off-the-shelf NLP tools do on this domain.
+  This paper tackles this gap and performs an in-depth investigation of the characteristics
+    of legal and illegal text in DarkNet, comparing it to a clear net website with similar
+    content as a control condition.
+  Taking drugs-related website as a test case, we find that texts for selling legal and illegal drugs
+    have several linguistic charateristics that distinguish them from one another, as well as from 
+    the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.
 \end{abstract}
 
 
@@ -55,11 +72,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Omri
+  Under the cloak of anonimity, the Darknet is a home to much illegal activity \citep{moore2016cryptopolitik}. 
+  Applying NLP tools to text from the DarkNet is thus important for effective law enforcement and intelligence.
+  However, little is known about the characteristics of 
 
--- darknet has much illegal activity (https://www.profwoodward.org/2016/02/how-much-of-tor-is-used-for-illegal.html). people use it because it's easier to be anonymous, hard to track etc.
-
--- scalably monitoring activity in darknet uses NLP tools, but little is known about what characteristics the text in Tor has, and how well do off-the-shelf NLP tools do on this domain.
+While this domain has attracted much attention, both in the academia
 
 -- X et al. (2017) published a corpus and looked into text classification on texts from Tor, and Y et al. (2019) looked into how influential criminal sites are. 
 
