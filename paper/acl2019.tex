@@ -87,11 +87,26 @@ Some works have directly addressed a specific type of illegality and a particula
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Datasets}
+\section{Datasets}\label{sec:data}
 
 DUTA \citep{AlNabki17}
 
 \paragraph{Cleaning.} Elior + Daniel
+
+As preprocessing for all experiments, we apply some cleaning to the text
+of web pages in our corpus.
+HTML markup is already removed in the original dataset,
+but many nonlinguistic content remains, such as
+buttons, encryption keys, metadata and URLs.
+We remove such text from the web pages, and also join paragraphs to single lines
+(as newlines are sometimes present in the original dataset for display purposes
+only).
+We then remove any duplicate paragraphs, where paragraphs are considered
+identical if they share all but numbers
+(to avoid an over-representation of some remaining surrounding text from the
+websites, e.g. ``Showing all 9 results Search for
+...'').\footnote{Our preprocessing code is included in the supplementary
+material, and will be publicly available upon publication.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Analysis}
@@ -140,7 +155,8 @@ In order to analyze the named entities in each domain and the differences
 between them we used a ``wikification'' technique, searching for
 said entities in public datasets such as Wikipedia. 
 
-Using SpaCy's named entity recognition, we first found all the named
+Using spaCy's\footnote{\url{https://spacy.io}}
+named entity recognition, we first found all the named
 entities in each site in the datasets. After finding the named entites
 we searched for relevant Wikipedia entries for each named entity using
 the DBpedia Ontology API. For each domain we counted the total number
@@ -182,12 +198,12 @@ are usually not well known by the general public and are therefore
 less likely to be found on Wikipedia or other public databases.
 
 In addition to the differences in wikification percentages between
-the domains, we found that SpaCy had trouble correctly identifying
+the domains, we found that spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites. There were a fair number
-of false positives (words and phrases that were found by SpaCy but
+of false positives (words and phrases that were found by spaCy but
 were not actually named entities), especially in illegal Onion sites.
 We believe the informal language used in our datasets makes it harder
-for SpaCy to function optimally in this capacity.
+for spaCy to function optimally in this capacity.
 
 These findings lead us to believe that the popular tools used today
 for named entity recognition and analysis are not ideal for processing
@@ -198,6 +214,44 @@ illicit activities.
 \section{Classification Experiments}
 
 Daniel
+
+\paragraph{Experimental setup.}
+
+After cleaning the dataset, joining lines to paragraphs and removing duplicates
+(see \S\ref{sec:data}), we split each subset into training, validation and test.
+We choose to have 456 training paragraphs, 57 validation paragraphs and
+58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
+thus randomly downsampling larger categories for an even division of labels.
+
+\paragraph{Model.}
+
+To classify paragraphs into categories, we experiment with four classifiers:
+
+\begin{itemize}
+  \item Naive Bayes bag-of-words: we use \texttt{BernoulliNB} from
+  \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
+  with $\alpha=1$.
+  \item SVM: we use \texttt{SVC}, also from \texttt{scikit-learn},
+  with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+\end{itemize}
+
+\paragraph{Data manipulation.}
+
+To check the sensitivity of classifiers to variations in content words,
+function words and syntax, we experiment with five manipulations to the input
+data (in training, validation and testing).
+For this purpose, we consider content words as words whose universal part-of-speech
+according to spaCy is one of \{ADJ, ADV, NOUN, PROPN, VERB, X, NUM\},
+and function words as all other words.
+The tested manipulations are:
+
+\begin{itemize}
+  \item Dropping all content words.
+  \item Dropping all function words.
+  \item Replacing all content words with their universal part-of-speech.
+  \item Replacing all function words with their universal part-of-speech.
+  \item Replacing all words with their universal part-of-speech.
+\end{itemize}
 
 \subsection{Results}
 
