@@ -86,7 +86,7 @@ Some works have directly addressed a specific type of illegality and a particula
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Datasets}
+\section{Datasets}\label{sec:data}
 
 DUTA \citep{AlNabki17}
 
@@ -181,6 +181,18 @@ illicit activities.
 \section{Classification Experiments}
 
 Daniel
+
+\paragraph{Experimental setup.}
+
+After cleaning the dataset, joining lines to paragraphs and removing duplicates
+(see \S\ref{sec:data}), we split each subset into training, validation and test.
+We choose to have 456 training paragraphs, 57 validation paragraphs and
+58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
+thus randomly downsampling larger categories for an even division of labels.
+
+\paragraph{Model.}
+
+To classify 
 
 \subsection{Results}
 
