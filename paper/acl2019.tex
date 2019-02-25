@@ -15,9 +15,10 @@
 \usepackage[hyperref]{acl2019}
 \usepackage{times}
 \usepackage{latexsym}
-
+\usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{url}
-
+\usepackage{xcolor}
 %\aclfinalcopy % Uncomment this line for the final submission
 %\def\aclpaperid{***} %  Enter the acl Paper ID here
 
@@ -96,10 +97,42 @@ DUTA \citep{AlNabki17}
 \section{Domain Analysis}
 
 \subsection{Distances between Domains}
+\begin{table}[]
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{@{}lllll@{}}
+			& all onion  & ebay       & illegal    & legal      \\
+			all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
+			ebay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
+			illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
+			legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
+		\end{tabular}%
+	}
+	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and Ebay sites. \label{ta:domain}}
+\end{table}
+\begin{table*}[]
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{@{}lllllllllllll@{}}
+			& all onion  & all onion\_half1 & all onion\_half2 & ebay       & ebay\_half1 & ebay\_half2 & illegal    & illegal\_half1 & illegal\_half2 & legal      & legal\_half1 & legal\_half2 \\
+			all onion        &            & 0.23, 0.34       & 0.25, 0.38       & 0.60, 1.31 & 0.61, 1.35  & 0.61, 1.35  & 0.33, 0.62 & 0.39, 0.77     & 0.41, 0.81     & 0.35, 0.65 & 0.41, 0.82   & 0.42, 0.82   \\
+			all onion\_half1 & 0.23, 0.34 &                  & 0.43, 0.73       & 0.60, 1.32 & 0.62, 1.35  & 0.62, 1.35  & 0.37, 0.63 & 0.33, 0.63     & 0.50, 0.96     & 0.40, 0.70 & 0.36, 0.70   & 0.52, 1.00   \\
+			all onion\_half2 & 0.25, 0.38 & 0.43, 0.73       &                  & 0.61, 1.34 & 0.62, 1.36  & 0.62, 1.37  & 0.39, 0.69 & 0.50, 0.96     & 0.35, 0.67     & 0.39, 0.67 & 0.51, 0.99   & 0.35, 0.66   \\
+			ebay             & 0.60, 1.31 & 0.60, 1.32       & 0.61, 1.34       &            & 0.23, 0.36  & 0.25, 0.39  & 0.59, 1.28 & 0.60, 1.30     & 0.60, 1.32     & 0.66, 1.46 & 0.67, 1.48   & 0.67, 1.49   \\
+			ebay\_half1      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.36       & 0.23, 0.36 &             & 0.43, 0.74  & 0.60, 1.32 & 0.61, 1.33     & 0.61, 1.34     & 0.67, 1.48 & 0.67, 1.48   & 0.68, 1.50   \\
+			ebay\_half2      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.37       & 0.25, 0.39 & 0.43, 0.74  &             & 0.60, 1.30 & 0.61, 1.32     & 0.61, 1.32     & 0.67, 1.49 & 0.68, 1.50   & 0.68, 1.50   \\
+			illegal          & 0.33, 0.62 & 0.37, 0.63       & 0.39, 0.69       & 0.59, 1.28 & 0.60, 1.32  & 0.60, 1.30  &            & 0.23, 0.35     & 0.27, 0.42     & 0.61, 1.28 & 0.62, 1.31   & 0.62, 1.31   \\
+			illegal\_half1   & 0.39, 0.77 & 0.33, 0.63       & 0.50, 0.96       & 0.60, 1.30 & 0.61, 1.33  & 0.61, 1.32  & 0.23, 0.35 &                & 0.45, 0.77     & 0.62, 1.31 & 0.63, 1.33   & 0.62, 1.32   \\
+			illegal\_half2   & 0.41, 0.81 & 0.50, 0.96       & 0.35, 0.67       & 0.60, 1.32 & 0.61, 1.34  & 0.61, 1.32  & 0.27, 0.42 & 0.45, 0.77     &                & 0.62, 1.31 & 0.63, 1.33   & 0.63, 1.33   \\
+			legal            & 0.35, 0.65 & 0.40, 0.70       & 0.39, 0.67       & 0.66, 1.46 & 0.67, 1.48  & 0.67, 1.49  & 0.61, 1.28 & 0.62, 1.31     & 0.62, 1.31     &            & 0.26, 0.40   & 0.26, 0.42   \\
+			legal\_half1     & 0.41, 0.82 & 0.36, 0.70       & 0.51, 0.99       & 0.67, 1.48 & 0.67, 1.48  & 0.68, 1.50  & 0.62, 1.31 & 0.63, 1.33     & 0.63, 1.33     & 0.26, 0.40 &              & 0.47, 0.82   \\
+			legal\_half2     & 0.42, 0.82 & 0.52, 1.00       & 0.35, 0.66       & 0.67, 1.49 & 0.68, 1.50  & 0.68, 1.50  & 0.62, 1.31 & 0.62, 1.32     & 0.63, 1.33     & 0.26, 0.42 & 0.47, 0.82   &             
+		\end{tabular}%
+	}
+	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and Ebay sites, each domain was also split in half for in domain comparison. \label{ta:domain_halves}}
+	
+\end{table*}
+At this point, we strive to know which of the domains we deal with is a different domain in terms of word use, whether all onion language should be considered the same, and is there a potential in learning differences between onion sites. For those means, we created a histogram of the frequencies of words in the Ebay corpus and the legal and illegal drugs onion corpora, together with the combination of the two latter, representing all drug sites in onion. Additionally, each corpus was randomly split in two halves allowing for in-domain comparison. Following \cite{Plank2011EffectiveMO} we chose Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
 
-Leshem
-
-
+We see in Table \ref{ta:domain_halves} that ebay, legal and illegal are self-distant 0.4-0.45 but the distance between one another is 0.6-0.65. This means the three form an equilateral. Which in turn means that we can think of the three as three different domains. The results suggest there is no reason to think about all onion as one domain, and thus studying using onion data what characterizes the illegal domain from the legal domain is sensible. We also see that Ebay is as far from the legal domain as it is from the illegal or for that case all onion domain, this would suggest there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside onion domain, rather than world wide web legal domains such as ebay.
 
 \subsection{NER and Wikification}
 
