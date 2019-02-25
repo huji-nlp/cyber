@@ -15,9 +15,10 @@
 \usepackage[hyperref]{acl2019}
 \usepackage{times}
 \usepackage{latexsym}
-
+\usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{url}
-
+\usepackage{xcolor}
 %\aclfinalcopy % Uncomment this line for the final submission
 %\def\aclpaperid{***} %  Enter the acl Paper ID here
 
@@ -88,20 +89,67 @@ Some works have directly addressed a specific type of illegality and a particula
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Datasets}
+\section{Datasets}\label{sec:data}
 
 DUTA \citep{AlNabki17}
 
 \paragraph{Cleaning.} Elior + Daniel
 
+As preprocessing for all experiments, we apply some cleaning to the text
+of web pages in our corpus.
+HTML markup is already removed in the original dataset,
+but many nonlinguistic content remains, such as
+buttons, encryption keys, metadata and URLs.
+We remove such text from the web pages, and also join paragraphs to single lines
+(as newlines are sometimes present in the original dataset for display purposes
+only).
+We then remove any duplicate paragraphs, where paragraphs are considered
+identical if they share all but numbers
+(to avoid an over-representation of some remaining surrounding text from the
+websites, e.g. ``Showing all 9 results Search for
+...'').\footnote{Our preprocessing code is included in the supplementary
+material, and will be publicly available upon publication.}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Analysis}
 
 \subsection{Distances between Domains}
+\begin{table}[]
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{@{}lllll@{}}
+			& all onion  & ebay       & illegal    & legal      \\
+			all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
+			ebay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
+			illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
+			legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
+		\end{tabular}%
+	}
+	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and Ebay sites. \label{ta:domain}}
+\end{table}
+\begin{table*}[]
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{@{}lllllllllllll@{}}
+			& all onion  & all onion\_half1 & all onion\_half2 & ebay       & ebay\_half1 & ebay\_half2 & illegal    & illegal\_half1 & illegal\_half2 & legal      & legal\_half1 & legal\_half2 \\
+			all onion        &            & 0.23, 0.34       & 0.25, 0.38       & 0.60, 1.31 & 0.61, 1.35  & 0.61, 1.35  & 0.33, 0.62 & 0.39, 0.77     & 0.41, 0.81     & 0.35, 0.65 & 0.41, 0.82   & 0.42, 0.82   \\
+			all onion\_half1 & 0.23, 0.34 &                  & 0.43, 0.73       & 0.60, 1.32 & 0.62, 1.35  & 0.62, 1.35  & 0.37, 0.63 & 0.33, 0.63     & 0.50, 0.96     & 0.40, 0.70 & 0.36, 0.70   & 0.52, 1.00   \\
+			all onion\_half2 & 0.25, 0.38 & 0.43, 0.73       &                  & 0.61, 1.34 & 0.62, 1.36  & 0.62, 1.37  & 0.39, 0.69 & 0.50, 0.96     & 0.35, 0.67     & 0.39, 0.67 & 0.51, 0.99   & 0.35, 0.66   \\
+			ebay             & 0.60, 1.31 & 0.60, 1.32       & 0.61, 1.34       &            & 0.23, 0.36  & 0.25, 0.39  & 0.59, 1.28 & 0.60, 1.30     & 0.60, 1.32     & 0.66, 1.46 & 0.67, 1.48   & 0.67, 1.49   \\
+			ebay\_half1      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.36       & 0.23, 0.36 &             & 0.43, 0.74  & 0.60, 1.32 & 0.61, 1.33     & 0.61, 1.34     & 0.67, 1.48 & 0.67, 1.48   & 0.68, 1.50   \\
+			ebay\_half2      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.37       & 0.25, 0.39 & 0.43, 0.74  &             & 0.60, 1.30 & 0.61, 1.32     & 0.61, 1.32     & 0.67, 1.49 & 0.68, 1.50   & 0.68, 1.50   \\
+			illegal          & 0.33, 0.62 & 0.37, 0.63       & 0.39, 0.69       & 0.59, 1.28 & 0.60, 1.32  & 0.60, 1.30  &            & 0.23, 0.35     & 0.27, 0.42     & 0.61, 1.28 & 0.62, 1.31   & 0.62, 1.31   \\
+			illegal\_half1   & 0.39, 0.77 & 0.33, 0.63       & 0.50, 0.96       & 0.60, 1.30 & 0.61, 1.33  & 0.61, 1.32  & 0.23, 0.35 &                & 0.45, 0.77     & 0.62, 1.31 & 0.63, 1.33   & 0.62, 1.32   \\
+			illegal\_half2   & 0.41, 0.81 & 0.50, 0.96       & 0.35, 0.67       & 0.60, 1.32 & 0.61, 1.34  & 0.61, 1.32  & 0.27, 0.42 & 0.45, 0.77     &                & 0.62, 1.31 & 0.63, 1.33   & 0.63, 1.33   \\
+			legal            & 0.35, 0.65 & 0.40, 0.70       & 0.39, 0.67       & 0.66, 1.46 & 0.67, 1.48  & 0.67, 1.49  & 0.61, 1.28 & 0.62, 1.31     & 0.62, 1.31     &            & 0.26, 0.40   & 0.26, 0.42   \\
+			legal\_half1     & 0.41, 0.82 & 0.36, 0.70       & 0.51, 0.99       & 0.67, 1.48 & 0.67, 1.48  & 0.68, 1.50  & 0.62, 1.31 & 0.63, 1.33     & 0.63, 1.33     & 0.26, 0.40 &              & 0.47, 0.82   \\
+			legal\_half2     & 0.42, 0.82 & 0.52, 1.00       & 0.35, 0.66       & 0.67, 1.49 & 0.68, 1.50  & 0.68, 1.50  & 0.62, 1.31 & 0.62, 1.32     & 0.63, 1.33     & 0.26, 0.42 & 0.47, 0.82   &             
+		\end{tabular}%
+	}
+	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and Ebay sites, each domain was also split in half for in domain comparison. \label{ta:domain_halves}}
+	
+\end{table*}
+At this point, we strive to know which of the domains we deal with is a different domain in terms of word use, whether all onion language should be considered the same, and is there a potential in learning differences between onion sites. For those means, we created a histogram of the frequencies of words in the Ebay corpus and the legal and illegal drugs onion corpora, together with the combination of the two latter, representing all drug sites in onion. Additionally, each corpus was randomly split in two halves allowing for in-domain comparison. Following \cite{Plank2011EffectiveMO} we chose Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
 
-Leshem
-
-
+We see in Table \ref{ta:domain_halves} that ebay, legal and illegal are self-distant 0.4-0.45 but the distance between one another is 0.6-0.65. This means the three form an equilateral. Which in turn means that we can think of the three as three different domains. The results suggest there is no reason to think about all onion as one domain, and thus studying using onion data what characterizes the illegal domain from the legal domain is sensible. We also see that Ebay is as far from the legal domain as it is from the illegal or for that case all onion domain, this would suggest there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside onion domain, rather than world wide web legal domains such as ebay.
 
 \subsection{NER and Wikification}
 
@@ -109,7 +157,8 @@ In order to analyze the named entities in each domain and the differences
 between them we used a ``wikification'' technique, searching for
 said entities in public datasets such as Wikipedia. 
 
-Using SpaCy's named entity recognition, we first found all the named
+Using spaCy's\footnote{\url{https://spacy.io}}
+named entity recognition, we first found all the named
 entities in each site in the datasets. After finding the named entites
 we searched for relevant Wikipedia entries for each named entity using
 the DBpedia Ontology API. For each domain we counted the total number
@@ -151,12 +200,12 @@ are usually not well known by the general public and are therefore
 less likely to be found on Wikipedia or other public databases.
 
 In addition to the differences in wikification percentages between
-the domains, we found that SpaCy had trouble correctly identifying
+the domains, we found that spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites. There were a fair number
-of false positives (words and phrases that were found by SpaCy but
+of false positives (words and phrases that were found by spaCy but
 were not actually named entities), especially in illegal Onion sites.
 We believe the informal language used in our datasets makes it harder
-for SpaCy to function optimally in this capacity.
+for spaCy to function optimally in this capacity.
 
 These findings lead us to believe that the popular tools used today
 for named entity recognition and analysis are not ideal for processing
@@ -167,6 +216,59 @@ illicit activities.
 \section{Classification Experiments}
 
 Daniel
+
+\paragraph{Experimental setup.}
+
+After cleaning the dataset, joining lines to paragraphs and removing duplicates
+(see \S\ref{sec:data}), we split each subset into training, validation and test.
+We choose to have 456 training paragraphs, 57 validation paragraphs and
+58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
+thus randomly downsampling larger categories for an even division of labels.
+
+\paragraph{Model.}
+
+To classify paragraphs into categories, we experiment with five classifiers:
+
+\begin{itemize}
+  \item Naive Bayes bag-of-words: we use \texttt{BernoulliNB} from
+  \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
+  with $\alpha=1$.
+  \item SVM: we use \texttt{SVC}, also from \texttt{scikit-learn},
+  with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+  \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
+  GloVe vector \cite{pennington2014glove}, average the embeddings for all words in the paragraph
+  to a single vector, and apply a 100-dimensional fully-connected layer with
+  ReLU non-linearity and dropout $p=0.2$.
+  The word vectors are not updated during training.
+  \item seq2vec: same as BoE, but instead of averaging word vectors,
+  we apply a BiLSTM to the word vectors, and take the concatenated
+  final hidden vectors from the forward and backward part as the input to the
+  fully-connected layer.
+  \item ELMo+attention: we replace the word representations with contextualized
+  pre-trained represetations from ELMo \cite{Peters:2018}. We then apply a self-attentive
+  classification network \cite{mccann2017learned} over the contextualized representations.
+\end{itemize}
+
+We use the AllenNLP Python library\footnote{\url{https://allennlp.org}}
+\cite{Gardner2017AllenNLP} for implementing the neural network classifiers.
+
+\paragraph{Data manipulation.}
+
+To check the sensitivity of classifiers to variations in content words,
+function words and syntax, we experiment with five manipulations to the input
+data (in training, validation and testing).
+For this purpose, we consider content words as words whose universal part-of-speech
+according to spaCy is one of \{ADJ, ADV, NOUN, PROPN, VERB, X, NUM\},
+and function words as all other words.
+The tested manipulations are:
+
+\begin{itemize}
+  \item Dropping all content words.
+  \item Dropping all function words.
+  \item Replacing all content words with their universal part-of-speech.
+  \item Replacing all function words with their universal part-of-speech.
+  \item Replacing all words with their universal part-of-speech.
+\end{itemize}
 
 \subsection{Results}
 
