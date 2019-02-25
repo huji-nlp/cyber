@@ -23,22 +23,18 @@ class Svm(DocumentClassifier):
         self.svm = SVC(gamma='scale', cache_size=4000, max_iter=-1, tol=1e-5)
         # self.svm = SVC(kernel="poly", gamma='scale', cache_size=4000, max_iter=-1)
         # self.svm = SVC(kernel="linear", gamma='scale', cache_size=4000, max_iter=-1)
+        # noinspection PyCallingNonCallable
         self.dummy = nn.Parameter(torch.tensor(0.0))
 
     @overrides
     def forward(self, text: Dict[str, torch.LongTensor],
                 label: torch.LongTensor = None,
-                metadata: Optional[List[Dict[str, Any]]]=None) -> Dict[str, torch.Tensor]:
-        text_mask = util.get_text_field_mask(text)
-        tokens = text["tokens"]
-        bow = torch.zeros((tokens.size(0), self.vocab_size))
-        bow.scatter_(1, tokens, torch.ones((tokens.size(0), self.vocab_size)))
-        mask = torch.zeros((tokens.size(0), self.vocab_size))
-        mask.scatter_(1, text_mask, torch.ones(
-            (text_mask.size(0), self.vocab_size)))
-        bow *= mask
-        bow = bow.numpy()
+                metadata: Optional[List[Dict[str, Any]]] = None) -> Dict[str, torch.Tensor]:
+        text_mask = util.get_text_field_mask(text).numpy()
+        tokens = text["tokens"].numpy()
+        bow = np.eye(self.vocab_size + 1, dtype=int)[text_mask * (tokens + 1)].sum(1)[:, 1:]
         self.svm.fit(bow, label)
+        # noinspection PyCallingNonCallable
         predict = torch.tensor(self.svm.predict(bow))
         # labels_num = 2
         labels_num = predict.max()+1
@@ -47,8 +43,8 @@ class Svm(DocumentClassifier):
         if label is not None:
             for metric in self.metrics.values():
                 metric(predict, label)
-            output_dict["loss"] = torch.tensor(
-                self.svm.score(bow, label)) + self.dummy
+            # noinspection PyCallingNonCallable
+            output_dict["loss"] = torch.tensor(self.svm.score(bow, label)) + self.dummy
 
         return output_dict
 

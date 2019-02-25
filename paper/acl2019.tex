@@ -77,7 +77,9 @@ Elior
 
 \paragraph{Detecting illegal activities in the Web}
 
-The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories, which allows the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content \citep{AlNabki17,Avarikioti18}.
+The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories, which allows the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. For example, in the recent work of \citet{Avarikioti18} on Tor content clasification, in most of the categories both legal and illegal content appear.
+
+Some works have directly addressed a specific type of illegality and a particular communication context. \citet{MorrisHirst12} have used an SVM classification to identify sexual predators in chatting message systems. The model includes both lexical features, including emoticons and behavioral features that correspond to conversational patterns. Another example is the detection of pedophile activity in peer-to-peeer networks \citep{Latapy13} where a predefined list of keywords was used to detect child-pornography queries.
 
 
 
@@ -101,7 +103,63 @@ Leshem
 
 \subsection{NER and Wikification}
 
-Dan: experimental setup, results and 
+In order to analyze the named entities in each domain and the differences
+between them we used a ``wikification'' technique, searching for
+said entities in public datasets such as Wikipedia. 
+
+Using SpaCy's named entity recognition, we first found all the named
+entities in each site in the datasets. After finding the named entites
+we searched for relevant Wikipedia entries for each named entity using
+the DBpedia Ontology API. For each domain we counted the total number
+of named entites and what percentage of them had corresponding Wikipedia
+articles.
+
+\begin{table}
+
+\caption{Percentage of Wikifiable Named Entites per Domain}
+
+\begin{centering}
+\begin{tabular}{|c||c|}
+\hline 
+ & Percentage\tabularnewline
+\hline 
+\hline 
+Legal Onion & 50.8 $\pm2.31$\tabularnewline
+\hline 
+\hline 
+Illegal Onion & 32.5 $\pm1.35$\tabularnewline
+\hline 
+\hline 
+eBay & 38.6 $\pm2$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\end{table}
+According to our results (Table 1) the wikification percentages of
+eBay sites and illegal Onion sites are comparable and relatively low.
+However, sites selling legal drugs on Onion have a much higher wikification
+percentage.
+
+Presumably the named entities in Onion sites selling legal drugs are
+more easily found in public databases such as Wikipedia because they
+are mainly well known names for legal pharmaceuticals. However, in
+both illegal Onion and eBay sites, the list of named entities include
+many nicknames for illicit drugs and paraphernalia. These nicknames
+are usually not well known by the general public and are therefore
+less likely to be found on Wikipedia or other public databases.
+
+In addition to the differences in wikification percentages between
+the domains, we found that SpaCy had trouble correctly identifying
+named entities in both Onion and eBay sites. There were a fair number
+of false positives (words and phrases that were found by SpaCy but
+were not actually named entities), especially in illegal Onion sites.
+We believe the informal language used in our datasets makes it harder
+for SpaCy to function optimally in this capacity.
+
+These findings lead us to believe that the popular tools used today
+for named entity recognition and analysis are not ideal for processing
+informal language on the internet, especially language dealing in
+illicit activities. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classification Experiments}
