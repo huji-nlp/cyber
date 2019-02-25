@@ -225,7 +225,7 @@ thus randomly downsampling larger categories for an even division of labels.
 
 \paragraph{Model.}
 
-To classify paragraphs into categories, we experiment with four classifiers:
+To classify paragraphs into categories, we experiment with five classifiers:
 
 \begin{itemize}
   \item Naive Bayes bag-of-words: we use \texttt{BernoulliNB} from
@@ -233,7 +233,22 @@ To classify paragraphs into categories, we experiment with four classifiers:
   with $\alpha=1$.
   \item SVM: we use \texttt{SVC}, also from \texttt{scikit-learn},
   with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+  \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
+  GloVe vector \cite{glove}, average the embeddings for all words in the paragraph
+  to a single vector, and apply a 100-dimensional fully-connected layer with
+  ReLU non-linearity and dropout $p=0.2$.
+  The word vectors are not updated during training.
+  \item seq2vec: same as BoE, but instead of averaging word vectors,
+  we apply a BiLSTM \cite{bilstm} to the word vectors, and take the concatenated
+  final hidden vectors from the forward and backward part as the input to the
+  fully-connected layer.
+  \item ELMo+attention: we replace the word representations with contextualized
+  pre-trained represetations from ELMo \cite{elmo}. We then apply a self-attentive
+  classification network \cite{1708.00107} over the contextualized representations.
 \end{itemize}
+
+We use the AllenNLP Python library\footnote{\url{https://allennlp.org}}
+\cite{allennlp} for implementing the neural network classifiers.
 
 \paragraph{Data manipulation.}
 
