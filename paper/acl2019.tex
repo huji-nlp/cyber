@@ -72,21 +72,50 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-
-  Under the cloak of anonimity, the Darknet is a home to much illegal activity \citep{moore2016cryptopolitik}. 
+  
+  Under the cloak of anonimity, the Darknet is a home to much illegal activity \citep{moore2016cryptopolitik}.
   Applying NLP tools to text from the DarkNet is thus important for effective law enforcement and intelligence.
-  However, little is known about the characteristics of 
-
-While this domain has attracted much attention, both in the academia
-
--- X et al. (2017) published a corpus and looked into text classification on texts from Tor, and Y et al. (2019) looked into how influential criminal sites are. 
-
--- We investigate how legal and illegal activity taken from DarkNet is different, comparing to a clearnet website with similar content as a control condition.
-
--- We also explore methods for classifying texts from DarkNet into legal and illegal. This is important both for understanding whether these two types are different in terms of
-their text and in what ways, and as a practical tool.
-
--- A bit on the experiments and results.
+  However, little is known about the characteristics of the language used in the DarkNet, 
+  and specifically on what distinguishes text on websites that conduct legal and illegal activity.
+  
+  \citet{AlNabki17} were the first to crawl webpages from Onion sites (non-index sites commonly accessed using the Tor browser), 
+  and used it to perform text classification into topical categories (e.g., ``drugs'', ``services'' etc.).
+  Classifying texts into legal and illegal activity over text from Tor was first pursued by \citet{Avarikioti18}.
+  However, to our knowledge no previous work attempted to reveal in what linguistic dimensions do sites that advertise
+  legal and illegal activities differ. 
+  
+  This paper addresses this gap, and studies the distinguishing features between legal and illegal texts in Onion sites,
+  taking sites that advertise drugs as a test case. We compare our results to a control condition of texts 
+  from ebay\footnote{\url{https://www.ebay.com/}} pages that advertise drugs. 
+  
+  We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, that legal and illegal
+  pages\oa{is it pages or sentences?} can be distinguished based on the identity of the content words (bag of words model) 
+  in about 90\% accuracy over a balanced sample. Second, we find that the distribution of POS tags in the documents is a strong cue for distinguishing
+  legal and illegal pages (about 75\% accuracy). This indicates that the texts of the two types of websites are different in terms of their syntactic 
+  structure. Third, we find that legal and illegal texts are roughly as distinguisable from one another as legal texts and ebay pages (both in terms
+  of their words and the distinguishability of the distribution of their POS tags). This shows that legal and illegal texts can be considered
+  distinct domains, which on the one hand implies that they can be distinguished, but on the other hand suggests that applying NLP tools to this
+  domain is likely to face the obstacles of domain adaptations.  
+  Fourth, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
+  This suggests that for proper text understanding, specialized knowledge bases and tools may be needed for pages on illegal drugs, 
+    which underscores the pitfalls of na\"{i}vely applying off-the-shelf NLP tools to this domain.
+  
+  
+  
+%   
+%    published a corpus and looked into text classification on texts from Tor, 
+%   
+%   
+%   and Y et al. (2019) looked into how influential criminal sites are. 
+%
+%   While this domain has attracted much attention, both in the academia
+%
+%   %-- We investigate how legal and illegal activity taken from DarkNet is different, comparing to a clearnet website with similar content as a control condition.
+%
+%   We also explore methods for classifying texts from DarkNet into legal and illegal. This is important both for understanding whether these two types are different in terms of
+%   their text and in what ways, and as a practical tool.
+%
+%   A bit on the experiments and results.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
