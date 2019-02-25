@@ -192,7 +192,33 @@ thus randomly downsampling larger categories for an even division of labels.
 
 \paragraph{Model.}
 
-To classify 
+To classify paragraphs into categories, we experiment with four classifiers:
+
+\begin{itemize}
+  \item Naive Bayes bag-of-words: we use \texttt{BernoulliNB} from
+  \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
+  with $\alpha=1$.
+  \item SVM: we use \texttt{SVC}, also from \texttt{scikit-learn},
+  with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+\end{itemize}
+
+\paragraph{Data manipulation.}
+
+To check the sensitivity of classifiers to variations in content words,
+function words and syntax, we experiment with five manipulations to the input
+data (in training, validation and testing).
+For this purpose, we consider content words as words whose universal part-of-speech
+according to spaCy is one of \{ADJ, ADV, NOUN, PROPN, VERB, X, NUM\},
+and function words as all other words.
+The tested manipulations are:
+
+\begin{itemize}
+  \item Dropping all content words.
+  \item Dropping all function words.
+  \item Replacing all content words with their universal part-of-speech.
+  \item Replacing all function words with their universal part-of-speech.
+  \item Replacing all words with their universal part-of-speech.
+\end{itemize}
 
 \subsection{Results}
 
