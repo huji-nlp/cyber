@@ -11,7 +11,7 @@
 %%e.agirre@ehu.es or Sergi.Balari@uab.es
 %% and that of ACL 08 by Joakim Nivre and Noah Smith
 
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper,table]{article}
 \usepackage[hyperref]{acl2019}
 \usepackage{times}
 \usepackage{latexsym}
@@ -19,8 +19,10 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{xcolor}
+\usepackage{pgf}
+\usepackage{collcell}
 %\aclfinalcopy % Uncomment this line for the final submission
-%\def\aclpaperid{***} %  Enter the acl Paper ID here
+\def\aclpaperid{***} %  Enter the acl Paper ID here
 
 %\setlength\titlebox{5cm}
 % You can expand the titlebox if you need extra space
@@ -28,7 +30,6 @@
 % smaller than 5cm (the original size); we will check this
 % in the camera-ready version and ask you to change it back.
 
-\newcommand\BibTeX{B\textsc{ib}\TeX}
 \newcommand{\oa}[1]{\footnote{\color{red}OA: #1}}
 \newcommand{\oamod}[1]{{\color{red}#1}}
 \newcommand{\lc}[1]{\footnote{\color{blue}LC: #1}}
@@ -36,6 +37,16 @@
 \newcommand{\daniel}[1]{\footnote{\color{brown}DH: #1}}
 \newcommand{\daneldad}[1]{\footnote{\color{green}DE: #1}}
 \newcommand{\es}[1]{\footnote{\color{purple}ES: #1}}
+
+
+% for results matrix
+\newcommand{\ApplyGradient}[1]{%
+  \pgfmathsetmacro{\PercentColor}{(#1-0)/10}%
+  \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
+  %\textcolor{black!\PercentColor}{#1}
+  \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
+}
+\newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
 
 
 \title{The Language of Legal and Illegal Activity on DarkNet}
@@ -170,38 +181,38 @@ material, and will be publicly available upon publication.}
 
 \subsection{Distances between Domains}
 \begin{table}[]
-	\resizebox{\columnwidth}{!}{%
-		\begin{tabular}{@{}lllll@{}}
-			& all onion  & eBay       & illegal    & legal      \\
-			all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
-			eBay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
-			illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
-			legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
-		\end{tabular}%
-	}
-	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and eBay sites. \label{ta:domain}}
+    \resizebox{\columnwidth}{!}{%
+        \begin{tabular}{@{}lllll@{}}
+            & all onion  & eBay       & illegal    & legal      \\
+            all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
+            eBay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
+            illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
+            legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
+        \end{tabular}%
+    }
+    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and eBay sites. \label{ta:domain}}
 \end{table}
 \begin{table*}[]
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{@{}lllllllllllll@{}}
-			& all onion  & all onion\_half1 & all onion\_half2 & ebay       & ebay\_half1 & ebay\_half2 & illegal    & illegal\_half1 & illegal\_half2 & legal      & legal\_half1 & legal\_half2 \\
-			all onion        &            & 0.23, 0.34       & 0.25, 0.38       & 0.60, 1.31 & 0.61, 1.35  & 0.61, 1.35  & 0.33, 0.62 & 0.39, 0.77     & 0.41, 0.81     & 0.35, 0.65 & 0.41, 0.82   & 0.42, 0.82   \\
-			all onion\_half1 & 0.23, 0.34 &                  & 0.43, 0.73       & 0.60, 1.32 & 0.62, 1.35  & 0.62, 1.35  & 0.37, 0.63 & 0.33, 0.63     & 0.50, 0.96     & 0.40, 0.70 & 0.36, 0.70   & 0.52, 1.00   \\
-			all onion\_half2 & 0.25, 0.38 & 0.43, 0.73       &                  & 0.61, 1.34 & 0.62, 1.36  & 0.62, 1.37  & 0.39, 0.69 & 0.50, 0.96     & 0.35, 0.67     & 0.39, 0.67 & 0.51, 0.99   & 0.35, 0.66   \\
-			ebay             & 0.60, 1.31 & 0.60, 1.32       & 0.61, 1.34       &            & 0.23, 0.36  & 0.25, 0.39  & 0.59, 1.28 & 0.60, 1.30     & 0.60, 1.32     & 0.66, 1.46 & 0.67, 1.48   & 0.67, 1.49   \\
-			ebay\_half1      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.36       & 0.23, 0.36 &             & 0.43, 0.74  & 0.60, 1.32 & 0.61, 1.33     & 0.61, 1.34     & 0.67, 1.48 & 0.67, 1.48   & 0.68, 1.50   \\
-			ebay\_half2      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.37       & 0.25, 0.39 & 0.43, 0.74  &             & 0.60, 1.30 & 0.61, 1.32     & 0.61, 1.32     & 0.67, 1.49 & 0.68, 1.50   & 0.68, 1.50   \\
-			illegal          & 0.33, 0.62 & 0.37, 0.63       & 0.39, 0.69       & 0.59, 1.28 & 0.60, 1.32  & 0.60, 1.30  &            & 0.23, 0.35     & 0.27, 0.42     & 0.61, 1.28 & 0.62, 1.31   & 0.62, 1.31   \\
-			illegal\_half1   & 0.39, 0.77 & 0.33, 0.63       & 0.50, 0.96       & 0.60, 1.30 & 0.61, 1.33  & 0.61, 1.32  & 0.23, 0.35 &                & 0.45, 0.77     & 0.62, 1.31 & 0.63, 1.33   & 0.62, 1.32   \\
-			illegal\_half2   & 0.41, 0.81 & 0.50, 0.96       & 0.35, 0.67       & 0.60, 1.32 & 0.61, 1.34  & 0.61, 1.32  & 0.27, 0.42 & 0.45, 0.77     &                & 0.62, 1.31 & 0.63, 1.33   & 0.63, 1.33   \\
-			legal            & 0.35, 0.65 & 0.40, 0.70       & 0.39, 0.67       & 0.66, 1.46 & 0.67, 1.48  & 0.67, 1.49  & 0.61, 1.28 & 0.62, 1.31     & 0.62, 1.31     &            & 0.26, 0.40   & 0.26, 0.42   \\
-			legal\_half1     & 0.41, 0.82 & 0.36, 0.70       & 0.51, 0.99       & 0.67, 1.48 & 0.67, 1.48  & 0.68, 1.50  & 0.62, 1.31 & 0.63, 1.33     & 0.63, 1.33     & 0.26, 0.40 &              & 0.47, 0.82   \\
-			legal\_half2     & 0.42, 0.82 & 0.52, 1.00       & 0.35, 0.66       & 0.67, 1.49 & 0.68, 1.50  & 0.68, 1.50  & 0.62, 1.31 & 0.62, 1.32     & 0.63, 1.33     & 0.26, 0.42 & 0.47, 0.82   &             
-		\end{tabular}%
-	}
-	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and eBay sites.
-	Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
-	
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{@{}lllllllllllll@{}}
+            & all onion  & all onion\_half1 & all onion\_half2 & ebay       & ebay\_half1 & ebay\_half2 & illegal    & illegal\_half1 & illegal\_half2 & legal      & legal\_half1 & legal\_half2 \\
+            all onion        &            & 0.23, 0.34       & 0.25, 0.38       & 0.60, 1.31 & 0.61, 1.35  & 0.61, 1.35  & 0.33, 0.62 & 0.39, 0.77     & 0.41, 0.81     & 0.35, 0.65 & 0.41, 0.82   & 0.42, 0.82   \\
+            all onion\_half1 & 0.23, 0.34 &                  & 0.43, 0.73       & 0.60, 1.32 & 0.62, 1.35  & 0.62, 1.35  & 0.37, 0.63 & 0.33, 0.63     & 0.50, 0.96     & 0.40, 0.70 & 0.36, 0.70   & 0.52, 1.00   \\
+            all onion\_half2 & 0.25, 0.38 & 0.43, 0.73       &                  & 0.61, 1.34 & 0.62, 1.36  & 0.62, 1.37  & 0.39, 0.69 & 0.50, 0.96     & 0.35, 0.67     & 0.39, 0.67 & 0.51, 0.99   & 0.35, 0.66   \\
+            ebay             & 0.60, 1.31 & 0.60, 1.32       & 0.61, 1.34       &            & 0.23, 0.36  & 0.25, 0.39  & 0.59, 1.28 & 0.60, 1.30     & 0.60, 1.32     & 0.66, 1.46 & 0.67, 1.48   & 0.67, 1.49   \\
+            ebay\_half1      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.36       & 0.23, 0.36 &             & 0.43, 0.74  & 0.60, 1.32 & 0.61, 1.33     & 0.61, 1.34     & 0.67, 1.48 & 0.67, 1.48   & 0.68, 1.50   \\
+            ebay\_half2      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.37       & 0.25, 0.39 & 0.43, 0.74  &             & 0.60, 1.30 & 0.61, 1.32     & 0.61, 1.32     & 0.67, 1.49 & 0.68, 1.50   & 0.68, 1.50   \\
+            illegal          & 0.33, 0.62 & 0.37, 0.63       & 0.39, 0.69       & 0.59, 1.28 & 0.60, 1.32  & 0.60, 1.30  &            & 0.23, 0.35     & 0.27, 0.42     & 0.61, 1.28 & 0.62, 1.31   & 0.62, 1.31   \\
+            illegal\_half1   & 0.39, 0.77 & 0.33, 0.63       & 0.50, 0.96       & 0.60, 1.30 & 0.61, 1.33  & 0.61, 1.32  & 0.23, 0.35 &                & 0.45, 0.77     & 0.62, 1.31 & 0.63, 1.33   & 0.62, 1.32   \\
+            illegal\_half2   & 0.41, 0.81 & 0.50, 0.96       & 0.35, 0.67       & 0.60, 1.32 & 0.61, 1.34  & 0.61, 1.32  & 0.27, 0.42 & 0.45, 0.77     &                & 0.62, 1.31 & 0.63, 1.33   & 0.63, 1.33   \\
+            legal            & 0.35, 0.65 & 0.40, 0.70       & 0.39, 0.67       & 0.66, 1.46 & 0.67, 1.48  & 0.67, 1.49  & 0.61, 1.28 & 0.62, 1.31     & 0.62, 1.31     &            & 0.26, 0.40   & 0.26, 0.42   \\
+            legal\_half1     & 0.41, 0.82 & 0.36, 0.70       & 0.51, 0.99       & 0.67, 1.48 & 0.67, 1.48  & 0.68, 1.50  & 0.62, 1.31 & 0.63, 1.33     & 0.63, 1.33     & 0.26, 0.40 &              & 0.47, 0.82   \\
+            legal\_half2     & 0.42, 0.82 & 0.52, 1.00       & 0.35, 0.66       & 0.67, 1.49 & 0.68, 1.50  & 0.68, 1.50  & 0.62, 1.31 & 0.62, 1.32     & 0.63, 1.33     & 0.26, 0.42 & 0.47, 0.82   &             
+        \end{tabular}%
+    }
+    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and eBay sites.
+    Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
+    
 \end{table*}
 At this point, we strive to know which of the domains we deal with is a different domain in terms of word use, whether all onion language should be considered the same, and is there a potential in learning differences between onion sites. For those means, we created a histogram of the frequencies of words in the eBay corpus and the legal and illegal drugs onion corpora, together with the combination of the two latter, representing all drug sites in onion. Additionally, each corpus was randomly split in two halves allowing for in-domain comparison. Following \citet{Plank2011EffectiveMO} we chose Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.\daniel{Leshem: do we really need \textit{both} measures?}
 
@@ -215,7 +226,7 @@ In order to analyze the named entities in each domain and the differences
 between them we used a ``wikification'' technique, searching for
 said entities in public datasets such as Wikipedia. 
 
-Using SpaCy's\footnote{\url{https://spacy.io}}
+Using spaCy's\footnote{\url{https://spacy.io}}
 named entity recognition, we first found all the named
 entities in each site in the datasets. After finding the named entites
 we searched for relevant Wikipedia entries for each named entity using
@@ -249,15 +260,15 @@ are usually not well known by the general public and are therefore
 less likely to be found on Wikipedia or other public databases.
 
 In addition to the differences in wikification percentages between
-the domains, we found that SpaCy had trouble correctly identifying
+the domains, we found that spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites. There were a fair number
-of false positives (words and phrases that were found by SpaCy but
+of false positives (words and phrases that were found by spaCy but
 were not actually named entities),\daniel{Dan: is this observation
 quantifiable? Can you tell what ratio are false positives? If not,
 mention that this is just our impression and perhaps give examples}
-especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up by SpaCy's NER.
+especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up by spaCy's NER.
 It should be noted that that ratio of false positives is not something that is easily quantifiable, and therefore this is only a qualitative observation. That being said, it is our impression that the informal language used in our datasets makes it harder
-for SpaCy to function optimally in this capacity.\daneldad{cleared up a bit and added examples as per daniel's comment}
+for spaCy to function optimally in this capacity.\daneldad{cleared up a bit and added examples as per daniel's comment}
 
 These findings lead us to believe that the popular tools used today
 for named entity recognition and analysis are not ideal for processing
@@ -292,7 +303,7 @@ To classify paragraphs into categories, we experiment with five classifiers:
   with $\gamma=$``scale'' and tolerance=$10^{-5}$.
   We use BoW features in this case too.
   \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
-  GloVe vector \cite{pennington2014glove}, average the embeddings for all words in the paragraph
+  GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
   to a single vector, and apply a 100-dimensional fully-connected layer with
   ReLU non-linearity and dropout $p=0.2$.
   The word vectors are not updated during training.
@@ -320,16 +331,35 @@ and function words as all other words.
 The tested manipulations are:
 
 \begin{itemize}
-  \item Dropping all content words.
-  \item Dropping all function words.
-  \item Replacing all content words with their universal part-of-speech.
-  \item Replacing all function words with their universal part-of-speech.
-  \item Replacing all words with their universal part-of-speech.
+  \item Dropping all content words (dropcontent).
+  \item Dropping all function words (dropfunc).
+  \item Replacing all content words with their universal part-of-speech (poscontent).
+  \item Replacing all function words with their universal part-of-speech (posfunc).
+  \item Replacing all words with their universal part-of-speech (pos).
 \end{itemize}
 
 \subsection{Results}
 
 \paragraph{Legal vs. Illegal}
+
+
+\begin{table*}[t]
+\centering
+%\setlength\tabcolsep{5pt}
+%\def\arraystretch{.855}
+\begin{tabular}{lRRRRRR}
+eBay vs. legal drugs \\
+Model & \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf dropcontent} & \multicolumn{1}{c}{\bf dropfunc} & \multicolumn{1}{c}{\bf poscontent} & \multicolumn{1}{c}{\bf posfunc} & \multicolumn{1}{c}{\bf pos}\\
+Naive Bayes & 91.4 & 57.8 & 90.5 & 56.9 & 92.2 & 46.6\\
+SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8 & 75\\
+BoE (sum) & 66.4 & 56 & 63.8 & 50.9 & 76.7 & \\
+BoE (average) & 75 & 55.2 & 59.5 & 50 & 75 & \\
+seq2vec & 73.3 &  & 65.5 & 65.5 & 75 & \\
+ELMo+attention & 82.8 &  & 85.3 & 62.1 & 82.8 & 62.9\\
+\end{tabular}
+\caption{Test accuracy for each classifier in each setting.
+\label{tab:results}}
+\end{table*}
 
 \paragraph{Legal Onion vs. eBay}
 
