@@ -209,7 +209,7 @@ In order to analyze the named entities in each domain and the differences
 between them we used a ``wikification'' technique, searching for
 said entities in public datasets such as Wikipedia. 
 
-Using SpaCy's\footnote{\url{https://spacy.io}}
+Using spaCy's\footnote{\url{https://spacy.io}}
 named entity recognition, we first found all the named
 entities in each site in the datasets. After finding the named entites
 we searched for relevant Wikipedia entries for each named entity using
@@ -243,15 +243,15 @@ are usually not well known by the general public and are therefore
 less likely to be found on Wikipedia or other public databases.
 
 In addition to the differences in wikification percentages between
-the domains, we found that SpaCy had trouble correctly identifying
+the domains, we found that spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites. There were a fair number
-of false positives (words and phrases that were found by SpaCy but
+of false positives (words and phrases that were found by spaCy but
 were not actually named entities),\daniel{Dan: is this observation
 quantifiable? Can you tell what ratio are false positives? If not,
 mention that this is just our impression and perhaps give examples}
-especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up by SpaCy's NER.
+especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up by spaCy's NER.
 It should be noted that that ratio of false positives is not something that is easily quantifiable, and therefore this is only a qualitative observation. That being said, it is our impression that the informal language used in our datasets makes it harder
-for SpaCy to function optimally in this capacity.\daneldad{cleared up a bit and added examples as per daniel's comment}
+for spaCy to function optimally in this capacity.\daneldad{cleared up a bit and added examples as per daniel's comment}
 
 These findings lead us to believe that the popular tools used today
 for named entity recognition and analysis are not ideal for processing
