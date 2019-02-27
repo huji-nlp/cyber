@@ -35,6 +35,7 @@
 \newcommand{\lcmod}[1]{{\color{blue}#1}}
 \newcommand{\daniel}[1]{\footnote{\color{brown}DH: #1}}
 \newcommand{\daneldad}[1]{\footnote{\color{green}DE: #1}}
+\newcommand{\es}[1]{\footnote{\color{purple}ES: #1}}
 
 
 \title{The Language of Legal and Illegal Activity on DarkNet}
@@ -81,15 +82,15 @@
   and specifically on what distinguishes text on websites that conduct legal and illegal activity.
   
   \citet{AlNabki17} were the first to crawl webpages from Onion sites (non-index sites commonly accessed using the Tor browser), 
-  and used it to perform text classification into topical categories (e.g., ``drugs'', ``services'' etc.).
+  and used it to perform text classification into topical categories (e.g., ``drugs'', ``services'' etc.). \es{I think \citet{moore2016cryptopolitik} were the first to use crawling for Tor but they only collected 5K samples of Tor onion pages for the topic classification and there didn't publish an annotated corpus.}
   Classifying texts into legal and illegal activity over text from Tor was first pursued by \citet{Avarikioti18}.
   However, to our knowledge no previous work attempted to reveal in what linguistic dimensions do sites that advertise
-  legal and illegal activities differ. 
+  legal and illegal activities differ.
   
   This paper addresses this gap, and studies the distinguishing features between legal and illegal texts in Onion sites,
   taking sites that advertise drugs as a test case. We compare our results to a control condition of texts 
   from eBay\footnote{\url{https://www.ebay.com/}} pages that advertise drugs
-  (supposedly of the pharmaceutical kind). 
+  (supposedly of the pharmaceutical kind). \es{I think it can also be another product (e.g. clothes) where a drug name is mentioned. What about: ``that advertises products corresponding to drug keywords (see Section \ref{datasets})''}
   
   We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, that text from legal and illegal
   pages can be distinguished based on the identity of the content words (bag of words model) 
@@ -127,20 +128,25 @@ Elior
 
 %\paragraph{Detecting illegal activities in the Web}
 
-The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories, which allows the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. For example, in the recent work of \citet{Avarikioti18} on Tor content clasification, in most of the categories both legal and illegal content appear.
 
-Some works have directly addressed a specific type of illegality and a particular communication context. \citet{MorrisHirst12} have used an SVM classification to identify sexual predators in chatting message systems. The model includes both lexical features, including emoticons and behavioral features that correspond to conversational patterns. Another example is the detection of pedophile activity in peer-to-peeer networks \citep{Latapy13} where a predefined list of keywords was used to detect child-pornography queries.
+The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories. This allowed the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand. The text in this case was extracted by exploiting a flaw in the network. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. For example, in the recent work of \citet{Avarikioti18} on Tor content clasification, in most of the categories both legal and illegal content appear. We here explore the distinction between legal and illegal activities within a given topical category.
 
-\citet{AlNabki17} presented the DUTA (Darknet Usage Text Addresses), the first publicly available Darknet dataset, together with a manual classification into classes and sub-classes. For some of the classes, legal and illegal activities are distinguished. However, the automatic classification presented in their work focuses on the differentiation between several illegal activities, without dealing with the separation between legal and illegal activities, which is the subject of the present paper. \citet{AlNabki19} further extended the DUTA-10K dataset, which we are using here, and report that 20\% of the hidden services correspond to suspiscious activities. This analysis is done using the text classifier presented in \citet{AlNabki17} and a manual verification, where the information is directly derived from a categorization into classes.
+Some works have directly addressed a specific type of illegality and a particular communication context. \citet{MorrisHirst12} have used an SVM classification to identify sexual predators in chatting message systems. The model includes both lexical features, including emoticons and behavioral features that correspond to conversational patterns. Another example is the detection of pedophile activity in peer-to-peeer networks \citep{Latapy13} where a predefined list of keywords was used to detect child-pornography queries. In adition to lexical features, we here consider other general linguistic properties as sentence structure whose analysis can be extended to a wide range of legal/illegal cases. 
 
+\citet{AlNabki17} presented DUTA (Darknet Usage Text Addresses), the first publicly available Darknet dataset, together with a manual classification into topical categories and sub-categories. For some of the categories, legal and illegal activities are distinguished. However, the automatic classification presented in their work focuses on the differentiation between several illegal activities, without dealing with the separation between legal and illegal ones, which is the subject of the present paper. \citet{AlNabki19} further extended the DUTA-10K dataset, which we are using here, and report that 20\% of the hidden services correspond to suspiscious activities. This analysis is done using the text classifier presented in \citet{AlNabki17} and a manual verification, where the information is directly derived from a the topic classification.
+
+Recently, \citet{Avarikioti18} presented another topic classification of text from Tor together with a first classification into legal and illegal activities.  The experiments were performed on a new crawled corpus obtained by a recursive search. The legal/illegal classification was done using an SVM classifier in an active learning setting with bag of words as features. Legality was assessed in a conservative way where illegality is assigned if the purpose of the content is an obvioulsy illegal action, even if the content might be technically legal. They found that a linear kernel worked best and reported an F1 score of 85 \% and an accuracy of 89 \%. Using the dataset of \citet{AlNabki19}, and focusing on a given topical category, we here confirm the importance of content words in the classification and explore the linguistic dimensions permitting the legal/illegal distinction. 
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Datasets}\label{sec:data}
+\section{Datasets}\label{sec:data} \label{datasets}
 
-DUTA \citep{AlNabki17}
+\paragraph{The Onion corpus}
+DUTA-10K \citep{AlNabki19}
+
+\paragraph{The Ebay corpus}
 
 \paragraph{Cleaning.} Elior + Daniel
 
