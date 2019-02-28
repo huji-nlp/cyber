@@ -21,6 +21,7 @@
 \usepackage{xcolor}
 \usepackage{pgf}
 \usepackage{collcell}
+\usepackage{tabularx}
 %\aclfinalcopy % Uncomment this line for the final submission
 \def\aclpaperid{***} %  Enter the acl Paper ID here
 
@@ -41,7 +42,7 @@
 
 % for results matrix
 \newcommand{\ApplyGradient}[1]{%
-  \pgfmathsetmacro{\PercentColor}{(#1-0)/10}%
+  \pgfmathsetmacro{\PercentColor}{(#1-0)/4}%
   \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
   %\textcolor{black!\PercentColor}{#1}
   \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
@@ -295,7 +296,7 @@ thus randomly downsampling larger categories for an even division of labels.
 To classify paragraphs into categories, we experiment with five classifiers:
 
 \begin{itemize}
-  \item Naive Bayes: we use \texttt{BernoulliNB} from
+  \item NB (Naive Bayes): we use \texttt{BernoulliNB} from
   \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
   with $\alpha=1$.
   The features are BoW (bag-of-words), i.e., indicator feature for each word.
@@ -311,7 +312,7 @@ To classify paragraphs into categories, we experiment with five classifiers:
   we apply a BiLSTM to the word vectors, and take the concatenated
   final hidden vectors from the forward and backward part as the input to the
   fully-connected layer.
-  \item ELMo+attention: we replace the word representations with contextualized
+  \item attention: we replace the word representations with contextualized
   pre-trained represetations from ELMo \cite{Peters:2018}. We then apply a self-attentive
   classification network \cite{mccann2017learned} over the contextualized representations. This architecture proved very accurate for classification in
   previous work \cite{W18-5427,D18-1401}.
@@ -331,10 +332,10 @@ and function words as all other words.
 The tested manipulations are:
 
 \begin{itemize}
-  \item Dropping all content words (dropcontent).
-  \item Dropping all function words (dropfunc).
-  \item Replacing all content words with their universal part-of-speech (poscontent).
-  \item Replacing all function words with their universal part-of-speech (posfunc).
+  \item Dropping all content words (drop cont.).
+  \item Dropping all function words (drop func).
+  \item Replacing all content words with their universal part-of-speech (pos cont.).
+  \item Replacing all function words with their universal part-of-speech (pos func).
   \item Replacing all words with their universal part-of-speech (pos).
 \end{itemize}
 
@@ -343,23 +344,24 @@ The tested manipulations are:
 \paragraph{Legal vs. Illegal}
 
 
-\begin{table*}[t]
+\begin{table}[t]
 \centering
-%\setlength\tabcolsep{5pt}
+\setlength\tabcolsep{3pt}
 %\def\arraystretch{.855}
-\begin{tabular}{lRRRRRR}
-eBay vs. legal drugs \\
-Model & \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf dropcontent} & \multicolumn{1}{c}{\bf dropfunc} & \multicolumn{1}{c}{\bf poscontent} & \multicolumn{1}{c}{\bf posfunc} & \multicolumn{1}{c}{\bf pos}\\
-Naive Bayes & 91.4 & 57.8 & 90.5 & 56.9 & 92.2 & 46.6\\
-SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8 & 75\\
-BoE (sum) & 66.4 & 56 & 63.8 & 50.9 & 76.7 & \\
-BoE (average) & 75 & 55.2 & 59.5 & 50 & 75 & \\
-seq2vec & 73.3 &  & 65.5 & 65.5 & 75 & \\
-ELMo+attention & 82.8 &  & 85.3 & 62.1 & 82.8 & 62.9\\
-\end{tabular}
+\begin{tabularx}{\textwidth}{l *{6}{R}}
+\multicolumn{6}{l}{\bf eBay vs. legal drugs} \\
+&& \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos} &\\
+& \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf pos}\\
+NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2 & 46.6\\
+SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8 & 75.0\\
+BoE$_\mathrm{sum}$ & 66.4 & 56.0 & 63.8 & 50.9 & 76.7 & \\
+BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0 & \\
+seq2vec & 73.3 &  & 65.5 & 65.5 & 75.0 & \\
+attention & 82.8 &  & 85.3 & 62.1 & 82.8 & 62.9\\
+\end{tabularx}
 \caption{Test accuracy for each classifier in each setting.
 \label{tab:results}}
-\end{table*}
+\end{table}
 
 \paragraph{Legal Onion vs. eBay}
 
