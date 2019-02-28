@@ -41,7 +41,7 @@
 
 % for results matrix
 \newcommand{\ApplyGradient}[1]{%
-  \pgfmathsetmacro{\PercentColor}{(#1-0)/4}%
+  \pgfmathsetmacro{\PercentColor}{ifthenelse(#1-0 > 0, (#1-21)*.8, 0)}%
   \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
   %\textcolor{black!\PercentColor}{#1}
   \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
