@@ -21,7 +21,6 @@
 \usepackage{xcolor}
 \usepackage{pgf}
 \usepackage{collcell}
-\usepackage{tabularx}
 %\aclfinalcopy % Uncomment this line for the final submission
 \def\aclpaperid{***} %  Enter the acl Paper ID here
 
@@ -348,17 +347,27 @@ The tested manipulations are:
 \centering
 \setlength\tabcolsep{3pt}
 %\def\arraystretch{.855}
-\begin{tabularx}{\textwidth}{l *{6}{R}}
-\multicolumn{6}{l}{\bf eBay vs. legal drugs} \\
+\begin{tabular}{l *{6}{R}}
 && \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos} &\\
 & \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf pos}\\
+\multicolumn{6}{l}{\bf eBay vs. Onion Legal Drugs} \\
+\hline
 NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2 & 46.6\\
 SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8 & 75.0\\
 BoE$_\mathrm{sum}$ & 66.4 & 56.0 & 63.8 & 50.9 & 76.7 & \\
 BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0 & \\
 seq2vec & 73.3 &  & 65.5 & 65.5 & 75.0 & \\
 attention & 82.8 &  & 85.3 & 62.1 & 82.8 & 62.9\\
-\end{tabularx}
+\\
+\multicolumn{6}{l}{\bf Onion Legal vs. Illegal Drugs} \\
+\hline
+NB & 71.6 & 53.4 & 87.9 & 51.7 & 77.6 & 51.7\\
+SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8 & 78.4\\
+BoE$_\mathrm{sum}$ & 52.6 & 61.2 & 74.1 & 50.9 & 51.7 & \\
+BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9 & \\
+seq2vec & 56.9 &  & 54.3 & 59.5 & 49.1 & \\
+attention & 64.7 &  & 62.9 & 55.2 & 69.0 & 51.7\\
+\end{tabular}
 \caption{Test accuracy for each classifier in each setting.
 \label{tab:results}}
 \end{table}
