@@ -68,17 +68,18 @@
 \maketitle
 
 \begin{abstract}
-  The non-indexed parts of the Internet (the Darknet)\daniel{I think it should be Darknet (in this capitalization) and always with ``the'' preceding it}
-   have become a haven for both legal and illegal annonymized activity.
-  Given the magnitude of these networks, scalably monitoring activity necessarily relies
+  The non-indexed parts of the Internet (the Darknet)
+	%\daniel{I think it should be Darknet (in this capitalization) and always with ``the'' preceding it}
+   have become a haven for both legal and illegal anonymous activity.
+  Given the magnitude of these networks, scalably monitoring their activity necessarily relies
     on automated tools, and notably on NLP tools.
   However, little is known about what characteristics texts communicated through the Darknet have, 
     and how well do off-the-shelf NLP tools do on this domain.
   This paper tackles this gap and performs an in-depth investigation of the characteristics
     of legal and illegal text in the Darknet, comparing it to a clear net website with similar
     content as a control condition.
-  Taking drugs-related website as a test case, we find that texts for selling legal and illegal drugs
-    have several linguistic charateristics that distinguish them from one another, as well as from 
+  Taking drugs-related websites as a test case, we find that texts for selling legal and illegal drugs
+    have several linguistic characteristics that distinguish them from one another, as well as from 
     the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.
 \end{abstract}
 
@@ -87,36 +88,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
   
-  Under the cloak of anonimity, the Darknet is a home to much illegal activity \citep{moore2016cryptopolitik}.
+  Under the cloak of anonymity, the Darknet harbors much illegal activity \citep{moore2016cryptopolitik}.
   Applying NLP tools to text from the Darknet is thus important for effective law enforcement and intelligence.
   However, little is known about the characteristics of the language used in the Darknet, 
   and specifically on what distinguishes text on websites that conduct legal and illegal activity.
+	The only work we are aware of that classified DarkNet texts into legal and illegal activity is \citep{Avarikioti18}.
+	However, they too did not investigate in what ways these two classes differ.
   
-  \citet{AlNabki17} were the first to crawl webpages from Onion sites (non-index sites commonly accessed using the Tor browser), 
-  and used it to perform text classification into topical categories (e.g., ``drugs'', ``services'' etc.). \es{I think \citet{moore2016cryptopolitik} were the first to use crawling for Tor but they only collected 5K samples of Tor onion pages for the topic classification and there didn't publish an annotated corpus.}
-  Classifying texts into legal and illegal activity over text from Tor was first pursued by \citet{Avarikioti18}.
-  However, to our knowledge no previous work attempted to reveal in what linguistic dimensions do sites that advertise
-  legal and illegal activities differ.
   
+  %Text classification of crawled DarkNet pages was pursued by .
+	%\citet{AlNabki17} pursued text classification of webpages from 
+	%Onion (non-indexed sites commonly accessed using the Tor browser), 
+	%and performend classification into topical categories (e.g., ``drugs'', ``services'' etc.). %\es{I think \citet{moore2016cryptopolitik} were the first to use crawling for Tor but they only collected 5K samples of Tor onion pages for the topic classification and there didn't publish an annotated corpus.}
   This paper addresses this gap, and studies the distinguishing features between legal and illegal texts in Onion sites,
   taking sites that advertise drugs as a test case. We compare our results to a control condition of texts 
-  from eBay\footnote{\url{https://www.ebay.com/}} pages that advertise drugs
-  (supposedly of the pharmaceutical kind). \es{I think it can also be another product (e.g. clothes) where a drug name is mentioned. What about: ``that advertises products corresponding to drug keywords (see Section \ref{datasets})''}
+  from eBay\footnote{\url{https://www.ebay.com/}} pages that 
+	advertise products corresponding to drug keywords (see Section \ref{datasets}).
+ 
+  We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, 
+	that text from legal and illegal pages can be distinguished based on the identity of the content words (bag of words) 
+  in about 90\% accuracy over a balanced sample. Second, we find that the distribution of POS tags in the documents is a strong cue for 
+	distinguishing between the classes (about 75\% accuracy). This indicates that the two classes are different in 
+	terms of their syntactic structure. Third, we find that legal and illegal texts are roughly as distinguishable from one another as legal 
+	texts and eBay pages (both in terms of their words and the their POS tags). 
+	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
+	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
+  Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
+  This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for pages on illegal drugs.
+    %which underscores the pitfalls of na\"{i}vely applying off-the-shelf NLP tools to this domain.
   
-  We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, that text from legal and illegal
-  pages can be distinguished based on the identity of the content words (bag of words model) 
-  in about 90\% accuracy over a balanced sample. Second, we find that the distribution of POS tags in the documents is a strong cue for distinguishing
-  legal and illegal pages (about 75\% accuracy). This indicates that the texts of the two types of websites are different in terms of their syntactic 
-  structure. Third, we find that legal and illegal texts are roughly as distinguisable from one another as legal texts and eBay pages (both in terms
-  of their words and the distinguishability of the distribution of their POS tags). This shows that legal and illegal texts can be considered
-  distinct domains, which on the one hand implies that they can be distinguished, but on the other hand suggests that applying NLP tools to this
-  domain is likely to face the obstacles of domain adaptations.  
-  Fourth, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
-  This suggests that for proper text understanding, specialized knowledge bases and tools may be needed for pages on illegal drugs, 
-    which underscores the pitfalls of na\"{i}vely applying off-the-shelf NLP tools to this domain.
-  
-  
-  
+	
 %   
 %    published a corpus and looked into text classification on texts from Tor, 
 %   
@@ -135,12 +136,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
 
-Elior
-
-%\paragraph{Detecting illegal activities in the Web}
-
-
-The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories. This allowed the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand. The text in this case was extracted by exploiting a flaw in the network. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. For example, in the recent work of \citet{Avarikioti18} on Tor content clasification, in most of the categories both legal and illegal content appear. We here explore the distinction between legal and illegal activities within a given topical category.
+The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02}\oa{you mean LDA features? if so, better state the model than the implementation} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories. This allowed the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand.\oa{this is unclear; maybe ``distinction between topics that usually correlate with illegal activity and those that usually do not''} The text in this case was extracted by exploiting a flaw in the network. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. For example, in the recent work of \citet{Avarikioti18} on Tor content clasification, in most of the categories both legal and illegal content appear. We here explore the distinction between legal and illegal activities within a given topical category.
 
 Some works have directly addressed a specific type of illegality and a particular communication context. \citet{MorrisHirst12} have used an SVM classification to identify sexual predators in chatting message systems. The model includes both lexical features, including emoticons and behavioral features that correspond to conversational patterns. Another example is the detection of pedophile activity in peer-to-peeer networks \citep{Latapy13} where a predefined list of keywords was used to detect child-pornography queries. In adition to lexical features, we here consider other general linguistic properties as sentence structure whose analysis can be extended to a wide range of legal/illegal cases. 
 
