@@ -289,7 +289,7 @@ the domains, we found that spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites. There were a fair number
 of false positives (words and phrases that were found by spaCy but
 were not actually named entities),
-especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up by spaCy's NER.\lc{isn't it good that the NER picked a name of something? Is the example opposite or am I missing something?}
+especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up. We consider these to be false positives as they are names of substances but not specific products which is what spaCy's NER is supposed to find.\footnote{\url{https://spacy.io/api/annotation#section-named-entities}}
 It should be noted that the ratio of false positives is not something that is easily quantifiable, and therefore this is only a qualitative observation. That being said, it is our impression that the informal language used in our datasets makes it harder
 for spaCy to function optimally in this capacity.
 
