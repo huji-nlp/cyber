@@ -156,7 +156,7 @@ We experiment with data from Darknet websites concerning\lc{in the previous sect
 legal and illegal activity, all from the DUTA-10K corpus \citep{AlNabki19}.
 We selected two sub-domains as a test case in this work:
 \begin{description}
-  \item[Legal and illegal drugs.] These websites advertize and sell
+  \item[Legal and illegal drugs.] These websites advertise and sell
   drugs, often to international customers.
   While legal websites often sell pharmaceuticals,
   illegal ones are often related to substance abuse.
@@ -228,17 +228,16 @@ material, and will be publicly available upon publication.}
     Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
     
 \end{table*}
-At this point, we strive to know which of the domains we deal with is a different domain in terms of word use, whether all Onion language should be considered the same, and is there a potential in learning differences between Onion sites. For those means, we created a histogram of the frequencies of words in the eBay corpus and the legal and illegal drugs Onion corpora, together with the combination of the two latter, representing all drug sites in Onion. Additionally, each corpus was randomly split in two halves allowing for in-domain comparison. Following \citet{Plank2011EffectiveMO} we chose Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.\daniel{Leshem: do we really need \textit{both} measures?}
+At this point, we strive to know which of the domains we deal with is a different domain in terms of word use, whether all Onion language should be considered the same, and is there a potential in learning differences between Onion sites. For those means, we created a histogram of the frequencies of words in the eBay corpus and the legal and illegal drugs Onion corpora, together with the combination of the two latter, representing all drug sites in Onion. Additionally, each corpus was randomly split in two halves allowing for in-domain comparison. Following \citet{Plank2011EffectiveMO} we chose Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
 
-We see in Table \ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. We can therefore think of the three as three different domains. The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible.
+We see in Table \ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 in the Jensen Shannon divergence, but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. We can therefore think of the three as three different domains. The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible. Similar results were achieved using Variational distance.
 
-We also see that eBay is as far from the legal domain as it is from the illegal or for that case all Onion domain. This would suggest there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain, rather than world wide web legal domains such as eBay.
+We also see that eBay is as far from the legal domain as it is from the illegal or for that case all Onion domain. This would suggest that there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain, rather than world wide web legal domains such as eBay.
 
 \subsection{NER and Wikification}
 
-In order to analyze the named entities in each domain and the differences
-between them we used a ``wikification'' technique, searching for
-said entities in public datasets such as Wikipedia. 
+After deeming them as different domains, we wanted to assess the behaviour of well established tools in this new domain. We chose to work with named entities and their wikification and compare their extraction in each domain. For that matter, Wikification is the task of matching 
+named entities from a text to items, in public datasets such as articles of Wikipedia.
 
 Using spaCy's\footnote{\url{https://spacy.io}}
 named entity recognition, we first found all the named
