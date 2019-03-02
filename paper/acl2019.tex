@@ -320,8 +320,8 @@ To classify paragraphs into categories, we experiment with five classifiers:
 \begin{itemize}
   \item NB (Naive Bayes) classifier
   with BoW (bag-of-words) features, i.e., indicator feature for each word.
-  \item SVM (support vector machine) classifier,
-  also with BoW features.  \lc{should I add here with kernel RBF or are we still expecting results with a linear one?}
+  \item SVM (support vector machine) classifier with an RBF kernel,
+  also with BoW features.
   \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
   GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
   to a single vector, and apply a 100-dimensional fully-connected layer with
@@ -372,8 +372,8 @@ We experiment with four settings, classifying paragraphs from different domains:
   to identify whether Onion pages differ from clear web pages.
   \item Training and testing on Onion legal vs. illegal drugs-related pages,
   to identify the difference in language between legal and illegal activity
-  on Tor drugs-related websites.
-  \item Training and testing on Onion legal vs. illegal forums,\lc{again tor vs. onion}
+  on Onion drug-related websites.
+  \item Training and testing on Onion legal vs. illegal forums,
   to evaluate the generality of the insights on user-generated content too.
   \item Training on Onion legal vs. illegal drugs-related pages,
   and testing on Onion legal vs. illegal forums.
