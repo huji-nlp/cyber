@@ -11,7 +11,7 @@
 %%e.agirre@ehu.es or Sergi.Balari@uab.es
 %% and that of ACL 08 by Joakim Nivre and Noah Smith
 
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper,table]{article}
 \usepackage[hyperref]{acl2019}
 \usepackage{times}
 \usepackage{latexsym}
@@ -19,8 +19,10 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{xcolor}
+\usepackage{pgf}
+\usepackage{collcell}
 %\aclfinalcopy % Uncomment this line for the final submission
-%\def\aclpaperid{***} %  Enter the acl Paper ID here
+\def\aclpaperid{***} %  Enter the acl Paper ID here
 
 %\setlength\titlebox{5cm}
 % You can expand the titlebox if you need extra space
@@ -28,9 +30,26 @@
 % smaller than 5cm (the original size); we will check this
 % in the camera-ready version and ask you to change it back.
 
-\newcommand\BibTeX{B\textsc{ib}\TeX}
+\newcommand{\oa}[1]{\footnote{\color{red}OA: #1}}
+\newcommand{\oamod}[1]{{\color{red}#1}}
+\newcommand{\lc}[1]{\footnote{\color{blue}LC: #1}}
+\newcommand{\lcmod}[1]{{\color{blue}#1}}
+\newcommand{\daniel}[1]{\footnote{\color{brown}DH: #1}}
+\newcommand{\daneldad}[1]{\footnote{\color{green}DE: #1}}
+\newcommand{\es}[1]{\footnote{\color{purple}ES: #1}}
 
-\title{The Language of Legal and Illegal Activity on DarkNet}
+
+% for results matrix
+\newcommand{\ApplyGradient}[1]{%
+  \pgfmathsetmacro{\PercentColor}{ifthenelse(#1-0 > 0, (#1-21)*.8, 0)}%
+  \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
+  %\textcolor{black!\PercentColor}{#1}
+  \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
+}
+\newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
+
+
+\title{The Language of Legal and Illegal Activity on the Darknet}
 
 %\author{First Author \\
 %  Affiliation / Address line 1 \\
@@ -47,51 +66,113 @@
 
 \begin{document}
 \maketitle
+
 \begin{abstract}
-  
+  The non-indexed parts of the Internet (the Darknet)
+   have become a haven for both legal and illegal anonymous activity.
+  Given the magnitude of these networks, scalably monitoring their activity necessarily relies
+    on automated tools, and notably on NLP tools.
+  However, little is known about what characteristics texts communicated through the Darknet have, 
+    and how well do off-the-shelf NLP tools do on this domain.
+  This paper tackles this gap and performs an in-depth investigation of the characteristics
+    of legal and illegal text in the Darknet, comparing it to a clear net website with similar
+    content as a control condition.
+  Taking drugs-related websites as a test case, we find that texts for selling legal and illegal drugs
+    have several linguistic characteristics that distinguish them from one another, as well as from 
+    the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.
 \end{abstract}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-
-Omri
-
--- darknet has much illegal activity (https://www.profwoodward.org/2016/02/how-much-of-tor-is-used-for-illegal.html). people use it because it's easier to be anonymous, hard to track etc.
-
--- scalably monitoring activity in darknet uses NLP tools, but little is known about what characteristics the text in Tor has, and how well do off-the-shelf NLP tools do on this domain.
-
--- X et al. (2017) published a corpus and looked into text classification on texts from Tor, and Y et al. (2019) looked into how influential criminal sites are. 
-
--- We investigate how legal and illegal activity taken from DarkNet is different, comparing to a clearnet website with similar content as a control condition.
-
--- We also explore methods for classifying texts from DarkNet into legal and illegal. This is important both for understanding whether these two types are different in terms of
-their text and in what ways, and as a practical tool.
-
--- A bit on the experiments and results.
+  
+  Under the cloak of anonymity, the Darknet harbors much illegal activity \citep{moore2016cryptopolitik}.
+  Applying NLP tools to text from the Darknet is thus important for effective law enforcement and intelligence.
+  However, little is known about the characteristics of the language used in the Darknet, 
+  and specifically on what distinguishes text on websites that conduct legal and illegal activity.
+	The only work we are aware of that classified DarkNet texts into legal and illegal activity is \citep{Avarikioti18}.
+	However, they too did not investigate in what ways these two classes differ.
+  
+  
+  %Text classification of crawled DarkNet pages was pursued by .
+	%\citet{AlNabki17} pursued text classification of webpages from 
+	%Onion (non-indexed sites commonly accessed using the Tor browser), 
+	%and performend classification into topical categories (e.g., ``drugs'', ``services'' etc.). %\es{I think \citet{moore2016cryptopolitik} were the first to use crawling for Tor but they only collected 5K samples of Tor Onion pages for the topic classification and there didn't publish an annotated corpus.}
+  This paper addresses this gap, and studies the distinguishing features between legal and illegal texts in Onion sites,
+  taking sites that advertise drugs as a test case. We compare our results to a control condition of texts 
+  from eBay\footnote{\url{https://www.ebay.com/}} pages that 
+	advertise products corresponding to drug keywords (see Section \ref{datasets}).
+ 
+  We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, 
+	that text from legal and illegal pages can be distinguished based on the identity of the content words (bag of words) 
+  in about 90\% accuracy over a balanced sample. Second, we find that the distribution of POS tags in the documents is a strong cue for 
+	distinguishing between the classes (about 75\% accuracy). This indicates that the two classes are different in 
+	terms of their syntactic structure. Third, we find that legal and illegal texts are roughly as distinguishable from one another as legal 
+	texts and eBay pages (both in terms of their words and the their POS tags). 
+	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
+	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
+  Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
+  This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for pages on illegal drugs.
+    %which underscores the pitfalls of na\"{i}vely applying off-the-shelf NLP tools to this domain.
+  
+	
+%   
+%    published a corpus and looked into text classification on texts from Tor, 
+%   
+%   
+%   and Y et al. (2019) looked into how influential criminal sites are. 
+%
+%   While this domain has attracted much attention, both in the academia
+%
+%   %-- We investigate how legal and illegal activity taken from Darknet is different, comparing to a clearnet website with similar content as a control condition.
+%
+%   We also explore methods for classifying texts from Darknet into legal and illegal. This is important both for understanding whether these two types are different in terms of
+%   their text and in what ways, and as a practical tool.
+%
+%   A bit on the experiments and results.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
 
-Elior
+The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02}\oa{you mean LDA features? if so, better state the model than the implementation} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories. This allowed the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand.\oa{this is unclear; maybe ``distinction between topics that usually correlate with illegal activity and those that usually do not''} 
+%The text in this case was extracted by exploiting a flaw in the network. 
+\citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. For example, in the recent work of \citet{Avarikioti18} on Tor content classification, in most of the categories both legal and illegal content appear. We here explore the distinction between legal and illegal activities within a given topical category.\oa{I think we can greatly simplify this parag, simply saying that these works classified Tor texts into classes, that can give information as to whether the products are legal or legal, but did not address the legal/illegal classification}
 
-\paragraph{Detecting illegal activities in the Web}
+Some works directly addressed a specific type of illegality and a particular communication context. \citet{MorrisHirst12} used an SVM classification to identify sexual predators in chatting message systems. The model includes both lexical features, including emoticons and behavioral features that correspond to conversational patterns. Another example is the detection of pedophile activity in peer-to-peer networks \citep{Latapy13}, where a predefined list of keywords was used to detect child-pornography queries. In addition to lexical features, we here consider other general linguistic properties, such as syntactic structure.% whose analysis can be extended to a wide range of legal/illegal cases. 
 
-The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14} used the software Mallet \citep{McCallum02} and the web service uClassify \citep{Kagstrom13} for a classification of the content of Tor hidden services into 18 categories, which allows the distinction between illegal or contreversial content on one hand and human rights or freedom of speech content on the other hand. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classfier for the classification of drug sales in an anonymous marketplace. However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. For example, in the recent work of \citet{Avarikioti18} on Tor content clasification, in most of the categories both legal and illegal content appear.
+\citet{AlNabki17} presented DUTA (Darknet Usage Text Addresses), the first publicly available Darknet dataset, together with a manual classification into topical categories and sub-categories. For some of the categories, legal and illegal activities are distinguished. However, the automatic classification presented in their work focuses on the distinction between several illegal activities, without dealing with the separation between legal and illegal ones, which is the subject of the present paper. \citet{AlNabki19} extended the dataset to form the DUTA-10K, which we are using here. Their results show that 20\% of the hidden services correspond to ``suspicious'' activities. This analysis is done using the text classifier presented in \citet{AlNabki17} and a manual verification, where the information is directly derived from the topic classifier.\oa{this last part of the sent is unclear}
 
-Some works have directly addressed a specific type of illegality and a particular communication context. \citet{MorrisHirst12} have used an SVM classification to identify sexual predators in chatting message systems. The model includes both lexical features, including emoticons and behavioral features that correspond to conversational patterns. Another example is the detection of pedophile activity in peer-to-peeer networks \citep{Latapy13} where a predefined list of keywords was used to detect child-pornography queries.
-
+Recently, \citet{Avarikioti18} presented another topic classification of text from Tor together with a first classification into legal and illegal activities.  The experiments were performed on a newly crawled corpus obtained by a recursive search. The legal/illegal classification was done using an SVM classifier in an active learning setting with bag of words as features. Legality was assessed in a conservative way where illegality is assigned if the purpose of the content is an obvioulsy illegal action, even if the content might be technically legal. They found that a linear kernel worked best and reported an F1 score of 85\% and an accuracy of 89\%. Using the dataset of \citet{AlNabki19}, and focusing on a given topical category, we here confirm the importance of content words in the classification and explore the linguistic dimensions permitting the legal/illegal distinction. 
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Datasets}\label{sec:data}
+\section{Datasets}\label{sec:data}\label{datasets}
 
-DUTA \citep{AlNabki17}
+\paragraph{Onion corpus.}
+We experiment with data from Darknet website concerning
+legal and illegal activity, all from the DUTA-10K corpus \citep{AlNabki19}.
+We selected two sub-domains as a test case in this work:
+\begin{description}
+  \item[Legal and illegal drugs.] These websites advertize and sell
+  drugs, often to international customers.
+  While legal websites often sell pharmaceuticals,
+  illegal ones are often related to substance abuse.
+  These pages are written by sellers and directed to their customers.
+  \item[Legal and illegal forums.] These contain user-written text in various
+  topics. Legal forums often discuss web design and other technical
+  and non-technical activity on the internet, while illegal ones involve
+  discussions about cyber-crimes and guides on how to commit them,
+  as well as narcotics, racism and other criminal activities.
+  As this domain contains user-generated content, it is more varied
+  and noisy.
+\end{description}
 
-\paragraph{Cleaning.} Elior + Daniel
+\paragraph{eBay corpus.}\daniel{Leshem, please fill in.}
+
+\paragraph{Cleaning.}
 
 As preprocessing for all experiments, we apply some cleaning to the text
 of web pages in our corpus.
@@ -113,41 +194,44 @@ material, and will be publicly available upon publication.}
 
 \subsection{Distances between Domains}
 \begin{table}[]
-	\resizebox{\columnwidth}{!}{%
-		\begin{tabular}{@{}lllll@{}}
-			& all onion  & ebay       & illegal    & legal      \\
-			all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
-			ebay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
-			illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
-			legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
-		\end{tabular}%
-	}
-	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and Ebay sites. \label{ta:domain}}
+    \resizebox{\columnwidth}{!}{%
+        \begin{tabular}{@{}lllll@{}}
+            & all onion  & eBay       & illegal    & legal      \\
+            all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
+            eBay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
+            illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
+            legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
+        \end{tabular}%
+    }
+    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites. \label{ta:domain}}
 \end{table}
 \begin{table*}[]
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{@{}lllllllllllll@{}}
-			& all onion  & all onion\_half1 & all onion\_half2 & ebay       & ebay\_half1 & ebay\_half2 & illegal    & illegal\_half1 & illegal\_half2 & legal      & legal\_half1 & legal\_half2 \\
-			all onion        &            & 0.23, 0.34       & 0.25, 0.38       & 0.60, 1.31 & 0.61, 1.35  & 0.61, 1.35  & 0.33, 0.62 & 0.39, 0.77     & 0.41, 0.81     & 0.35, 0.65 & 0.41, 0.82   & 0.42, 0.82   \\
-			all onion\_half1 & 0.23, 0.34 &                  & 0.43, 0.73       & 0.60, 1.32 & 0.62, 1.35  & 0.62, 1.35  & 0.37, 0.63 & 0.33, 0.63     & 0.50, 0.96     & 0.40, 0.70 & 0.36, 0.70   & 0.52, 1.00   \\
-			all onion\_half2 & 0.25, 0.38 & 0.43, 0.73       &                  & 0.61, 1.34 & 0.62, 1.36  & 0.62, 1.37  & 0.39, 0.69 & 0.50, 0.96     & 0.35, 0.67     & 0.39, 0.67 & 0.51, 0.99   & 0.35, 0.66   \\
-			ebay             & 0.60, 1.31 & 0.60, 1.32       & 0.61, 1.34       &            & 0.23, 0.36  & 0.25, 0.39  & 0.59, 1.28 & 0.60, 1.30     & 0.60, 1.32     & 0.66, 1.46 & 0.67, 1.48   & 0.67, 1.49   \\
-			ebay\_half1      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.36       & 0.23, 0.36 &             & 0.43, 0.74  & 0.60, 1.32 & 0.61, 1.33     & 0.61, 1.34     & 0.67, 1.48 & 0.67, 1.48   & 0.68, 1.50   \\
-			ebay\_half2      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.37       & 0.25, 0.39 & 0.43, 0.74  &             & 0.60, 1.30 & 0.61, 1.32     & 0.61, 1.32     & 0.67, 1.49 & 0.68, 1.50   & 0.68, 1.50   \\
-			illegal          & 0.33, 0.62 & 0.37, 0.63       & 0.39, 0.69       & 0.59, 1.28 & 0.60, 1.32  & 0.60, 1.30  &            & 0.23, 0.35     & 0.27, 0.42     & 0.61, 1.28 & 0.62, 1.31   & 0.62, 1.31   \\
-			illegal\_half1   & 0.39, 0.77 & 0.33, 0.63       & 0.50, 0.96       & 0.60, 1.30 & 0.61, 1.33  & 0.61, 1.32  & 0.23, 0.35 &                & 0.45, 0.77     & 0.62, 1.31 & 0.63, 1.33   & 0.62, 1.32   \\
-			illegal\_half2   & 0.41, 0.81 & 0.50, 0.96       & 0.35, 0.67       & 0.60, 1.32 & 0.61, 1.34  & 0.61, 1.32  & 0.27, 0.42 & 0.45, 0.77     &                & 0.62, 1.31 & 0.63, 1.33   & 0.63, 1.33   \\
-			legal            & 0.35, 0.65 & 0.40, 0.70       & 0.39, 0.67       & 0.66, 1.46 & 0.67, 1.48  & 0.67, 1.49  & 0.61, 1.28 & 0.62, 1.31     & 0.62, 1.31     &            & 0.26, 0.40   & 0.26, 0.42   \\
-			legal\_half1     & 0.41, 0.82 & 0.36, 0.70       & 0.51, 0.99       & 0.67, 1.48 & 0.67, 1.48  & 0.68, 1.50  & 0.62, 1.31 & 0.63, 1.33     & 0.63, 1.33     & 0.26, 0.40 &              & 0.47, 0.82   \\
-			legal\_half2     & 0.42, 0.82 & 0.52, 1.00       & 0.35, 0.66       & 0.67, 1.49 & 0.68, 1.50  & 0.68, 1.50  & 0.62, 1.31 & 0.62, 1.32     & 0.63, 1.33     & 0.26, 0.42 & 0.47, 0.82   &             
-		\end{tabular}%
-	}
-	\caption{Jensen-Shannon divergence and Variational distance between word distribution in all onion drug sites, legal and illegal onion drug sites, and Ebay sites, each domain was also split in half for in domain comparison. \label{ta:domain_halves}}
-	
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{@{}lllllllllllll@{}}
+            & all onion  & all onion\_half1 & all onion\_half2 & ebay       & ebay\_half1 & ebay\_half2 & illegal    & illegal\_half1 & illegal\_half2 & legal      & legal\_half1 & legal\_half2 \\
+            all onion        &            & 0.23, 0.34       & 0.25, 0.38       & 0.60, 1.31 & 0.61, 1.35  & 0.61, 1.35  & 0.33, 0.62 & 0.39, 0.77     & 0.41, 0.81     & 0.35, 0.65 & 0.41, 0.82   & 0.42, 0.82   \\
+            all onion\_half1 & 0.23, 0.34 &                  & 0.43, 0.73       & 0.60, 1.32 & 0.62, 1.35  & 0.62, 1.35  & 0.37, 0.63 & 0.33, 0.63     & 0.50, 0.96     & 0.40, 0.70 & 0.36, 0.70   & 0.52, 1.00   \\
+            all onion\_half2 & 0.25, 0.38 & 0.43, 0.73       &                  & 0.61, 1.34 & 0.62, 1.36  & 0.62, 1.37  & 0.39, 0.69 & 0.50, 0.96     & 0.35, 0.67     & 0.39, 0.67 & 0.51, 0.99   & 0.35, 0.66   \\
+            ebay             & 0.60, 1.31 & 0.60, 1.32       & 0.61, 1.34       &            & 0.23, 0.36  & 0.25, 0.39  & 0.59, 1.28 & 0.60, 1.30     & 0.60, 1.32     & 0.66, 1.46 & 0.67, 1.48   & 0.67, 1.49   \\
+            ebay\_half1      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.36       & 0.23, 0.36 &             & 0.43, 0.74  & 0.60, 1.32 & 0.61, 1.33     & 0.61, 1.34     & 0.67, 1.48 & 0.67, 1.48   & 0.68, 1.50   \\
+            ebay\_half2      & 0.61, 1.35 & 0.62, 1.35       & 0.62, 1.37       & 0.25, 0.39 & 0.43, 0.74  &             & 0.60, 1.30 & 0.61, 1.32     & 0.61, 1.32     & 0.67, 1.49 & 0.68, 1.50   & 0.68, 1.50   \\
+            illegal          & 0.33, 0.62 & 0.37, 0.63       & 0.39, 0.69       & 0.59, 1.28 & 0.60, 1.32  & 0.60, 1.30  &            & 0.23, 0.35     & 0.27, 0.42     & 0.61, 1.28 & 0.62, 1.31   & 0.62, 1.31   \\
+            illegal\_half1   & 0.39, 0.77 & 0.33, 0.63       & 0.50, 0.96       & 0.60, 1.30 & 0.61, 1.33  & 0.61, 1.32  & 0.23, 0.35 &                & 0.45, 0.77     & 0.62, 1.31 & 0.63, 1.33   & 0.62, 1.32   \\
+            illegal\_half2   & 0.41, 0.81 & 0.50, 0.96       & 0.35, 0.67       & 0.60, 1.32 & 0.61, 1.34  & 0.61, 1.32  & 0.27, 0.42 & 0.45, 0.77     &                & 0.62, 1.31 & 0.63, 1.33   & 0.63, 1.33   \\
+            legal            & 0.35, 0.65 & 0.40, 0.70       & 0.39, 0.67       & 0.66, 1.46 & 0.67, 1.48  & 0.67, 1.49  & 0.61, 1.28 & 0.62, 1.31     & 0.62, 1.31     &            & 0.26, 0.40   & 0.26, 0.42   \\
+            legal\_half1     & 0.41, 0.82 & 0.36, 0.70       & 0.51, 0.99       & 0.67, 1.48 & 0.67, 1.48  & 0.68, 1.50  & 0.62, 1.31 & 0.63, 1.33     & 0.63, 1.33     & 0.26, 0.40 &              & 0.47, 0.82   \\
+            legal\_half2     & 0.42, 0.82 & 0.52, 1.00       & 0.35, 0.66       & 0.67, 1.49 & 0.68, 1.50  & 0.68, 1.50  & 0.62, 1.31 & 0.62, 1.32     & 0.63, 1.33     & 0.26, 0.42 & 0.47, 0.82   &             
+        \end{tabular}%
+    }
+    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites.
+    Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
+    
 \end{table*}
-At this point, we strive to know which of the domains we deal with is a different domain in terms of word use, whether all onion language should be considered the same, and is there a potential in learning differences between onion sites. For those means, we created a histogram of the frequencies of words in the Ebay corpus and the legal and illegal drugs onion corpora, together with the combination of the two latter, representing all drug sites in onion. Additionally, each corpus was randomly split in two halves allowing for in-domain comparison. Following \cite{Plank2011EffectiveMO} we chose Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
+At this point, we strive to know which of the domains we deal with is a different domain in terms of word use, whether all Onion language should be considered the same, and is there a potential in learning differences between Onion sites. For those means, we created a histogram of the frequencies of words in the eBay corpus and the legal and illegal drugs Onion corpora, together with the combination of the two latter, representing all drug sites in Onion. Additionally, each corpus was randomly split in two halves allowing for in-domain comparison. Following \citet{Plank2011EffectiveMO} we chose Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.\daniel{Leshem: do we really need \textit{both} measures?}
 
-We see in Table \ref{ta:domain_halves} that ebay, legal and illegal are self-distant 0.4-0.45 but the distance between one another is 0.6-0.65. This means the three form an equilateral. Which in turn means that we can think of the three as three different domains. The results suggest there is no reason to think about all onion as one domain, and thus studying using onion data what characterizes the illegal domain from the legal domain is sensible. We also see that Ebay is as far from the legal domain as it is from the illegal or for that case all onion domain, this would suggest there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside onion domain, rather than world wide web legal domains such as ebay.
+We see in Table \ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. We can therefore think of the three as three different domains. The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible.
+
+We also see that eBay is as far from the legal domain as it is from the illegal or for that case all Onion domain. This would suggest there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain, rather than world wide web legal domains such as eBay.
 
 \subsection{NER and Wikification}
 
@@ -159,32 +243,23 @@ Using spaCy's\footnote{\url{https://spacy.io}}
 named entity recognition, we first found all the named
 entities in each site in the datasets. After finding the named entites
 we searched for relevant Wikipedia entries for each named entity using
-the DBpedia Ontology API. For each domain we counted the total number
+the DBpedia Ontology API \cite{isem2013daiber}.
+For each domain we counted the total number
 of named entites and what percentage of them had corresponding Wikipedia
 articles.
 
 \begin{table}
-
-\caption{Percentage of Wikifiable Named Entites per Domain}
-
-\begin{centering}
-\begin{tabular}{|c||c|}
-\hline 
- & Percentage\tabularnewline
-\hline 
-\hline 
-Legal Onion & 50.8 $\pm2.31$\tabularnewline
-\hline 
-\hline 
-Illegal Onion & 32.5 $\pm1.35$\tabularnewline
-\hline 
-\hline 
-eBay & 38.6 $\pm2$\tabularnewline
-\hline 
+\begin{center}
+\begin{tabular}{lr}
+ & \% Wikifiable\\
+Legal Onion & 50.8 $\pm2.31$\\
+Illegal Onion & 32.5 $\pm1.35$\\
+eBay & 38.6 $\pm2$\\
 \end{tabular}
-\par\end{centering}
+\end{center}
+\caption{Percentage of wikifiable named entites per domain.\label{ta:wiki}}
 \end{table}
-According to our results (Table 1) the wikification percentages of
+According to our results (Table~\ref{ta:wiki}) the wikification percentages of
 eBay sites and illegal Onion sites are comparable and relatively low.
 However, sites selling legal drugs on Onion have a much higher wikification
 percentage.
@@ -193,7 +268,7 @@ Presumably the named entities in Onion sites selling legal drugs are
 more easily found in public databases such as Wikipedia because they
 are mainly well known names for legal pharmaceuticals. However, in
 both illegal Onion and eBay sites, the list of named entities include
-many nicknames for illicit drugs and paraphernalia. These nicknames
+many slang terms for illicit drugs and paraphernalia. These slang terms
 are usually not well known by the general public and are therefore
 less likely to be found on Wikipedia or other public databases.
 
@@ -201,8 +276,9 @@ In addition to the differences in wikification percentages between
 the domains, we found that spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites. There were a fair number
 of false positives (words and phrases that were found by spaCy but
-were not actually named entities), especially in illegal Onion sites.
-We believe the informal language used in our datasets makes it harder
+were not actually named entities),
+especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up by spaCy's NER.
+It should be noted that that ratio of false positives is not something that is easily quantifiable, and therefore this is only a qualitative observation. That being said, it is our impression that the informal language used in our datasets makes it harder
 for spaCy to function optimally in this capacity.
 
 These findings lead us to believe that the popular tools used today
@@ -213,51 +289,177 @@ illicit activities.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classification Experiments}
 
-Daniel
+Here we detail our experiments in classifying text from different legal and
+illegal domains using various methods, to find the most important features
+distinguishing between the domains.
 
 \paragraph{Experimental setup.}
 
 After cleaning the dataset, joining lines to paragraphs and removing duplicates
 (see \S\ref{sec:data}), we split each subset into training, validation and test.
-We choose to have 456 training paragraphs, 57 validation paragraphs and
+We select 456 training paragraphs, 57 validation paragraphs and
 58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
 thus randomly downsampling larger categories for an even division of labels.
 
 \paragraph{Model.}
 
-To classify paragraphs into categories, we experiment with four classifiers:
+To classify paragraphs into categories, we experiment with five classifiers:
 
 \begin{itemize}
-  \item Naive Bayes bag-of-words: we use \texttt{BernoulliNB} from
-  \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
-  with $\alpha=1$.
-  \item SVM: we use \texttt{SVC}, also from \texttt{scikit-learn},
-  with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+  \item NB (Naive Bayes) classifier
+  with BoW (bag-of-words) features, i.e., indicator feature for each word.
+  \item SVM (support vector machine) classifier,
+  also with BoW features.
+  \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
+  GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
+  to a single vector, and apply a 100-dimensional fully-connected layer with
+  ReLU non-linearity and dropout $p=0.2$.
+  The word vectors are not updated during training.
+  \item seq2vec: same as BoE, but instead of averaging word vectors,
+  we apply a BiLSTM to the word vectors, and take the concatenated
+  final hidden vectors from the forward and backward part as the input to the
+  fully-connected layer.
+  \item attention: we replace the word representations with contextualized
+  pre-trained represetations from ELMo \cite{Peters:2018}. We then apply a self-attentive
+  classification network \cite{mccann2017learned} over the contextualized representations. This architecture proved very accurate for classification in
+  previous work \cite{W18-5427,D18-1401}.
 \end{itemize}
+
+For the NB classifier we use \texttt{BernoulliNB} from
+\texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
+with $\alpha=1$,
+and for the SVM clasifier we use \texttt{SVC}, also from \texttt{scikit-learn},
+with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+We use the AllenNLP Python library\footnote{\url{https://allennlp.org}}
+\cite{Gardner2017AllenNLP} for implementing the neural network classifiers.
 
 \paragraph{Data manipulation.}
 
 To check the sensitivity of classifiers to variations in content words,
-function words and syntax, we experiment with five manipulations to the input
+function words and syntax, we experiment with four manipulations to the input
 data (in training, validation and testing).
 For this purpose, we consider content words as words whose universal part-of-speech
-according to spaCy is one of \{ADJ, ADV, NOUN, PROPN, VERB, X, NUM\},
+according to spaCy is one of the following:
+\[\{\mathrm{ADJ, ADV, NOUN, PROPN, VERB, X, NUM}\}\]
 and function words as all other words.
 The tested manipulations are:
 
 \begin{itemize}
-  \item Dropping all content words.
-  \item Dropping all function words.
-  \item Replacing all content words with their universal part-of-speech.
-  \item Replacing all function words with their universal part-of-speech.
-  \item Replacing all words with their universal part-of-speech.
+  \item Dropping all content words (drop cont.).
+  \item Dropping all function words (drop func).
+  \item Replacing all content words with their universal part-of-speech (pos cont.).
+  \item Replacing all function words with their universal part-of-speech (pos func).
+\end{itemize}
+
+\paragraph{Settings.}
+
+We experiment with four settings, classifying paragraphs from different domains:
+\begin{itemize}
+  \item Training and testing on eBay pages vs. legal Onion pages,
+  as a control experiment
+  to identify whether Onion pages differ from clear web pages.
+  \item Training and testing on Onion legal vs. illegal drugs-related pages,
+  to identify the difference in language between legal and illegal activity
+  on Tor drugs-related websites.
+  \item Training and testing on Onion legal vs. illegal forums,
+  to evaluate the generality of the insights on user-generated content too.
+  \item Training on Onion legal vs. illegal drugs-related pages,
+  and testing on Onion legal vs. illegal forums.
+  This cross-domain evaluation reveals whether the distinctions learned on the
+  drugs domain generalize directly to the forums domain.
 \end{itemize}
 
 \subsection{Results}
 
-\paragraph{Legal vs. Illegal}
+\begin{table}[t]
+\centering
+\setlength\tabcolsep{4pt}
+%\def\arraystretch{.855}
+\begin{tabular}{l *{5}{R}}
+&& \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
+& \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
+\multicolumn{6}{l}{\bf eBay vs. Onion Legal Drugs} \\
+\hline
+NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2\\
+SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8\\
+BoE$_\mathrm{sum}$ & 66.4 & 56.0 & 63.8 & 50.9 & 76.7\\
+BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0\\
+seq2vec & 73.3 & 53.8 & 65.5 & 65.5 & 75.0\\
+attention & 82.8 & 57.5 & 85.3 & 62.1 & 82.8\\
+\\
+\multicolumn{6}{l}{\bf Onion Legal vs. Illegal Drugs} \\
+\hline
+NB & 77.6 & 53.4 & 87.9 & 51.7 & 77.6\\
+SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
+BoE$_\mathrm{sum}$ & 52.6 & 61.2 & 74.1 & 50.9 & 51.7\\
+BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9\\
+seq2vec & 56.9 & 55.0 & 54.3 & 59.5 & 49.1\\
+attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0\\
+\\
+\multicolumn{6}{l}{\bf Onion Legal vs. Illegal Forums} \\
+\hline
+NB & 74.1 & 50.9 & 78.4 & 50.9 & 72.4\\
+SVM & 85.3 & 75.9 & 56.0 & 81.9 & 81.0\\
+BoE$_\mathrm{sum}$ & 25.9 & 32.8 & 21.6 & 36.2 & 35.3\\
+BoE$_\mathrm{average}$ & 40.5 & 42.2 & 31.9 & 48.3 & 53.4\\
+seq2vec & 50.0 & 48.9 & 50.9 & 28.4 & 51.7\\
+attention & 31.0 & 37.2 & 33.6 & 27.6 & 30.2\\
+\\
+\multicolumn{6}{l}{\bf Forums, Trained on Drugs} \\
+\hline
+NB & 78.4 & 63.8 & 89.7 & 63.8 & 79.3\\
+SVM & 62.1 & 69.0 & 54.3 & 69.8 & 62.1\\
+BoE$_\mathrm{sum}$ & 45.7 & 50.9 & 49.1 & 50.9 & 50.0\\
+BoE$_\mathrm{average}$ & 49.1 & 51.7 & 51.7 & 52.6 & 58.6\\
+seq2vec & 51.7 & 61.1 & 51.7 & 54.3 & 57.8\\
+attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4\\
+\end{tabular}
+\caption{Test accuracy for each classifier in each setting.
+\label{tab:results}}
+\end{table}
 
-\paragraph{Legal Onion vs. Ebay}
+
+\paragraph{Legal Onion vs. eBay.}
+
+This control experiment shows that legal Onion content is quite easily
+distinguishable from eBay content, as a Naive Bayes bag-of-words classifier
+reachers 91.4\% accuracy on this classification.
+Moreover, replacing function words by their parts of speech even improves
+the performance, suggesting that the content is mostly useful for determining
+whether a page comes from Onion or eBay.
+This is confirmed by the drop in accuracy when content words are dropped:
+however, in this setting (drop cont.) the SVM classifier performed best,
+suggesting there is a non-linear relationship between the function words
+found in a page and its source.
+While other, more sophisticated classifiers performed worse, the attention
+classifier managed to get as close as possible to the simple Naive Bayes
+one, as it has pre-trained contextualized word embeddings to compensate for
+the small amount of training data.
+
+\paragraph{Legal vs. illegal drugs.}
+
+Classifying legal from illegal pages within the drugs domain on Onion
+proved to be a more difficult task.
+In this setting, content proved to be even more important:
+dropping function words entirely improved the performance of the Naive Bayes
+classifier to nearly its accuracy in the previous experiment.
+This suggests that syntactic structure is similar between the legal and illegal
+domains, but their content allows differentiating them, e.g.,
+by the terms they use to describe their products.
+
+\paragraph{Legal vs. illegal forums.}
+
+Results when training and testing on fourms data are much worse,
+probably due to the fact that this data is much noisier and more varied,
+containing different distributions of words in the training and testing
+subsets.
+
+\paragraph{Cross-domain evaluation.}
+
+Surprisingly, training on drugs data and evaluating on forums performs much
+better than both previous experiments for all classifiers,
+showing that while the forums data is noisy, it can be accurately classified
+when training on the cleaner drugs data.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -273,9 +475,84 @@ in a 72\%.
 Looking at how different types of language influence results: given that replacing all words with their POS tags gives
 the same performance, this tells us their syntax is different as well.
 
-Methological: Legal and illegal in Onion are distinct enough to be considered different domains (as distant as Legal and Ebay). 
+Methological: Legal and illegal in Onion are distinct enough to be considered different domains (as distant as Legal and eBay). 
 Therefore, Tor could be a good testbed for working on legal and illegal classification.
 
+\paragraph{Analysis of learned feature weights.}
+
+Table~\ref{tab:nb_weights} shows the most indicative features learned
+by the NB classifier (without input manipulation) for the Onion
+legal vs. illegal setting.
+Many strong features are function words, showing that the language itself
+is quite different between the domains.
+
+\begin{table}
+\small
+\begin{tabular}{lr}
+\multicolumn{2}{c}{Legal}\\
+feature & ratio\\
+\hline
+cart & 0.037\\
+2016 & 0.063\\
+Bh & 0.067\\
+drugs & 0.067\\
+EUR & 0.077\\
+very & 0.083\\
+Per & 0.091\\
+delivery & 0.091\\
+symptoms & 0.091\\
+Please & 0.100\\
+Quantity & 0.100\\
+here & 0.100\\
+check & 0.100\\
+contact & 0.100\\
+called & 0.100\\
+not & 0.102\\
+if & 0.105\\
+If & 0.111\\
+taking & 0.111\\
+like & 0.111\\
+questions & 0.111\\
+Cart & 0.118\\
+> & 0.125\\
+take & 0.125\\
+\end{tabular}
+\begin{tabular}{lr}
+\multicolumn{2}{c}{Illegal}\\
+feature & ratio\\
+\hline
+Laboratories & 8.500\\
+Cipla & 9.000\\
+Pfizer & 9.000\\
+each & 9.571\\
+Force & 10.000\\
+Pharma & 10.333\\
+grams & 10.333\\
+300 & 10.500\\
+Bitcoin & 11.500\\
+RSM & 12.000\\
+Sun & 12.000\\
+manufactured & 12.667\\
+Tablets & 13.000\\
+tablets & 13.714\\
+120 & 16.000\\
+Moldova & 17.000\\
+citrate & 18.000\\
+Pharmaceuticals & 31.500\\
+New & 33.000\\
+200 & 36.000\\
+blister & 48.000\\
+generic & 49.500\\
+60 & 55.000\\
+@ & 63.000\\
+\end{tabular}
+\caption{Most indicative features for each class in NB classifier
+trained on Onion legal vs. illegal drugs,
+and the ratio between their number of occurrences in the ``illegal''
+class and the ``legal'' class.
+Left: features with lowest ratio; right: features with highest ratio.
+\label{tab:nb_weights}}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}

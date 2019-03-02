@@ -24,7 +24,8 @@ def mask(tok, drop=False, content=False, func=False):
 
 def print_doc(file, **kwargs):
     s = "".join(mask(t, **kwargs) for t in doc)
-    print(" ".join(s.split()).strip(), file=file)
+    if s:
+        print(" ".join(s.split()).strip(), file=file)
 
 
 if __name__ == "__main__":
