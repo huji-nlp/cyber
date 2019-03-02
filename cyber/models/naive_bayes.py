@@ -1,3 +1,4 @@
+import csv
 from typing import Dict, Optional, List, Any
 
 import numpy as np
@@ -65,7 +66,22 @@ class NaiveBayes(DocumentClassifier):
                 "tp": tp, "tn": tn, "fp": fp, "fn": fn}
 
     def state_dict(self, *args, **kwargs):
-        return self.nb.get_params()
+        del args, kwargs
+        with open("nb.tsv", "w", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f, delimiter="\t")
+            writer.writerows(zip(self.vocab.get_token_to_index_vocabulary(), self.nb.coef_[0]))
+        return dict(
+            class_count=self.nb.class_count_,
+            class_log_prior=self.nb.class_log_prior_,
+            coef=self.nb.coef_,
+            feature_count=self.nb.feature_count_,
+            feature_log_prob=self.nb.feature_log_prob_,
+            intercept=self.nb.intercept_,
+        )
 
     def _load_from_state_dict(self, state_dict, *args, **kwargs):
-        self.nb.set_params(**state_dict)
+        del args, kwargs
+        self.nb.class_count_ = state_dict["class_count"]
+        self.nb.class_log_prior_ = state_dict["class_log_prior"]
+        self.nb.feature_count_ = state_dict["feature_count"]
+        self.nb.feature_log_prob_ = state_dict["feature_log_prob"]
