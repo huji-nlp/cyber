@@ -349,10 +349,25 @@ The tested manipulations are:
   \item Replacing all function words with their universal part-of-speech (pos func).
 \end{itemize}
 
+\paragraph{Settings.}
+
+We experiment with four settings, classifying paragraphs from different domains:
+\begin{itemize}
+  \item Training and testing on eBay pages vs. legal Onion pages,
+  as a control experiment
+  to identify whether Onion pages differ from clear web pages.
+  \item Training and testing on Onion legal vs. illegal drugs-related pages,
+  to identify the difference in language between legal and illegal activity
+  on Tor drugs-related websites.
+  \item Training and testing on Onion legal vs. illegal forums,
+  to evaluate the generality of the insights on user-generated content too.
+  \item Training on Onion legal vs. illegal drugs-related pages,
+  and testing on Onion legal vs. illegal forums.
+  This cross-domain evaluation reveals whether the distinctions learned on the
+  drugs domain generalize directly to the forums domain.
+\end{itemize}
+
 \subsection{Results}
-
-\paragraph{Legal vs. Illegal}
-
 
 \begin{table}[t]
 \centering
@@ -401,7 +416,48 @@ attention & 65.5 &  & 65.5 & 50.9 & 66.4\\
 \label{tab:results}}
 \end{table}
 
-\paragraph{Legal Onion vs. eBay}
+
+\paragraph{Legal Onion vs. eBay.}
+
+This control experiment shows that legal Onion content is quite easily
+distinguishable from eBay content, as a Naive Bayes bag-of-words classifier
+reachers 91.4\% accuracy on this classification.
+Moreover, replacing function words by their parts of speech even improves
+the performance, suggesting that the content is mostly useful for determining
+whether a page comes from Onion or eBay.
+This is confirmed by the drop in accuracy when content words are dropped:
+however, in this setting (drop cont.) the SVM classifier performed best,
+suggesting there is a non-linear relationship between the function words
+found in a page and its source.
+While other, more sophisticated classifiers performed worse, the attention
+classifier managed to get as close as possible to the simple Naive Bayes
+one, as it has pre-trained contextualized word embeddings to compensate for
+the small amount of training data.
+
+\paragraph{Legal vs. illegal drugs.}
+
+Classifying legal from illegal pages within the drugs domain on Onion
+proved to be a more difficult task.
+In this setting, content proved to be even more important:
+dropping function words entirely improved the performance of the Naive Bayes
+classifier to nearly its accuracy in the previous experiment.
+This suggests that syntactic structure is similar between the legal and illegal
+domains, but their content allows differentiating them, e.g.,
+by the terms they use to describe their products.
+
+\paragraph{Legal vs. illegal forums.}
+
+Results when training and testing on fourms data are much worse,
+probably due to the fact that this data is much noisier and more varied,
+containing different distributions of words in the training and testing
+subsets.
+
+\paragraph{Cross-domain evaluation.}
+
+Surprisingly, training on drugs data and evaluating on forums performs much
+better than both previous experiments for all classifiers,
+showing that while the forums data is noisy, it can be accurately classified
+when training on the cleaner drugs data.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
