@@ -306,13 +306,10 @@ thus randomly downsampling larger categories for an even division of labels.
 To classify paragraphs into categories, we experiment with five classifiers:
 
 \begin{itemize}
-  \item NB (Naive Bayes): we use \texttt{BernoulliNB} from
-  \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
-  with $\alpha=1$.
-  The features are BoW (bag-of-words), i.e., indicator feature for each word.
-  \item SVM: we use \texttt{SVC}, also from \texttt{scikit-learn},
-  with $\gamma=$``scale'' and tolerance=$10^{-5}$.
-  We use BoW features in this case too.
+  \item NB (Naive Bayes) classifier
+  with BoW (bag-of-words) features, i.e., indicator feature for each word.
+  \item SVM (support vector machine) classifier,
+  also with BoW features.
   \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
   GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
   to a single vector, and apply a 100-dimensional fully-connected layer with
@@ -328,6 +325,11 @@ To classify paragraphs into categories, we experiment with five classifiers:
   previous work \cite{W18-5427,D18-1401}.
 \end{itemize}
 
+For the NB classifier we use \texttt{BernoulliNB} from
+\texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
+with $\alpha=1$,
+and for the SVM clasifier we use \texttt{SVC}, also from \texttt{scikit-learn},
+with $\gamma=$``scale'' and tolerance=$10^{-5}$.
 We use the AllenNLP Python library\footnote{\url{https://allennlp.org}}
 \cite{Gardner2017AllenNLP} for implementing the neural network classifiers.
 
