@@ -389,7 +389,7 @@ attention & 82.8 & 57.5 & 85.3 & 62.1 & 82.8\\
 \\
 \multicolumn{6}{l}{\bf Onion Legal vs. Illegal Drugs} \\
 \hline
-NB & 71.6 & 53.4 & 87.9 & 51.7 & 77.6\\
+NB & 77.6 & 53.4 & 87.9 & 51.7 & 77.6\\
 SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
 BoE$_\mathrm{sum}$ & 52.6 & 61.2 & 74.1 & 50.9 & 51.7\\
 BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9\\
@@ -480,6 +480,79 @@ Therefore, Tor could be a good testbed for working on legal and illegal classifi
 
 \paragraph{Analysis of learned feature weights.}
 
+Table~\ref{tab:nb_weights} shows the most indicative features learned
+by the NB classifier (without input manipulation) for the Onion
+legal vs. illegal setting.
+Many strong features are function words, showing that the language itself
+is quite different between the domains.
+
+\begin{table}
+\small
+\begin{tabular}{lr}
+\multicolumn{2}{c}{Legal}\\
+feature & ratio\\
+\hline
+cart & 0.037\\
+2016 & 0.063\\
+Bh & 0.067\\
+drugs & 0.067\\
+EUR & 0.077\\
+very & 0.083\\
+Per & 0.091\\
+delivery & 0.091\\
+symptoms & 0.091\\
+Please & 0.100\\
+Quantity & 0.100\\
+here & 0.100\\
+check & 0.100\\
+contact & 0.100\\
+called & 0.100\\
+not & 0.102\\
+if & 0.105\\
+If & 0.111\\
+taking & 0.111\\
+like & 0.111\\
+questions & 0.111\\
+Cart & 0.118\\
+> & 0.125\\
+take & 0.125\\
+\end{tabular}
+\begin{tabular}{lr}
+\multicolumn{2}{c}{Illegal}\\
+feature & ratio\\
+\hline
+Laboratories & 8.500\\
+Cipla & 9.000\\
+Pfizer & 9.000\\
+each & 9.571\\
+Force & 10.000\\
+Pharma & 10.333\\
+grams & 10.333\\
+300 & 10.500\\
+Bitcoin & 11.500\\
+RSM & 12.000\\
+Sun & 12.000\\
+manufactured & 12.667\\
+Tablets & 13.000\\
+tablets & 13.714\\
+120 & 16.000\\
+Moldova & 17.000\\
+citrate & 18.000\\
+Pharmaceuticals & 31.500\\
+New & 33.000\\
+200 & 36.000\\
+blister & 48.000\\
+generic & 49.500\\
+60 & 55.000\\
+@ & 63.000\\
+\end{tabular}
+\caption{Most indicative features for each class in NB classifier
+trained on Onion legal vs. illegal drugs,
+and the ratio between their number of occurrences in the ``illegal''
+class and the ``legal'' class.
+Left: features with lowest ratio; right: features with highest ratio.
+\label{tab:nb_weights}}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
