@@ -69,6 +69,7 @@ class NaiveBayes(DocumentClassifier):
         del args, kwargs
         with open("nb.tsv", "w", encoding="utf-8", newline="") as f:
             writer = csv.writer(f, delimiter="\t")
+            writer.writerow(["", self.nb.intercept_])
             writer.writerows(zip(self.vocab.get_token_to_index_vocabulary(), self.nb.coef_[0]))
         return dict(
             class_count=self.nb.class_count_,
