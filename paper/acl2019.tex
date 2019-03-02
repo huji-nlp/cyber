@@ -240,14 +240,14 @@ identical if they share all but numbers (to avoid an over-representation of some
 
     We turn to quantifying the domain difference between text from legal and illegal texts. This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure). 
     %the domains we deal with is a different domain in terms of word use, whether all Onion language should be considered a single domain, and is there a potential in learning differences between onion sites. 
-    
-    To do so, we compute the the frequency distribution of words in the eBay corpus, the legal and illegal drugs Onion section, and the entire drug section (All Onion). 
+    To do so, we compute the frequency distribution of words in the eBay corpus, the legal and illegal drugs Onion corpora, and the entire drug section (All Onion). 
     %We combine the latter two, representing all drug sites in onion. 
     Since any two sets of texts are bound to show some disparity between them, we compare the differences between domains to a control setting, where we randomly split each examined corpus into two halves, and compute the frequency distribution of the two halves. The inner consistency of each corpus, defined as the similarity of distribution between the two halves, serves as a reference point for the similarity between domains.
     
     Following \citet{Plank2011EffectiveMO} we compute the Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.%\daniel{Leshem: do we really need \textit{both} measures?}\oa{one is enough, given that trends are the same. If they are, we can plainly say we experimented with the other and got similar results}
-
-    We see in Table \ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 in the Jensen Shannon divergence, but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. We can therefore think of the three as three different domains. The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible. Similar results were achieved using Variational distance.
+    We see in Table \ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 in the Jensen Shannon divergence, but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. 
+    %We can therefore think of the three as three different domains. 
+    The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible. Similar results were obtained using Variational distance.
 
     We also see that eBay is as far from the legal domain as it is from the illegal or for that case all Onion domain. This would suggest that there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain, rather than world wide web legal domains such as eBay.
 
@@ -274,8 +274,9 @@ identical if they share all but numbers (to avoid an over-representation of some
 
 \begin{table}
 \begin{center}
-\begin{tabular}{lr}
+\begin{tabular}{l|c}
  & \% Wikifiable\\
+ \hline
 Legal Onion & 50.8 $\pm2.31$\\
 Illegal Onion & 32.5 $\pm1.35$\\
 eBay & 38.6 $\pm2$\\
