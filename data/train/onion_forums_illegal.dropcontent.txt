@@ -23,7 +23,6 @@ of from the .
 , or to -to all .
 -, -, -, ! . -) . .) ) . .) )
 - , um na !
-
 a No
 a No
 No
@@ -31,15 +30,11 @@ No
 No
 : No
 : ,
-
 / / / / - - -
 / / / /
-
 It ,
-
 .
 : : me
-
 phpBB(r) ()
 arrow.gif &
 arrow.gif &
@@ -191,7 +186,6 @@ The
 the at
 This
 Hello , ! : : ? me
-
 The of . by
 , . ... by
 for a or ? for it :
@@ -206,22 +200,14 @@ for the . --, by
 . and --, by
 or on . To ... , by
 --, by /
-
-
-
-
 a of in . We . Please , The at on at
-
 No
 0 No
 : : I me
 In :: , and (on over the ) on , : No : ,
-
 We you to to the , please a , we as this a . Please a , .
 To in the without , the .
 In :: , and (on over the ) on , : No : ,
-
-
 to both 's and the - as by ...
 of
 with
@@ -266,7 +252,6 @@ a !!
 ! / For you !
 / about and
 , ! / for , from !
-
 ha
 () by : phpBB
 the a
@@ -289,8 +274,6 @@ A TO . We and to . on the ... : for
 - : for
 about , , and like this. : for : :
 () All .
-
-
 This
 about or that : , and
 to both 's and the - as
@@ -313,7 +296,6 @@ a de
 -
 as ... ""
 , , ...
-
 um , ...
 , , ,
 na
@@ -322,7 +304,6 @@ de um ou ? em !
 que em /
 : Re: os Re... by
 In :: , and (on over the ) on , : No : , ,
-
 ) () with It. by
 : em , ... by
 : Re: a ... by
@@ -384,7 +365,6 @@ Some of
 on "Some of "
 on ""
 for the , for the !
-
 From until , for all g of and !
 Hello ! of all, before I !
 I about of , into : , , .
