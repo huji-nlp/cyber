@@ -69,7 +69,6 @@
 
 \begin{abstract}
   The non-indexed parts of the Internet (the Darknet)
-	%\daniel{I think it should be Darknet (in this capitalization) and always with ``the'' preceding it}
    have become a haven for both legal and illegal anonymous activity.
   Given the magnitude of these networks, scalably monitoring their activity necessarily relies
     on automated tools, and notably on NLP tools.
@@ -157,7 +156,7 @@ DUTA-10K \citep{AlNabki19}
 
 \paragraph{The eBay corpus}
 
-\paragraph{Cleaning.} Elior + Daniel
+\paragraph{Cleaning.}
 
 As preprocessing for all experiments, we apply some cleaning to the text
 of web pages in our corpus.
@@ -261,12 +260,10 @@ In addition to the differences in wikification percentages between
 the domains, we found that spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites. There were a fair number
 of false positives (words and phrases that were found by spaCy but
-were not actually named entities),\daniel{Dan: is this observation
-quantifiable? Can you tell what ratio are false positives? If not,
-mention that this is just our impression and perhaps give examples}
+were not actually named entities),
 especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example "kush" or "GBL", were being falsely picked up by spaCy's NER.
 It should be noted that that ratio of false positives is not something that is easily quantifiable, and therefore this is only a qualitative observation. That being said, it is our impression that the informal language used in our datasets makes it harder
-for spaCy to function optimally in this capacity.\daneldad{cleared up a bit and added examples as per daniel's comment}
+for spaCy to function optimally in this capacity.
 
 These findings lead us to believe that the popular tools used today
 for named entity recognition and analysis are not ideal for processing
