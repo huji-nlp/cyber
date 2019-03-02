@@ -86,16 +86,22 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+
+  The Darknet refers to the subset of Internet sites and pages that are not
+  indexed by search engines.
+  Due to the their use of the ``.onion'' top-level domain, these websites are
+  often referred to as ``Onion sites'', and are reachable via the Tor network
+  anonymously.
   
   Under the cloak of anonymity, the Darknet harbors much illegal activity \citep{moore2016cryptopolitik}.
   Applying NLP tools to text from the Darknet is thus important for effective law enforcement and intelligence.
   However, little is known about the characteristics of the language used in the Darknet, 
   and specifically on what distinguishes text on websites that conduct legal and illegal activity.
-	The only work we are aware of that classified DarkNet texts into legal and illegal activity is \citet{Avarikioti18}.
+	The only work we are aware of that classified Darknet texts into legal and illegal activity is \citet{Avarikioti18}.
 	However, they too did not investigate in what ways these two classes differ.
   
   
-  %Text classification of crawled DarkNet pages was pursued by .
+  %Text classification of crawled Darknet pages was pursued by .
 	%\citet{AlNabki17} pursued text classification of webpages from 
 	%Onion (non-indexed sites commonly accessed using the Tor browser), 
 	%and performend classification into topical categories (e.g., ``drugs'', ``services'' etc.). %\es{I think \citet{moore2016cryptopolitik} were the first to use crawling for Tor but they only collected 5K samples of Tor Onion pages for the topic classification and there didn't publish an annotated corpus.}
@@ -152,7 +158,9 @@ Recently, \citet{Avarikioti18} presented another topic classification of text fr
 \section{Datasets}\label{sec:data}\label{datasets}
 
 \paragraph{Onion corpus.}
-We experiment with data from Darknet websites concerning\lc{in the previous section we talk about Tor, this paragraph name is onion and the sentence says DarkNet, is there a reason for it or should all be changed to onion?}
+We experiment with data from Darknet websites concerning\lc{in the previous section we talk about Tor, this paragraph name is onion and the sentence says Darknet, is there a reason for it or should all be changed to onion?}\daniel{I
+hope the first paragraph in the paper, which I just added, explains this well
+enough. I think it's OK to use the three terms interchangeably.}
 legal and illegal activity, all from the DUTA-10K corpus \citep{AlNabki19}.
 We selected two sub-domains as a test case in this work:
 \begin{description}
@@ -171,7 +179,11 @@ We selected two sub-domains as a test case in this work:
 \end{description}
 
 \paragraph{eBay corpus.}
-As additional data of similar size and characteristics but from clear net and of legal nature we created the eBay corpus. eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions each consists of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching for drug related terms, namely marijuana, weed, grass and drug and choosing search patterns to avoid over repetition of the mentioned factors. Either because of advertisement strategies or the origins of the sellers that come from all over the world, as eBay is an American company, but it hosts for any seller, the ebay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang \footnote{This data will be publicly available upon publication}. \lc{What else is there to say?}
+As additional data of similar size and characteristics but from clear net and of legal nature we created the eBay corpus. eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions each consists of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching for drug related terms, namely marijuana, weed, grass and drug and choosing search patterns to avoid over repetition of the mentioned factors. Either because of advertisement strategies or the origins of the sellers that come from all over the world, as eBay is an American company, but it hosts for any seller, the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
+Importantly, eBay websites are assumed to conduct legal activity---even
+if discussing drug-related material, we find it is never the sale of illegal
+drugs but rather merchandise, tools, or otherwise related content.\footnote{This 
+data will be publicly available upon publication.}
 
 \paragraph{Cleaning.}
 
@@ -308,8 +320,8 @@ To classify paragraphs into categories, we experiment with five classifiers:
 \begin{itemize}
   \item NB (Naive Bayes) classifier
   with BoW (bag-of-words) features, i.e., indicator feature for each word.
-  \item SVM (support vector machine) classifier,
-  also with BoW features.  \lc{should I add here with kernel RBF or are we still expecting results with a linear one?}
+  \item SVM (support vector machine) classifier with an RBF kernel,
+  also with BoW features.
   \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
   GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
   to a single vector, and apply a 100-dimensional fully-connected layer with
@@ -360,8 +372,8 @@ We experiment with four settings, classifying paragraphs from different domains:
   to identify whether Onion pages differ from clear web pages.
   \item Training and testing on Onion legal vs. illegal drugs-related pages,
   to identify the difference in language between legal and illegal activity
-  on Tor drugs-related websites.
-  \item Training and testing on Onion legal vs. illegal forums,\lc{again tor vs. onion}
+  on Onion drug-related websites.
+  \item Training and testing on Onion legal vs. illegal forums,
   to evaluate the generality of the insights on user-generated content too.
   \item Training on Onion legal vs. illegal drugs-related pages,
   and testing on Onion legal vs. illegal forums.
