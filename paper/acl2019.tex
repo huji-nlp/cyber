@@ -309,7 +309,7 @@ To classify paragraphs into categories, we experiment with five classifiers:
   \item NB (Naive Bayes) classifier
   with BoW (bag-of-words) features, i.e., indicator feature for each word.
   \item SVM (support vector machine) classifier,
-  also with BoW features.
+  also with BoW features.  \lc{should I add here with kernel RBF or are we still expecting results with a linear one?}
   \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
   GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
   to a single vector, and apply a 100-dimensional fully-connected layer with
@@ -346,9 +346,9 @@ The tested manipulations are:
 
 \begin{itemize}
   \item Dropping all content words (drop cont.).
-  \item Dropping all function words (drop func).
+  \item Dropping all function words (drop func.).
   \item Replacing all content words with their universal part-of-speech (pos cont.).
-  \item Replacing all function words with their universal part-of-speech (pos func).
+  \item Replacing all function words with their universal part-of-speech (pos func.).
 \end{itemize}
 
 \paragraph{Settings.}
@@ -361,7 +361,7 @@ We experiment with four settings, classifying paragraphs from different domains:
   \item Training and testing on Onion legal vs. illegal drugs-related pages,
   to identify the difference in language between legal and illegal activity
   on Tor drugs-related websites.
-  \item Training and testing on Onion legal vs. illegal forums,
+  \item Training and testing on Onion legal vs. illegal forums,\lc{again tor vs. onion}
   to evaluate the generality of the insights on user-generated content too.
   \item Training on Onion legal vs. illegal drugs-related pages,
   and testing on Onion legal vs. illegal forums.
@@ -423,7 +423,7 @@ attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4\\
 
 This control experiment shows that legal Onion content is quite easily
 distinguishable from eBay content, as a Naive Bayes bag-of-words classifier
-reachers 91.4\% accuracy on this classification.
+reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
 the performance, suggesting that the content is mostly useful for determining
 whether a page comes from Onion or eBay.
