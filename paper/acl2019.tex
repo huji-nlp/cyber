@@ -209,31 +209,38 @@ identical if they share all but numbers (to avoid an over-representation of some
 %    \begin{table}[]
 %    \resizebox{\columnwidth}{!}{%
 %        \begin{tabular}{@{}lllll@{}}
-%            & all onion  & eBay       & illegal    & legal      \\
-%            all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
-%            eBay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
-%            illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
-%            legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
+%& all onion & eBay & illegal & legal      \\
+%all onion && 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
+%eBay & 0.60, 1.31 && 0.59, 1.28 & 0.66, 1.46 \\
+%illegal & 0.33, 0.62 & 0.59, 1.28 && 0.61, 1.28 \\
+%legal & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &     
 %        \end{tabular}%
 %    }
 %    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites. \label{ta:domain}}
 %\end{table}
 \begin{table*}[]
     \resizebox{\textwidth}{!}{%
-        \begin{tabular}{@{}lllllllllllll@{}}
-                             & all onion & all onion\_half1 & all onion\_half2 & ebay & ebay\_half1 & ebay\_half2 & illegal & illegal\_half1 & illegal\_half2 & legal & legal\_half1 & legal\_half2 \\ 
-            all onion        &           & 0.23             & 0.25             & 0.6  & 0.61        & 0.61        & 0.33    & 0.39           & 0.41           & 0.35  & 0.41         & 0.42         \\
-            all onion\_half1 & 0.23      &                  & 0.43             & 0.6  & 0.62        & 0.62        & 0.37    & 0.33           & 0.5            & 0.4   & 0.36         & 0.52         \\
-            all onion\_half2 & 0.25      & 0.43             &                  & 0.61 & 0.62        & 0.62        & 0.39    & 0.5            & 0.35           & 0.39  & 0.51         & 0.35         \\
-            ebay             & 0.6       & 0.6              & 0.61             &      & 0.23        & 0.25        & 0.59    & 0.6            & 0.6            & 0.66  & 0.67         & 0.67         \\
-            ebay\_half1      & 0.61      & 0.62             & 0.62             & 0.23 &             & 0.43        & 0.6     & 0.61           & 0.61           & 0.67  & 0.67         & 0.68         \\
-            ebay\_half2      & 0.61      & 0.62             & 0.62             & 0.25 & 0.43        &             & 0.6     & 0.61           & 0.61           & 0.67  & 0.68         & 0.68         \\
-            illegal          & 0.33      & 0.37             & 0.39             & 0.59 & 0.6         & 0.6         &         & 0.23           & 0.27           & 0.61  & 0.62         & 0.62         \\
-            illegal\_half1   & 0.39      & 0.33             & 0.5              & 0.6  & 0.61        & 0.61        & 0.23    &                & 0.45           & 0.62  & 0.63         & 0.62         \\
-            illegal\_half2   & 0.41      & 0.5              & 0.35             & 0.6  & 0.61        & 0.61        & 0.27    & 0.45           &                & 0.62  & 0.63         & 0.63         \\
-            legal            & 0.35      & 0.4              & 0.39             & 0.66 & 0.67        & 0.67        & 0.61    & 0.62           & 0.62           &       & 0.26         & 0.26         \\
-            legal\_half1     & 0.41      & 0.36             & 0.51             & 0.67 & 0.67        & 0.68        & 0.62    & 0.63           & 0.63           & 0.26  &              & 0.47         \\
-            legal\_half2     & 0.42      & 0.52             & 0.35             & 0.67 & 0.68        & 0.68        & 0.62    & 0.62           & 0.63           & 0.26  & 0.47         &              \\          
+        \begin{tabular}{@{}ll|rrr|rrr|rrr|rrr@{}}
+&& \multicolumn{3}{c}{All Onion} & \multicolumn{3}{c}{eBay}
+& \multicolumn{3}{c}{Illegal Onion} & \multicolumn{3}{c}{Legal Onion} \\
+&& all & half1 & half2 & all & half1 & half2
+& all & half1 & half2 & all & half1 & half2 \\
+\hline
+& all & & 0.23 & 0.25 & 0.60 & 0.61 & 0.61 & 0.33 & 0.39 & 0.41 & 0.35 & 0.41 & 0.42 \\
+All Onion & half1 & 0.23 & & 0.43 & 0.60 & 0.62 & 0.62 & 0.37 & 0.33 & 0.50& 0.40 & 0.36 & 0.52 \\
+& half2 & 0.25 & 0.43 & & 0.61 & 0.62 & 0.62 & 0.39 & 0.50& 0.35 & 0.39 & 0.51 & 0.35 \\
+\hline
+& all & 0.60 & 0.60 & 0.61 & & 0.23 & 0.25 & 0.59 & 0.60& 0.60& 0.66 & 0.67 & 0.67 \\
+eBay & half1 & 0.61 & 0.62 & 0.62 & 0.23 & & 0.43 & 0.60 & 0.61 & 0.61 & 0.67 & 0.67 & 0.68 \\
+& half2 & 0.61 & 0.62 & 0.62 & 0.25 & 0.43 & & 0.60 & 0.61 & 0.61 & 0.67 & 0.68 & 0.68 \\
+\hline
+& all & 0.33 & 0.37 & 0.39 & 0.59 & 0.60 & 0.60 & & 0.23 & 0.27 & 0.61 & 0.62 & 0.62 \\
+Illegal Onion & half1 & 0.39 & 0.33 & 0.50 & 0.60 & 0.61 & 0.61 & 0.23 & & 0.45 & 0.62 & 0.63 & 0.62 \\
+& half2 & 0.41 & 0.50 & 0.35 & 0.60 & 0.61 & 0.61 & 0.27 & 0.45 & & 0.62 & 0.63 & 0.63 \\
+\hline
+& all & 0.35 & 0.40 & 0.39 & 0.66 & 0.67 & 0.67 & 0.61 & 0.62 & 0.62 & & 0.26 & 0.26 \\
+Legal onion & half1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0.63 & 0.26 & & 0.47 \\
+& half2 & 0.42 & 0.52 & 0.35 & 0.67 & 0.68 & 0.68 & 0.62 & 0.62 & 0.63 & 0.26 & 0.47 &  \\          
         \end{tabular}%
     }
     \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites.
