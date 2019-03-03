@@ -496,8 +496,7 @@ manufactured by: Cipla Pharmaceuticals Compare to &Generic Kaletra contains a co
 (generic Zoloft) Sertraline 25 mg tablets US\$31.05&/ roduct-category/cannabis/ Cannabis / 14g Amnesia\\
 Sustanon-250mg Testosterone Compound 250mgml&Welcome to SnowKings Good Quality Cocaine
 \end{tabular}
-\caption{Example paragraphs (data instances) from the Legal Onion and
-Onion Illegal subsets of the Onion corpus (ten examples from each).
+\caption{Example paragraphs (data instances) from the Legal Onion and Illegal Onion subsets of the Onion corpus (ten examples from each).
 Each paragraph is trimmed to the first 50 characters for space reasons.
 \label{fig:examples}}
 \end{figure*}
@@ -520,7 +519,7 @@ PROPN PROPN PROPN NUM PROPN PROPN -&/ NOUN - NOUN / NOUN PROPN / PROPN \\
 PROPN / PROPN PROPN PROPN / PROPN P&Any NOUN VERB us.\\
 \end{tabular}
 \caption{Example paragraphs (data instances) from the Legal Onion and
-Onion Illegal subsets of the Onion corpus (ten examples from each),
+Illegal Onion subsets of the Onion corpus (ten examples from each),
 where content words are replaced with their parts of speech.
 Each paragraph is trimmed to the first 50 characters for space reasons.
 Different instances are shown than in Figure~\ref{fig:examples}.
@@ -649,16 +648,16 @@ As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
 are quite distant in terms of word distribution and named entity wikification.
 Moreover, named entity recognition and wikification work less well
 for the illegal domain.
-This has practical implications: we need to adapt our tools to deal with illegal Tor data.
+This has practical implications: we need to adapt our tools to deal with illegal Tor data, if we want in the future to successfully apply automatic tools there.
 As evident from the classification experiments (\S\ref{sec:classification}), however,
-the Legal Onion and Onion Illegal texts are harder to distinguish than
+the Onion Legal and Illegal Onion texts are harder to distinguish than
 eBay and Legal Onion, meaning we need to look beyond word distribution
 when comparing these domains.
 
 \paragraph{Analysis of texts from the datasets.}
 
 Looking at specific sentences (Figure~\ref{fig:examples})
-reveals that Legal Onion and Onion Illegal are easy to distinguish
+reveals that Legal Onion and Illegal Onion are easy to distinguish
 based on the identity of certain words, e.g., terms for legal and illegal drugs,
 respectively.
 Thus looking at the wordforms is already a good solution for tackling this
@@ -671,21 +670,20 @@ terms of accuracy.
 Given that replacing content words with their POS tags significantly drops
 performance for classification of legal vs illegal texts
 (see ``pos cont.'' in \S\ref{sec:classification}),
-we conclude that the distrubtion of parts of speech is not significantly
+we conclude that the distribution of parts of speech is not significantly
 different between the domains,
 and most differences can be attributed to content.
 However, non-linear models such as the SVM or the order-aware neural models
 do manage to distinguish between the texts even in this setting.
 Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
 there are easily identifiable patterns distinguishing between the domains,
-but a bag-of-words approach is not strong enough to identify them.
+but a bag-of-words approach is not strong enough to identify them. In other words, if there is any classifier who manages to distinguish such texts not relying on the content words, then the information is there, and there are distinct linguistic attributes to the legal and illegal texts. 
 
-On a methological note, Legal Onion and Illegal Onion are distinct enough
+On a methodological note, Legal Onion and Illegal Onion are distinct enough
 to be considered different domains (as distant as Legal Onion and eBay,
 see \S\ref{sec:domain}). 
 Therefore, Tor could be a good testbed for working on classification of
-legal and illegal texts.\daniel{Similar to a sentence from before, not sure
-I follow the logic}
+legal and illegal texts.
 
 \paragraph{Analysis of learned feature weights.}
 
