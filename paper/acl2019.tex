@@ -164,20 +164,15 @@ We experiment with data from Darknet websites concerning\lc{in the previous sect
 hope the first paragraph in the paper, which I just added, explains this well
 enough. I think it's OK to use the three terms interchangeably.}
 legal and illegal activity, all from the DUTA-10K corpus \citep{AlNabki19}.
-We selected two sub-domains as a test case in this work:
-\begin{description}
-  \item[Legal and illegal drugs.] These websites advertise and sell
-  drugs, often to international customers.
-  While legal websites often sell pharmaceuticals,
-  illegal ones are often related to substance abuse.
-  These pages are written by sellers and directed to their customers.
-  \item[Legal and illegal forums.] These contain user-written text in various
-  topics. Legal forums often discuss web design and other technical
-  and non-technical activity on the internet, while illegal ones involve
-  discussions about cyber-crimes and guides on how to commit them,
-  as well as narcotics, racism and other criminal activities.
-  As this domain contains user-generated content, it is more varied
-  and noisy.
+We selected the ``drugs'' sub-domain as a test case, considering both ``legal drugs'' and ``illegal drugs'' sub-categories.
+%\begin{description}
+%\item[Legal and illegal drugs.]
+These websites advertise and sell
+drugs, often to international customers.
+While legal websites often sell pharmaceuticals,
+illegal ones are often related to substance abuse.
+These pages are written by sellers and directed to their customers.
+  
 \end{description}
 
 \paragraph{eBay corpus.}
@@ -497,6 +492,21 @@ classifier to nearly its accuracy in the previous experiment.
 This suggests that syntactic structure is similar between the legal and illegal
 domains, but their content allows differentiating them, e.g.,
 by the terms they use to describe their products.
+
+\section{Illegality Detection Across Domains}
+
+\subsection{Experimental Setup}
+
+Legal/illegal forums
+These contain user-written text in various
+topics. Legal forums often discuss web design and other technical
+and non-technical activity on the internet, while illegal ones involve
+discussions about cyber-crimes and guides on how to commit them,
+as well as narcotics, racism and other criminal activities.
+As this domain contains user-generated content, it is more varied
+and noisy.
+
+\subsection{Results}
 
 \paragraph{Legal vs. illegal forums.}
 
