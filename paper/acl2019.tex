@@ -170,7 +170,7 @@ Recently, \citet{Avarikioti18} presented another topic classification of text fr
 %legal & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &     
 %        \end{tabular}%
 %    }
-%    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites. \label{ta:domain}}
+%    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and Illegal Onion drug sites, and eBay sites. \label{ta:domain}}
 %\end{table}
 \begin{table*}[]
     \resizebox{\textwidth}{!}{%
@@ -197,7 +197,7 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 & half 2 & 0.42 & 0.52 & 0.35 & 0.67 & 0.68 & 0.68 & 0.62 & 0.62 & 0.63 & 0.26 & 0.47 &  \\          
         \end{tabular}%
     }
-    \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites.
+    \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, Legal and Illegal Onion drug sites, and eBay sites.
     Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
 \end{table*}
 
@@ -239,7 +239,7 @@ We then remove any duplicate paragraphs, where paragraphs are considered
 identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our data and preprocessing code is included in the supplementary material, and will be made publicly available upon publication.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Domain Differences}
+\section{Domain Differences}\label{sec:domain}
     
     We turn to quantifying the domain difference between text from legal and illegal texts. This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure).
 
@@ -358,7 +358,7 @@ For the NB classifier we use \texttt{BernoulliNB} from
 \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
 with $\alpha=1$,
 and for the SVM clasifier we use \texttt{SVC}, also from \texttt{scikit-learn},
-with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+with $\gamma=\mathrm{scale}$ and tolerance=$10^{-5}$.
 We use the AllenNLP Python library\footnote{\url{https://allennlp.org}}
 \cite{Gardner2017AllenNLP} for implementing the neural network classifiers.
 
@@ -384,10 +384,10 @@ The tested manipulations are:
 
 We experiment with four settings, classifying paragraphs from different domains:
 \begin{itemize}
-  \item Training and testing on eBay pages vs. legal Onion pages,
+  \item Training and testing on eBay pages vs. Legal Onion pages,
   as a control experiment
-  to identify whether Onion pages differ from clear web pages.
-  \item Training and testing on Onion legal vs. illegal drugs-related pages,
+  to identify whether Onion pages differ from clear net pages.
+  \item Training and testing on Legal Onion vs. Illegal Onion drugs-related pages,
   to identify the difference in language between legal and illegal activity
   on Onion drug-related websites.
   \item Training and testing on Onion legal vs. illegal forums,
@@ -461,7 +461,7 @@ attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
 
 \paragraph{Legal Onion vs. eBay.}
 
-This control experiment shows that legal Onion content is quite easily
+This control experiment shows that Legal Onion content is quite easily
 distinguishable from eBay content, as a Naive Bayes bag-of-words classifier
 reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
@@ -523,8 +523,15 @@ when training on the cleaner drugs data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-The legal and illegal are pretty distant, which is evident in a few ways: word distribution is different, NER and Wikification work less well
-for illegal. This has practical implications: we need to adapt our tools to deal with illegal Tor data. 
+As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
+are quite distant in terms of word distribution and named entity wikification.
+Moreover, named entity recognition and wikification work less well
+for the illegal domain.
+This has practical implications: we need to adapt our tools to deal with illegal Tor data.
+As evident from the classification experiments (\S\ref{sec:classification}), however,
+the Onion Legal and Onion Illegal texts are harder to distinguish than
+eBay and Onion Legal, meaning we need to look beyond word distribution
+when comparing these domains.
 
 Looking at specific sentences, we see that it's hard distinguishing them based on the identity of the words, which means that
 looking at the wordforms is a very poor solution for tackling this. However, using modern text classification, they can be distinguished
