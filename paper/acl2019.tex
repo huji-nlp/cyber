@@ -177,24 +177,24 @@ Recently, \citet{Avarikioti18} presented another topic classification of text fr
         \begin{tabular}{@{}ll|rrr|rrr|rrr|rrr@{}}
 && \multicolumn{3}{c|}{All Onion} & \multicolumn{3}{c|}{eBay}
 & \multicolumn{3}{c|}{Illegal Onion} & \multicolumn{3}{c}{Legal Onion} \\
-&& all & half1 & half2 & all & half1 & half2
-& all & half1 & half2 & all & half1 & half2 \\
+&& all & half 1 & half 2 & all & half 1 & half 2
+& all & half 1 & half 2 & all & half 1 & half 2 \\
 \hline
 & all & & 0.23 & 0.25 & 0.60 & 0.61 & 0.61 & 0.33 & 0.39 & 0.41 & 0.35 & 0.41 & 0.42 \\
-All Onion & half1 & 0.23 & & 0.43 & 0.60 & 0.62 & 0.62 & 0.37 & 0.33 & 0.50& 0.40 & 0.36 & 0.52 \\
-& half2 & 0.25 & 0.43 & & 0.61 & 0.62 & 0.62 & 0.39 & 0.50& 0.35 & 0.39 & 0.51 & 0.35 \\
+All Onion & half 1 & 0.23 & & 0.43 & 0.60 & 0.62 & 0.62 & 0.37 & 0.33 & 0.50& 0.40 & 0.36 & 0.52 \\
+& half 2 & 0.25 & 0.43 & & 0.61 & 0.62 & 0.62 & 0.39 & 0.50& 0.35 & 0.39 & 0.51 & 0.35 \\
 \hline
 & all & 0.60 & 0.60 & 0.61 & & 0.23 & 0.25 & 0.59 & 0.60& 0.60& 0.66 & 0.67 & 0.67 \\
-eBay & half1 & 0.61 & 0.62 & 0.62 & 0.23 & & 0.43 & 0.60 & 0.61 & 0.61 & 0.67 & 0.67 & 0.68 \\
-& half2 & 0.61 & 0.62 & 0.62 & 0.25 & 0.43 & & 0.60 & 0.61 & 0.61 & 0.67 & 0.68 & 0.68 \\
+eBay & half 1 & 0.61 & 0.62 & 0.62 & 0.23 & & 0.43 & 0.60 & 0.61 & 0.61 & 0.67 & 0.67 & 0.68 \\
+& half 2 & 0.61 & 0.62 & 0.62 & 0.25 & 0.43 & & 0.60 & 0.61 & 0.61 & 0.67 & 0.68 & 0.68 \\
 \hline
 & all & 0.33 & 0.37 & 0.39 & 0.59 & 0.60 & 0.60 & & 0.23 & 0.27 & 0.61 & 0.62 & 0.62 \\
-Illegal Onion & half1 & 0.39 & 0.33 & 0.50 & 0.60 & 0.61 & 0.61 & 0.23 & & 0.45 & 0.62 & 0.63 & 0.62 \\
-& half2 & 0.41 & 0.50 & 0.35 & 0.60 & 0.61 & 0.61 & 0.27 & 0.45 & & 0.62 & 0.63 & 0.63 \\
+Illegal Onion & half 1 & 0.39 & 0.33 & 0.50 & 0.60 & 0.61 & 0.61 & 0.23 & & 0.45 & 0.62 & 0.63 & 0.62 \\
+& half 2 & 0.41 & 0.50 & 0.35 & 0.60 & 0.61 & 0.61 & 0.27 & 0.45 & & 0.62 & 0.63 & 0.63 \\
 \hline
 & all & 0.35 & 0.40 & 0.39 & 0.66 & 0.67 & 0.67 & 0.61 & 0.62 & 0.62 & & 0.26 & 0.26 \\
-Legal onion & half1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0.63 & 0.26 & & 0.47 \\
-& half2 & 0.42 & 0.52 & 0.35 & 0.67 & 0.68 & 0.68 & 0.62 & 0.62 & 0.63 & 0.26 & 0.47 &  \\          
+Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0.63 & 0.26 & & 0.47 \\
+& half 2 & 0.42 & 0.52 & 0.35 & 0.67 & 0.68 & 0.68 & 0.62 & 0.62 & 0.63 & 0.26 & 0.47 &  \\          
         \end{tabular}%
     }
     \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites.
@@ -245,8 +245,6 @@ identical if they share all but numbers (to avoid an over-representation of some
 
 \subsection{Vocabulary Differences}
 
-
-    %the domains we deal with is a different domain in terms of word use, whether all Onion language should be considered a single domain, and is there a potential in learning differences between onion sites. 
     To quantify the domain differences between texts from legal and illegal texts,
     we compute the frequency distribution of words in the eBay corpus, the legal and illegal drugs Onion corpora, and the entire Onion drug section (All~Onion). 
     %We combine the latter two, representing all drug sites in onion. 
@@ -255,25 +253,24 @@ identical if they share all but numbers (to avoid an over-representation of some
     We refer to this measure as ``self-distance''.
     
     Following \citet{Plank2011EffectiveMO}, we compute the Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
-    We see in Table~\ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 in the Jensen Shannon divergence, but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. 
-    The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible. Similar results were obtained using Variational distance.
+    We see in Table~\ref{ta:domain_halves} that the self-distance of the
+    eBay, Legal Onion and Illegal Onion corpora lies between 0.40 to 0.45
+    by the Jensen-Shannon divergence, but the distance between each pair
+    is 0.60 to 0.65.
+    This means the three approximately form an equilateral triangle. 
+    The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible.\oa{I didn't get the last part of the sentence; why is this entailed?}
+    Similar results were obtained using Variational distance, and are omitted for brevity.
 
-    We also see that eBay is as far from the legal domain as it is from the illegal or for that case all Onion domain. This would suggest that there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain, rather than world wide web legal domains such as eBay.
-
-    
-%     Table~\ref{ta:domain_halves} presents our results, showing that eBay, and the legal and illegal sections are self-distant\oa{we need to define this term if we use it} 0.4--0.45, but the distance between corpora is 0.6--0.65. This means the three form an equilateral triangle, which suggests that they can by right be regarded as different domains. 
-%     
-%     The results suggest there is no reason to think about all of Onion as one domain, and hence studying using Onion data what characterizes the illegal domain from the legal domain is sensible.\oa{I didn't get the last part of the sentence; why is this entailed?}
-% 
-%     We also see that eBay is as far from the legal domain as it is from the illegal or for that case all onion domain. This would suggest there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to distinguish illegal and legal inside the onion domain, rather than world wide web legal domains such as eBay.\oa{didn't understand the last parag. can we omit it?}
+    We also see that eBay is as far from the Legal Onion domain as it is from the Illegal Onion domain, and from All Onion.
+    This suggests that there are also unique characteristics for each domain, which make learning properties of Illegal Onion more challenging
+    than simply domain differences.
+    For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain,
+    rather than world wide web legal domains such as eBay.\oa{didn't understand the last parag. can we omit it?}
 
 \subsection{Differences in Named Entities}
 
     In order to analyze the difference in the distribution of 
     named entities between the domains,  we used a ``wikification''\cite{bunescu2006using} technique, i.e., linking entities to their corresponding article in Wikipedia.
-% 
-%     After deeming them as different domains, we wanted to assess the behaviour of well established tools in this new domain. We chose to work with named entities and their wikification and compare their extraction in each domain. For that matter, Wikification is the task of matching 
-% named entities from a text to items, in public datasets such as articles of Wikipedia.
 
     Using spaCy's\footnote{\url{https://spacy.io}}
     named entity recognition, we first extract all named
