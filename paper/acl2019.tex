@@ -397,8 +397,6 @@ We experiment with four settings, classifying paragraphs from different domains:
 
 \subsection{Results} \label{subsec:results}
 
-The accuracy scores for the different classifiers and settings are reported in Table~\ref{tab:results_drugs}.
-
 \begin{table}[t]
 \centering
 \setlength\tabcolsep{4pt}
@@ -512,7 +510,7 @@ drugs domain generalize directly to the forums domain.
 
 \subsection{Results}
 
-The accuracy scores are reported in Table~\ref{tab:results_forums}.
+The accuracy scores for the different classifiers and settings are reported in Table~\ref{tab:results_drugs}.
 
 \paragraph{Legal vs. illegal forums.}
 
@@ -570,6 +568,8 @@ the Legal Onion and Onion Illegal texts are harder to distinguish than
 eBay and Legal Onion, meaning we need to look beyond word distribution
 when comparing these domains.
 
+\paragraph{Analysis of texts from the datasets.}
+
 Looking at specific sentences (Figure~\ref{fig:examples})
 reveals that Legal Onion and Onion Illegal are easy to distinguish
 based on the identity of certain words, e.g., terms for legal and illegal drugs,
@@ -604,6 +604,8 @@ Different instances are shown than in Figure~\ref{fig:examples}.
 \label{fig:examples_poscontent}}
 \end{figure*}
 
+\paragraph{Analysis of manipulated texts.}
+
 Given that replacing content words with their POS tags significantly drops
 performance for classification of legal vs illegal texts
 (see ``pos cont.'' in \S\ref{sec:classification}),
@@ -616,8 +618,12 @@ Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
 there are easily identifiable patterns distinguishing between the domains,
 but a bag-of-words approach is not strong enough to identify them.
 
-Methological: Legal and illegal in Onion are distinct enough to be considered different domains (as distant as Legal and eBay). 
-Therefore, Tor could be a good testbed for working on legal and illegal classification.
+On a methological note, Legal Onion and Illegal Onion are distinct enough
+to be considered different domains (as distant as Legal Onion and eBay,
+see \S\ref{sec:domain}). 
+Therefore, Tor could be a good testbed for working on classification of
+legal and illegal texts.\daniel{Similar to a sentence from before, not sure
+I follow the logic}
 
 \paragraph{Analysis of learned feature weights.}
 
