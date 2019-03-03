@@ -308,65 +308,7 @@ In particular, slang terms for drugs, as well as abbreviated drug terms, for exa
 were being falsely picked up by spaCy's NER.
 We consider these to be false positives as they are names of substances but not specific products, and hence not named entities.\footnote{See \url{https://spacy.io/api/annotation\#section-named-entities}}
 
- The results in these experiments suggest both that (1) legal and illegal activity is different in terms of its named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity. 
-
-\begin{table}[t]
-\centering
-\setlength\tabcolsep{4pt}
-%\def\arraystretch{.855}
-\begin{tabular}{l *{5}{R}}
-&& \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
-& \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
-\multicolumn{6}{l}{\bf eBay vs. Legal Onion Drugs} \\
-\hline
-NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2\\
-SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8\\
-BoE$_\mathrm{sum}$ & 66.4 & 56.0 & 63.8 & 50.9 & 76.7\\
-BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0\\
-seq2vec & 73.3 & 53.8 & 65.5 & 65.5 & 75.0\\
-attention & 82.8 & 57.5 & 85.3 & 62.1 & 82.8\\
-\\
-\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Drugs} \\
-\hline
-NB & 77.6 & 53.4 & 87.9 & 51.7 & 77.6\\
-SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
-BoE$_\mathrm{sum}$ & 52.6 & 61.2 & 74.1 & 50.9 & 51.7\\
-BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9\\
-seq2vec & 56.9 & 55.0 & 54.3 & 59.5 & 49.1\\
-attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0
-\end{tabular}
-\caption{Test accuracy for each classifier (rows) in each setting (columns) on drugs-related data.
-\label{tab:results_drugs}}
-\end{table}
-
-\begin{table}[t]
-\centering
-\setlength\tabcolsep{4pt}
-%\def\arraystretch{.855}
-\begin{tabular}{l *{5}{R}}
-&& \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
-& \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
-\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Forums} \\
-\hline
-NB & 74.1 & 50.9 & 78.4 & 50.9 & 72.4\\
-SVM & 85.3 & 75.9 & 56.0 & 81.9 & 81.0\\
-BoE$_\mathrm{sum}$ & 25.9 & 32.8 & 21.6 & 36.2 & 35.3\\
-BoE$_\mathrm{average}$ & 40.5 & 42.2 & 31.9 & 48.3 & 53.4\\
-seq2vec & 50.0 & 48.9 & 50.9 & 28.4 & 51.7\\
-attention & 31.0 & 37.2 & 33.6 & 27.6 & 30.2\\
-\\
-\multicolumn{6}{l}{\bf Trained on Drugs, Tested on Forums} \\
-\hline
-NB & 78.4 & 63.8 & 89.7 & 63.8 & 79.3\\
-SVM & 62.1 & 69.0 & 54.3 & 69.8 & 62.1\\
-BoE$_\mathrm{sum}$ & 45.7 & 50.9 & 49.1 & 50.9 & 50.0\\
-BoE$_\mathrm{average}$ & 49.1 & 51.7 & 51.7 & 52.6 & 58.6\\
-seq2vec & 51.7 & 61.1 & 51.7 & 54.3 & 57.8\\
-attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
-\end{tabular}
-\caption{Test accuracy for each classifier (rows) in each setting (columns) on forums data.
-\label{tab:results_forums}}
-\end{table}
+ The results in these experiments suggest both that (1) legal and illegal activity is different in terms of its named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -446,6 +388,64 @@ We experiment with four settings, classifying paragraphs from different domains:
   on Onion drug-related websites.
   
 \end{itemize}
+
+\begin{table}[t]
+\centering
+\setlength\tabcolsep{4pt}
+%\def\arraystretch{.855}
+\begin{tabular}{l *{5}{R}}
+&& \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
+& \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
+\multicolumn{6}{l}{\bf eBay vs. Legal Onion Drugs} \\
+\hline
+NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2\\
+SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8\\
+BoE$_\mathrm{sum}$ & 66.4 & 56.0 & 63.8 & 50.9 & 76.7\\
+BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0\\
+seq2vec & 73.3 & 53.8 & 65.5 & 65.5 & 75.0\\
+attention & 82.8 & 57.5 & 85.3 & 62.1 & 82.8\\
+\\
+\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Drugs} \\
+\hline
+NB & 77.6 & 53.4 & 87.9 & 51.7 & 77.6\\
+SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
+BoE$_\mathrm{sum}$ & 52.6 & 61.2 & 74.1 & 50.9 & 51.7\\
+BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9\\
+seq2vec & 56.9 & 55.0 & 54.3 & 59.5 & 49.1\\
+attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0
+\end{tabular}
+\caption{Test accuracy for each classifier (rows) in each setting (columns) on drugs-related data.
+\label{tab:results_drugs}}
+\end{table}
+
+\begin{table}[t]
+\centering
+\setlength\tabcolsep{4pt}
+%\def\arraystretch{.855}
+\begin{tabular}{l *{5}{R}}
+&& \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
+& \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
+\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Forums} \\
+\hline
+NB & 74.1 & 50.9 & 78.4 & 50.9 & 72.4\\
+SVM & 85.3 & 75.9 & 56.0 & 81.9 & 81.0\\
+BoE$_\mathrm{sum}$ & 25.9 & 32.8 & 21.6 & 36.2 & 35.3\\
+BoE$_\mathrm{average}$ & 40.5 & 42.2 & 31.9 & 48.3 & 53.4\\
+seq2vec & 50.0 & 48.9 & 50.9 & 28.4 & 51.7\\
+attention & 31.0 & 37.2 & 33.6 & 27.6 & 30.2\\
+\\
+\multicolumn{6}{l}{\bf Trained on Drugs, Tested on Forums} \\
+\hline
+NB & 78.4 & 63.8 & 89.7 & 63.8 & 79.3\\
+SVM & 62.1 & 69.0 & 54.3 & 69.8 & 62.1\\
+BoE$_\mathrm{sum}$ & 45.7 & 50.9 & 49.1 & 50.9 & 50.0\\
+BoE$_\mathrm{average}$ & 49.1 & 51.7 & 51.7 & 52.6 & 58.6\\
+seq2vec & 51.7 & 61.1 & 51.7 & 54.3 & 57.8\\
+attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
+\end{tabular}
+\caption{Test accuracy for each classifier (rows) in each setting (columns) on forums data.
+\label{tab:results_forums}}
+\end{table}
 
 \subsection{Results} \label{subsec:results}
 
@@ -679,33 +679,29 @@ Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
 there are easily identifiable patterns distinguishing between the domains,
 but a bag-of-words approach is not strong enough to identify them. In other words, if there is any classifier who manages to distinguish such texts not relying on the content words, then the information is there, and there are distinct linguistic attributes to the legal and illegal texts. 
 
-On a methodological note, Legal Onion and Illegal Onion are distinct enough
-to be considered different domains (as distant as Legal Onion and eBay,
-see \S\ref{sec:domain}). 
-Therefore, Tor could be a good testbed for working on classification of
-legal and illegal texts.
-
 \paragraph{Analysis of learned feature weights.}
 
+As the Naive Bayes classifier was the most successful at distinguishing
+legal from illegal texts in the ``full'' setting (without input manipulation),
+we conclude that the identity of certain words provide a strong indication
+that an instance is taken from one set or the other.
 Table~\ref{tab:nb_weights} shows the most indicative features learned
-by the NB classifier (without input manipulation) for the Onion
-legal vs. illegal setting.
-Many strong features are function words, showing that the language itself
-is quite different between the domains.
+by the Naive Bayes classifier for the
+Legal Onion vs. Illegal Onion classification in this setting.
+Suprisingly, many strong features are function words,
+showing that even without spotting specific entities,
+the classifier can easily distinguish the domains, as the language itself
+is quite different between them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
- 
 
-
-
-
-
-
-
-
-
-
+On a methological note, Legal Onion and Illegal Onion are distinct enough
+to be considered different domains (as distant as Legal Onion and eBay,
+see \S\ref{sec:domain}). 
+Therefore, Tor could be a good testbed for working on classification of
+legal and illegal texts.\daniel{Similar to a sentence from before, not sure
+I follow the logic}
 
 
 \bibliography{acl2019}
