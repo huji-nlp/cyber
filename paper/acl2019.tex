@@ -497,15 +497,18 @@ by the terms they use to describe their products.
 
 \subsection{Experimental Setup}
 
-To investigate the illegality detection across different domains, we replicate the classification experiments on the ``forums'' category that was separated in DUTA-10K, as in the case ``drugs'',  into legal and illegal sub-categories. 
+To investigate illegality detection across different domains, we replicate the legal/illegal classification experiment, using the  ``forums'' category that is separated into legal and illegal sub-categories in DUTA-10K.
 The forums  contain user-written text in various topics. Legal forums often discuss web design and other technical
 and non-technical activity on the internet, while illegal ones involve
 discussions about cyber-crimes and guides on how to commit them,
 as well as narcotics, racism and other criminal activities.
 As this domain contains user-generated content, it is more varied
-and noisy. We use the cleaning process described in \ref{sec:datasets} and data splitting described in \ref{sec:classification}, with the same number of paragraphs. 
+and noisy. We use the cleaning process described in \ref{sec:datasets} and data splitting described in \ref{sec:classification}, with the same number of paragraphs.
+In a second experiment, we experiment on the forums test set with the classifiers trained on the legal/illegal drugs data to check to which extent illegality detection can be applied across different domains.  
 
 \subsection{Results}
+
+The accuracy scores for the different classifiers and settings are reported in table \ref{tab:results}.
 
 \paragraph{Legal vs. illegal forums.}
 
