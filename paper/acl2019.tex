@@ -460,7 +460,7 @@ BoE$_\mathrm{average}$ & 49.1 & 51.7 & 51.7 & 52.6 & 58.6\\
 seq2vec & 51.7 & 61.1 & 51.7 & 54.3 & 57.8\\
 attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4\\
 \end{tabular}
-\caption{Test accuracy for each classifier in each setting.
+\caption{Test accuracy for each classifier (rows) in each setting (columns).
 \label{tab:results}}
 \end{table}
 
@@ -491,7 +491,7 @@ dropping function words entirely improved the performance of the Naive Bayes
 classifier to nearly its accuracy in the previous experiment.
 This suggests that syntactic structure is similar between the legal and illegal
 domains, but their content allows differentiating them, e.g.,
-by the terms they use to describe their products.
+by the terms they use to describe their products. 
 
 \section{Illegality Detection Across Domains}
 
@@ -512,7 +512,7 @@ and noisy. We use the cleaning process described in \ref{sec:datasets} and data 
 Results when training and testing on forums data are much worse for the neural-based systems,
 probably due to the fact that this data is much noisier and more varied,
 containing different distributions of words in the training and testing
-subsets. 
+subsets. However, the SVM model achieves an accuracy of 85.3 in the full setting. The high results obtained by the model in the cases where the content words are dropped (drop.cont.) or replaced by part-of-speech tags (pos cont.) further demonstrate the importance of the syntactic structure to the legal/illegal differentiation.  
 
 \paragraph{Cross-domain evaluation.}
 
