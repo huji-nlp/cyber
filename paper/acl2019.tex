@@ -531,20 +531,6 @@ when training on the cleaner drugs data. This also shows that illegal texts in T
 The lower results obtained by the Naive Bayes classifier in the drop cont. setting suggest that some of these properties are lexical.
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion}
-
-As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
-are quite distant in terms of word distribution and named entity wikification.
-Moreover, named entity recognition and wikification work less well
-for the illegal domain.
-This has practical implications: we need to adapt our tools to deal with illegal Tor data.
-As evident from the classification experiments (\S\ref{sec:classification}), however,
-the Legal Onion and Onion Illegal texts are harder to distinguish than
-eBay and Legal Onion, meaning we need to look beyond word distribution
-when comparing these domains:
-
 \begin{figure*}[t]
 \centering
 \small
@@ -567,6 +553,20 @@ Onion Illegal subsets of the Onion corpus (ten examples from each).
 Each paragraph is trimmed to the first 50 characters for space reasons.
 \label{fig:examples}}
 \end{figure*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
+are quite distant in terms of word distribution and named entity wikification.
+Moreover, named entity recognition and wikification work less well
+for the illegal domain.
+This has practical implications: we need to adapt our tools to deal with illegal Tor data.
+As evident from the classification experiments (\S\ref{sec:classification}), however,
+the Legal Onion and Onion Illegal texts are harder to distinguish than
+eBay and Legal Onion, meaning we need to look beyond word distribution
+when comparing these domains.
 
 Looking at specific sentences (Figure~\ref{fig:examples})
 confirms that Legal Onion and Onion Illegal are hard to distinguish
