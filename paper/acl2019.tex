@@ -390,15 +390,10 @@ We experiment with four settings, classifying paragraphs from different domains:
   \item Training and testing on Onion legal vs. illegal drugs-related pages,
   to identify the difference in language between legal and illegal activity
   on Onion drug-related websites.
-  \item Training and testing on Onion legal vs. illegal forums,
-  to evaluate the generality of the insights on user-generated content too.
-  \item Training on Onion legal vs. illegal drugs-related pages,
-  and testing on Onion legal vs. illegal forums.
-  This cross-domain evaluation reveals whether the distinctions learned on the
-  drugs domain generalize directly to the forums domain.
+  
 \end{itemize}
 
-\subsection{Results}
+\subsection{Results} \label{subsec:results}
 
 \begin{table}[t]
 \centering
@@ -489,16 +484,27 @@ by the terms they use to describe their products.
 
 \section{Illegality Detection Across Domains}
 
-\subsection{Experimental Setup}
+\subsection{Experimental setup}
 
-To investigate illegality detection across different domains, we replicate the legal/illegal classification experiment, using the  ``forums'' category that is separated into legal and illegal sub-categories in DUTA-10K.
+To investigate illegality detection across different domains, %we replicate the legal/illegal classification experiment, using
+we perform classification experiments on the  ``forums'' category that is also separated into legal and illegal sub-categories in DUTA-10K.
 The forums  contain user-written text in various topics. Legal forums often discuss web design and other technical
 and non-technical activity on the internet, while illegal ones involve
 discussions about cyber-crimes and guides on how to commit them,
 as well as narcotics, racism and other criminal activities.
 As this domain contains user-generated content, it is more varied
 and noisy. We use the cleaning process described in \ref{sec:datasets} and data splitting described in \ref{sec:classification}, with the same number of paragraphs.
-In a second experiment, we experiment on the forums test set with the classifiers trained on the legal/illegal drugs data to check to which extent illegality detection can be applied across different domains.  
+%In a second experiment, we experiment on the forums test set with the classifiers trained on the legal/illegal drugs data to check to which extent illegality detection can be applied across different domains.
+
+We experiment with two settings:
+\begin{itemize}
+\item Training and testing on Onion legal vs. illegal forums,
+to evaluate the insights observed in the drugs domain generalize to user-generated content.
+\item Training on Onion legal vs. illegal drugs-related pages,
+and testing on Onion legal vs. illegal forums.
+This cross-domain evaluation reveals whether the distinctions learned on the
+drugs domain generalize directly to the forums domain.
+\end{itemize}  
 
 \subsection{Results}
 
@@ -510,14 +516,18 @@ The classification scores on the Onion forums data are reported in Table~\ref{ta
 Results when training and testing on forums data are much worse for the neural-based systems,
 probably due to the fact that this data is much noisier and more varied,
 containing different distributions of words in the training and testing
-subsets. However, the SVM model achieves an accuracy of 85.3 in the full setting. The high results obtained by the model in the cases where the content words are dropped (drop.cont.) or replaced by part-of-speech tags (pos cont.) further demonstrate the importance of the syntactic structure to the legal/illegal differentiation.  
+subsets. However, the SVM model achieves an accuracy of 85.3 in the full setting. The high results obtained by the model in the cases where the content words are dropped (drop.cont.) or replaced by part-of-speech tags (pos cont.) further the importance of the syntactic structure to the legal/illegal differentiation in this case. 
 
 \paragraph{Cross-domain evaluation.}
 
 Surprisingly, training on drugs data and evaluating on forums performs much
-better than both previous experiments for all classifiers,
+better than %both previous experiments
+in the in-domain setting
+for four out of five classifiers,
 showing that while the forums data is noisy, it can be accurately classified
-when training on the cleaner drugs data.
+when training on the cleaner drugs data. This also shows that illegal texts in Tor share common properties regardless of topical category.
+The lower results obtained by the Naive Bayes classifier in the drop cont. setting suggest that some of these properties are lexical.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
