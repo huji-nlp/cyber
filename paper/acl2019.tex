@@ -170,7 +170,7 @@ Recently, \citet{Avarikioti18} presented another topic classification of text fr
 %legal & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &     
 %        \end{tabular}%
 %    }
-%    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites. \label{ta:domain}}
+%    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and Illegal Onion drug sites, and eBay sites. \label{ta:domain}}
 %\end{table}
 \begin{table*}[]
     \resizebox{\textwidth}{!}{%
@@ -197,7 +197,7 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 & half 2 & 0.42 & 0.52 & 0.35 & 0.67 & 0.68 & 0.68 & 0.62 & 0.62 & 0.63 & 0.26 & 0.47 &  \\          
         \end{tabular}%
     }
-    \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites.
+    \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, Legal and Illegal Onion drug sites, and eBay sites.
     Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
 \end{table*}
 
@@ -239,7 +239,7 @@ We then remove any duplicate paragraphs, where paragraphs are considered
 identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our data and preprocessing code is included in the supplementary material, and will be made publicly available upon publication.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Domain Differences}
+\section{Domain Differences}\label{sec:domain}
     
     We turn to quantifying the domain difference between text from legal and illegal texts. This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure).
 
@@ -288,10 +288,12 @@ Illegal Onion & $32.5 \pm1.35$\\
 Legal Onion & $50.8 \pm2.31$
 \end{tabular}
 \end{center}
-\caption{Percentage of wikifiable named entites per domain.\label{ta:wiki}}
+\caption{Average percentage of wikifiable named entities in a website per domain, with standard error.\label{ta:wiki}}
 \end{table}
 
-According to our results (Table~\ref{ta:wiki}) the wikification success ratios of eBay and Illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher wikification percentage.
+The results (shown in Table~\ref{ta:wiki}) were obtained by averaging the percentage of wikifiable named entities in each site per domain. We also calculated the standard error for each average.
+
+According to our results, the wikification success ratios of eBay and Illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher wikification percentage.
 
 Presumably the named entities in Onion sites selling legal drugs are
 more easily found in public databases such as Wikipedia because they
@@ -358,7 +360,7 @@ For the NB classifier we use \texttt{BernoulliNB} from
 \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
 with $\alpha=1$,
 and for the SVM clasifier we use \texttt{SVC}, also from \texttt{scikit-learn},
-with $\gamma=$``scale'' and tolerance=$10^{-5}$.
+with $\gamma=\mathrm{scale}$ and tolerance=$10^{-5}$.
 We use the AllenNLP Python library\footnote{\url{https://allennlp.org}}
 \cite{Gardner2017AllenNLP} for implementing the neural network classifiers.
 
@@ -384,10 +386,10 @@ The tested manipulations are:
 
 We experiment with four settings, classifying paragraphs from different domains:
 \begin{itemize}
-  \item Training and testing on eBay pages vs. legal Onion pages,
+  \item Training and testing on eBay pages vs. Legal Onion pages,
   as a control experiment
-  to identify whether Onion pages differ from clear web pages.
-  \item Training and testing on Onion legal vs. illegal drugs-related pages,
+  to identify whether Onion pages differ from clear net pages.
+  \item Training and testing on Legal Onion vs. Illegal Onion drugs-related pages,
   to identify the difference in language between legal and illegal activity
   on Onion drug-related websites.
   
@@ -402,7 +404,7 @@ We experiment with four settings, classifying paragraphs from different domains:
 \begin{tabular}{l *{5}{R}}
 && \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
 & \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
-\multicolumn{6}{l}{\bf eBay vs. Onion Legal Drugs} \\
+\multicolumn{6}{l}{\bf eBay vs. Legal Onion Drugs} \\
 \hline
 NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2\\
 SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8\\
@@ -411,7 +413,7 @@ BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0\\
 seq2vec & 73.3 & 53.8 & 65.5 & 65.5 & 75.0\\
 attention & 82.8 & 57.5 & 85.3 & 62.1 & 82.8\\
 \\
-\multicolumn{6}{l}{\bf Onion Legal vs. Illegal Drugs} \\
+\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Drugs} \\
 \hline
 NB & 77.6 & 53.4 & 87.9 & 51.7 & 77.6\\
 SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
@@ -431,7 +433,7 @@ attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0
 \begin{tabular}{l *{5}{R}}
 && \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
 & \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
-\multicolumn{6}{l}{\bf Onion Legal vs. Illegal Forums} \\
+\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Forums} \\
 \hline
 NB & 74.1 & 50.9 & 78.4 & 50.9 & 72.4\\
 SVM & 85.3 & 75.9 & 56.0 & 81.9 & 81.0\\
@@ -456,7 +458,7 @@ attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
 
 \paragraph{Legal Onion vs. eBay.}
 
-This control experiment shows that legal Onion content is quite easily
+This control experiment shows that Legal Onion content is quite easily
 distinguishable from eBay content, as a Naive Bayes bag-of-words classifier
 reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
@@ -533,12 +535,44 @@ The lower results obtained by the Naive Bayes classifier in the drop cont. setti
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-The legal and illegal are pretty distant, which is evident in a few ways: word distribution is different, NER and Wikification work less well
-for illegal. This has practical implications: we need to adapt our tools to deal with illegal Tor data. 
+As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
+are quite distant in terms of word distribution and named entity wikification.
+Moreover, named entity recognition and wikification work less well
+for the illegal domain.
+This has practical implications: we need to adapt our tools to deal with illegal Tor data.
+As evident from the classification experiments (\S\ref{sec:classification}), however,
+the Legal Onion and Onion Illegal texts are harder to distinguish than
+eBay and Legal Onion, meaning we need to look beyond word distribution
+when comparing these domains:
 
-Looking at specific sentences, we see that it's hard distinguishing them based on the identity of the words, which means that
+\begin{figure*}[t]
+\centering
+\small
+\begin{tabular}{l|l}
+\multicolumn{1}{c}{\textbf{Legal Onion}} &
+\multicolumn{1}{c}{\textbf{Illegal Onion}}\\
+Generic Viagra Oral Jelly is used for Erectile Dys&8/03/2017 - ATTN! Looks like SIGAINT email provid\\
+Fortis Testosteron Testosterone Enanthate 250mgml &Medical Grade Cannabis Buds We stock high quality \\
+Generic Cialis is used to treat erection problems &1 BTC 2630.8 USD\\
+2 Kits Misoprostol 200mg with 4 Tablets \$75 \$150&Cialis(r) is in a class of drugs called Phosphodie\\
+Boldenone 300 New Boldenone 300 Olymp Labs&TZOLKIN CALENDAR, 140ug LSD Marquis PreTest\\
+(generic Viagra) unbranded generic Sildenafil citr&Formed in early 2016, OzDrugsExpress is the work o\\
+Mesterolone New Mesterolone Olymp Labs&500mg x 30 pills Price:$ 45.95 Per pill:$ 1.53 Ord\\
+manufactured by: Cipla Pharmaceuticals Compare to &Generic Kaletra contains a combination of lopinavi\\
+(generic Zoloft) Sertraline 25 mg tablets US\$31.05&/ roduct-category/cannabis/ Cannabis / 14g Amnesia\\
+Sustanon-250mg Testosterone Compound 250mgml&Welcome to SnowKings Good Quality Cocaine
+\end{tabular}
+\caption{Example paragraphs (data instances) from the Legal Onion and
+Onion Illegal subsets of the Onion corpus (ten examples from each).
+Each paragraph is trimmed to the first 50 characters for space reasons.
+\label{fig:examples}}
+\end{figure*}
+
+Looking at specific sentences (Figure~\ref{fig:examples})
+confirms that Legal Onion and Onion Illegal are hard to distinguish
+based on the identity of the words, which means that
 looking at the wordforms is a very poor solution for tackling this. However, using modern text classification, they can be distinguished
-in a 72\%. 
+in a 72\% accuracy.
 
 Looking at how different types of language influence results: given that replacing all words with their POS tags gives
 the same performance, this tells us their syntax is different as well.
@@ -557,7 +591,7 @@ is quite different between the domains.
 \begin{table}
 \small
 \begin{tabular}{lr}
-\multicolumn{2}{c}{Legal}\\
+\multicolumn{2}{c}{\textbf{Legal Onion}}\\
 feature & ratio\\
 \hline
 cart & 0.037\\
@@ -586,7 +620,7 @@ Cart & 0.118\\
 take & 0.125\\
 \end{tabular}
 \begin{tabular}{lr}
-\multicolumn{2}{c}{Illegal}\\
+\multicolumn{2}{c}{\textbf{Illegal Onion}}\\
 feature & ratio\\
 \hline
 Laboratories & 8.500\\
