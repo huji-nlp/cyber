@@ -178,7 +178,10 @@ These pages are written by sellers and directed to their customers.
 %\end{description}
 
 \paragraph{eBay corpus.}
-As additional data of similar size and characteristics but from clear net and of legal nature we created the eBay corpus. eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions each consists of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching for drug related terms, namely marijuana, weed, grass and drug and choosing search patterns to avoid over repetition of the mentioned factors. Either because of advertisement strategies or the origins of the sellers that come from all over the world, as eBay is an American company, but it hosts for any seller, the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
+As an additional dataset of similar size and characteristics,
+but from a clear net source, and of legal nature,
+we created a corpus of eBay pages.
+eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition of the mentioned factors.\daniel{This sentence requires clarification.} Either because of advertisement strategies or the origins of the sellers (from all over the world), the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
 Importantly, eBay websites are assumed to conduct legal activity---even
 if discussing drug-related material, we find it is never the sale of illegal
 drugs but rather merchandise, tools, or otherwise related content.\footnote{This 
@@ -186,17 +189,19 @@ data will be publicly available upon publication.}
 
 \paragraph{Cleaning.} 
 As preprocessing for all experiments, we apply some cleaning to the text
-of web pages in our corpus.
-HTML markup is already removed in the original dataset,
+of web pages in our corpora.
+HTML markup is already removed in the original datasets,
 but much nonlinguistic content remains, such as
 buttons, encryption keys, metadata and URLs.
 We remove such text from the web pages, and join paragraphs 
 to single lines (as newlines are sometimes present in the original dataset for display purposes only).
 We then remove any duplicate paragraphs, where paragraphs are considered
-identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results Search for ...'').\footnote{Our preprocessing code is included in the supplementary material, and will be made publicly available upon publication.}
+identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our preprocessing code is included in the supplementary material, and will be made publicly available upon publication.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Differences}
+    
+    We turn to quantifying the domain difference between text from legal and illegal texts. This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure).
 
 \subsection{Vocabulary Differences}
 
@@ -236,15 +241,16 @@ identical if they share all but numbers (to avoid an over-representation of some
     
 \end{table*}
 
-    We turn to quantifying the domain difference between text from legal and illegal texts. This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure). 
     %the domains we deal with is a different domain in terms of word use, whether all Onion language should be considered a single domain, and is there a potential in learning differences between onion sites. 
-    To do so, we compute the frequency distribution of words in the eBay corpus, the legal and illegal drugs Onion corpora, and the entire drug section (All Onion). 
+    To quantify the domain differences between texts from legal and illegal texts,
+    we compute the frequency distribution of words in the eBay corpus, the legal and illegal drugs Onion corpora, and the entire Onion drug section (All~Onion). 
     %We combine the latter two, representing all drug sites in onion. 
-    Since any two sets of texts are bound to show some disparity between them, we compare the differences between domains to a control setting, where we randomly split each examined corpus into two halves, and compute the frequency distribution of the two halves. The inner consistency of each corpus, defined as the similarity of distribution between the two halves, serves as a reference point for the similarity between domains.
+    Since any two sets of texts are bound to show some disparity between them, we compare the differences between domains to a control setting, where we randomly split each examined corpus into two halves, and compute the frequency distribution of the two halves.
+    The inner consistency of each corpus, defined as the similarity of distribution between the two halves, serves as a reference point for the similarity between domains.
+    We refer to this measure as ``self-distance''.
     
-    Following \citet{Plank2011EffectiveMO} we compute the Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.%\daniel{Leshem: do we really need \textit{both} measures?}\oa{one is enough, given that trends are the same. If they are, we can plainly say we experimented with the other and got similar results}
+    Following \citet{Plank2011EffectiveMO} we compute the Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
     We see in Table \ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 in the Jensen Shannon divergence, but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. 
-    %We can therefore think of the three as three different domains. 
     The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible. Similar results were obtained using Variational distance.
 
     We also see that eBay is as far from the legal domain as it is from the illegal or for that case all Onion domain. This would suggest that there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain, rather than world wide web legal domains such as eBay.
