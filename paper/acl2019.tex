@@ -409,7 +409,7 @@ We experiment with four settings, classifying paragraphs from different domains:
 \begin{tabular}{l *{5}{R}}
 && \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
 & \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
-\multicolumn{6}{l}{\bf eBay vs. Onion Legal Drugs} \\
+\multicolumn{6}{l}{\bf eBay vs. Legal Onion Drugs} \\
 \hline
 NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2\\
 SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8\\
@@ -418,7 +418,7 @@ BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0\\
 seq2vec & 73.3 & 53.8 & 65.5 & 65.5 & 75.0\\
 attention & 82.8 & 57.5 & 85.3 & 62.1 & 82.8\\
 \\
-\multicolumn{6}{l}{\bf Onion Legal vs. Illegal Drugs} \\
+\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Drugs} \\
 \hline
 NB & 77.6 & 53.4 & 87.9 & 51.7 & 77.6\\
 SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
@@ -438,7 +438,7 @@ attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0
 \begin{tabular}{l *{5}{R}}
 && \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
 & \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
-\multicolumn{6}{l}{\bf Onion Legal vs. Illegal Forums} \\
+\multicolumn{6}{l}{\bf Legal Onion vs. Illegal Forums} \\
 \hline
 NB & 74.1 & 50.9 & 78.4 & 50.9 & 72.4\\
 SVM & 85.3 & 75.9 & 56.0 & 81.9 & 81.0\\
@@ -531,13 +531,38 @@ Moreover, named entity recognition and wikification work less well
 for the illegal domain.
 This has practical implications: we need to adapt our tools to deal with illegal Tor data.
 As evident from the classification experiments (\S\ref{sec:classification}), however,
-the Onion Legal and Onion Illegal texts are harder to distinguish than
-eBay and Onion Legal, meaning we need to look beyond word distribution
-when comparing these domains.
+the Legal Onion and Onion Illegal texts are harder to distinguish than
+eBay and Legal Onion, meaning we need to look beyond word distribution
+when comparing these domains:
 
-Looking at specific sentences, we see that it's hard distinguishing them based on the identity of the words, which means that
+\begin{figure*}[t]
+\centering
+\small
+\begin{tabular}{l|l}
+\multicolumn{1}{c}{\textbf{Legal Onion}} &
+\multicolumn{1}{c}{\textbf{Illegal Onion}}\\
+Generic Viagra Oral Jelly is used for Erectile Dys&8/03/2017 - ATTN! Looks like SIGAINT email provid\\
+Fortis Testosteron Testosterone Enanthate 250mgml &Medical Grade Cannabis Buds We stock high quality \\
+Generic Cialis is used to treat erection problems &1 BTC 2630.8 USD\\
+2 Kits Misoprostol 200mg with 4 Tablets \$75 \$150&Cialis(r) is in a class of drugs called Phosphodie\\
+Boldenone 300 New Boldenone 300 Olymp Labs&TZOLKIN CALENDAR, 140ug LSD Marquis PreTest\\
+(generic Viagra) unbranded generic Sildenafil citr&Formed in early 2016, OzDrugsExpress is the work o\\
+Mesterolone New Mesterolone Olymp Labs&500mg x 30 pills Price:$ 45.95 Per pill:$ 1.53 Ord\\
+manufactured by: Cipla Pharmaceuticals Compare to &Generic Kaletra contains a combination of lopinavi\\
+(generic Zoloft) Sertraline 25 mg tablets US\$31.05&/ roduct-category/cannabis/ Cannabis / 14g Amnesia\\
+Sustanon-250mg Testosterone Compound 250mgml&Welcome to SnowKings Good Quality Cocaine
+\end{tabular}
+\caption{Example paragraphs (data instances) from the Legal Onion and
+Onion Illegal subsets of the Onion corpus (ten examples from each).
+Each paragraph is trimmed to the first 50 characters for space reasons.
+\label{tab:examples}}
+\end{figure*}
+
+Looking at specific sentences (Figure~\ref{fig:examples})
+confirms that Legal Onion and Onion Illegal are hard to distinguish
+based on the identity of the words, which means that
 looking at the wordforms is a very poor solution for tackling this. However, using modern text classification, they can be distinguished
-in a 72\%. 
+in a 72\% accuracy.
 
 Looking at how different types of language influence results: given that replacing all words with their POS tags gives
 the same performance, this tells us their syntax is different as well.
@@ -556,7 +581,7 @@ is quite different between the domains.
 \begin{table}
 \small
 \begin{tabular}{lr}
-\multicolumn{2}{c}{Legal}\\
+\multicolumn{2}{c}{\textbf{Legal Onion}}\\
 feature & ratio\\
 \hline
 cart & 0.037\\
@@ -585,7 +610,7 @@ Cart & 0.118\\
 take & 0.125\\
 \end{tabular}
 \begin{tabular}{lr}
-\multicolumn{2}{c}{Illegal}\\
+\multicolumn{2}{c}{\textbf{Illegal Onion}}\\
 feature & ratio\\
 \hline
 Laboratories & 8.500\\
