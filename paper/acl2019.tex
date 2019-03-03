@@ -225,8 +225,7 @@ we created a corpus of eBay pages.
 eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition of the mentioned factors.\daniel{This sentence requires clarification.} Either because of advertisement strategies or the origins of the sellers (from all over the world), the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
 Importantly, eBay websites are assumed to conduct legal activity---even
 if discussing drug-related material, we find it is never the sale of illegal
-drugs but rather merchandise, tools, or otherwise related content.\footnote{This 
-data will be publicly available upon publication.}
+drugs but rather merchandise, tools, or otherwise related content.
 
 \paragraph{Cleaning.} 
 As preprocessing for all experiments, we apply some cleaning to the text
@@ -237,7 +236,7 @@ buttons, encryption keys, metadata and URLs.
 We remove such text from the web pages, and join paragraphs 
 to single lines (as newlines are sometimes present in the original dataset for display purposes only).
 We then remove any duplicate paragraphs, where paragraphs are considered
-identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our preprocessing code is included in the supplementary material, and will be made publicly available upon publication.}
+identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our data and preprocessing code is included in the supplementary material, and will be made publicly available upon publication.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Differences}
