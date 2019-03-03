@@ -571,13 +571,50 @@ eBay and Legal Onion, meaning we need to look beyond word distribution
 when comparing these domains.
 
 Looking at specific sentences (Figure~\ref{fig:examples})
-confirms that Legal Onion and Onion Illegal are hard to distinguish
-based on the identity of the words, which means that
-looking at the wordforms is a very poor solution for tackling this. However, using modern text classification, they can be distinguished
-in a 72\% accuracy.
+reveals that Legal Onion and Onion Illegal are easy to distinguish
+based on the identity of certain words, e.g., terms for legal and illegal drugs,
+respectively.
+Thus looking at the wordforms is already a good solution for tackling this
+classification problem,
+and using modern text classification does not present an advantage in
+terms of accuracy.
 
-Looking at how different types of language influence results: given that replacing all words with their POS tags gives
-the same performance, this tells us their syntax is different as well.
+\begin{figure*}[t]
+\centering
+\small
+\begin{tabular}{l|l}
+\multicolumn{1}{c}{\textbf{Legal Onion}} &
+\multicolumn{1}{c}{\textbf{Illegal Onion}}\\
+( ADJ PROPN ) PROPN PROPN VERB NUM &3. We VERB VERB NOUN with ADV the A\\
+( ADJ PROPN , PROPN ) PROPN NUM NOU&NOUN . NOUN NOUN PROPN NOUN\\
+PROPN PROPN VERB PROPN NUM NOUN US\$&VERB NOUN NOUN : No ADJ than NUM NO\\
+PROPN PROPN PROPN NUM NOUN \$ NUM PR&Welcome! We VERB ADJ to VERB a ADJ \\
+NOUN NUM PROPN with NOUN - NOUN NUM&PROPN PROPN PROPN NOUN : ADJ NOUN V\\
+PROPN NUM PROPN PROPN \$ NUM&( PROPN ) NUM PROPN PROPN NUM PROPN\\
+ADJ PROPN NUM PROPN VERB US\$ NUM fo&NOUN PROPN NUM , NUM ADJ NOUN , ADJ\\
+( ADJ PROPN ) NOUN NUM NOUN NOUN . &You VERB ADV VERB NUM of these NOUN\\
+PROPN PROPN PROPN NUM PROPN PROPN -&/ NOUN - NOUN / NOUN PROPN / PROPN \\
+PROPN / PROPN PROPN PROPN / PROPN P&Any NOUN VERB us.\\
+\end{tabular}
+\caption{Example paragraphs (data instances) from the Legal Onion and
+Onion Illegal subsets of the Onion corpus (ten examples from each),
+where content words are replaced with their parts of speech.
+Each paragraph is trimmed to the first 50 characters for space reasons.
+Different instances are shown than in Figure~\ref{fig:examples}.
+\label{fig:examples_poscontent}}
+\end{figure*}
+
+Given that replacing content words with their POS tags significantly drops
+performance for classification of legal vs illegal texts
+(see ``pos cont.'' in \S\ref{sec:classification}),
+we conclude that the distrubtion of parts of speech is not significantly
+different between the domains,
+and most differences can be attributed to content.
+However, non-linear models such as the SVM or the order-aware neural models
+do manage to distinguish between the texts even in this setting.
+Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
+there are easily identifiable patterns distinguishing between the domains,
+but a bag-of-words approach is not strong enough to identify them.
 
 Methological: Legal and illegal in Onion are distinct enough to be considered different domains (as distant as Legal and eBay). 
 Therefore, Tor could be a good testbed for working on legal and illegal classification.
