@@ -280,12 +280,12 @@ identical if they share all but numbers (to avoid an over-representation of some
 
 \begin{table}
 \begin{center}
-\begin{tabular}{l|c}
+\begin{tabular}{l|r}
  & \% Wikifiable\\
  \hline
-Legal Onion & 50.8 $\pm2.31$\\
+eBay & 38.6 $\pm2.00$\\
 Illegal Onion & 32.5 $\pm1.35$\\
-eBay & 38.6 $\pm2$\\
+Legal Onion & 50.8 $\pm2.31$
 \end{tabular}
 \end{center}
 \caption{Percentage of wikifiable named entites per domain.\label{ta:wiki}}
@@ -306,15 +306,13 @@ In addition to the differences in wikification ratios between
 the domains, it seems spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites, possibly
 due to the commmon use of informal language and drug-related jargon.
-Eyeballing the results, there were a fair number of false positives (words and phrases that were found by spaCy but were not actually named entities),\daniel{Dan: is this observation
-quantifiable? Can you tell what ratio are false positives? If not,
-mention that this is just our impression and perhaps give examples}
-especially in illegal Onion sites. In particular, nicknames for drugs as well as initialed drugs, for example ``kush'' or ``GBL'', 
+Eyeballing the results, there were a fair number of false positives (words and phrases that were found by spaCy but were not actually named entities),
+especially in illegal Onion sites. In particular, slang terms for drugs as well as initialed drugs, for example ``kush'' or ``GBL'', 
 were being falsely picked up by spaCy's NER.
 We consider these to be false positives as they are names of substances but not specific products, and hence not named entities.\footnote{See \url{https://spacy.io/api/annotation\#section-named-entities}}
 %We note that an exact that ratio of false positives is not something that is easily quantifiable, and therefore this is only a qualitative observation. 
 %That being said, it is our impression that the informal language used in our datasets makes it harder
-%for spaCy to function optimally in this capacity.\daneldad{cleared up a bit and added examples as per daniel's comment}
+%for spaCy to function optimally in this capacity.
 
  The results in these experiments suggest both that (1) legal and illegal activity is different in terms of its named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity. 
 
