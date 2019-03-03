@@ -204,17 +204,17 @@ identical if they share all but numbers (to avoid an over-representation of some
 \subsection{Vocabulary Differences}
 
 
-    \begin{table}[]
-    \resizebox{\columnwidth}{!}{%
-        \begin{tabular}{@{}lllll@{}}
-            & all onion  & eBay       & illegal    & legal      \\
-            all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
-            eBay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
-            illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
-            legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
-        \end{tabular}%
-    }
-    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites. \label{ta:domain}}
+%    \begin{table}[]
+%    \resizebox{\columnwidth}{!}{%
+%        \begin{tabular}{@{}lllll@{}}
+%            & all onion  & eBay       & illegal    & legal      \\
+%            all onion &            & 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
+%            eBay      & 0.60, 1.31 &            & 0.59, 1.28 & 0.66, 1.46 \\
+%            illegal   & 0.33, 0.62 & 0.59, 1.28 &            & 0.61, 1.28 \\
+%            legal     & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &           
+%        \end{tabular}%
+%    }
+%    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites. \label{ta:domain}}
 \end{table}
 \begin{table*}[]
     \resizebox{\textwidth}{!}{%
@@ -234,7 +234,7 @@ identical if they share all but numbers (to avoid an over-representation of some
             legal\_half2     & 0.42      & 0.52             & 0.35             & 0.67 & 0.68        & 0.68        & 0.62    & 0.62           & 0.63           & 0.26  & 0.47         &              \\          
         \end{tabular}%
     }
-    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites.
+    \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, legal and illegal Onion drug sites, and eBay sites.
     Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
     
 \end{table*}
