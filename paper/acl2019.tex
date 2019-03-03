@@ -254,14 +254,14 @@ identical if they share all but numbers (to avoid an over-representation of some
     The inner consistency of each corpus, defined as the similarity of distribution between the two halves, serves as a reference point for the similarity between domains.
     We refer to this measure as ``self-distance''.
     
-    Following \citet{Plank2011EffectiveMO} we compute the Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
-    We see in Table \ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 in the Jensen Shannon divergence, but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. 
+    Following \citet{Plank2011EffectiveMO}, we compute the Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
+    We see in Table~\ref{ta:domain_halves} that eBay, legal and illegal are self-distant 0.4-0.45 in the Jensen Shannon divergence, but the distance between one another is 0.6-0.65. This means the three form an equilateral triangle. 
     The results suggest there is no reason to think about all Onion as one domain, and thus studying using Onion data what characterizes the illegal domain from the legal domain is sensible. Similar results were obtained using Variational distance.
 
     We also see that eBay is as far from the legal domain as it is from the illegal or for that case all Onion domain. This would suggest that there are also unique characteristics for each domain which will make learning illegal properties rather than simply domain differences more challenging. For this reason if one wishes to understand differences that stem from legality issues, it might prove more beneficial to differentiate illegal and legal inside the Onion domain, rather than world wide web legal domains such as eBay.
 
     
-%     Table \ref{ta:domain_halves} presents our results, showing that eBay, and the legal and illegal sections are self-distant\oa{we need to define this term if we use it} 0.4--0.45, but the distance between corpora is 0.6--0.65. This means the three form an equilateral triangle, which suggests that they can by right be regarded as different domains. 
+%     Table~\ref{ta:domain_halves} presents our results, showing that eBay, and the legal and illegal sections are self-distant\oa{we need to define this term if we use it} 0.4--0.45, but the distance between corpora is 0.6--0.65. This means the three form an equilateral triangle, which suggests that they can by right be regarded as different domains. 
 %     
 %     The results suggest there is no reason to think about all of Onion as one domain, and hence studying using Onion data what characterizes the illegal domain from the legal domain is sensible.\oa{I didn't get the last part of the sentence; why is this entailed?}
 % 
@@ -453,8 +453,19 @@ SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
 BoE$_\mathrm{sum}$ & 52.6 & 61.2 & 74.1 & 50.9 & 51.7\\
 BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9\\
 seq2vec & 56.9 & 55.0 & 54.3 & 59.5 & 49.1\\
-attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0\\
-\\
+attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0
+\end{tabular}
+\caption{Test accuracy for each classifier (rows) in each setting (columns).
+\label{tab:results_drugs}}
+\end{table}
+
+\begin{table}[t]
+\centering
+\setlength\tabcolsep{4pt}
+%\def\arraystretch{.855}
+\begin{tabular}{l *{5}{R}}
+&& \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf drop} & \multicolumn{1}{c}{\bf pos} & \multicolumn{1}{c}{\bf pos}\\
+& \multicolumn{1}{c}{\bf full} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func} & \multicolumn{1}{c}{\bf cont.} & \multicolumn{1}{c}{\bf func}\\
 \multicolumn{6}{l}{\bf Onion Legal vs. Illegal Forums} \\
 \hline
 NB & 74.1 & 50.9 & 78.4 & 50.9 & 72.4\\
@@ -471,10 +482,10 @@ SVM & 62.1 & 69.0 & 54.3 & 69.8 & 62.1\\
 BoE$_\mathrm{sum}$ & 45.7 & 50.9 & 49.1 & 50.9 & 50.0\\
 BoE$_\mathrm{average}$ & 49.1 & 51.7 & 51.7 & 52.6 & 58.6\\
 seq2vec & 51.7 & 61.1 & 51.7 & 54.3 & 57.8\\
-attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4\\
+attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
 \end{tabular}
 \caption{Test accuracy for each classifier (rows) in each setting (columns).
-\label{tab:results}}
+\label{tab:results_forums}}
 \end{table}
 
 
@@ -521,10 +532,11 @@ In a second experiment, we experiment on the forums test set with the classifier
 
 \subsection{Results}
 
-The accuracy scores for the different classifiers and settings are reported in table \ref{tab:results}.
+The accuracy scores for the different classifiers and settings are reported in Table~\ref{tab:results_drugs}.
 
 \paragraph{Legal vs. illegal forums.}
 
+The classification scores on the Onion forums data are reported in Table~\ref{tab:results_forums}.
 Results when training and testing on forums data are much worse for the neural-based systems,
 probably due to the fact that this data is much noisier and more varied,
 containing different distributions of words in the training and testing
