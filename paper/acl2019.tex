@@ -291,7 +291,7 @@ Legal Onion & $50.8 \pm2.31$
 \caption{Percentage of wikifiable named entites per domain.\label{ta:wiki}}
 \end{table}
 
-According to our results (Table~\ref{ta:wiki}) the wikification success ratios of eBay and illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher wikification percentage.
+According to our results (Table~\ref{ta:wiki}) the wikification success ratios of eBay and Illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher wikification percentage.
 
 Presumably the named entities in Onion sites selling legal drugs are
 more easily found in public databases such as Wikipedia because they
@@ -307,7 +307,8 @@ the domains, it seems spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites, possibly
 due to the commmon use of informal language and drug-related jargon.
 Eyeballing the results, there were a fair number of false positives (words and phrases that were found by spaCy but were not actually named entities),
-especially in illegal Onion sites. In particular, slang terms for drugs as well as initialed drugs, for example ``kush'' or ``GBL'', 
+especially in Illegal Onion sites.
+In particular, slang terms for drugs, as well as abbreviated drug terms, for example ``kush'' or ``GBL'',
 were being falsely picked up by spaCy's NER.
 We consider these to be false positives as they are names of substances but not specific products, and hence not named entities.\footnote{See \url{https://spacy.io/api/annotation\#section-named-entities}}
 %We note that an exact that ratio of false positives is not something that is easily quantifiable, and therefore this is only a qualitative observation. 
