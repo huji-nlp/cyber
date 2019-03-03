@@ -108,7 +108,7 @@
   This paper addresses this gap, and studies the distinguishing features between legal and illegal texts in Onion sites,
   taking sites that advertise drugs as a test case. We compare our results to a control condition of texts 
   from eBay\footnote{\url{https://www.ebay.com/}} pages that 
-	advertise products corresponding to drug keywords (see Section \ref{datasets}).
+	advertise products corresponding to drug keywords (see Section \ref{sec:datasets}).
  
   We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, 
 	that text from legal and illegal pages can be distinguished based on the identity of the content words (bag of words) 
@@ -157,7 +157,7 @@ Recently, \citet{Avarikioti18} presented another topic classification of text fr
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Datasets Used}\label{sec:data}\label{datasets}
+\section{Datasets Used}\label{sec:datasets}
 
 \paragraph{Onion corpus.}
 We experiment with data from Darknet websites concerning\lc{in the previous section we talk about Tor, this paragraph name is onion and the sentence says Darknet, is there a reason for it or should all be changed to onion?}\daniel{I
@@ -333,7 +333,7 @@ We consider these to be false positives as they are names of substances but not 
 % >>>>>>> 68831c30bf8b1fba57d739cf9147b51f3793fcd3
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Classification Experiments}
+\section{Classification Experiments} \label{sec:classification}
 
 Here we detail our experiments in classifying text from different legal and
 illegal domains using various methods, to find the most important linguistic features
@@ -342,7 +342,7 @@ distinguishing between the domains. Another goal of the classification task is t
 \paragraph{Experimental setup.}
 
 After cleaning the dataset, joining lines to paragraphs and removing duplicates
-(see \S\ref{sec:data}), we split each subset into training, validation and test.
+(see \S\ref{sec:datasets}), we split each subset into training, validation and test.
 We select 456 training paragraphs, 57 validation paragraphs and
 58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
 thus randomly downsampling larger categories for an even division of labels.
@@ -503,16 +503,16 @@ and non-technical activity on the internet, while illegal ones involve
 discussions about cyber-crimes and guides on how to commit them,
 as well as narcotics, racism and other criminal activities.
 As this domain contains user-generated content, it is more varied
-and noisy. We use the same cleaning process as described in \ref{datasets}.
+and noisy. We use the cleaning process described in \ref{sec:datasets} and data splitting described in \ref{sec:classification}, with the same number of paragraphs. 
 
 \subsection{Results}
 
 \paragraph{Legal vs. illegal forums.}
 
-Results when training and testing on forums data are much worse,
+Results when training and testing on forums data are much worse for the neural-based systems,
 probably due to the fact that this data is much noisier and more varied,
 containing different distributions of words in the training and testing
-subsets.
+subsets. 
 
 \paragraph{Cross-domain evaluation.}
 
