@@ -173,7 +173,7 @@ While legal websites often sell pharmaceuticals,
 illegal ones are often related to substance abuse.
 These pages are written by sellers and directed to their customers.
   
-\end{description}
+%\end{description}
 
 \paragraph{eBay corpus.}
 As additional data of similar size and characteristics but from clear net and of legal nature we created the eBay corpus. eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions each consists of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching for drug related terms, namely marijuana, weed, grass and drug and choosing search patterns to avoid over repetition of the mentioned factors. Either because of advertisement strategies or the origins of the sellers that come from all over the world, as eBay is an American company, but it hosts for any seller, the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
@@ -497,14 +497,13 @@ by the terms they use to describe their products.
 
 \subsection{Experimental Setup}
 
-Legal/illegal forums
-These contain user-written text in various
-topics. Legal forums often discuss web design and other technical
+To investigate the illegality detection across different domains, we replicate the classification experiments on the ``forums'' category that was separated in DUTA-10K, as in the case ``drugs'',  into legal and illegal sub-categories. 
+The forums  contain user-written text in various topics. Legal forums often discuss web design and other technical
 and non-technical activity on the internet, while illegal ones involve
 discussions about cyber-crimes and guides on how to commit them,
 as well as narcotics, racism and other criminal activities.
 As this domain contains user-generated content, it is more varied
-and noisy.
+and noisy. We use the same cleaning process as described in \ref{datasets}.
 
 \subsection{Results}
 
