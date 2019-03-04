@@ -155,7 +155,7 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
   We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, 
 	that text from legal and illegal pages can be distinguished based on the identity of the content words (bag of words) 
   in about 90\% accuracy over a balanced sample. Second, we find that the distribution of POS tags in the documents is a strong cue for 
-	distinguishing between the classes (about 75\% accuracy). This indicates that the two classes are different in 
+	distinguishing between the classes (about 75\% accuracy)\es{I think it should be 71\%.}. This indicates that the two classes are different in 
 	terms of their syntactic structure. Third, we find that legal and illegal texts are roughly as distinguishable from one another as legal 
 	texts and eBay pages (both in terms of their words and their POS tags). 
 	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
@@ -163,7 +163,7 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
   Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
   Finally, by experimenting on user-generated content in Tor, we show that the legal/illegal differentiation generalizes across different domains.
-  After presenting previous works in Section \ref{sec:related_work}, we describe the datasets used in Section \ref{sec:datasets}. Vocabulary and named entities differences are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} present additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
+  After presenting previous works in Section \ref{sec:related_work}, we describe the datasets used in Section \ref{sec:datasets}. Vocabulary and named entities differences are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} presents additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
   
   % Capitalization should be Darknet, not DarkNet
   
@@ -223,7 +223,7 @@ These pages are written by sellers and directed to their customers.
 
 \paragraph{eBay corpus.}
 As an additional dataset of similar size and characteristics,
-but from a clear net source, and of legal nature,
+but from a Clearnet source, and of legal nature,
 we created a corpus of eBay pages.
 eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition of the mentioned factors. For example, where many sell the same product only one example was added to the corpus, and search queries included filtering for prices, so each query will result with different items. Either because of advertisement strategies or the origins of the sellers (from all over the world), the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
 Importantly, eBay websites are assumed to conduct legal activity---even
@@ -381,11 +381,11 @@ The tested manipulations are:
 
 \paragraph{Settings.}
 
-We experiment with four settings, classifying paragraphs from different domains:
+We experiment with two settings, classifying paragraphs from different domains:
 \begin{itemize}
   \item Training and testing on eBay pages vs. Legal Onion pages,
   as a control experiment
-  to identify whether Onion pages differ from clear net pages.
+  to identify whether Onion pages differ from Clearnet pages.
   \item Training and testing on Legal Onion vs. Illegal Onion drugs-related pages,
   to identify the difference in language between legal and illegal activity
   on Onion drug-related websites.
@@ -450,7 +450,9 @@ attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
 \label{tab:results_forums}}
 \end{table}
 
-\subsection{Results} \label{subsec:results}
+\subsection{Results} \label{subsec:results
+
+The accuracy scores for the different classifiers and settings are reported in Table~\ref{tab:results_drugs}.
 
 
 \paragraph{Legal Onion vs. eBay.}
@@ -461,8 +463,8 @@ reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
 the performance, suggesting that the content is mostly useful for determining
 whether a page comes from Onion or eBay.
-This is confirmed by the drop in accuracy when content words are dropped:
-however, in this setting (drop cont.) the SVM classifier performed best,
+This is confirmed by the drop in accuracy when content words are dropped.
+However, in this setting (drop cont.) the SVM classifier performed best,
 suggesting there is a non-linear relationship between the function words
 found in a page and its source.
 While other, more sophisticated classifiers performed worse, the attention
@@ -555,7 +557,7 @@ drugs domain generalize directly to the forums domain.
 
 \subsection{Results}
 
-The accuracy scores for the different classifiers and settings are reported in Table~\ref{tab:results_drugs}.
+The accuracy scores are reported in Table~\ref{tab:results_forums}.
 
 \paragraph{Legal vs. illegal forums.}
 
