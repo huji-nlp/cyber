@@ -277,7 +277,7 @@ We examine two types of domain differences between legal and illegal texts: voca
     These results suggest that rather than regarding all drug-related Onion texts as one domain, with legal and illegal texts as sub-domains, 
       they should be treated as distinct domains.
     Therefore, using Onion data to characterize the differences between illegal and legal linguistic attributes is sensible. 
-    In fact, it is more sensible than comparing Illegal Onion to eBay text, as there the legal/illegal distiction may be confounded by the differences
+    In fact, it is more sensible than comparing Illegal Onion to eBay text, as there the legal/illegal distinction may be confounded by the differences
       between eBay and Onion data.
 %    as we may assume that the data from the same corpus is more 
 %    similar in most attributes and when it differs it is because of the legality of the materials or the illegality thereof.\oa{didnt follow last sent}
@@ -376,7 +376,7 @@ To classify paragraphs into categories, we experiment with five classifiers:
 For the NB classifier we use \texttt{BernoulliNB} from
 \texttt{scikit-learn}\footnote{\url{https://scikit-learn.org}}
 with $\alpha=1$,
-and for the SVM clasifier we use \texttt{SVC}, also from \texttt{scikit-learn},
+and for the SVM classifier we use \texttt{SVC}, also from \texttt{scikit-learn},
 with $\gamma=\mathrm{scale}$ and tolerance=$10^{-5}$.
 We use the AllenNLP  library\footnote{\url{https://allennlp.org}}
 \cite{Gardner2017AllenNLP} to implement the neural network classifiers.
@@ -542,7 +542,7 @@ Sustanon-250mg Testosterone Compound 250mgml&Welcome to SnowKings Good Quality C
 \end{tabular}
 \caption{Example paragraphs (data instances) from the Legal Onion and Illegal Onion subsets of the Onion corpus (ten examples from each).
 Each paragraph is trimmed to the first 50 characters for space reasons.
-Distinguishing lexical features are easlily observed, e.g.,
+Distinguishing lexical features are easily observed, e.g.,
 names of legal and illegal drugs.
 \label{fig:examples}}
 \end{figure*}
@@ -759,7 +759,7 @@ While some strong features are entities, many are in fact function words.
   comparable texts from eBay.
   This suggests that future work on distinguishing legal and illegal text should not use a setting where Onion pages
     are distinguished from clear net pages, but rather explore this distinction among Tor websites, 
-    thus reducing potential artefacts.
+    thus reducing potential artifacts.
 
 
 \bibliography{acl2019}
