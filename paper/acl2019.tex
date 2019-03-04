@@ -385,11 +385,14 @@ and function words as all other words.
 The tested manipulations are:
 
 \begin{itemize}
-  \item Dropping all content words (drop cont.).
-  \item Dropping all function words (drop func.).
-  \item Replacing all content words with their universal part-of-speech (pos cont.).
-  \item Replacing all function words with their universal part-of-speech (pos func.).
+  \item Dropping all content words ({\it drop cont.}).
+  \item Dropping all function words ({\it drop func.}).
+  \item Replacing all content words with their universal part-of-speech ({\it pos cont.}).
+  \item Replacing all function words with their universal part-of-speech ({\it pos func.}).
 \end{itemize}
+
+Results when applying these manipulations are compared to the {\it full} condition, where all
+words are available.
 
 \paragraph{Settings.}
 
@@ -593,7 +596,7 @@ The accuracy scores are reported in Table~\ref{tab:results_forums}.
 Results when training and testing on forums data are much worse for the neural-based systems,
 probably due to the much noisier and more varied nature of the data,
 containing different distributions of words in the training and testing
-subsets. However, the SVM model achieves an accuracy of 85.3 in the full setting. The high results obtained by the model in the cases where the content words are dropped (drop.cont.) or replaced by part-of-speech tags (pos cont.) underscore the importance of the syntactic structure to the legal/illegal differentiation in this case. 
+subsets. However, the SVM model achieves an accuracy of 85.3 in the full setting. The high results obtained by the model in the cases where the content words are dropped (drop. cont.) or replaced by part-of-speech tags (pos cont.) underscore the importance of the syntactic structure to the legal/illegal distinction in this case. 
 
 \paragraph{Cross-domain evaluation.}
 
@@ -678,16 +681,14 @@ Left: features with lowest ratio; right: features with highest ratio.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion} \label{sec:discussion}
 
-As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
-are quite distant in terms of word distribution and named entity wikification.
-Moreover, named entity recognition and Wikification work less well
-for the illegal domain.
-This has practical implications: we need to adapt our tools to deal with illegal Tor data, if we want in the future to successfully apply automatic tools there.
-
-As evident from the classification experiments (\S\ref{sec:classification}), however,
-the Onion Legal and Illegal Onion texts are harder to distinguish than
-eBay and Legal Onion, meaning we need to look beyond word distribution
-when comparing these domains.
+  As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
+  are quite distant in terms of word distribution and named entity Wikification.
+  Moreover, named entity recognition and Wikification work less well
+  for the illegal domain.
+  This has practical implications: we need to adapt our tools to deal with illegal Tor data, if we want in the future to successfully apply automatic tools there.
+  As evident from the classification experiments (\S\ref{sec:classification}), however,
+  the Onion Legal and Illegal Onion texts are harder to distinguish than
+  eBay and Legal Onion, meaning that deciding on domain boundaries should consider syntactic structure as well.
 
 \paragraph{Analysis of texts from the datasets.}
 
@@ -712,20 +713,21 @@ However, non-linear models such as the SVM or the order-aware neural models
 do manage to distinguish between the texts even in this setting.
 Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
 there are easily identifiable patterns distinguishing between the domains,
-but a bag-of-words approach is not strong enough to identify them. In other words, if there is any classifier who manages to distinguish such texts not relying on the content words, then the information is there, and there are distinct linguistic attributes to the legal and illegal texts. 
+but a bag-of-words approach is not strong enough to identify them. 
+%In other words, a classifier who manages to distinguish such texts not relying on the content words, then the information is there, and there are distinct linguistic attributes to the legal and illegal texts. 
 
 \paragraph{Analysis of learned feature weights.}
 
 As the Naive Bayes classifier was the most successful at distinguishing
-legal from illegal texts in the ``full'' setting (without input manipulation),
-we conclude that the identity of certain words provide a strong indication
-that an instance is taken from one set or the other.
+legal from illegal texts in the full setting (without input manipulation),
+we may conclude that the very occurance of certain words provide a strong indication
+that an instance is taken from class or the other.
 Table~\ref{tab:nb_weights} shows the most indicative features learned
 by the Naive Bayes classifier for the
 Legal Onion vs. Illegal Onion classification in this setting.
-Surprisingly, many strong features are function words,
+Interestingly, many strong features are function words,
 showing that even without spotting specific entities,
-the classifier can easily distinguish the domains, as the language itself
+the classifier can easily distinguish the domains, as the linguistic structure itself
 is quite different between them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
