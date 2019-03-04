@@ -579,7 +579,7 @@ and non-technical activity on the internet, while illegal ones involve
 discussions about cyber-crimes and guides on how to commit them,
 as well as narcotics, racism and other criminal activities.
 As this domain contains user-generated content, it is more varied
-and noisy. We use the cleaning process described in \ref{sec:datasets} and data splitting described in \ref{sec:classification}, with the same number of paragraphs.
+and noisy. We use the cleaning process described in Section~\ref{sec:datasets} and data splitting described in Section~\ref{sec:classification}, with the same number of paragraphs.
 %In a second experiment, we experiment on the forums test set with the classifiers trained on the legal/illegal drugs data to check to which extent illegality detection can be applied across different domains.
 
 \subsection{Experimental setup}
@@ -689,12 +689,12 @@ Left: features with lowest ratio; right: features with highest ratio.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion} \label{sec:discussion}
 
-  As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
+  As shown in Section~\ref{sec:domain}, the Legal Onion and Illegal Onion domains
   are quite distant in terms of word distribution and named entity wikification.
   Moreover, named entity recognition and wikification work less well
   for the illegal domain.
   This has practical implications: we need to adapt our tools to deal with illegal Tor data, if we want in the future to successfully apply automatic tools there.
-  As evident from the classification experiments (\S\ref{sec:classification}), however,
+  As evident from the classification experiments (Section~\ref{sec:classification}), however,
   the Onion Legal and Illegal Onion texts are harder to distinguish than
   eBay and Legal Onion, meaning that deciding on domain boundaries should consider syntactic structure as well.
 
@@ -713,7 +713,7 @@ Left: features with lowest ratio; right: features with highest ratio.
 
     Given that replacing content words with their POS tags significantly drops
     performance for classification of legal vs illegal texts
-    (see ``pos cont.'' in \S\ref{sec:classification}),
+    (see ``pos cont.'' in Section~\ref{sec:classification}),
     we conclude that the distribution of parts of speech is not significantly
     different between the domains,
     and most differences can be attributed to content.
