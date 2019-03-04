@@ -690,54 +690,62 @@ Left: features with lowest ratio; right: features with highest ratio.
   the Onion Legal and Illegal Onion texts are harder to distinguish than
   eBay and Legal Onion, meaning that deciding on domain boundaries should consider syntactic structure as well.
 
-\paragraph{Analysis of texts from the datasets.}
+  \paragraph{Analysis of texts from the datasets.}
 
-Looking at specific sentences (Figure~\ref{fig:examples})
-reveals that Legal Onion and Illegal Onion are easy to distinguish
-based on the identity of certain words, e.g., terms for legal and illegal drugs,
-respectively.
-Thus looking at the word forms is already a good solution for tackling this
-classification problem,
-and using modern text classification does not present an advantage in
-terms of accuracy.
+    Looking at specific sentences (Figure~\ref{fig:examples})
+    reveals that Legal Onion and Illegal Onion are easy to distinguish
+    based on the identity of certain words, e.g., terms for legal and illegal drugs,
+    respectively.
+    Thus looking at the word forms is already a good solution for tackling this
+    classification problem,
+    and using modern text classification does not present an advantage in
+    terms of accuracy.
 
-\paragraph{Analysis of manipulated texts.}
+  \paragraph{Analysis of manipulated texts.}
 
-Given that replacing content words with their POS tags significantly drops
-performance for classification of legal vs illegal texts
-(see ``pos cont.'' in \S\ref{sec:classification}),
-we conclude that the distribution of parts of speech is not significantly
-different between the domains,
-and most differences can be attributed to content.
-However, non-linear models such as the SVM or the order-aware neural models
-do manage to distinguish between the texts even in this setting.
-Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
-there are easily identifiable patterns distinguishing between the domains,
-but a bag-of-words approach is not strong enough to identify them. 
-%In other words, a classifier who manages to distinguish such texts not relying on the content words, then the information is there, and there are distinct linguistic attributes to the legal and illegal texts. 
+    Given that replacing content words with their POS tags significantly drops
+    performance for classification of legal vs illegal texts
+    (see ``pos cont.'' in \S\ref{sec:classification}),
+    we conclude that the distribution of parts of speech is not significantly
+    different between the domains,
+    and most differences can be attributed to content.
+    However, non-linear models such as the SVM or the order-aware neural models
+    do manage to distinguish between the texts even in this setting.
+    Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
+    there are easily identifiable patterns distinguishing between the domains,
+    but a bag-of-words approach is not strong enough to identify them. 
+    %In other words, a classifier who manages to distinguish such texts not relying on the content words, then the information is there, and there are distinct linguistic attributes to the legal and illegal 
+    %texts. 
 
-\paragraph{Analysis of learned feature weights.}
+  \paragraph{Analysis of learned feature weights.}
 
-As the Naive Bayes classifier was the most successful at distinguishing
-legal from illegal texts in the full setting (without input manipulation),
-we may conclude that the very occurance of certain words provide a strong indication
-that an instance is taken from class or the other.
-Table~\ref{tab:nb_weights} shows the most indicative features learned
-by the Naive Bayes classifier for the
-Legal Onion vs. Illegal Onion classification in this setting.
-Interestingly, many strong features are function words,
-showing that even without spotting specific entities,
-the classifier can easily distinguish the domains, as the linguistic structure itself
-is quite different between them.
+    As the Naive Bayes classifier was the most successful at distinguishing
+    legal from illegal texts in the full setting (without input manipulation),
+    we may conclude that the very occurance of certain words provide a strong indication
+    that an instance is taken from class or the other.
+    Table~\ref{tab:nb_weights} shows the most indicative features learned
+    by the Naive Bayes classifier for the
+    Legal Onion vs. Illegal Onion classification in this setting.
+    Interestingly, many strong features are function words,
+    showing that even without spotting specific entities,
+    the classifier can easily distinguish the domains, as the linguistic structure itself
+    is quite different between them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion} \label{sec:conclusion}
 
-On a methodological note, Legal Onion and Illegal Onion are distinct enough
-to be considered different domains (as distant as Legal Onion and eBay,
-see \S\ref{sec:domain}). 
-Therefore, Tor could be a good test-bed for working on classification of
-legal and illegal texts.
+  In this paper we identified several distinguishing factors between legal and illegal texts, taking
+  a variety of approaches, predictive (text classification), application-based (named entity wikification),
+  as well as an approach based on raw statistics. The results revealed that legal and illegal texts on the DarkNet
+  are not only distinguishable in terms of their words, but also in terms of their linguistic structure, manifested
+  in their POS tag and function word distributions. Distinguishing features between legal and illegal texts are
+  consistent enough between domains, so that a classifier trained on drug-related websites can be straightforwardly
+  ported to classify legal and illegal texts from another DarkNet domain (forums).
+
+  Our results also show that in terms of vocabulary, legal texts and illegal texts are as distant from each other, as 
+  comparable texts from ebay.
+  This suggests that methodologically, Tor could be a good test-bed for working on classification of
+  legal and illegal texts.\oa{why?}
 
 
 \bibliography{acl2019}
