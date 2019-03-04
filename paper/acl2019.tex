@@ -572,8 +572,6 @@ Different instances are shown than in Figure~\ref{fig:examples}.
 
 \section{Illegality Detection Across Domains} \label{sec:cross_domains}
 
-\subsection{Experimental setup}
-
 To investigate illegality detection across different domains, %we replicate the legal/illegal classification experiment, using
 we perform classification experiments on the  ``forums'' category that is also separated into legal and illegal sub-categories in DUTA-10K.
 The forums  contain user-written text in various topics. Legal forums often discuss web design and other technical
@@ -583,6 +581,8 @@ as well as narcotics, racism and other criminal activities.
 As this domain contains user-generated content, it is more varied
 and noisy. We use the cleaning process described in \ref{sec:datasets} and data splitting described in \ref{sec:classification}, with the same number of paragraphs.
 %In a second experiment, we experiment on the forums test set with the classifiers trained on the legal/illegal drugs data to check to which extent illegality detection can be applied across different domains.
+
+\subsection{Experimental setup}
 
 We experiment with two settings:
 \begin{itemize}
