@@ -330,7 +330,7 @@ were being falsely picked up by spaCy.\footnote{We
 consider these to be false positives as they are names of substances but not specific products, 
 and hence not named entities. See \url{https://spacy.io/api/annotation\#section-named-entities}}
 
-To recap, results suggest both that (1) legal and illegal texts are different in terms of their named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity.
+To summarize, results suggest both that (1) legal and illegal texts are different in terms of their named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -342,7 +342,9 @@ distinguishing between the domains. Another goal of the classification task is t
 
 \paragraph{Experimental setup.}
 
-We split each subset into training, validation and test.
+We split each subset among
+\{eBay, Legal Onion, Illegal Onion\}
+into training, validation and test.
 We select 456 training paragraphs, 57 validation paragraphs and
 58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
 randomly downsampling larger categories for an even division of labels.
