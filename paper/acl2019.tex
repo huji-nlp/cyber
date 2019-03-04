@@ -122,7 +122,7 @@
 	texts and eBay pages are (both in terms of their words and their POS tags). 
 	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
 	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
-  Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
+  Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
   By experimenting on a different domain in Tor (user-generated content), we show that the legal/illegal distinction generalizes across domains.
 
@@ -299,7 +299,7 @@ Legal Onion & $50.8 \pm2.31$
 \subsection{Differences in Named Entities}
 
     In order to analyze the difference in the distribution of 
-    named entities between the domains,  we used a Wikification technique \cite{bunescu2006using}, i.e., linking entities to their corresponding article in Wikipedia.
+    named entities between the domains,  we used a wikification technique \cite{bunescu2006using}, i.e., linking entities to their corresponding article in Wikipedia.
 
     Using spaCy's\footnote{\url{https://spacy.io}}
     named entity recognition, we first extract all named
@@ -688,8 +688,8 @@ Left: features with lowest ratio; right: features with highest ratio.
 \section{Discussion} \label{sec:discussion}
 
   As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
-  are quite distant in terms of word distribution and named entity Wikification.
-  Moreover, named entity recognition and Wikification work less well
+  are quite distant in terms of word distribution and named entity wikification.
+  Moreover, named entity recognition and wikification work less well
   for the illegal domain.
   This has practical implications: we need to adapt our tools to deal with illegal Tor data, if we want in the future to successfully apply automatic tools there.
   As evident from the classification experiments (\S\ref{sec:classification}), however,
