@@ -162,6 +162,9 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
   Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
+  Finally, by experimenting on user-generated content in Tor, we show that the legal/illegal differentiation genralizes across different domains.
+  After presenting previous works in Section \ref{sec:related_work}, we describe the datasets used in Section \ref{sec:datasets}. Voacabulary and named entities differences are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} present additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
+  
   % Capitalization should be Darknet, not DarkNet
   
     %which underscores the pitfalls of na\"{i}vely applying off-the-shelf NLP tools to this domain.
@@ -183,7 +186,7 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 %   A bit on the experiments and results.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Related Work}
+\section{Related Work} \label{sec:related_work}
 
 The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14}
 %used the software Mallet \citep{McCallum02}\oa{you mean LDA features? if so, better state the model than the implementation}\es{they don't give details about the model}and the web service uClassify \citep{Kagstrom13}
@@ -526,7 +529,7 @@ Different instances are shown than in Figure~\ref{fig:examples}.
 \label{fig:examples_poscontent}}
 \end{figure*}
 
-\section{Illegality Detection Across Domains}
+\section{Illegality Detection Across Domains} \label{sec:cross_domains}
 
 \subsection{Experimental setup}
 
@@ -642,7 +645,7 @@ Left: features with lowest ratio; right: features with highest ratio.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion}
+\section{Discussion} \label{sec:discussion}
 
 As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
 are quite distant in terms of word distribution and named entity wikification.
@@ -694,7 +697,7 @@ the classifier can easily distinguish the domains, as the language itself
 is quite different between them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusion}
+\section{Conclusion} \label{sec:conclusion}
 
 On a methological note, Legal Onion and Illegal Onion are distinct enough
 to be considered different domains (as distant as Legal Onion and eBay,
