@@ -212,8 +212,8 @@ Recently, \citet{Avarikioti18} presented another topic classification of text fr
 \paragraph{Onion corpus.}
 We experiment with data from Darknet websites containing
 legal and illegal activity, all from the DUTA-10K corpus \citep{AlNabki19}.
-We selected the ``drugs'' sub-domain as a test case, as it is the only domain
-that has a ``legal'' and ``illegal'' sub-categories, and is large enough to allow quantitative analysis.
+We selected the ``drugs'' sub-domain as a test case, as it is the largest domain\oa{is this true?}
+that has a ``legal'' and ``illegal'' sub-categories.
 %\begin{description}
 %\item[Legal and illegal drugs.]
 These websites advertise and sell
@@ -429,7 +429,7 @@ BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9\\
 seq2vec & 56.9 & 55.0 & 54.3 & 59.5 & 49.1\\
 attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0
 \end{tabular}
-\caption{Test accuracy for each classifier (rows) in each setting (columns) on drugs-related data.
+\caption{Test accuracy in percents for each classifier (rows) in each setting (columns) on drugs-related data.
 \label{tab:results_drugs}}
 \end{table}
 
@@ -458,7 +458,7 @@ BoE$_\mathrm{average}$ & 49.1 & 51.7 & 51.7 & 52.6 & 58.6\\
 seq2vec & 51.7 & 61.1 & 51.7 & 54.3 & 57.8\\
 attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
 \end{tabular}
-\caption{Test accuracy for each classifier (rows) in each setting (columns) on forums data.
+\caption{Test accuracy in percents for each classifier (rows) in each setting (columns) on forums data.
 \label{tab:results_forums}}
 \end{table}
 
@@ -589,11 +589,11 @@ The accuracy scores are reported in Table~\ref{tab:results_forums}.
 
 \paragraph{Legal vs. illegal forums.}
 
-The classification scores on the Onion forums data are reported in Table~\ref{tab:results_forums}.
+%The classification scores on the Onion forums data are reported in Table~\ref{tab:results_forums}.
 Results when training and testing on forums data are much worse for the neural-based systems,
-probably due to the fact that this data is much noisier and more varied,
+probably due to the much noisier and more varied nature of the data,
 containing different distributions of words in the training and testing
-subsets. However, the SVM model achieves an accuracy of 85.3 in the full setting. The high results obtained by the model in the cases where the content words are dropped (drop.cont.) or replaced by part-of-speech tags (pos cont.) further the importance of the syntactic structure to the legal/illegal differentiation in this case. 
+subsets. However, the SVM model achieves an accuracy of 85.3 in the full setting. The high results obtained by the model in the cases where the content words are dropped (drop.cont.) or replaced by part-of-speech tags (pos cont.) underscore the importance of the syntactic structure to the legal/illegal differentiation in this case. 
 
 \paragraph{Cross-domain evaluation.}
 
@@ -603,7 +603,8 @@ in the in-domain setting
 for four out of five classifiers,
 showing that while the forums data is noisy, it can be accurately classified
 when training on the cleaner drugs data. This also shows that illegal texts in Tor share common properties regardless of topical category.
-The lower results obtained by the Naive Bayes classifier in the drop cont. setting suggest that some of these properties are lexical.
+The lower results obtained by the Naive Bayes classifier where content words are dropped (drop cont.) suggest that some of
+these properties are lexical.
 
 \begin{table}[t]
 \small
@@ -679,9 +680,10 @@ Left: features with lowest ratio; right: features with highest ratio.
 
 As shown in \S\ref{sec:domain}, the Legal Onion and Illegal Onion domains
 are quite distant in terms of word distribution and named entity wikification.
-Moreover, named entity recognition and wikification work less well
+Moreover, named entity recognition and Wikification work less well
 for the illegal domain.
 This has practical implications: we need to adapt our tools to deal with illegal Tor data, if we want in the future to successfully apply automatic tools there.
+
 As evident from the classification experiments (\S\ref{sec:classification}), however,
 the Onion Legal and Illegal Onion texts are harder to distinguish than
 eBay and Legal Onion, meaning we need to look beyond word distribution
