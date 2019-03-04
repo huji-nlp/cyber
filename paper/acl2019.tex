@@ -326,9 +326,9 @@ due to the common use of informal language and drug-related jargon.
 Eyeballing the results, there were a fair number of false positives (words and phrases that were found by spaCy but were not actually named entities),
 especially in Illegal Onion sites.
 In particular, slang terms for drugs, as well as abbreviated drug terms, for example ``kush'' or ``GBL'',
-were being falsely picked up by spaCy's recognizer.
-(We consider these to be false positives as they are names of substances but not specific products, 
-and hence not named entities.\footnote{See \url{https://spacy.io/api/annotation\#section-named-entities}})
+were being falsely picked up by spaCy's recognizer.\footnote{We
+consider these to be false positives as they are names of substances but not specific products, 
+and hence not named entities. See \url{https://spacy.io/api/annotation\#section-named-entities}}
 
 To recap, results suggest both that (1) legal and illegal texts are different in terms of their named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity.
 
