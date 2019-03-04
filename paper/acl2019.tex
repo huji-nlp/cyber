@@ -162,8 +162,8 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
   Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
-  Finally, by experimenting on user-generated content in Tor, we show that the legal/illegal differentiation genralizes across different domains.
-  After presenting previous works in Section \ref{sec:related_work}, we describe the datasets used in Section \ref{sec:datasets}. Voacabulary and named entities differences are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} present additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
+  Finally, by experimenting on user-generated content in Tor, we show that the legal/illegal differentiation generalizes across different domains.
+  After presenting previous works in Section \ref{sec:related_work}, we describe the datasets used in Section \ref{sec:datasets}. Vocabulary and named entities differences are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} present additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
   
   % Capitalization should be Darknet, not DarkNet
   
@@ -200,7 +200,7 @@ Some works directly addressed a specific type of illegality and a particular com
 
 \citet{AlNabki17} presented DUTA (Darknet Usage Text Addresses), the first publicly available Darknet dataset, together with a manual classification into topical categories and sub-categories. For some of the categories, legal and illegal activities are distinguished. However, the automatic classification presented in their work focuses on the distinction between several illegal activities, without dealing with the separation between legal and illegal ones, which is the subject of the present paper. \citet{AlNabki19} extended the dataset to form the DUTA-10K, which we are using here. Their results show that 20\% of the hidden services correspond to ``suspicious'' activities. This analysis is done using the text classifier presented in \citet{AlNabki17} and a manual verification. %where the information is directly derived from the topic classifier.\oa{this last part of the sent is unclear}
 
-Recently, \citet{Avarikioti18} presented another topic classification of text from Tor together with a first classification into legal and illegal activities.  The experiments were performed on a newly crawled corpus obtained by a recursive search. The legal/illegal classification was done using an SVM classifier in an active learning setting with bag of words as features. Legality was assessed in a conservative way where illegality is assigned if the purpose of the content is an obvioulsy illegal action, even if the content might be technically legal. They found that a linear kernel worked best and reported an F1 score of 85\% and an accuracy of 89\%. Using the dataset of \citet{AlNabki19}, and focusing on a given topical category, we here confirm the importance of content words in the classification and explore the linguistic dimensions permitting the legal/illegal distinction. 
+Recently, \citet{Avarikioti18} presented another topic classification of text from Tor together with a first classification into legal and illegal activities.  The experiments were performed on a newly crawled corpus obtained by a recursive search. The legal/illegal classification was done using an SVM classifier in an active learning setting with bag of words as features. Legality was assessed in a conservative way where illegality is assigned if the purpose of the content is an obviously illegal action, even if the content might be technically legal. They found that a linear kernel worked best and reported an F1 score of 85\% and an accuracy of 89\%. Using the dataset of \citet{AlNabki19}, and focusing on a given topical category, we here confirm the importance of content words in the classification and explore the linguistic dimensions permitting the legal/illegal distinction. 
 
 As pointed out by \citet{Plank11}, there is no common ground of what constitutes a domain. Domain differences are attributed in some works to differences in vocabulary \citep{Blitzer06} and in other works to differences in style, genre and medium \citep{McClosky2010}. While here the domains are defined in advance (e.g., they correspond to a category in the DUTA-10K corpus), we show in which way and to which extent they can be distinguished according to their internal properties. 
 
@@ -234,7 +234,7 @@ drugs but rather merchandise, tools, or otherwise related content.
 As preprocessing for all experiments, we apply some cleaning to the text
 of web pages in our corpora.
 HTML markup is already removed in the original datasets,
-but much nonlinguistic content remains, such as
+but much non-linguistic content remains, such as
 buttons, encryption keys, metadata and URLs.
 We remove such text from the web pages, and join paragraphs 
 to single lines (as newlines are sometimes present in the original dataset for display purposes only).
@@ -286,7 +286,7 @@ Legal Onion & $50.8 \pm2.31$
     named entity recognition, we first extract all named
     entity mentions from all the corpora. 
     We then search for relevant Wikipedia entries for each named entity using the DBpedia Ontology API \cite{isem2013daiber}.
-    For each domain we compute the total number of named entites and what percentage of them had corresponding Wikipedia articles.
+    For each domain we compute the total number of named entities and what percentage of them had corresponding Wikipedia articles.
 
 The results (shown in Table~\ref{ta:wiki}) were obtained by averaging the percentage of wikifiable named entities in each site per domain. We also calculated the standard error for each average.
 
@@ -304,7 +304,7 @@ less likely to be covered by Wikipedia and similar public databases.
 In addition to the differences in wikification ratios between
 the domains, it seems spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites, possibly
-due to the commmon use of informal language and drug-related jargon.
+due to the common use of informal language and drug-related jargon.
 Eyeballing the results, there were a fair number of false positives (words and phrases that were found by spaCy but were not actually named entities),
 especially in Illegal Onion sites.
 In particular, slang terms for drugs, as well as abbreviated drug terms, for example ``kush'' or ``GBL'',
@@ -663,7 +663,7 @@ Looking at specific sentences (Figure~\ref{fig:examples})
 reveals that Legal Onion and Illegal Onion are easy to distinguish
 based on the identity of certain words, e.g., terms for legal and illegal drugs,
 respectively.
-Thus looking at the wordforms is already a good solution for tackling this
+Thus looking at the word forms is already a good solution for tackling this
 classification problem,
 and using modern text classification does not present an advantage in
 terms of accuracy.
@@ -699,10 +699,10 @@ is quite different between them.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion} \label{sec:conclusion}
 
-On a methological note, Legal Onion and Illegal Onion are distinct enough
+On a methodological note, Legal Onion and Illegal Onion are distinct enough
 to be considered different domains (as distant as Legal Onion and eBay,
 see \S\ref{sec:domain}). 
-Therefore, Tor could be a good testbed for working on classification of
+Therefore, Tor could be a good test-bed for working on classification of
 legal and illegal texts.
 
 
