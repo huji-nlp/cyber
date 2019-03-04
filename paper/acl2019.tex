@@ -212,8 +212,9 @@ Recently, \citet{Avarikioti18} presented another topic classification of text fr
 \paragraph{Onion corpus.}
 We experiment with data from Darknet websites containing
 legal and illegal activity, all from the DUTA-10K corpus \citep{AlNabki19}.
-We selected the ``drugs'' sub-domain as a test case, as it is the largest domain\oa{is this true?}
-that has a ``legal'' and ``illegal'' sub-categories.
+We selected the ``drugs'' sub-domain as a test case, as it is a large domain in the corpus,
+that has a ``legal'' and ``illegal'' sub-categories, and where the distinction between them 
+can  be reliably made.
 %\begin{description}
 %\item[Legal and illegal drugs.]
 These websites advertise and sell
@@ -228,7 +229,7 @@ These pages are written by sellers and directed to their customers.
 As an additional dataset of similar size and characteristics,
 but from a clear net source, and of legal nature,
 we compiled a corpus of eBay pages.
-eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words.\oa{LC, what does that mean?} 
+eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than one sentence.
 Item descriptions vary in price, item sold and seller. The descriptions were selected by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition. For example, where many sell the same product, only one example was added to the corpus. Search queries also included filtering for price, so that each query resulted with different items. Either because of advertisement strategies or the geographical dispersion of the  sellers, the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
 Importantly, eBay websites are assumed to conduct legal activity---even
   when discussing drug-related material, we find it is never the sale of illegal
@@ -283,11 +284,14 @@ We examine two types of domain differences between legal and illegal texts: voca
     by the Jensen-Shannon divergence, but the distance between each pair is 0.60 to 0.65. 
     These means the three approximately form an equilateral triangle.     
 
-    These results suggest that there is no reason to think about all drug-related Onion texts as one domain, with legal and illegal texts as sub-domains, but rather to think of the three corpora as representing different domains.
+    These results suggest that rather than regrading all drug-related Onion texts as one domain, with legal and illegal texts as sub-domains, 
+      they should be treated as distinct domains.
     Threfore, using Onion data to characterize the differences between illegal and legal linguistic attributes is sensible. 
-    It will also make more sense than comparing illegal to eBay texts, as we may assume that the data from the same corpus is more 
-    similar in most attributes and when it differs it is because of the legality of the materials or the illegality thereof.\oa{didnt follow last sent}
-    Similar results were obtained using Variational distance, and are omitted for brevity.
+    In fact, it is more sensible than comparing illegal to eBay text, as there the legal/illegal distiction may be confounded by the differences
+      between eBay and Onion data.
+%    as we may assume that the data from the same corpus is more 
+%    similar in most attributes and when it differs it is because of the legality of the materials or the illegality thereof.\oa{didnt follow last sent}
+    Similar results are obtained using Variational distance, and are omitted for brevity.
 
 
 \subsection{Differences in Named Entities}
@@ -357,8 +361,8 @@ To classify paragraphs into categories, we experiment with five classifiers:
   The word vectors are not updated during training.
   \item seq2vec: same as BoE, but instead of averaging word vectors,
   we apply a BiLSTM to the word vectors, and take the concatenated
-  final hidden vectors from the forward and backward part as the input to the
-  fully-connected layer.\oa{one layer?}
+  final hidden vectors from the forward and backward part as the input to a
+  fully-connected layer.
   \item attention: we replace the word representations with contextualized
   pre-trained representations from ELMo \cite{Peters:2018}. We then apply a self-attentive
   classification network \cite{mccann2017learned} over the contextualized representations. This architecture proved very accurate for classification in
@@ -476,14 +480,14 @@ This control experiment shows that Legal Onion content is quite easily
 distinguishable from eBay content, as a Naive Bayes bag-of-words classifier
 reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
-the performance, suggesting that the content\oa{what content? didn't follow the last sent} is mostly useful for determining
-whether a page comes from Onion or eBay.
+performance, suggesting that the content words are the important factor in this classification.
+%whether a page comes from Onion or eBay.
 This is confirmed by the drop in accuracy when content words are dropped.
-However, in this setting (drop cont.) the SVM classifier performed best,
-suggesting there is a non-linear relationship between the function words
-found in a page and its source.
+However, in this setting (drop cont.), non-trivial performance is still
+obtained by the SVM classifier, suggesting that the domains are distinguishable
+based on the function words alone.
 
-Surprisingly, the more sophisticated neural classifiers performed worse than Naive Bayes.
+Surprisingly, the more sophisticated neural classifiers perform worse than Naive Bayes.
 This is despite using pretrained word embeddings,
 and architectures that have proven beneficial for text classification.
 It is likely that this is due to the small size of the training data, as well as the specialized
@@ -495,14 +499,14 @@ vocabulary found in this domain, which is unlikely to be supported well by the p
 
 \paragraph{Legal vs. illegal drugs.}
 
-Classifying legal from illegal pages within the drugs domain on Onion
+Classifying legal and illegal pages within the drugs domain on Onion
 proved to be a more difficult task.
 %In this setting, content words seem to be even more important:
 %dropping function words entirely improved the performance.
-However, where only the POS of the content words is available,
-the SVM classifier managed to distinguish between content and function words with quite a high accuracy.
-This may suggest that the syntactic structure is different between the legal and illegal
-domains, such that the distribution of grammatical categories is sufficient for distinguishing them with a reasonable accuracy.\oa{5.1 needs some editing; are these the only conclusions we can make?}
+However, where content words are replaced with their POS tags,
+the SVM classifier distinguishes between legal and illegal texts with quite a high accuracy.
+This may suggest that the syntactic structure is sufficiently different between the legal and illegal
+domains, so that the distribution of grammatical categories can distinguish them with a reasonable accuracy.
 % =======
 % In this setting, content proved to be even more important:
 % dropping function words entirely improved the performance of the Naive Bayes
@@ -743,9 +747,10 @@ Left: features with lowest ratio; right: features with highest ratio.
   ported to classify legal and illegal texts from another DarkNet domain (forums).
 
   Our results also show that in terms of vocabulary, legal texts and illegal texts are as distant from each other, as 
-  comparable texts from ebay.
-  This suggests that methodologically, Tor could be a good test-bed for working on classification of
-  legal and illegal texts.\oa{why?}
+  comparable texts from eBay.
+  This suggests that future work on distinguishing legal and illegal text should not use a setting where Onion pages
+    are distinguished from clear net pages, but rather explore this distinction among Tor websites, 
+    thus reducing potential artefacts.
 
 
 \bibliography{acl2019}
