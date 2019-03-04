@@ -88,46 +88,6 @@
 \section{Introduction}
 
 
-%    \begin{table}[]
-%    \resizebox{\columnwidth}{!}{%
-%        \begin{tabular}{@{}lllll@{}}
-%& all onion & eBay & illegal & legal      \\
-%all onion && 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
-%eBay & 0.60, 1.31 && 0.59, 1.28 & 0.66, 1.46 \\
-%illegal & 0.33, 0.62 & 0.59, 1.28 && 0.61, 1.28 \\
-%legal & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &     
-%        \end{tabular}%
-%    }
-%    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and Illegal Onion drug sites, and eBay sites. \label{ta:domain}}
-%\end{table}
-\begin{table*}[]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{@{}ll|rrr|rrr|rrr|rrr@{}}
-&& \multicolumn{3}{c|}{All Onion} & \multicolumn{3}{c|}{eBay}
-& \multicolumn{3}{c|}{Illegal Onion} & \multicolumn{3}{c}{Legal Onion} \\
-&& all & half 1 & half 2 & all & half 1 & half 2
-& all & half 1 & half 2 & all & half 1 & half 2 \\
-\hline
-& all & & 0.23 & 0.25 & 0.60 & 0.61 & 0.61 & 0.33 & 0.39 & 0.41 & 0.35 & 0.41 & 0.42 \\
-All Onion & half 1 & 0.23 & & 0.43 & 0.60 & 0.62 & 0.62 & 0.37 & 0.33 & 0.50& 0.40 & 0.36 & 0.52 \\
-& half 2 & 0.25 & 0.43 & & 0.61 & 0.62 & 0.62 & 0.39 & 0.50& 0.35 & 0.39 & 0.51 & 0.35 \\
-\hline
-& all & 0.60 & 0.60 & 0.61 & & 0.23 & 0.25 & 0.59 & 0.60& 0.60& 0.66 & 0.67 & 0.67 \\
-eBay & half 1 & 0.61 & 0.62 & 0.62 & 0.23 & & 0.43 & 0.60 & 0.61 & 0.61 & 0.67 & 0.67 & 0.68 \\
-& half 2 & 0.61 & 0.62 & 0.62 & 0.25 & 0.43 & & 0.60 & 0.61 & 0.61 & 0.67 & 0.68 & 0.68 \\
-\hline
-& all & 0.33 & 0.37 & 0.39 & 0.59 & 0.60 & 0.60 & & 0.23 & 0.27 & 0.61 & 0.62 & 0.62 \\
-Illegal Onion & half 1 & 0.39 & 0.33 & 0.50 & 0.60 & 0.61 & 0.61 & 0.23 & & 0.45 & 0.62 & 0.63 & 0.62 \\
-& half 2 & 0.41 & 0.50 & 0.35 & 0.60 & 0.61 & 0.61 & 0.27 & 0.45 & & 0.62 & 0.63 & 0.63 \\
-\hline
-& all & 0.35 & 0.40 & 0.39 & 0.66 & 0.67 & 0.67 & 0.61 & 0.62 & 0.62 & & 0.26 & 0.26 \\
-Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0.63 & 0.26 & & 0.47 \\
-& half 2 & 0.42 & 0.52 & 0.35 & 0.67 & 0.68 & 0.68 & 0.62 & 0.62 & 0.63 & 0.26 & 0.47 &  \\          
-        \end{tabular}%
-    }
-    \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, Legal and Illegal Onion drug sites, and eBay sites.
-    Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
-\end{table*}
 
   The Darknet refers to the subset of Internet sites and pages that are not
   indexed by search engines.
@@ -205,6 +165,46 @@ Some works directly addressed a specific type of illegality and a particular com
 \citet{AlNabki17} presented DUTA (Darknet Usage Text Addresses), the first publicly available Darknet dataset, together with a manual classification into topical categories and sub-categories. For some of the categories, legal and illegal activities are distinguished. However, the automatic classification presented in their work focuses on the distinction between different classes of illegal activity, without addressing the distinction between legal and illegal ones, which is the subject of the present paper. \citet{AlNabki19} extended the dataset to form the DUTA-10K, which we are using here. Their results show that 20\% of the hidden services correspond to ``suspicious'' activities. The analysis was conducted using the text classifier presented in \citet{AlNabki17} and a manual verification. %where the information is directly derived from the topic classifier.\oa{this last part of the sent is unclear}
 
 Recently, \citet{Avarikioti18} presented another topic classification of text from Tor together with a first classification into legal and illegal activities.  The experiments were performed on a newly crawled corpus obtained by a recursive search. The legal/illegal classification was done using an SVM classifier in an active learning setting with bag of words as features. Legality was assessed in a conservative way where illegality is assigned if the purpose of the content is an obviously illegal action, even if the content might be technically legal. They found that a linear kernel worked best and reported an F1 score of 85\% and an accuracy of 89\%. Using the dataset of \citet{AlNabki19}, and focusing on specific topical categories, we here confirm the importance of content words in the classification, and explore the linguistic dimensions supporting classification into legal and illegal texts. 
+%    \begin{table}[]
+%    \resizebox{\columnwidth}{!}{%
+%        \begin{tabular}{@{}lllll@{}}
+%& all onion & eBay & illegal & legal      \\
+%all onion && 0.60, 1.31 & 0.33, 0.62 & 0.35, 0.65 \\
+%eBay & 0.60, 1.31 && 0.59, 1.28 & 0.66, 1.46 \\
+%illegal & 0.33, 0.62 & 0.59, 1.28 && 0.61, 1.28 \\
+%legal & 0.35, 0.65 & 0.66, 1.46 & 0.61, 1.28 &     
+%        \end{tabular}%
+%    }
+%    \caption{Jensen-Shannon divergence and Variational distance between word distribution in all Onion drug sites, legal and Illegal Onion drug sites, and eBay sites. \label{ta:domain}}
+%\end{table}
+\begin{table*}[]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{@{}ll|rrr|rrr|rrr|rrr@{}}
+&& \multicolumn{3}{c|}{All Onion} & \multicolumn{3}{c|}{eBay}
+& \multicolumn{3}{c|}{Illegal Onion} & \multicolumn{3}{c}{Legal Onion} \\
+&& all & half 1 & half 2 & all & half 1 & half 2
+& all & half 1 & half 2 & all & half 1 & half 2 \\
+\hline
+& all & & 0.23 & 0.25 & 0.60 & 0.61 & 0.61 & 0.33 & 0.39 & 0.41 & 0.35 & 0.41 & 0.42 \\
+All Onion & half 1 & 0.23 & & 0.43 & 0.60 & 0.62 & 0.62 & 0.37 & 0.33 & 0.50& 0.40 & 0.36 & 0.52 \\
+& half 2 & 0.25 & 0.43 & & 0.61 & 0.62 & 0.62 & 0.39 & 0.50& 0.35 & 0.39 & 0.51 & 0.35 \\
+\hline
+& all & 0.60 & 0.60 & 0.61 & & 0.23 & 0.25 & 0.59 & 0.60& 0.60& 0.66 & 0.67 & 0.67 \\
+eBay & half 1 & 0.61 & 0.62 & 0.62 & 0.23 & & 0.43 & 0.60 & 0.61 & 0.61 & 0.67 & 0.67 & 0.68 \\
+& half 2 & 0.61 & 0.62 & 0.62 & 0.25 & 0.43 & & 0.60 & 0.61 & 0.61 & 0.67 & 0.68 & 0.68 \\
+\hline
+& all & 0.33 & 0.37 & 0.39 & 0.59 & 0.60 & 0.60 & & 0.23 & 0.27 & 0.61 & 0.62 & 0.62 \\
+Illegal Onion & half 1 & 0.39 & 0.33 & 0.50 & 0.60 & 0.61 & 0.61 & 0.23 & & 0.45 & 0.62 & 0.63 & 0.62 \\
+& half 2 & 0.41 & 0.50 & 0.35 & 0.60 & 0.61 & 0.61 & 0.27 & 0.45 & & 0.62 & 0.63 & 0.63 \\
+\hline
+& all & 0.35 & 0.40 & 0.39 & 0.66 & 0.67 & 0.67 & 0.61 & 0.62 & 0.62 & & 0.26 & 0.26 \\
+Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0.63 & 0.26 & & 0.47 \\
+& half 2 & 0.42 & 0.52 & 0.35 & 0.67 & 0.68 & 0.68 & 0.62 & 0.62 & 0.63 & 0.26 & 0.47 &  \\          
+        \end{tabular}%
+    }
+    \caption{Jensen-Shannon divergence between word distribution in all Onion drug sites, Legal and Illegal Onion drug sites, and eBay sites.
+    Each domain was also split in half for within-domain comparison. \label{ta:domain_halves}}
+\end{table*}
 
 
 
@@ -248,19 +248,6 @@ to single lines (as newlines are sometimes present in the original dataset for d
 We then remove any duplicate paragraphs, where paragraphs are considered
 identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our data and preprocessing code  will be made publicly available upon publication.}
 
-\begin{table}
-\begin{center}
-\begin{tabular}{l|r}
- & \% Wikifiable\\
- \hline
-eBay & $38.6 \pm2.00$\\
-Illegal Onion & $32.5 \pm1.35$\\
-Legal Onion & $50.8 \pm2.31$
-\end{tabular}
-\end{center}
-\caption{Average percentage of wikifiable named entities in a website per domain, with standard error.\label{ta:wiki}}
-\end{table}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Differences}\label{sec:domain}
 
@@ -294,6 +281,19 @@ We examine two types of domain differences between legal and illegal texts: voca
 %    as we may assume that the data from the same corpus is more 
 %    similar in most attributes and when it differs it is because of the legality of the materials or the illegality thereof.\oa{didnt follow last sent}
     Similar results are obtained using Variational distance, and are omitted for brevity.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l|r}
+ & \% Wikifiable\\
+ \hline
+eBay & $38.6 \pm2.00$\\
+Illegal Onion & $32.5 \pm1.35$\\
+Legal Onion & $50.8 \pm2.31$
+\end{tabular}
+\end{center}
+\caption{Average percentage of wikifiable named entities in a website per domain, with standard error.\label{ta:wiki}}
+\end{table}
 
 
 \subsection{Differences in Named Entities}
