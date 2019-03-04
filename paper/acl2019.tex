@@ -75,7 +75,7 @@
   However, little is known about what characteristics texts communicated through the Darknet have, 
     and how well do off-the-shelf NLP tools do on this domain.
   This paper tackles this gap and performs an in-depth investigation of the characteristics
-    of legal and illegal text in the Darknet, comparing it to a clear net website with similar
+    of legal and illegal text in the Darknet, comparing it to a Clearnet website with similar
     content as a control condition.
   Taking drug-related websites as a test case, we find that texts for selling legal and illegal drugs
     have several linguistic characteristics that distinguish them from one another, as well as from 
@@ -155,7 +155,7 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
   We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, 
 	that text from legal and illegal pages (henceforth, {\it legal} and {\it illegal} texts) can be distinguished based on the identity of the content words (bag of words) 
   in about 90\% accuracy over a balanced sample. Second, we find that the distribution of POS tags in the documents is a strong cue for 
-	distinguishing between the classes (about 75\% accuracy). This indicates that the two classes are different in 
+	distinguishing between the classes (about 75\% accuracy)\es{I think it should be 71\%.}. This indicates that the two classes are different in 
 	terms of their syntactic structure. Third, we find that legal and illegal texts are roughly as distinguishable from one another as legal 
 	texts and eBay pages are (both in terms of their words and their POS tags). 
 	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
@@ -228,7 +228,8 @@ These pages are written by sellers and directed to their customers.
 As an additional dataset of similar size and characteristics,
 but from a clear net source, and of legal nature,
 we compiled a corpus of eBay pages.
-eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words.\oa{LC, what does that mean?} Item descriptions vary in price, item sold and seller. The descriptions were selected by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition. For example, where many sell the same product, only one example was added to the corpus. Search queries also included filtering for price, so that each query resulted with different items. Either because of advertisement strategies or the geographical dispersion of the  sellers, the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
+eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words.\oa{LC, what does that mean?} 
+Item descriptions vary in price, item sold and seller. The descriptions were selected by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition. For example, where many sell the same product, only one example was added to the corpus. Search queries also included filtering for price, so that each query resulted with different items. Either because of advertisement strategies or the geographical dispersion of the  sellers, the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
 Importantly, eBay websites are assumed to conduct legal activity---even
   when discussing drug-related material, we find it is never the sale of illegal
   drugs but rather merchandise, tools, or otherwise related content.
@@ -392,11 +393,11 @@ The tested manipulations are:
 
 \paragraph{Settings.}
 
-We experiment with four settings, classifying paragraphs from different domains:
+We experiment with two settings, classifying paragraphs from different domains:
 \begin{itemize}
   \item Training and testing on eBay pages vs. Legal Onion pages,
   as a control experiment
-  to identify whether Onion pages differ from clear net pages.
+  to identify whether Onion pages differ from Clearnet pages.
   \item Training and testing on Legal Onion vs. Illegal Onion drugs-related pages,
   to identify the difference in language between legal and illegal activity
   on Onion drug-related websites.
@@ -461,7 +462,9 @@ attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
 \label{tab:results_forums}}
 \end{table}
 
-\subsection{Results} \label{subsec:results}
+\subsection{Results} \label{subsec:results
+
+The accuracy scores for the different classifiers and settings are reported in Table~\ref{tab:results_drugs}.
 
 
 \paragraph{Legal Onion vs. eBay.}
@@ -472,8 +475,8 @@ reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
 the performance, suggesting that the content\oa{what content? didn't follow the last sent} is mostly useful for determining
 whether a page comes from Onion or eBay.
-This is confirmed by the drop in accuracy when content words are dropped:
-however, in this setting (drop cont.) the kernel SVM classifier performed best,
+This is confirmed by the drop in accuracy when content words are dropped.
+However, in this setting (drop cont.) the SVM classifier performed best,
 suggesting there is a non-linear relationship between the function words
 found in a page and its source.
 
@@ -497,7 +500,17 @@ However, where only the POS of the content words is available,
 the SVM classifier managed to distinguish between content and function words with quite a high accuracy.
 This may suggest that the syntactic structure is different between the legal and illegal
 domains, such that the distribution of grammatical categories is sufficient for distinguishing them with a reasonable accuracy.\oa{5.1 needs some editing; are these the only conclusions we can make?}
-
+% =======
+% In this setting, content proved to be even more important:
+% dropping function words entirely improved the performance of the Naive Bayes
+% classifier to nearly its accuracy in the previous experiment.
+% This suggests that the content of the legal and illegal domains
+% %syntactic structure is similar between the legal and illegal
+% %domains, but their content
+% allows differentiating them, e.g., by the terms they use to describe their products.
+% The score of 70.7 obtained by the SVM classifier when content words are replaced by PoS tags (pos cont.) indicate that syntactic properties can also be used
+% for the legal/illegal differentiation.
+%
 
 \begin{figure*}[t]
 \centering
@@ -572,7 +585,7 @@ drugs domain generalize directly to the forums domain.
 
 \subsection{Results}
 
-The accuracy scores for the different classifiers and settings are reported in Table~\ref{tab:results_drugs}.
+The accuracy scores are reported in Table~\ref{tab:results_forums}.
 
 \paragraph{Legal vs. illegal forums.}
 
