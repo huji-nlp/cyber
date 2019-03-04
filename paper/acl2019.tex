@@ -77,7 +77,7 @@
   This paper tackles this gap and performs an in-depth investigation of the characteristics
     of legal and illegal text in the Darknet, comparing it to a clear net website with similar
     content as a control condition.
-  Taking drugs-related websites as a test case, we find that texts for selling legal and illegal drugs
+  Taking drug-related websites as a test case, we find that texts for selling legal and illegal drugs
     have several linguistic characteristics that distinguish them from one another, as well as from 
     the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.
 \end{abstract}
@@ -139,8 +139,8 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
   Applying NLP tools to text from the Darknet is thus important for effective law enforcement and intelligence.
   However, little is known about the characteristics of the language used in the Darknet, 
   and specifically on what distinguishes text on websites that conduct legal and illegal activity.
-	The only work we are aware of that classified Darknet texts into legal and illegal activity is \citet{Avarikioti18}.
-	However, they too did not investigate in what ways these two classes differ.
+	In fact, the only work we are aware of that classified Darknet texts into legal and illegal activity is \citet{Avarikioti18},
+	but they too did not investigate in what ways these two classes differ. See Section \ref{sec:related_work}.
   
   
   %Text classification of crawled Darknet pages was pursued by .
@@ -153,17 +153,18 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 	advertise products corresponding to drug keywords (see Section \ref{sec:datasets}).
  
   We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, 
-	that text from legal and illegal pages can be distinguished based on the identity of the content words (bag of words) 
+	that text from legal and illegal pages (henceforth, {\it legal} and {\it illegal} texts) can be distinguished based on the identity of the content words (bag of words) 
   in about 90\% accuracy over a balanced sample. Second, we find that the distribution of POS tags in the documents is a strong cue for 
 	distinguishing between the classes (about 75\% accuracy). This indicates that the two classes are different in 
 	terms of their syntactic structure. Third, we find that legal and illegal texts are roughly as distinguishable from one another as legal 
-	texts and eBay pages (both in terms of their words and their POS tags). 
+	texts and eBay pages are (both in terms of their words and their POS tags). 
 	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
 	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
   Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
   Finally, by experimenting on user-generated content in Tor, we show that the legal/illegal differentiation generalizes across different domains.
-  After presenting previous works in Section \ref{sec:related_work}, we describe the datasets used in Section \ref{sec:datasets}. Vocabulary and named entities differences are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} present additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
+
+  After presenting previous works in Section \ref{sec:related_work}, we detail the datasets used in Section \ref{sec:datasets}. Differences in the vocabulary and named entities between the classes are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} present additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
   
   % Capitalization should be Darknet, not DarkNet
   
@@ -190,27 +191,29 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 
 The detection of illegal activities in the Web is sometimes derived from a more general topic classification. For example, \citet{Biryukov14}
 %used the software Mallet \citep{McCallum02}\oa{you mean LDA features? if so, better state the model than the implementation}\es{they don't give details about the model}and the web service uClassify \citep{Kagstrom13}
-classified the content of Tor hidden services into 18 categories, allowing the distinction between topics that usually correlate with illegal activity and those that usually do not. \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classifier for the classification of drug sales in an anonymous marketplace.
-These works classified Tor texts into classes, that can give information as to whether the products are legal or legal, but did not address the legal/illegal classification.
+  classified the content of Tor hidden services into 18 topical categories, some of which correlate with illegal activity and some do not.   
+  \citet{GraczykKinningham15} combined unsupervised feature selection and an SVM classifier for the classification of drug sales in an anonymous marketplace.
+  However, while these works classified Tor texts into classes, they did not directly address the legal/illegal distinction.
 
 %However, although the detection of illegal activities can be easily deduced in some cases, the legal status of a given product can change \citep{GraczykKinningham15} and a given topic could cover both legal and illegal content. These works classified Tor texts into classes, that can give information as to whether the products are legal or legal, but did not address the legal/illegal classification.
 %For example, in the recent work of \citet{Avarikioti18} on Tor content classification, in most of the categories both legal and illegal content appear. We here explore the distinction between legal and illegal activities within a given topical category.\oa{I think we can greatly simplify this parag, simply saying that these works classified Tor texts into classes, that can give information as to whether the products are legal or legal, but did not address the legal/illegal classification}
 
 Some works directly addressed a specific type of illegality and a particular communication context. \citet{MorrisHirst12} used an SVM classification to identify sexual predators in chatting message systems. The model includes both lexical features, including emoticons and behavioral features that correspond to conversational patterns. Another example is the detection of pedophile activity in peer-to-peer networks \citep{Latapy13}, where a predefined list of keywords was used to detect child-pornography queries. In addition to lexical features, we here consider other general linguistic properties, such as syntactic structure.% whose analysis can be extended to a wide range of legal/illegal cases. 
 
-\citet{AlNabki17} presented DUTA (Darknet Usage Text Addresses), the first publicly available Darknet dataset, together with a manual classification into topical categories and sub-categories. For some of the categories, legal and illegal activities are distinguished. However, the automatic classification presented in their work focuses on the distinction between several illegal activities, without dealing with the separation between legal and illegal ones, which is the subject of the present paper. \citet{AlNabki19} extended the dataset to form the DUTA-10K, which we are using here. Their results show that 20\% of the hidden services correspond to ``suspicious'' activities. This analysis is done using the text classifier presented in \citet{AlNabki17} and a manual verification. %where the information is directly derived from the topic classifier.\oa{this last part of the sent is unclear}
+\citet{AlNabki17} presented DUTA (Darknet Usage Text Addresses), the first publicly available Darknet dataset, together with a manual classification into topical categories and sub-categories. For some of the categories, legal and illegal activities are distinguished. However, the automatic classification presented in their work focuses on the distinction between different classes of illegal activity, without addressing the distinction between legal and illegal ones, which is the subject of the present paper. \citet{AlNabki19} extended the dataset to form the DUTA-10K, which we are using here. Their results show that 20\% of the hidden services correspond to ``suspicious'' activities. The analysis was conducted using the text classifier presented in \citet{AlNabki17} and a manual verification. %where the information is directly derived from the topic classifier.\oa{this last part of the sent is unclear}
 
-Recently, \citet{Avarikioti18} presented another topic classification of text from Tor together with a first classification into legal and illegal activities.  The experiments were performed on a newly crawled corpus obtained by a recursive search. The legal/illegal classification was done using an SVM classifier in an active learning setting with bag of words as features. Legality was assessed in a conservative way where illegality is assigned if the purpose of the content is an obviously illegal action, even if the content might be technically legal. They found that a linear kernel worked best and reported an F1 score of 85\% and an accuracy of 89\%. Using the dataset of \citet{AlNabki19}, and focusing on given topical categories, we here confirm the importance of content words in the classification and explore the linguistic dimensions permitting the legal/illegal distinction. 
+Recently, \citet{Avarikioti18} presented another topic classification of text from Tor together with a first classification into legal and illegal activities.  The experiments were performed on a newly crawled corpus obtained by a recursive search. The legal/illegal classification was done using an SVM classifier in an active learning setting with bag of words as features. Legality was assessed in a conservative way where illegality is assigned if the purpose of the content is an obviously illegal action, even if the content might be technically legal. They found that a linear kernel worked best and reported an F1 score of 85\% and an accuracy of 89\%. Using the dataset of \citet{AlNabki19}, and focusing on specific topical categories, we here confirm the importance of content words in the classification, and explore the linguistic dimensions supporting classification into legal and illegal texts. 
 
-As pointed out by \citet{Plank11}, there is no common ground of what constitutes a domain. Domain differences are attributed in some works to differences in vocabulary \citep{Blitzer06} and in other works to differences in style, genre and medium \citep{McClosky2010}. While here the domains are defined in advance (e.g., they correspond to a category in the DUTA-10K corpus), we show in which way and to which extent they can be distinguished according to their internal properties. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Datasets Used}\label{sec:datasets}
 
 \paragraph{Onion corpus.}
-We experiment with data from Darknet websites concerning
+We experiment with data from Darknet websites containing
 legal and illegal activity, all from the DUTA-10K corpus \citep{AlNabki19}.
-We selected the ``drugs'' sub-domain as a test case, considering both ``legal drugs'' and ``illegal drugs'' sub-categories.
+We selected the ``drugs'' sub-domain as a test case, as it is the only domain
+that has a ``legal'' and ``illegal'' sub-categories, and is large enough to allow quantitative analysis.
 %\begin{description}
 %\item[Legal and illegal drugs.]
 These websites advertise and sell
@@ -224,11 +227,11 @@ These pages are written by sellers and directed to their customers.
 \paragraph{eBay corpus.}
 As an additional dataset of similar size and characteristics,
 but from a clear net source, and of legal nature,
-we created a corpus of eBay pages.
-eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words. Those item descriptions vary in price, item sold and seller. The descriptions were chosen by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition of the mentioned factors. For example, where many sell the same product only one example was added to the corpus, and search queries included filtering for prices, so each query will result with different items. Either because of advertisement strategies or the origins of the sellers (from all over the world), the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
+we compiled a corpus of eBay pages.
+eBay is one of the largest hosting sites for retail sellers of various goods. Our corpus contains 118 item descriptions, each consisting of more than a few words.\oa{LC, what does that mean?} Item descriptions vary in price, item sold and seller. The descriptions were selected by searching eBay for drug related terms,\footnote{Namely,  \textit{marijuana}, \textit{weed}, \textit{grass} and \textit{drug}.} and selecting search patterns to avoid over-repetition. For example, where many sell the same product, only one example was added to the corpus. Search queries also included filtering for price, so that each query resulted with different items. Either because of advertisement strategies or the geographical dispersion of the  sellers, the eBay corpus contains formal as well as informal language, and some item descriptions contain abbreviations and slang.
 Importantly, eBay websites are assumed to conduct legal activity---even
-if discussing drug-related material, we find it is never the sale of illegal
-drugs but rather merchandise, tools, or otherwise related content.
+  when discussing drug-related material, we find it is never the sale of illegal
+  drugs but rather merchandise, tools, or otherwise related content.
 
 \paragraph{Cleaning.} 
 As preprocessing for all experiments, we apply some cleaning to the text
@@ -239,7 +242,7 @@ buttons, encryption keys, metadata and URLs.
 We remove such text from the web pages, and join paragraphs 
 to single lines (as newlines are sometimes present in the original dataset for display purposes only).
 We then remove any duplicate paragraphs, where paragraphs are considered
-identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our data and preprocessing code is included in the supplementary material, and will be made publicly available upon publication.}
+identical if they share all but numbers (to avoid an over-representation of some remaining surrounding text from the websites, e.g. ``Showing all 9 results'').\footnote{Our data and preprocessing code  will be made publicly available upon publication.}
 
 \begin{table}
 \begin{center}
@@ -256,41 +259,49 @@ Legal Onion & $50.8 \pm2.31$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Differences}\label{sec:domain}
+
+As pointed out by \citet{Plank11}, there is no common ground of what constitutes a domain. Domain differences are attributed in some works to differences in vocabulary \citep{Blitzer06} and in other works to differences in style, genre and medium \citep{McClosky2010}. While here we adopt an existing classification, based on the DUTA-10K corpus, 
+we show in which way and to what extent it translates to distinct properties of the texts. 
+This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure).
     
-    We turn to quantifying the domain difference between text from legal and illegal texts. This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure).
+We examine two types of domain differences between legal and illegal texts: vocabulary differences and named entities. 
 
 \subsection{Vocabulary Differences}
 
     To quantify the domain differences between texts from legal and illegal texts,
     we compute the frequency distribution of words in the eBay corpus, the legal and illegal drugs Onion corpora, and the entire Onion drug section (All~Onion). 
     %We combine the latter two, representing all drug sites in onion. 
-    Since any two sets of texts are bound to show some disparity between them, we compare the differences between domains to a control setting, where we randomly split each examined corpus into two halves, and compute the frequency distribution of the two halves.
+    Since any two sets of texts are bound to show some disparity between them, we compare the differences between domains to a control setting, where we randomly split each examined corpus into two halves, and compute the frequency distribution of each of them.
     The inner consistency of each corpus, defined as the similarity of distribution between the two halves, serves as a reference point for the similarity between domains.
     We refer to this measure as ``self-distance''.
     
     Following \citet{Plank2011EffectiveMO}, we compute the Jensen-Shannon divergence and Variational distance (also known as L1 or Manhattan) as the comparison measures between the word frequency histograms.
-    We see in Table~\ref{ta:domain_halves} that the self-distance of the
-    eBay, Legal Onion and Illegal Onion corpora lies between 0.40 to 0.45
-    by the Jensen-Shannon divergence, but the distance between each pair
-    is 0.60 to 0.65. 
-    This means the three approximately form an equilateral triangle. 
-    The results suggest that there is no reason to think about all Onion as one domain, despite our separation of the data to onion and non-onion sites. Thus, utilizing Onion data to characterize the differences between illegal and legal linguistic attributes is sensible. It will also make more sense than comparing illegal to eBay, as we may assume that the data from the same corpus is more similar in most attributes and when it differs it is because of the legality of the materials or the illegality thereof.
+    
+    Table~\ref{ta:domain_halves} presents our results.
+    The self-distance of the eBay, Legal Onion and Illegal Onion corpora lies between 0.40 to 0.45
+    by the Jensen-Shannon divergence, but the distance between each pair is 0.60 to 0.65. 
+    These means the three approximately form an equilateral triangle.     
+
+    These results suggest that there is no reason to think about all drug-related Onion texts as one domain, with legal and illegal texts as sub-domains, but rather to think of the three corpora as representing different domains.
+    Threfore, using Onion data to characterize the differences between illegal and legal linguistic attributes is sensible. 
+    It will also make more sense than comparing illegal to eBay texts, as we may assume that the data from the same corpus is more 
+    similar in most attributes and when it differs it is because of the legality of the materials or the illegality thereof.\oa{didnt follow last sent}
     Similar results were obtained using Variational distance, and are omitted for brevity.
+
 
 \subsection{Differences in Named Entities}
 
     In order to analyze the difference in the distribution of 
-    named entities between the domains,  we used a ``wikification''\cite{bunescu2006using} technique, i.e., linking entities to their corresponding article in Wikipedia.
+    named entities between the domains,  we used a Wikification technique \cite{bunescu2006using}, i.e., linking entities to their corresponding article in Wikipedia.
 
     Using spaCy's\footnote{\url{https://spacy.io}}
     named entity recognition, we first extract all named
     entity mentions from all the corpora. 
     We then search for relevant Wikipedia entries for each named entity using the DBpedia Ontology API \cite{isem2013daiber}.
-    For each domain we compute the total number of named entities and what percentage of them had corresponding Wikipedia articles.
+    For each domain we compute the total number of named entities and the percentage of them with corresponding Wikipedia articles.
 
-The results (shown in Table~\ref{ta:wiki}) were obtained by averaging the percentage of wikifiable named entities in each site per domain. We also calculated the standard error for each average.
-
-According to our results, the wikification success ratios of eBay and Illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher wikification percentage.
+    The results were obtained by averaging the percentage of wikifiable named entities in each site per domain. We also report the standard error for each average.
+    According to our results (Table~\ref{ta:wiki}), the wikification success ratios of eBay and Illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher wikification percentage.
 
 Presumably the named entities in Onion sites selling legal drugs are
 more easily found in public databases such as Wikipedia because they
@@ -308,10 +319,11 @@ due to the common use of informal language and drug-related jargon.
 Eyeballing the results, there were a fair number of false positives (words and phrases that were found by spaCy but were not actually named entities),
 especially in Illegal Onion sites.
 In particular, slang terms for drugs, as well as abbreviated drug terms, for example ``kush'' or ``GBL'',
-were being falsely picked up by spaCy's NER.
-We consider these to be false positives as they are names of substances but not specific products, and hence not named entities.\footnote{See \url{https://spacy.io/api/annotation\#section-named-entities}}
+were being falsely picked up by spaCy's recognizer.
+(We consider these to be false positives as they are names of substances but not specific products, 
+and hence not named entities.\footnote{See \url{https://spacy.io/api/annotation\#section-named-entities}})
 
- The results in these experiments suggest both that (1) legal and illegal activity is different in terms of its named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity.
+To recap, results suggest both that (1) legal and illegal texts are different in terms of their named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -323,11 +335,10 @@ distinguishing between the domains. Another goal of the classification task is t
 
 \paragraph{Experimental setup.}
 
-After cleaning the dataset, joining lines to paragraphs and removing duplicates
-(see \S\ref{sec:datasets}), we split each subset into training, validation and test.
+We split each subset into training, validation and test.
 We select 456 training paragraphs, 57 validation paragraphs and
 58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
-thus randomly downsampling larger categories for an even division of labels.
+randomly downsampling larger categories for an even division of labels.
 
 \paragraph{Model.}
 
@@ -337,7 +348,7 @@ To classify paragraphs into categories, we experiment with five classifiers:
   \item NB (Naive Bayes) classifier
   with BoW (bag-of-words) features, i.e., indicator feature for each word.
   \item SVM (support vector machine) classifier with an RBF kernel,
-  also with BoW features.
+  also with BoW features that count the number of words of each type.
   \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
   GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
   to a single vector, and apply a 100-dimensional fully-connected layer with
@@ -346,7 +357,7 @@ To classify paragraphs into categories, we experiment with five classifiers:
   \item seq2vec: same as BoE, but instead of averaging word vectors,
   we apply a BiLSTM to the word vectors, and take the concatenated
   final hidden vectors from the forward and backward part as the input to the
-  fully-connected layer.
+  fully-connected layer.\oa{one layer?}
   \item attention: we replace the word representations with contextualized
   pre-trained representations from ELMo \cite{Peters:2018}. We then apply a self-attentive
   classification network \cite{mccann2017learned} over the contextualized representations. This architecture proved very accurate for classification in
@@ -358,7 +369,7 @@ For the NB classifier we use \texttt{BernoulliNB} from
 with $\alpha=1$,
 and for the SVM clasifier we use \texttt{SVC}, also from \texttt{scikit-learn},
 with $\gamma=\mathrm{scale}$ and tolerance=$10^{-5}$.
-We use the AllenNLP Python library\footnote{\url{https://allennlp.org}}
+We use the AllenNLP  library\footnote{\url{https://allennlp.org}}
 \cite{Gardner2017AllenNLP} for implementing the neural network classifiers.
 
 \paragraph{Data manipulation.}
@@ -459,27 +470,33 @@ This control experiment shows that Legal Onion content is quite easily
 distinguishable from eBay content, as a Naive Bayes bag-of-words classifier
 reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
-the performance, suggesting that the content is mostly useful for determining
+the performance, suggesting that the content\oa{what content? didn't follow the last sent} is mostly useful for determining
 whether a page comes from Onion or eBay.
 This is confirmed by the drop in accuracy when content words are dropped:
-however, in this setting (drop cont.) the SVM classifier performed best,
+however, in this setting (drop cont.) the kernel SVM classifier performed best,
 suggesting there is a non-linear relationship between the function words
 found in a page and its source.
-While other, more sophisticated classifiers performed worse, the attention
-classifier managed to get as close as possible to the simple Naive Bayes
-one, as it has pre-trained contextualized word embeddings to compensate for
-the small amount of training data.
+
+Surprisingly, the more sophisticated neural classifiers performed worse than Naive Bayes.
+This is despite using pretrained word embeddings,
+and architectures that have proven beneficial for text classification.
+It is likely that this is due to the small size of the training data, as well as the specialized
+vocabulary found in this domain, which is unlikely to be supported well by the pretrained embeddings.
+
+%It may be that training specialized word embeddings for Onion sites will improve results (if large enough datasets can be scraped)
+%The attention classifier managed to get as close as possible to the simple Naive Bayes
+%one, as it has pre-trained contextualized word embeddings to compensate for the small amount of training data.
 
 \paragraph{Legal vs. illegal drugs.}
 
 Classifying legal from illegal pages within the drugs domain on Onion
 proved to be a more difficult task.
-In this setting, content proved to be even more important:
-dropping function words entirely improved the performance of the Naive Bayes
-classifier to nearly its accuracy in the previous experiment.
-This suggests that syntactic structure is similar between the legal and illegal
-domains, but their content allows differentiating them, e.g.,
-by the terms they use to describe their products. 
+%In this setting, content words seem to be even more important:
+%dropping function words entirely improved the performance.
+However, where only the POS of the content words is available,
+the SVM classifier managed to distinguish between content and function words with quite a high accuracy.
+This may suggest that the syntactic structure is different between the legal and illegal
+domains, such that the distribution of grammatical categories is sufficient for distinguishing them with a reasonable accuracy.\oa{5.1 needs some editing; are these the only conclusions we can make?}
 
 
 \begin{figure*}[t]
