@@ -140,7 +140,8 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
   However, little is known about the characteristics of the language used in the Darknet, 
   and specifically on what distinguishes text on websites that conduct legal and illegal activity.
 	In fact, the only work we are aware of that classified Darknet texts into legal and illegal activity is \citet{Avarikioti18},
-	but they too did not investigate in what ways these two classes differ. See Section \ref{sec:related_work}.
+	but they too did not investigate in what ways these two classes differ.
+	%See Section \ref{sec:related_work}.
   
   
   %Text classification of crawled Darknet pages was pursued by .
@@ -150,7 +151,8 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
   This paper addresses this gap, and studies the distinguishing features between legal and illegal texts in Onion sites,
   taking sites that advertise drugs as a test case. We compare our results to a control condition of texts 
   from eBay\footnote{\url{https://www.ebay.com/}} pages that 
-	advertise products corresponding to drug keywords (see Section \ref{sec:datasets}).
+	advertise products corresponding to drug keywords.
+	%(see Section \ref{sec:datasets}).
  
   We find a number of distinguishing features. First, we confirm the results of \citet{Avarikioti18}, 
 	that text from legal and illegal pages (henceforth, {\it legal} and {\it illegal} texts) can be distinguished based on the identity of the content words (bag of words) 
@@ -162,7 +164,7 @@ Legal onion & half 1 & 0.41 & 0.36 & 0.51 & 0.67 & 0.67 & 0.68 & 0.62 & 0.63 & 0
 	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
   Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
-  Finally, by experimenting on a different domain in Tor (user-generated content), we show that the legal/illegal distinction generalizes across domains.
+  By experimenting on a different domain in Tor (user-generated content), we show that the legal/illegal distinction generalizes across domains.
 
   After presenting previous works in Section \ref{sec:related_work}, we detail the datasets used in Section \ref{sec:datasets}. Differences in the vocabulary and named entities between the classes are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} presents additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
   
