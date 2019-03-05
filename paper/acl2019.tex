@@ -123,7 +123,7 @@
 	texts and eBay pages are (both in terms of their words and their POS tags). 
 	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
 	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
-  Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., wikification works less well on them.
+  Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
   By experimenting on a different domain in Tor (user-generated content), we show that the legal/illegal distinction generalizes across domains.
 
@@ -297,10 +297,10 @@ Legal Onion & $50.8 \pm2.31$
 \end{table}
 
 
-\subsection{Differences in Named Entities}
+\subsection{Differences in Named Entities}\label{sec:ner}
 
     In order to analyze the difference in the distribution of 
-    named entities between the domains,  we used a wikification technique \cite{bunescu2006using}, i.e., linking entities to their corresponding article in Wikipedia.
+    named entities between the domains,  we used a Wikification technique \cite{bunescu2006using}, i.e., linking entities to their corresponding article in Wikipedia.
 
     Using spaCy's\footnote{\url{https://spacy.io}}
     named entity recognition, we first extract all named
@@ -309,7 +309,7 @@ Legal Onion & $50.8 \pm2.31$
     For each domain we compute the total number of named entities and the percentage with corresponding Wikipedia articles.
 
     The results were obtained by averaging the percentage of wikifiable named entities in each site per domain. We also report the standard error for each average.
-    According to our results (Table~\ref{ta:wiki}), the wikification success ratios of eBay and Illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher wikification percentage.
+    According to our results (Table~\ref{ta:wiki}), the Wikification success ratios of eBay and Illegal Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher Wikification percentage.
 
 Presumably the named entities in Onion sites selling legal drugs are
 more easily found in public databases such as Wikipedia because they
@@ -320,7 +320,7 @@ are usually not well known by the general public, and are therefore
 less likely to be covered by Wikipedia and similar public databases.
 
 
-In addition to the differences in wikification ratios between
+In addition to the differences in Wikification ratios between
 the domains, it seems spaCy had trouble correctly identifying
 named entities in both Onion and eBay sites, possibly
 due to the common use of informal language and drug-related jargon.
@@ -337,9 +337,9 @@ To summarize, results suggest both that (1) legal and illegal texts are differen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classification Experiments} \label{sec:classification}
 
-Here we detail our experiments in classifying text from different legal and
-illegal domains using various methods, to find the most important linguistic features
-distinguishing between the domains. Another goal of the classification task is to confirm our finding that the domains are distinguishable, assuming different domains should be separable by a classifier.
+  Here we detail our experiments in classifying text from different legal and
+  illegal domains using various methods, to find the most important linguistic features
+  distinguishing between the domains. Another goal of the classification task is to confirm our finding that the domains are distinguishable.
 
 \paragraph{Experimental setup.}
 
@@ -347,7 +347,7 @@ We split each subset among
 \{eBay, Legal Onion, Illegal Onion\}
 into training, validation and test.
 We select 456 training paragraphs, 57 validation paragraphs and
-58 test paragraphs (approximately a 80\%/10\%/10\% split) for each category,
+58 test paragraphs for each category (approximately a 80\%/10\%/10\% split),
 randomly downsampling larger categories for an even division of labels.
 
 \paragraph{Model.}
@@ -356,22 +356,22 @@ To classify paragraphs into categories, we experiment with five classifiers:
 
 \begin{itemize}
   \item NB (Naive Bayes) classifier
-  with BoW (bag-of-words) features, i.e., indicator feature for each word.
+    with binary bag-of-words features, i.e., indicator feature for each word. This simple classifier
+    features  frequently in work on text classification in the DarkNet.
   \item SVM (support vector machine) classifier with an RBF kernel,
   also with BoW features that count the number of words of each type.
-  \item BoE (bag-of-embeddings): we represent each word with its 100-dimensional
-  GloVe vector \cite{pennington2014glove}, average (or sum) the embeddings for all words in the paragraph
-  to a single vector, and apply a 100-dimensional fully-connected layer with
-  ReLU non-linearity and dropout $p=0.2$.
-  The word vectors are not updated during training.
+  \item BoE (bag-of-embeddings): each word is represented with its 100-dimensional
+  GloVe vector \cite{pennington2014glove}. BoE$_\mathrm{sum}$ (BoE$_\mathrm{average}$) sums (averages) 
+  the embeddings for all words in the paragraph to a single vector, and applies a 100-dimensional fully-connected layer with
+  ReLU non-linearity and dropout $p=0.2$. The word vectors are not updated during training.
   \item seq2vec: same as BoE, but instead of averaging word vectors,
   we apply a BiLSTM to the word vectors, and take the concatenated
   final hidden vectors from the forward and backward part as the input to a
-  fully-connected layer.
+  fully-connected layer (same hyper-parameters as above).
   \item attention: we replace the word representations with contextualized
   pre-trained representations from ELMo \cite{Peters:2018}. We then apply a self-attentive
-  classification network \cite{mccann2017learned} over the contextualized representations. This architecture proved very accurate for classification in
-  previous work \cite{W18-5427,D18-1401}.
+  classification network \cite{mccann2017learned} over the contextualized representations. This architecture has proved very effective for classification in
+  recent work \cite{W18-5427,D18-1401}.
 \end{itemize}
 
 For the NB classifier we use \texttt{BernoulliNB} from
@@ -384,9 +384,10 @@ We use the AllenNLP  library\footnote{\url{https://allennlp.org}}
 
 \paragraph{Data manipulation.}
 
-To check the sensitivity of classifiers to variations in content words,
-function words and syntax, we experiment with four manipulations to the input
+In order to isolate what factors contribute to the classifiers' performance,
+we experiment with four manipulations to the input
 data (in training, validation and testing).
+Specifically, we examine the impact of variations in the content words, function words and shallow syntactic structure (represented through POS tags).
 For this purpose, we consider content words as words whose universal part-of-speech
 according to spaCy is one of the following:
 \[\{\mathrm{ADJ, ADV, NOUN, PROPN, VERB, X, NUM}\}\]
@@ -394,10 +395,10 @@ and function words as all other words.
 The tested manipulations are:
 
 \begin{itemize}
-  \item Dropping all content words ({\it drop cont.}).
-  \item Dropping all function words ({\it drop func.}).
-  \item Replacing all content words with their universal part-of-speech ({\it pos cont.}).
-  \item Replacing all function words with their universal part-of-speech ({\it pos func.}).
+  \item Dropping all content words ({\it drop cont.})
+  \item Dropping all function words ({\it drop func.})
+  \item Replacing all content words with their universal part-of-speech ({\it pos cont.})
+  \item Replacing all function words with their universal part-of-speech ({\it pos func.})
 \end{itemize}
 
 Results when applying these manipulations are compared to the {\it full} condition, where all
@@ -407,7 +408,7 @@ words are available.
 
 We experiment with two settings, classifying paragraphs from different domains:
 \begin{itemize}
-  \item Training and testing on eBay pages vs. Legal Onion pages,
+  \item Training and testing on eBay pages vs. Legal drug-related Onion pages,
   as a control experiment
   to identify whether Onion pages differ from clear net pages.
   \item Training and testing on Legal Onion vs. Illegal Onion drugs-related pages,
@@ -487,16 +488,17 @@ reaches 91.4\% accuracy on this classification.
 Moreover, replacing function words by their parts of speech even improves
 performance, suggesting that the content words are the important factor in this classification.
 %whether a page comes from Onion or eBay.
-This is confirmed by the drop in accuracy when content words are dropped.
+This is confirmed by the drop in accuracy when content words are removed.
 However, in this setting (drop cont.), non-trivial performance is still
-obtained by the SVM classifier, suggesting that the domains are distinguishable
-based on the function words alone.
+obtained by the SVM classifier, suggesting that the domains are distinguishable (albeit to a lesser extent)
+based on the function word distribution alone.
 
 Surprisingly, the more sophisticated neural classifiers perform worse than Naive Bayes.
 This is despite using pretrained word embeddings,
 and architectures that have proven beneficial for text classification.
 It is likely that this is due to the small size of the training data, as well as the specialized
-vocabulary found in this domain, which is unlikely to be supported well by the pretrained embeddings.
+vocabulary found in this domain, which is unlikely to be supported well by the pretrained embeddings (see \S\ref{sec:ner}).
+
 
 %It may be that training specialized word embeddings for Onion sites will improve results (if large enough datasets can be scraped)
 %The attention classifier managed to get as close as possible to the simple Naive Bayes
@@ -509,9 +511,9 @@ proved to be a more difficult task.
 %In this setting, content words seem to be even more important:
 %dropping function words entirely improved the performance.
 However, where content words are replaced with their POS tags,
-the SVM classifier distinguishes between legal and illegal texts with quite a high accuracy.
-This may suggest that the syntactic structure is sufficiently different between the legal and illegal
-domains, so that the distribution of grammatical categories can distinguish them with a reasonable accuracy.
+the SVM classifier distinguishes between legal and illegal texts with quite a high accuracy (70.7\% on a balanced test set).
+This suggests that the syntactic structure is sufficiently different between the 
+domains, so as to make them distinuishable in terms of their distribution of grammatical categories.
 % =======
 % In this setting, content proved to be even more important:
 % dropping function words entirely improved the performance of the Naive Bayes
@@ -529,19 +531,19 @@ domains, so that the distribution of grammatical categories can distinguish them
 \small
 \begin{tabular}{l|l}
 \multicolumn{1}{c}{\textbf{Legal Onion}} &
-\multicolumn{1}{c}{\textbf{Illegal Onion}}\\
-Generic Viagra Oral Jelly is used for Erectile Dys&8/03/2017 - ATTN! Looks like SIGAINT email provid\\
-Fortis Testosteron Testosterone Enanthate 250mgml &Medical Grade Cannabis Buds We stock high quality \\
-Generic Cialis is used to treat erection problems &1 BTC 2630.8 USD\\
-2 Kits Misoprostol 200mg with 4 Tablets \$75 \$150&Cialis(r) is in a class of drugs called Phosphodie\\
-Boldenone 300 New Boldenone 300 Olymp Labs&TZOLKIN CALENDAR, 140ug LSD Marquis PreTest\\
-(generic Viagra) unbranded generic Sildenafil citr&Formed in early 2016, OzDrugsExpress is the work o\\
-Mesterolone New Mesterolone Olymp Labs&500mg x 30 pills Price:$ 45.95 Per pill:$ 1.53 Ord\\
-manufactured by: Cipla Pharmaceuticals Compare to &Generic Kaletra contains a combination of lopinavi\\
-(generic Zoloft) Sertraline 25 mg tablets US\$31.05&/ roduct-category/cannabis/ Cannabis / 14g Amnesia\\
-Sustanon-250mg Testosterone Compound 250mgml&Welcome to SnowKings Good Quality Cocaine
+\multicolumn{1}{c}{\textbf{Illegal Onion}}\\[.1cm]
+Generic Viagra Oral Jelly is used for Erectile Dys&8/03/2017 - ATTN! Looks like SIGAINT email provid\\[.1cm]
+Fortis Testosteron Testosterone Enanthate 250mgml &Medical Grade Cannabis Buds We stock high quality \\[.1cm]
+Generic Cialis is used to treat erection problems &1 BTC 2630.8 USD\\[.1cm]
+2 Kits Misoprostol 200mg with 4 Tablets \$75 \$150&Cialis(r) is in a class of drugs called Phosphodie\\[.1cm]
+Boldenone 300 New Boldenone 300 Olymp Labs&TZOLKIN CALENDAR, 140ug LSD Marquis PreTest\\[.1cm]
+(generic Viagra) unbranded generic Sildenafil citr&Formed in early 2016, OzDrugsExpress is the work o\\[.1cm]
+Mesterolone New Mesterolone Olymp Labs&500mg x 30 pills Price:$ 45.95 Per pill:$ 1.53 Ord\\[.1cm]
+manufactured by: Cipla Pharmaceuticals Compare to &Generic Kaletra contains a combination of lopinavi\\[.1cm]
+(generic Zoloft) Sertraline 25 mg tablets US\$31.05&/ roduct-category/cannabis/ Cannabis / 14g Amnesia\\[.1cm]
+Sustanon-250mg Testosterone Compound 250mgml&Welcome to SnowKings Good Quality Cocaine[.1cm]
 \end{tabular}
-\caption{Example paragraphs (data instances) from the Legal Onion and Illegal Onion subsets of the Onion corpus (ten examples from each).
+\caption{Example paragraphs (data instances) from the Legal Onion and Illegal Onion subsets of the drug-related corpus (ten examples from each).
 Each paragraph is trimmed to the first 50 characters for space reasons.
 Distinguishing lexical features are easily observed, e.g.,
 names of legal and illegal drugs.
@@ -553,20 +555,20 @@ names of legal and illegal drugs.
 \small
 \begin{tabular}{l|l}
 \multicolumn{1}{c}{\textbf{Legal Onion}} &
-\multicolumn{1}{c}{\textbf{Illegal Onion}}\\
-( ADJ PROPN ) PROPN PROPN VERB NUM &3. We VERB VERB NOUN with ADV the A\\
-( ADJ PROPN , PROPN ) PROPN NUM NOU&NOUN . NOUN NOUN PROPN NOUN\\
-PROPN PROPN VERB PROPN NUM NOUN US\$&VERB NOUN NOUN : No ADJ than NUM NO\\
-PROPN PROPN PROPN NUM NOUN \$ NUM PR&Welcome! We VERB ADJ to VERB a ADJ \\
-NOUN NUM PROPN with NOUN - NOUN NUM&PROPN PROPN PROPN NOUN : ADJ NOUN V\\
-PROPN NUM PROPN PROPN \$ NUM&( PROPN ) NUM PROPN PROPN NUM PROPN\\
-ADJ PROPN NUM PROPN VERB US\$ NUM fo&NOUN PROPN NUM , NUM ADJ NOUN , ADJ\\
-( ADJ PROPN ) NOUN NUM NOUN NOUN . &You VERB ADV VERB NUM of these NOUN\\
-PROPN PROPN PROPN NUM PROPN PROPN -&/ NOUN - NOUN / NOUN PROPN / PROPN \\
-PROPN / PROPN PROPN PROPN / PROPN P&Any NOUN VERB us.\\
+\multicolumn{1}{c}{\textbf{Illegal Onion}}\\[.1cm]
+( ADJ PROPN ) PROPN PROPN VERB NUM &3. We VERB VERB NOUN with ADV the A\\[.1cm]
+( ADJ PROPN , PROPN ) PROPN NUM NOU&NOUN . NOUN NOUN PROPN NOUN\\[.1cm]
+PROPN PROPN VERB PROPN NUM NOUN US\$&VERB NOUN NOUN : No ADJ than NUM NO\\[.1cm]
+PROPN PROPN PROPN NUM NOUN \$ NUM PR&Welcome! We VERB ADJ to VERB a ADJ \\[.1cm]
+NOUN NUM PROPN with NOUN - NOUN NUM&PROPN PROPN PROPN NOUN : ADJ NOUN V\\[.1cm]
+PROPN NUM PROPN PROPN \$ NUM&( PROPN ) NUM PROPN PROPN NUM PROPN\\[.1cm]
+ADJ PROPN NUM PROPN VERB US\$ NUM fo&NOUN PROPN NUM , NUM ADJ NOUN , ADJ\\[.1cm]
+( ADJ PROPN ) NOUN NUM NOUN NOUN . &You VERB ADV VERB NUM of these NOUN\\[.1cm]
+PROPN PROPN PROPN NUM PROPN PROPN -&/ NOUN - NOUN / NOUN PROPN / PROPN \\[.1cm]
+PROPN / PROPN PROPN PROPN / PROPN P&Any NOUN VERB us.\\[.1cm]
 \end{tabular}
 \caption{Example paragraphs (data instances) from the Legal Onion and
-Illegal Onion subsets of the Onion corpus (ten examples from each),
+Illegal Onion subsets of the drug-related corpus (ten examples from each),
 where content words are replaced with their parts of speech.
 Each paragraph is trimmed to the first 50 characters for space reasons.
 Different instances are shown than in Figure~\ref{fig:examples}.
@@ -600,29 +602,32 @@ drugs domain generalize directly to the forums domain.
 
 \subsection{Results}
 
-The accuracy scores are reported in Table~\ref{tab:results_forums}.
+Accuracy scores are reported in Table~\ref{tab:results_forums}.
 
 \paragraph{Legal vs. illegal forums.}
 
 %The classification scores on the Onion forums data are reported in Table~\ref{tab:results_forums}.
 Results when training and testing on forums data are much worse for the neural-based systems,
-probably due to the much noisier and more varied nature of the data,
-containing different distributions of words in the training and testing
-subsets. However, the SVM model achieves an accuracy of 85.3\% in the full setting. The good results obtained by the model in the cases where the content words are dropped (drop. cont.) or replaced by part-of-speech tags (pos cont.) underscore the importance of the syntactic structure to the legal/illegal distinction in this case. 
+probably due to the much noisier and more varied nature of the data. 
+However, the SVM model achieves an accuracy of 85.3\% in the full setting. 
+Good performance is presented by this model even in the cases where the content words are dropped (drop. cont.) 
+or replaced by part-of-speech tags (pos cont.),
+underscoring the distinguishability of legal in illegal content based on shallow syntactic structure in this domain as well.
 
 \paragraph{Cross-domain evaluation.}
 
 Surprisingly, training on drugs data and evaluating on forums performs much
 better than %both previous experiments
 in the in-domain setting
-for four out of five classifiers,
-showing that while the forums data is noisy, it can be accurately classified
+for four out of five classifiers.
+This implies that while the forums data is noisy, it can be accurately classified into legal and illegal content
 when training on the cleaner drugs data. This also shows that illegal texts in Tor share common properties regardless of topical category.
-The lower results obtained by the Naive Bayes classifier where content words are dropped (drop cont.) suggest that some of
-these properties are lexical.
+The much lower results obtained by the models where content words are dropped (drop cont.) are converted to POS tags (pos cont.),
+namely less than 70\% as opposed to 89.7\% in the full setting, suggest that some of these properties are lexical.
 
 \begin{table}[t]
 \small
+\centering
 \begin{tabular}{lr}
 \multicolumn{2}{c}{\textbf{Legal Onion}}\\
 feature & ratio\\
@@ -695,13 +700,18 @@ While some strong features are entities, many are in fact function words.
 \section{Discussion} \label{sec:discussion}
 
   As shown in Section~\ref{sec:domain}, the Legal Onion and Illegal Onion domains
-  are quite distant in terms of word distribution and named entity wikification.
-  Moreover, named entity recognition and wikification work less well
-  for the illegal domain.
-  This has practical implications: we need to adapt our tools to deal with illegal Tor data, if we want in the future to successfully apply automatic tools there.
-  As evident from the classification experiments (Section~\ref{sec:classification}), however,
+  are quite distant in terms of word distribution and named entity Wikification.
+  Moreover, named entity recognition and Wikification work less well
+  for the illegal domain, and so do state-of-the-art neural text classification architectures (Section~\ref{sec:classification}),
+  which present inferior results to simple bag-of-words model. This is likely a result of the different vocabulary and syntax
+  of text from Onion domain, compared to standard domains used for training NLP models and pretrained word embeddings.
+  %   may also be a result of the pretrained word embeddings needing to adapt
+  This conclusion has practical implications: to effectively process text in Onion, considerable domain adaptation should be performed,
+  and effort should be made to annotate data and extend standard knowledge bases to cover this idiosyncratic domain.
+
+  Another conclusion from the classification experiments is that
   the Onion Legal and Illegal Onion texts are harder to distinguish than
-  eBay and Legal Onion, meaning that deciding on domain boundaries should consider syntactic structure as well.
+  eBay and Legal Onion, meaning that deciding on domain boundaries should consider syntactic structure, and not only lexical differences.
 
   \paragraph{Analysis of texts from the datasets.}
 
@@ -711,23 +721,22 @@ While some strong features are entities, many are in fact function words.
     respectively.
     Thus looking at the word forms is already a good solution for tackling this
     classification problem,
-    and using modern text classification (e.g., neural networks)
-    does not present an advantage in
-    terms of accuracy.
+    which gives further insight as to why modern text classification (e.g., neural networks)
+    do not present an advantage in     terms of accuracy.
 
   \paragraph{Analysis of manipulated texts.}
 
-    Given that replacing content words with their POS tags significantly drops
-    performance for classification of legal vs illegal texts
+    Given that replacing content words with their POS tags substantially lowers
+    performance for classification of legal vs illegal drug-related texts
     (see ``pos cont.'' in Section~\ref{sec:classification}),
-    we conclude that the distribution of parts of speech is not significantly
-    different between the domains,
-    and most differences can be attributed to content.
+    we conclude that the distribution of parts of speech alone is not as strong
+    a signal as the word forms for distinguishing between the domains.
+%    and most differences can be attributed to content.
     However, the SVM model 
     does manage to distinguish between the texts even in this setting.
     Indeed, Figure~\ref{fig:examples_poscontent} demonstrates that
     there are easily identifiable patterns distinguishing between the domains,
-    but a bag-of-words approach is not strong enough to identify them. 
+    but that a bag-of-words approach may not be sufficiently expressive to identify them. 
     %In other words, a classifier who manages to distinguish such texts not relying on the content words, then the information is there, and there are distinct linguistic attributes to the legal and illegal 
     %texts. 
 
@@ -741,26 +750,28 @@ While some strong features are entities, many are in fact function words.
     by the Naive Bayes classifier for the
     Legal Onion vs. Illegal Onion classification in this setting.
     Interestingly, many strong features are function words,
-    showing that even without spotting specific entities,
-    the classifier can easily distinguish the domains, as the linguistic structure itself
-    is quite different between them.
+    providing another indication of the different distribution of function words in the two domains.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion} \label{sec:conclusion}
 
   In this paper we identified several distinguishing factors between legal and illegal texts, taking
-  a variety of approaches, predictive (text classification), application-based (named entity wikification),
+  a variety of approaches, predictive (text classification), application-based (named entity Wikification),
   as well as an approach based on raw statistics. The results revealed that legal and illegal texts on the Darknet
-  are not only distinguishable in terms of their words, but also in terms of their linguistic structure, manifested
+  are not only distinguishable in terms of their words, but also in terms of their shallow syntactic structure, manifested
   in their POS tag and function word distributions. Distinguishing features between legal and illegal texts are
   consistent enough between domains, so that a classifier trained on drug-related websites can be straightforwardly
   ported to classify legal and illegal texts from another Darknet domain (forums).
-
-  Our results also show that in terms of vocabulary, legal texts and illegal texts are as distant from each other, as from
-  comparable texts from eBay.
-  This suggests that future work on distinguishing legal and illegal text should not use a setting where Onion pages
-    are distinguished from clear net pages, but rather explore this distinction among Tor websites, 
-    thus reducing potential artifacts.
+  Our results also show that in terms of vocabulary, legal texts and illegal texts are as distant from each other, 
+  as from comparable texts from eBay.
+ 
+  We conclude from this investigation that Onion pages provide an attractive testbed for studying distinguishing
+    factors between the text of legal illegal webpages, as they present challenges to off-the-shelf NLP tools,
+    but at the same time have sufficient self-consistency to allow studies of the linguistic signals that separate these classes.
+    % and automatically learned.
+%  Taken togetherThis suggests that future work on distinguishing legal and illegal text should not use a setting where Onion pages
+%    are distinguished from clear net pages, but rather explore this distinction among Tor websites, 
+%    thus reducing potential artifacts.
 
 
 \bibliography{acl2019}
