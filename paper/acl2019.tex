@@ -543,7 +543,7 @@ manufactured by: Cipla Pharmaceuticals Compare to &Generic Kaletra contains a co
 (generic Zoloft) Sertraline 25 mg tablets US\$31.05&/ roduct-category/cannabis/ Cannabis / 14g Amnesia\\[.1cm]
 Sustanon-250mg Testosterone Compound 250mgml&Welcome to SnowKings Good Quality Cocaine[.1cm]
 \end{tabular}
-\caption{Example paragraphs (data instances) from the Legal Onion and Illegal Onion subsets of the drug-related corpus (ten examples from each).
+\caption{Example paragraphs (data instances) from the training sets of the Legal Onion and Illegal Onion subsets of the drug-related corpus (ten examples from each).
 Each paragraph is trimmed to the first 50 characters for space reasons.
 Distinguishing lexical features are easily observed, e.g.,
 names of legal and illegal drugs.
@@ -567,7 +567,7 @@ ADJ PROPN NUM PROPN VERB US\$ NUM fo&NOUN PROPN NUM , NUM ADJ NOUN , ADJ\\[.1cm]
 PROPN PROPN PROPN NUM PROPN PROPN -&/ NOUN - NOUN / NOUN PROPN / PROPN \\[.1cm]
 PROPN / PROPN PROPN PROPN / PROPN P&Any NOUN VERB us.\\[.1cm]
 \end{tabular}
-\caption{Example paragraphs (data instances) from the Legal Onion and
+\caption{Example paragraphs (data instances) from the training sets of the Legal Onion and
 Illegal Onion subsets of the drug-related corpus (ten examples from each),
 where content words are replaced with their parts of speech.
 Each paragraph is trimmed to the first 50 characters for space reasons.
@@ -628,7 +628,7 @@ namely less than 70\% as opposed to 89.7\% in the full setting, suggest that som
 \begin{table}[t]
 \small
 \centering
-\begin{tabular}{lr}
+\begin{tabular}{p{21mm}r|}
 \multicolumn{2}{c}{\textbf{Legal Onion}}\\
 feature & ratio\\
 \hline
@@ -657,7 +657,7 @@ Cart & 0.118\\
 $>$ & 0.125\\
 take & 0.125\\
 \end{tabular}
-\begin{tabular}{lr}
+\begin{tabular}{p{21mm}r}
 \multicolumn{2}{c}{\textbf{Illegal Onion}}\\
 feature & ratio\\
 \hline
@@ -689,7 +689,7 @@ generic & 49.500\\
 \caption{Most indicative features for each class in NB classifier
 trained on Onion legal vs. illegal drugs,
 and the ratio between their number of occurrences in the ``illegal''
-class and the ``legal'' class.
+class and the ``legal'' class in the training set.
 Left: features with lowest ratio; right: features with highest ratio.
 While some strong features are entities, many are in fact function words.
 \label{tab:nb_weights}}
