@@ -22,7 +22,7 @@
 \usepackage{pgf}
 \usepackage{collcell}
 \usepackage[T1]{fontenc}
-%\aclfinalcopy % Uncomment this line for the final submission
+\aclfinalcopy % Uncomment this line for the final submission
 \def\aclpaperid{713} %  Enter the acl Paper ID here
 
 %\setlength\titlebox{5cm}
@@ -54,17 +54,14 @@
 
 \title{The Language of Legal and Illegal Activity on the Darknet}
 
-%\author{First Author \\
-%  Affiliation / Address line 1 \\
-%  Affiliation / Address line 2 \\
-%  Affiliation / Address line 3 \\
-%  \texttt{email@domain} \\\And
-%  Second Author \\
-%  Affiliation / Address line 1 \\
-%  Affiliation / Address line 2 \\
-%  Affiliation / Address line 3 \\
-%  \texttt{email@domain} \\}
 
+\author{
+	Leshem Choshen\thanks{Ordered alphabetically}, \And Dan Eldad\footnotemark[1], \And Daniel Hershcovich\footnotemark[1]\\	
+	School of Computer Science and Engineering \\
+	The Hebrew University of Jerusalem \\
+	\texttt{first.last@mail.huji.ac.il}\\
+	\And Elior Sulem\footnotemark[1]\And  Omri Abend \\
+}
 \date{}
 
 \begin{document}
@@ -129,8 +126,7 @@
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
   By experimenting on a different domain in Tor (user-generated content), we show that the legal/illegal distinction generalizes across domains.\footnote{Our
   data and code (preprocessing, analysis and classification)
-  are included in the supplementary material, and
-  will be made publicly available upon publication.}
+  are included in the supplementary material, and can be found in \url{https://github.com/huji-nlp/cyber}.}
 
   After discussing previous works in Section \ref{sec:related_work}, we detail the datasets used in Section \ref{sec:datasets}. Differences in the vocabulary and named entities between the classes are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} presents additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
   
