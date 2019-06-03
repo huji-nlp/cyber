@@ -303,7 +303,7 @@ Legal Onion & $50.8 \pm2.31$
 
     Using spaCy's\footnote{\url{https://spacy.io}}
     named entity recognition, we first extract all named
-    entity mentions from all the corpora. 
+    entity mentions from all the corpora \footnote{We used all named entity types (and not only “product”) to gain a greater perspective of the differences between the domains regarding named entities. For example, even the prevalence of named entities that are not directly drug related could be used to differentiate between domains.}. 
     We then search for relevant Wikipedia entries for each named entity using the DBpedia Ontology API \cite{isem2013daiber}.
     For each domain we compute the total number of named entities and the percentage with corresponding Wikipedia articles.
 
