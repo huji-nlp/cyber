@@ -303,7 +303,7 @@ Legal Onion & $50.8 \pm2.31$
 
     Using spaCy's\footnote{\url{https://spacy.io}}
     named entity recognition, we first extract all named
-    entity mentions from all the corpora.\footnote{We use all named entity types provided by spaCy (and not only ``Product'') to get a broader perspective on the differences between the domains in terms of their named entities.} 
+    entity mentions from all the corpora.\footnote{We use all named entity types provided by spaCy (and not only ``Product'') to get a broader perspective on the differences between the domains in terms of their named entities. For example, the named entity “Peru” (of type “GPE”) appears multiple times in onion sites and is meant to imply the quality of a drug.} 
     We then search for relevant Wikipedia entries for each named entity using the DBpedia Ontology API \cite{isem2013daiber}.
     For each domain we compute the total number of named entities and the percentage with corresponding Wikipedia articles.
 
@@ -777,7 +777,7 @@ While some strong features are entities, many are in fact function words.
 
 \section*{Acknowledgments}
 
-This work was supported by the Israel Science Foundation (grant no. 929/17) and by the HUJI Cyber Security Research Center in conjunction with the Israel National Cyber Bureau in the Prime Minister's Office.
+This work was supported by the Israel Science Foundation (grant no. 929/17) and by the HUJI Cyber Security Research Center in conjunction with the Israel National Cyber Bureau in the Prime Minister's Office. We thank Wesam Al Nabki, Eduardo Fidalgo, Enrique Alegre, and Ivan de Paz for providing us their dataset of onion sites.
 
 \bibliography{acl2019}
 \bibliographystyle{acl_natbib}
