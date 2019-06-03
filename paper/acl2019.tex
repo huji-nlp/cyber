@@ -81,9 +81,7 @@
     content as a control condition.
   Taking drug-related websites as a test case, we find that texts for selling legal and illegal drugs
     have several linguistic characteristics that distinguish them from one another, as well as from 
-    the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.\footnote{Our
-  data and code (preprocessing, analysis and classification)
-  are included in the supplementary material, and can be found in \url{https://github.com/huji-nlp/cyber}.}
+    the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.\footnote{Our code can be found in \url{https://github.com/huji-nlp/cyber}. Our data is available upon request.}
 \end{abstract}
 
 
@@ -254,7 +252,7 @@ identical if they share all but numbers (to avoid an over-representation of some
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Domain Differences}\label{sec:domain}
 
-As pointed out by \citet{Plank11}, there is no common ground of what constitutes a domain. Domain differences are attributed in some works to differences in vocabulary \citep{Blitzer06} and in other works to differences in style, genre and medium \citep{McClosky2010}. While here we adopt an existing classification, based on the DUTA-10K corpus, 
+As pointed out by \citet{Plank11}, there is no common ground as to what constitutes a domain. Domain differences are attributed in some works to differences in vocabulary \citep{Blitzer06} and in other works to differences in style, genre and medium \citep{McClosky2010}. While here we adopt an existing classification, based on the DUTA-10K corpus, 
 we show in which way and to what extent it translates to distinct properties of the texts. 
 This question bears on the possibility of distinguishing between legal and illegal drug-related websites based on their text alone (i.e., without recourse to additional information, such as meta-data or network structure).
     
@@ -333,7 +331,7 @@ were being falsely picked up by spaCy.\footnote{We
 consider these to be false positives as they are names of substances but not specific products, 
 and hence not named entities. See \url{https://spacy.io/api/annotation\#section-named-entities}}
 
-To summarize, results suggest both that (1) legal and illegal texts are different in terms of their named entities and their coverage in Wikipedia, as well as that (2) standard NLP tools for named entity recognition (and potentially other text understanding tasks), and standard databases, require considerable adaptation to be fully functional on text related to illegal activity.
+To summarize, results suggest both that (1) legal and illegal texts are different in terms of their named entities and their coverage in Wikipedia, as well as that (2) standard databases and standard NLP tools for named entity recognition (and potentially other text understanding tasks), require considerable adaptation to be fully functional on text related to illegal activity.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -359,7 +357,7 @@ To classify paragraphs into categories, we experiment with five classifiers:
 \begin{itemize}
   \item NB (Naive Bayes) classifier
     with binary bag-of-words features, i.e., indicator feature for each word. This simple classifier
-    features  frequently in work on text classification in the DarkNet.
+    features  frequently in work on text classification in the Darknet.
   \item SVM (support vector machine) classifier with an RBF kernel,
   also with BoW features that count the number of words of each type.
   \item BoE (bag-of-embeddings): each word is represented with its 100-dimensional
@@ -576,6 +574,7 @@ Each paragraph is trimmed to the first 50 characters for space reasons.
 Different instances are shown than in Figure~\ref{fig:examples}.
 Although harder to identify, distinguishing patterns are observable in this case too.
 \label{fig:examples_poscontent}}
+\vspace{-.2cm}
 \end{figure*}
 
 \section{Illegality Detection Across Domains} \label{sec:cross_domains}
@@ -759,7 +758,7 @@ While some strong features are entities, many are in fact function words.
 
   In this paper we identified several distinguishing factors between legal and illegal texts, taking
   a variety of approaches, predictive (text classification), application-based (named entity Wikification),
-  as well as an approach based on raw statistics. The results revealed that legal and illegal texts on the Darknet
+  as well as an approach based on raw statistics. Our results revealed that legal and illegal texts on the Darknet
   are not only distinguishable in terms of their words, but also in terms of their shallow syntactic structure, manifested
   in their POS tag and function word distributions. Distinguishing features between legal and illegal texts are
   consistent enough between domains, so that a classifier trained on drug-related websites can be straightforwardly
@@ -768,7 +767,7 @@ While some strong features are entities, many are in fact function words.
   as from comparable texts from eBay.
  
   We conclude from this investigation that Onion pages provide an attractive testbed for studying distinguishing
-    factors between the text of legal illegal webpages, as they present challenges to off-the-shelf NLP tools,
+    factors between the text of legal and illegal webpages, as they present challenges to off-the-shelf NLP tools,
     but at the same time have sufficient self-consistency to allow studies of the linguistic signals that separate these classes.
     % and automatically learned.
 %  Taken togetherThis suggests that future work on distinguishing legal and illegal text should not use a setting where Onion pages
