@@ -51,7 +51,7 @@
 \newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
 
 % stretch all tables to fit the 8 pages exactly (it looks more professional)
-\def\arraystretch{1.075}
+\def\arraystretch{1.072}
 
 \title{The Language of Legal and Illegal Activity on the Darknet}
 
@@ -363,8 +363,10 @@ To classify paragraphs into categories, we experiment with five classifiers:
   GloVe vector \cite{pennington2014glove}. BoE$_\mathrm{sum}$ (BoE$_\mathrm{average}$) sums (averages) 
   the embeddings for all words in the paragraph to a single vector, and applies a 100-dimensional fully-connected layer with
   ReLU non-linearity and dropout $p=0.2$. The word vectors are not updated during training.
+  Vectors for words not found in GloVe are set randomly
+  $\sim\mathcal{N}(\mu_\textrm{GloVe},\sigma^2_\textrm{GloVe})$.
   \item seq2vec: same as BoE, but instead of averaging word vectors,
-  we apply a BiLSTM to the word vectors, and take the concatenated
+  we apply a single-layer 100-dimensional BiLSTM to the word vectors, and take the concatenated
   final hidden vectors from the forward and backward part as the input to a
   fully-connected layer (same hyper-parameters as above).
   \item attention: we replace the word representations with contextualized
