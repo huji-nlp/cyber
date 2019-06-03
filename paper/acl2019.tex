@@ -495,10 +495,10 @@ obtained by the SVM classifier, suggesting that the domains are distinguishable 
 based on the function word distribution alone.
 
 Surprisingly, the more sophisticated neural classifiers perform worse than Naive Bayes.
-This is despite using pretrained word embeddings,
+This is despite using pre-trained word embeddings,
 and architectures that have proven beneficial for text classification.
 It is likely that this is due to the small size of the training data, as well as the specialized
-vocabulary found in this domain, which is unlikely to be supported well by the pretrained embeddings (see \S\ref{sec:ner}).
+vocabulary found in this domain, which is unlikely to be supported well by the pre-trained embeddings (see \S\ref{sec:ner}).
 
 
 %It may be that training specialized word embeddings for Onion sites will improve results (if large enough datasets can be scraped)
@@ -706,8 +706,8 @@ While some strong features are entities, many are in fact function words.
   Moreover, named entity recognition and Wikification work less well
   for the illegal domain, and so do state-of-the-art neural text classification architectures (Section~\ref{sec:classification}),
   which present inferior results to simple bag-of-words model. This is likely a result of the different vocabulary and syntax
-  of text from Onion domain, compared to standard domains used for training NLP models and pretrained word embeddings.
-  %   may also be a result of the pretrained word embeddings needing to adapt
+  of text from Onion domain, compared to standard domains used for training NLP models and pre-trained word embeddings.
+  %   may also be a result of the pre-trained word embeddings needing to adapt
   This conclusion has practical implications: to effectively process text in Onion, considerable domain adaptation should be performed,
   and effort should be made to annotate data and extend standard knowledge bases to cover this idiosyncratic domain.
 
