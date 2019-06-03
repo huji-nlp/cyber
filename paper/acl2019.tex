@@ -81,7 +81,9 @@
     content as a control condition.
   Taking drug-related websites as a test case, we find that texts for selling legal and illegal drugs
     have several linguistic characteristics that distinguish them from one another, as well as from 
-    the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.
+    the control condition, among them the distribution of POS tags, and the coverage of their named entities in Wikipedia.\footnote{Our
+  data and code (preprocessing, analysis and classification)
+  are included in the supplementary material, and can be found in \url{https://github.com/huji-nlp/cyber}.}
 \end{abstract}
 
 
@@ -91,11 +93,10 @@
 
 
 
-  The Darknet refers to the subset of Internet sites and pages that are not
-  indexed by search engines.
+  The term ``Darknet'' refers to the subset of Internet sites and pages that are not indexed by search engines.
   Due to the their use of the ``.onion'' top-level domain, these websites are
   often referred to as ``Onion sites'', and are reachable via the Tor network
-  anonymously.
+  anonymously.\oa{but Darknet is not synonymous with Tor right?}
   
   Under the cloak of anonymity, the Darknet harbors much illegal activity \citep{moore2016cryptopolitik}.
   Applying NLP tools to text from the Darknet is thus important for effective law enforcement and intelligence.
@@ -123,12 +124,10 @@
 	terms of their syntactic structure. Third, we find that legal and illegal texts are roughly as distinguishable from one another as legal 
 	texts and eBay pages are (both in terms of their words and their POS tags). 
 	The latter point suggests that legal and illegal texts can be considered distinct domains, which explains why they can be 
-	automatically classified, but also implies that applying NLP tools to this domain is likely to face the obstacles of domain adaptation.  
+	automatically classified, but also implies that applying NLP tools to Darknet texts is likely to face the obstacles of domain adaptation.  
   Indeed, we show that named entities in illegal pages are covered less well by Wikipedia, i.e., Wikification works less well on them.
   This suggests that for high-performance text understanding, specialized knowledge bases and tools may be needed for processing texts from the Darknet.
-  By experimenting on a different domain in Tor (user-generated content), we show that the legal/illegal distinction generalizes across domains.\footnote{Our
-  data and code (preprocessing, analysis and classification)
-  are included in the supplementary material, and can be found in \url{https://github.com/huji-nlp/cyber}.}
+  By experimenting on a different domain in Tor (user-generated content), we show that the legal/illegal distinction generalizes across domains.
 
   After discussing previous works in Section \ref{sec:related_work}, we detail the datasets used in Section \ref{sec:datasets}. Differences in the vocabulary and named entities between the classes are analyzed in Section \ref{sec:domain}, before the presentation of the classification experiments (Section \ref{sec:classification}). Section \ref{sec:cross_domains} presents additional experiments, which explore cross-domain classification. We further analyze and discuss the findings in Section \ref{sec:discussion}.
   
