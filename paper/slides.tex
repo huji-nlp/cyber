@@ -4,16 +4,16 @@
 \usetheme{Warsaw}
 \useoutertheme{infolines} 
 
-\usepackage{fontspec}
+%\usepackage{fontspec}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{bbm}
 \usepackage{bm}
-\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+%\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
 \usepackage{nicefrac}
 \usepackage{color}
-\usepackage{perpage}
+%\usepackage{perpage}
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{adjustbox}
@@ -26,22 +26,22 @@
 \usepackage{booktabs}
 \usepackage{color,soul}
 
-\usetikzlibrary{arrows.meta,graphs,graphs.standard,graphdrawing,quotes,shapes}
-\usegdlibrary{layered,trees}
+%\usetikzlibrary{arrows.meta,graphs,graphs.standard,graphdrawing,quotes,shapes}
+%\usegdlibrary{layered,trees}
 
-\tikzset{
-  invisible/.style={opacity=0},
-  visible on/.style={alt={#1{}{invisible}}},
-  alt/.code args={<#1>#2#3}{%
-    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
-  },
-}
-
-\captionsetup{labelformat=empty}
-\newcommand{\parser}[1]{TUPA\textsubscript{#1}}
-
-\newfontfamily\hebfont[Script=Hebrew, Scale=MatchUppercase]{FreeSans}
-\newcommand{\heb}[1]{\bgroup\textdir TRT\hebfont #1\egroup}
+%\tikzset{
+%  invisible/.style={opacity=0},
+%  visible on/.style={alt={#1{}{invisible}}},
+%  alt/.code args={<#1>#2#3}{%
+%    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+%  },
+%}
+%
+%\captionsetup{labelformat=empty}
+%\newcommand{\parser}[1]{TUPA\textsubscript{#1}}
+%
+%\newfontfamily\hebfont[Script=Hebrew, Scale=MatchUppercase]{FreeSans}
+%\newcommand{\heb}[1]{\bgroup\textdir TRT\hebfont #1\egroup}
 
 \newcommand{\ucca}[1]{\textcolor{gray}{\textbf{\textsf{#1}}}}
 \newcommand{\sst}[1]{\textsc{#1}}
@@ -63,55 +63,55 @@
 \definecolor{lavender}{rgb}{0.65,0.55,1.0}
 
 
-\makeatletter
-\pgfdeclareshape{vector}{
-      \inheritsavedanchors[from={rectangle}]
-      \inheritbackgroundpath[from={rectangle}]
-      \inheritanchorborder[from={rectangle}]
-      \foreach \x in {center,north east,north west,north,south,south east,south west,east,west}{
-        \inheritanchor[from={rectangle}]{\x}
-      }
+%\makeatletter
+%\pgfdeclareshape{vector}{
+%      \inheritsavedanchors[from={rectangle}]
+%      \inheritbackgroundpath[from={rectangle}]
+%      \inheritanchorborder[from={rectangle}]
+%      \foreach \x in {center,north east,north west,north,south,south east,south west,east,west}{
+%        \inheritanchor[from={rectangle}]{\x}
+%      }
+%
+%    \backgroundpath{
+%      \pgftransformshift{\pgfpoint{-16pt}{-4pt}}
+%          \draw[rounded corners=2pt] (0,0) rectangle (32pt,8pt);
+%    }
+%
+%    \beforebackgroundpath{
+%      \draw[step=8pt,help lines,-] (8pt,.1pt) grid (24pt,7.9pt);
+%    }
+%}
+%\pgfdeclareshape{vector}{
+%      \inheritsavedanchors[from={rectangle}]
+%      \inheritbackgroundpath[from={rectangle}]
+%      \inheritanchorborder[from={rectangle}]
+%      \foreach \x in {center,north east,north west,north,south,south east,south west,east,west}{
+%        \inheritanchor[from={rectangle}]{\x}
+%      }
+%
+%    \backgroundpath{
+%      \pgftransformshift{\pgfpoint{-16pt}{-4pt}}
+%          \draw[rounded corners=2pt] (0,0) rectangle (32pt,8pt);
+%    }
+%
+%    \beforebackgroundpath{
+%      \draw[step=8pt,help lines,-] (8pt,.1pt) grid (24pt,7.9pt);
+%    }
+%}
+%\makeatother
+%
+%
+%% for confusion matrix
+%\newcommand{\ApplyGradient}[1]{%
+%  \pgfmathsetmacro{\PercentColor}{(#1-0)/63.88}%
+%  \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
+%  %\textcolor{black!\PercentColor}{#1}
+%  \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
+%}
+%\newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
 
-    \backgroundpath{
-      \pgftransformshift{\pgfpoint{-16pt}{-4pt}}
-          \draw[rounded corners=2pt] (0,0) rectangle (32pt,8pt);
-    }
 
-    \beforebackgroundpath{
-      \draw[step=8pt,help lines,-] (8pt,.1pt) grid (24pt,7.9pt);
-    }
-}
-\pgfdeclareshape{vector}{
-      \inheritsavedanchors[from={rectangle}]
-      \inheritbackgroundpath[from={rectangle}]
-      \inheritanchorborder[from={rectangle}]
-      \foreach \x in {center,north east,north west,north,south,south east,south west,east,west}{
-        \inheritanchor[from={rectangle}]{\x}
-      }
-
-    \backgroundpath{
-      \pgftransformshift{\pgfpoint{-16pt}{-4pt}}
-          \draw[rounded corners=2pt] (0,0) rectangle (32pt,8pt);
-    }
-
-    \beforebackgroundpath{
-      \draw[step=8pt,help lines,-] (8pt,.1pt) grid (24pt,7.9pt);
-    }
-}
-\makeatother
-
-
-% for confusion matrix
-\newcommand{\ApplyGradient}[1]{%
-  \pgfmathsetmacro{\PercentColor}{(#1-0)/63.88}%
-  \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
-  %\textcolor{black!\PercentColor}{#1}
-  \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
-}
-\newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
-
-
-\MakePerPage{footnote}
+%\MakePerPage{footnote}
 
 % Outline slides
 \AtBeginSection[]
@@ -137,16 +137,33 @@ The Hebrew University of Jerusalem}
 \frametitle{Introduction}
 \end{frame}
 
+{\usebackgroundtemplate{
+	\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil\includegraphics[width=0.8\paperwidth]{DarkNet}\hfil}}	
+	}%
 \begin{frame}
 	\frametitle{What is the DarkNet}
+	% When presenting some examples might be in order
 \end{frame}
-
+}
 \begin{frame}
 	\frametitle{Data - existing and gathered}
+	\begin{itemize}
+		\item DUTA-10K, illegal vs. legal drugs (Al Nabki et al. 2019)
+		\item manually acquired eBay products of drugs weed etc.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Domain - vocabulary}
+	Jensen-Shannon divergence and Variational distance between word frequencies.
+	Self distances are small while pair distances in Legal-Illegal-eBay are high.
+	
+	Legal and Illegal should be considered different domains, despite being both DarkNet material.
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.3\textwidth]{3different.png}
+	\end{figure}
+
 \end{frame}
 
 \begin{frame}
