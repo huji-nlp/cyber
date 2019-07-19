@@ -165,7 +165,23 @@ Elior Sulem and Omri Abend }
 \end{frame}
 
 \begin{frame}
-	\frametitle{Models}
+	\frametitle{Classifiers}
+	
+	\begin{minipage}{.7\textwidth}
+	\begin{itemize}\setlength\itemsep{1em}
+		\item NB: Naive Bayes
+		\item SVM: Support Vector Machine
+		\item BoE: sum/average GloVe + MLP
+		\item seq2vec: BiLSTM + MLP
+		\item attention: ELMo + BCN (self-attention)
+	\end{itemize}
+	\end{minipage}
+	\begin{minipage}{.29\textwidth}
+	\centering
+	\hspace{-2cm}\includegraphics[trim={3cm 3cm 3cm 0},clip,width=1.5\textwidth]{FeedForwardAttention.png}
+	
+	\includegraphics[width=.7\textwidth]{elmo.jpg}
+	\end{minipage}
 \end{frame}
 
 \begin{frame}
