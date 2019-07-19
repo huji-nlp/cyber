@@ -23,6 +23,10 @@
 \usepackage{booktabs}
 \usepackage{soul}
 
+\definecolor{yellow}{rgb}{0.89, 0.61, 0.06}
+\definecolor{green}{rgb}{0.0, 0.5, 0.0}
+\definecolor{red}{rgb}{0.7, 0.11, 0.11}
+
 % Outline slides
 \AtBeginSection[]
 {\begin{frame} \frametitle{Outline} \tableofcontents[currentsection,currentsubsection] \end{frame}}
@@ -96,6 +100,11 @@ Elior Sulem and Omri Abend }
 \begin{frame}
 	\frametitle{Control Data: eBay}
 	Manually acquired eBay products of drugs weed etc. % change "etc." to actual list
+	\vfill
+	
+	\begin{center}
+	\includegraphics[width=.5\textwidth]{ebay.png}
+	\end{center}
 \end{frame}
 
 \begin{frame}
@@ -105,8 +114,8 @@ Elior Sulem and Omri Abend }
 	\begin{tabular}{c|cc}
 	& Public Web & Dark Web \\ 
 	\hline
-	Legal & eBay & Legal Onion \\
-	Illegal & & Illegal Onion
+	Legal & \textbf{\color{yellow} eBay} & \textbf{\color{green} Legal Onion} \\
+	Illegal & & \textbf{\color{red} Illegal Onion}
 	\end{tabular}
 	\end{center}
 \end{frame}
@@ -141,7 +150,18 @@ Elior Sulem and Omri Abend }
 
 \begin{frame}
 	\frametitle{Classes}
-	\[\text{ \{eBay, Legal Onion, Illegal Onion\} }\]
+	We identified three domains:
+	\begin{center}
+	\{ \textbf{\color{yellow} eBay}, \textbf{\color{green} Legal Onion}, \textbf{\color{red} Illegal Onion} \}
+	\end{center}
+	\vfill
+	
+	What are the linguistic features distinguishing them?
+	\vfill
+	
+	\begin{center}
+	\includegraphics[width=.3\textwidth]{svm.png}
+	\end{center}
 \end{frame}
 
 \begin{frame}
