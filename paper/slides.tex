@@ -187,17 +187,44 @@ Elior Sulem and Omri Abend }
 \begin{frame}
 	\frametitle{Manipulations}
 	
-	\begin{minipage}{.7\textwidth}
 	\begin{itemize}\setlength\itemsep{1em}
 	    \item Full original text
+	\end{itemize}
+	\vfill
+	
+	\begin{minipage}{.35\textwidth}
+	\begin{itemize}\setlength\itemsep{1em}
 		\item Drop \textbf{content} words
 		\item Drop \textbf{function} words
+	\end{itemize}
+	\end{minipage}
+	\begin{minipage}{.59\textwidth}
+	\begin{itemize}\setlength\itemsep{1em}
 		\item Replace \textbf{content} words with their POS
 		\item Replace \textbf{function} words with their POS
 	\end{itemize}
 	\end{minipage}
-	\begin{minipage}{.29\textwidth}
-	\end{minipage}
+	\vfill
+	
+    \[\{\textsc{adj, adv, noun, propn, verb, x, num}\}\]
+	\vfill
+	\pause
+	
+	{\color{green}
+	\setlength{\tabcolsep}{2.3pt}
+	\begin{tabular}{ccccccccccc}
+	Generic&Viagra&(&Oral&Jelly&)&is&used&for&Erectile&Dysfunction\\
+	\small\textsc{propn} & \small\textsc{propn} &(& \small\textsc{propn} & \small\textsc{propn} &)& \small\textsc{verb} & \small\textsc{verb} & for & \small\textsc{propn} & \small\textsc{propn}
+	\end{tabular}}
+	\vfill
+	\pause
+	
+	{\color{red}
+	\setlength{\tabcolsep}{9.5pt}
+	\begin{tabular}{ccccccc}
+	Welcome&to&SnowKings&Good&Quality&Cocaine&!\\
+	\small\textsc{verb} & to & \small\textsc{propn} & \small\textsc{propn} & \small\textsc{propn} & \small\textsc{propn} & !
+	\end{tabular}}
 \end{frame}
 
 \begin{frame}
