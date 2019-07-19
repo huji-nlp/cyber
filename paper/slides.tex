@@ -143,7 +143,10 @@ Elior Sulem and Omri Abend }
 
 \begin{frame}
 	\frametitle{Named Entities and Wikification}
-	% TODO
+	Using spaCy we extracted named entities from all corpora
+	We then applied a wikification technique to guage the percentage of NE's with a corresponding Wikipedia article
+	Legal sites from Onion found substantially more wikifiable, eBay and illegal Onion sites relatively similar
+	SpaCy had trouble correctly identifying NEs suggesting standard NER tools are not ideal with texts regarding illegal activities
 \end{frame}
 
 \section{Classification: Legal \& Illegal Drugs, eBay}
