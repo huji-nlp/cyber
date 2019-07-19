@@ -150,11 +150,15 @@ Elior Sulem and Omri Abend }
 
 \begin{frame}
 	\frametitle{Classes}
-	We identified three domains:
+	We identified three domains. Two binary classification settings:
 	\begin{center}
-	\{ \textbf{\color{yellow} eBay}, \textbf{\color{green} Legal Onion}, \textbf{\color{red} Illegal Onion} \}
+	\{ \textbf{\color{yellow} eBay}, \textbf{\color{green} Legal Onion} \}
+	\vfill
+	
+	\{ \textbf{\color{green} Legal Onion}, \textbf{\color{red} Illegal Onion} \}
 	\end{center}
 	\vfill
+	\pause
 	
 	What are the linguistic features distinguishing them?
 	\vfill
@@ -169,7 +173,7 @@ Elior Sulem and Omri Abend }
 	
 	\begin{minipage}{.7\textwidth}
 	\begin{itemize}\setlength\itemsep{1em}
-		\item NB: Naive Bayes
+		\item NB: Naive Bayes (bag of words)
 		\item SVM: Support Vector Machine
 		\item BoE: sum/average GloVe + MLP
 		\item seq2vec: BiLSTM + MLP
