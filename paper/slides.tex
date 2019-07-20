@@ -27,6 +27,15 @@
 \definecolor{green}{rgb}{0.0, 0.5, 0.0}
 \definecolor{red}{rgb}{0.7, 0.11, 0.11}
 
+% for results matrix
+\newcommand{\ApplyGradient}[1]{%
+  \pgfmathsetmacro{\PercentColor}{ifthenelse(#1-0 > 0, (#1-21)*.8, 0)}%
+  \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
+  %\textcolor{black!\PercentColor}{#1}
+  \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
+}
+\newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
+
 % Outline slides
 \AtBeginSection[]
 {\begin{frame} \frametitle{Outline} \tableofcontents[currentsection,currentsubsection] \end{frame}}
@@ -232,11 +241,47 @@ Elior Sulem and Omri Abend }
 \end{frame}
 
 \begin{frame}
-	\frametitle{legal DarkNet vs. eBay}
+	\frametitle{Results: eBay vs. Legal Onion Drugs}
+	
+	\begin{center}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\begin{tabular}{l *{5}{R}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{function}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{function}}\\
+		\hline
+		NB & 91.4 & 57.8 & 90.5 & 56.9 & 92.2\\
+		SVM & 63.8 & 64.7 & 63.8 & 68.1 & 63.8\\
+		BoE$_\mathrm{sum}$ & 66.4 & 56.0 & 63.8 & 50.9 & 76.7\\
+		BoE$_\mathrm{average}$ & 75.0 & 55.2 & 59.5 & 50.0 & 75.0\\
+		seq2vec & 73.3 & 53.8 & 65.5 & 65.5 & 75.0\\
+		attention & 82.8 & 57.5 & 85.3 & 62.1 & 82.8
+		\end{tabular}
+	\end{center}
 \end{frame}
 
 \begin{frame}
-	\frametitle{legal Drugs vs. illegal}
+	\frametitle{Results: Legal vs. Illegal Onion Drugs}
+	
+	\begin{center}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\begin{tabular}{l *{5}{R}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{function}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{function}}\\
+		\hline
+		NB & 77.6 & 53.4 & 87.9 & 51.7 & 77.6\\
+		SVM & 63.8 & 66.4 & 63.8 & 70.7 & 63.8\\
+		BoE$_\mathrm{sum}$ & 52.6 & 61.2 & 74.1 & 50.9 & 51.7\\
+		BoE$_\mathrm{average}$ & 57.8 & 57.8 & 52.6 & 55.2 & 50.9\\
+		seq2vec & 56.9 & 55.0 & 54.3 & 59.5 & 49.1\\
+		attention & 64.7 & 51.4 & 62.9 & 55.2 & 69.0
+		\end{tabular}
+	\end{center}
 \end{frame}
 
 \section{Cross-Domain Classification: Legal \& Illegal Forums}
@@ -246,6 +291,50 @@ Elior Sulem and Omri Abend }
 	Forum: multi-topic\footnote{\textit{We assign Forum label to the multitopic forums unless the whole forum is related to
 a single topic. e.g. a hacking forum was assigned
 to Hacking class instead of Forum.}} \cite{AlNabki17}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Results: Legal vs. Illegal Onion Forums}
+	
+	\begin{center}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\begin{tabular}{l *{5}{R}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{function}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{function}}\\
+		\hline
+		NB & 74.1 & 50.9 & 78.4 & 50.9 & 72.4\\
+		SVM & 85.3 & 75.9 & 56.0 & 81.9 & 81.0\\
+		BoE$_\mathrm{sum}$ & 25.9 & 32.8 & 21.6 & 36.2 & 35.3\\
+		BoE$_\mathrm{average}$ & 40.5 & 42.2 & 31.9 & 48.3 & 53.4\\
+		seq2vec & 50.0 & 48.9 & 50.9 & 28.4 & 51.7\\
+		attention & 31.0 & 37.2 & 33.6 & 27.6 & 30.2
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Results: Trained on Drugs, Tested on Forums}
+	
+	\begin{center}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\begin{tabular}{l *{5}{R}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{function}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{content}}
+		& \multicolumn{1}{c}{\bf \rotatebox{90}{pos}\rotatebox{90}{function}}\\
+		\hline
+		NB & 78.4 & 63.8 & 89.7 & 63.8 & 79.3\\
+		SVM & 62.1 & 69.0 & 54.3 & 69.8 & 62.1\\
+		BoE$_\mathrm{sum}$ & 45.7 & 50.9 & 49.1 & 50.9 & 50.0\\
+		BoE$_\mathrm{average}$ & 49.1 & 51.7 & 51.7 & 52.6 & 58.6\\
+		seq2vec & 51.7 & 61.1 & 51.7 & 54.3 & 57.8\\
+		attention & 65.5 & 59.2 & 65.5 & 50.9 & 66.4
+		\end{tabular}
+	\end{center}
 \end{frame}
 
 \section*{}
