@@ -209,12 +209,29 @@ Package include:
 
 \begin{frame}
 	\frametitle{Vocabulary}
-	Jensen-Shannon divergence and variational distance between word frequencies.
-	Self distances are small while pair distances in Legal-Illegal-eBay are high.
+	Distance between word frequencies distributions, measured by:
+	\begin{itemize}
+	\item Jensen-Shannon divergence.
+	\item L1 distance.
+	\end{itemize}
 	
-	Legal and Illegal should be considered different domains, despite being both Darknet material.
-	% TODO: some quantitative results
-
+	Splitting each dataset in half, we find small ``self-distances'', \\
+	but the different domains are about equidistant.
+	\vfill
+	\pause
+	
+	\begin{center}
+	\begin{tikzpicture}
+	\draw (0,1) node[anchor=north]{eBay}
+	  -- (2,0) node[anchor=north]{Onion Legal}
+	  -- (2,2) node[anchor=south]{Onion Illegal}
+	  -- cycle;
+	\end{tikzpicture}
+	\end{center}
+	\vfill
+	\pause
+	
+	Legal and illegal Onion should be considered different domains.
 \end{frame}
 
 \begin{frame}
