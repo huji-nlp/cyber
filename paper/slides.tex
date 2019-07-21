@@ -192,13 +192,7 @@ Elior Sulem and Omri Abend }
 \begin{frame}
 	\frametitle{Named Entities and Wikification}
 	
-	NE extraction with spaCy.
-	\vfill
-
-	Applied wikification technique (how many NEs had Wikipedia articles)
-	\vfill
-
-	spaCy had trouble correctly identifying NEs suggesting standard NER tools not ideal with texts regarding illegal activities
+	NE extraction [spaCy] + Wikification \cite{bunescu2006using}.
 	\vfill
 	
 	\begin{center}
@@ -210,6 +204,11 @@ Elior Sulem and Omri Abend }
 	Legal Onion & $50.8 \pm2.31$
 	\end{tabular}
 	\end{center}
+	\vfill
+
+	By manual inspection, NE precision and recall are low for Illegal Onion.
+	
+	$\Rightarrow$ Standard NLP is not suited for this domain.
 \end{frame}
 
 \section{Classification: Legal \& Illegal Drugs, eBay}
