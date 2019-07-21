@@ -191,7 +191,16 @@ Elior Sulem and Omri Abend }
 
 \begin{frame}
 	\frametitle{Named Entities and Wikification}
-	\begin{table}
+	
+	NE extraction with spaCy.
+	\vfill
+
+	Applied wikification technique (how many NEs had Wikipedia articles)
+	\vfill
+
+	spaCy had trouble correctly identifying NEs suggesting standard NER tools not ideal with texts regarding illegal activities
+	\vfill
+	
 	\begin{center}
 	\begin{tabular}{l|r}
 	 & \% Wikifiable\\
@@ -201,14 +210,6 @@ Elior Sulem and Omri Abend }
 	Legal Onion & $50.8 \pm2.31$
 	\end{tabular}
 	\end{center}
-	\caption{Average percentage of wikifiable named entities in a website per domain, with standard error.\label{ta:wiki}}
-	\end{table}
-	
-	NE extraction with spaCy
-
-	Applied wikification technique (how many NEs had Wikipedia articles)
-
-	SpaCy had trouble correctly identifying NEs suggesting standard NER tools not ideal with texts regarding illegal activities
 \end{frame}
 
 \section{Classification: Legal \& Illegal Drugs, eBay}
