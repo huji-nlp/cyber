@@ -117,7 +117,10 @@ Elior Sulem and Omri Abend }
 
 \begin{frame}
 	\frametitle{Control Data: eBay}
-	Manually acquired eBay products of drugs weed etc. % change "etc." to actual list
+	Product descriptions acquired by searching for drug-related terms.
+	\vfill
+	
+	Do not sell actual drugs, but rather drug-related products.
 	\vfill
 	
 	\begin{center}
@@ -143,6 +146,11 @@ Elior Sulem and Omri Abend }
 
 \begin{frame}
 	\frametitle{Cleaning}
+	
+	Filtered out website menu contents.
+	\vfill
+	
+	Split to paragraphs.
 \end{frame}
 
 \begin{frame}
@@ -170,7 +178,7 @@ Elior Sulem and Omri Abend }
 	Jensen-Shannon divergence and variational distance between word frequencies.
 	Self distances are small while pair distances in Legal-Illegal-eBay are high.
 	
-	Legal and Illegal should be considered different domains, despite being both DarkNet material.
+	Legal and Illegal should be considered different domains, despite being both Darknet material.
 	% TODO: some quantitative results
 
 \end{frame}
@@ -208,7 +216,8 @@ Elior Sulem and Omri Abend }
 
 	By manual inspection, NE precision and recall are low for Illegal Onion.
 	
-	For example: slang words for drugs (i.e. "kush") falsely picked up as NEs.
+	For example: slang words for drugs (e.g., ``kush'') falsely picked up as NEs.	
+	\vfill
 	
 	$\Rightarrow$ Standard NLP is not suited for this domain.
 \end{frame}
