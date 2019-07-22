@@ -33,10 +33,10 @@
 
 % for results matrix
 \newcommand{\ApplyGradient}[1]{%
-  \pgfmathsetmacro{\PercentColor}{ifthenelse(#1-0 > 0, (#1-21)*.8, 0)}%
-  \pgfmathsetmacro{\PercentInverse}{ifthenelse(\PercentColor > 70, 0, 100)}%
+  \pgfmathsetmacro{\PercentColor}{ifthenelse(#1-0 > 0, (#1*120/92-21), 0)}%
+  \pgfmathsetmacro{\PercentInverse}{\PercentColor}%
   %\textcolor{black!\PercentColor}{#1}
-  \edef\x{\noexpand\cellcolor{red!\PercentColor}}\x\textcolor{black!\PercentInverse}{#1}%
+  \edef\x{\noexpand\cellcolor{green!\PercentColor}}\x\tiny\textcolor{black!\PercentColor}{#1}%
 }
 \newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
 
@@ -61,7 +61,7 @@ Elior Sulem and Omri Abend }
 \section*{Introduction}
 
 {\usebackgroundtemplate{
-	\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil\includegraphics[width=.92\paperwidth]{DarkNet}\hfil}}	
+	\vbox to \paperheight{\hbox to \paperwidth{\hfill\includegraphics[width=.92\paperwidth]{DarkNet}\hfill}}	
 	}%
 \begin{frame}
 \end{frame}

@@ -2,9 +2,6 @@ fluency
 engage: show example earlier
 use darknet styling
 first sentence must be polished
-possible uses
-frame "the majority of the data..." _in this dataset_
 add example for word frequency vectors
 motivation for manipulations should be the first thing on the slide
-make results tables easier to see
 color coding in the results
