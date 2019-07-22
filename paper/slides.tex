@@ -63,14 +63,13 @@ Elior Sulem and Omri Abend }
 	}%
 \begin{frame}
 	What is the Dark Web?
-	\begin{center}
-	\begin{itemize}\setlength\itemsep{1em}
-	\item The non-indexed parts of the Internet
-	\item Anonymous activities
-	\item Both legal and illegal activities
-	\end{itemize}
-	\end{center}
-	% TODO: examples
+%	\begin{center}
+%	\begin{itemize}\setlength\itemsep{1em}
+%	\item The non-indexed parts of the Internet
+%	\item Anonymous activities
+%	\item Both legal and illegal activities
+%	\end{itemize}
+%	\end{center}
 \end{frame}
 }
 
@@ -150,18 +149,20 @@ Elior Sulem and Omri Abend }
 	\end{center}
 	\vfill
 	
-\small
-\begin{verbatim}
-3 Layers  Chip Style Herb Herbal Tobacco Grinder Weed Grinders
-Description:
-Quantity: 1
-Type : Tobacco Crusher
-Feature: Stocked,Eco-Friendly
-Material: plastic
-Size: 42*26mm
-Package include:
-1PC  Tobacco Crusher
-\end{verbatim}
+	\small
+	\begin{center}\color{green}
+		\begin{verbatim}
+			3 Layers  Chip Style Herb Herbal Tobacco Grinder Weed Grinders
+			Description:
+			Quantity: 1
+			Type : Tobacco Crusher
+			Feature: Stocked,Eco-Friendly
+			Material: plastic
+			Size: 42*26mm
+			Package include:
+			1PC  Tobacco Crusher
+		\end{verbatim}
+	\end{center}
 \end{frame}
 
 \begin{frame}
@@ -183,33 +184,30 @@ Package include:
 \begin{frame}[fragile]
 	\frametitle{Cleaning}
 	\begin{itemize}\setlength\itemsep{1em}
-	%\item Filter out website menu contents, 
-	\item Remove non-linguistic content: buttons, encryption keys, metadata, URLs.
-	%\vfill
+	\item Remove non-linguistic content: buttons, encryption keys, URLs...
 	
-	\item Split to paragraphs and join paragraphs to single lines.
-	%\vfill
-	
-	\item Remove duplicate paragraphs.
-	%\vfill
+	\item Split to paragraphs, join to single lines, remove duplicates.
+
 	\end{itemize}
-	\scriptsize
-\begin{verbatim}
-	Finest organic cannabis grown by proffessional growers in the
-	netherlands.
-	We double seal all packages for odor less delivery.
-	Shipping within 24 hours!
-	              Product                    Price          Quantity
-	1g Original Haze                    15 EUR = 0.025 ฿ 1_ X Buy now
-	5g Original Haze                    65 EUR = 0.108 ฿ 1_ X Buy now
-	1g Bubblegum                        10 EUR = 0.017 ฿ 1_ X Buy now
-	5g Bubblegum                        45 EUR = 0.075 ฿ 1_ X Buy now
-	1g Jack Herer                       14 EUR = 0.023 ฿ 1_ X Buy now
-	5g Jack Herer                       60 EUR = 0.099 ฿ 1_ X Buy now
-	1g Chronic                          9 EUR = 0.015 ฿  1_ X Buy now
-	5g Chronic                          40 EUR = 0.066 ฿ 1_ X Buy now
-	1g Banana Kush                      11 EUR = 0.018 ฿ 1_ X Buy now
-\end{verbatim}
+	\small
+	\begin{center}\color{red}
+		\begin{verbatim}
+			Finest organic cannabis grown by proffessional growers in the
+			netherlands.
+			We double seal all packages for odor less delivery.
+			Shipping within 24 hours!
+			              Product                    Price          Quantity
+			1g Original Haze                    15 EUR = 0.025 ฿ 1_ X Buy now
+			5g Original Haze                    65 EUR = 0.108 ฿ 1_ X Buy now
+			1g Bubblegum                        10 EUR = 0.017 ฿ 1_ X Buy now
+			5g Bubblegum                        45 EUR = 0.075 ฿ 1_ X Buy now
+			1g Jack Herer                       14 EUR = 0.023 ฿ 1_ X Buy now
+			5g Jack Herer                       60 EUR = 0.099 ฿ 1_ X Buy now
+			1g Chronic                          9 EUR = 0.015 ฿  1_ X Buy now
+			5g Chronic                          40 EUR = 0.066 ฿ 1_ X Buy now
+			1g Banana Kush                      11 EUR = 0.018 ฿ 1_ X Buy now
+		\end{verbatim}
+	\end{center}
 \end{frame}
 
 \begin{frame}
@@ -235,25 +233,29 @@ Package include:
 \begin{frame}
 	\frametitle{Vocabulary}
 	Distance between word frequencies distributions, measured by:
-	\begin{itemize}
-	\item Jensen-Shannon divergence.
-	\item L1 distance.
-	\end{itemize}
-	
-	Splitting each dataset in half, we find small ``self-distances'', \\
-	but the different domains are about equidistant.
+	\begin{minipage}{.45\textwidth}
+		\begin{itemize}
+			\item Jensen-Shannon divergence
+		\end{itemize}
+	\end{minipage}\hfill
+	\begin{minipage}{.45\textwidth}
+		\begin{itemize}
+			\item L1 distance
+		\end{itemize}
+	\end{minipage}
 	\vfill
-	\pause
+	
+	Splitting each dataset in half, we find small ``self-distances''{\pause}, \\ 
+	but the different domains are about equidistant.
 	
 	\begin{center}
 	\begin{tikzpicture}
-	\draw (0,1) node[anchor=north]{eBay}
-	  -- (2,0) node[anchor=north]{Onion Legal}
-	  -- (2,2) node[anchor=south]{Onion Illegal}
+	\draw[line width=2] (0,1) node[anchor=north]{\textbf{\color{yellow} eBay}}
+	  -- (2,0) node[anchor=north]{\textbf{\color{green} Legal Onion}}
+	  -- (2,2) node[anchor=south]{\textbf{\color{red} Illegal Onion}}
 	  -- cycle;
 	\end{tikzpicture}
 	\end{center}
-	\vfill
 	\pause
 	
 	Legal and illegal Onion should be considered different domains.
@@ -280,19 +282,19 @@ Package include:
 	\vfill
 	
 	\begin{center}
-	\begin{tabular}{l|r}
-	 & \% Wikifiable\\
+	\begin{tabular}{l|c}
+	 & \% (of detected NEs) Wikifiable\\
 	 \hline
-	eBay & $38.6 \pm2.00$\\
-	Illegal Onion & $32.5 \pm1.35$\\
-	Legal Onion & $50.8 \pm2.31$
+	\textbf{\color{yellow} eBay} & $38.6 \pm2.00$\\
+	\textbf{\color{red} Illegal Onion} & $32.5 \pm1.35$\\
+	\textbf{\color{green} Legal Onion} & $50.8 \pm2.31$
 	\end{tabular}
 	\end{center}
 	\vfill
 
-	By manual inspection, NE precision and recall are low for Illegal Onion.
+	By manual inspection, NE precision and recall are low for \textbf{\color{red} Illegal Onion}.
 	
-	For example: slang words for drugs (e.g., ``kush'') falsely picked up as NEs.	
+	For example: slang words for drugs (e.g., ``\textbf{\color{red} kush}'') falsely picked up as NEs.	
 	\vfill
 	
 	$\Rightarrow$ Standard NLP is not suited for this domain.
