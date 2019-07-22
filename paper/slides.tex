@@ -40,12 +40,7 @@
 }
 \newcolumntype{R}{>{\collectcell\ApplyGradient}{c}<{\endcollectcell}}
 
-% Outline slides
-\AtBeginSection[]
-{\begin{frame} \frametitle{Outline} \tableofcontents[currentsection,currentsubsection] \end{frame}}
-
 \begin{document}
-
 
 \title[]{The Language of Legal and Illegal Activity \\ on the Darknet}
 \author[Daniel Hershcovich]{Leshem Choshen, Dan Eldad, \textbf{Daniel Hershcovich}, \\
@@ -105,7 +100,7 @@ Elior Sulem and Omri Abend }
 	
 	\begin{center}
 	How well do NLP tools work on Darknet text?
-	\includegraphics[width=.4\textwidth]{nlp.png}
+	\includegraphics[width=.4\textwidth]{spacy.png}
 	\vfill
 	\pause
 	
@@ -432,17 +427,6 @@ Elior Sulem and Omri Abend }
 	\end{center}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Classification Challenges}
-	
-	Simple classifiers (NB, SVM) work best.
-	\begin{itemize}\setlength\itemsep{1em}
-	\item Small training data.
-	\item Non-standard language.
-	\item Understudied domain.
-	\end{itemize}
-\end{frame}
-
 \section{Cross-Domain Classification: Legal \& Illegal Forums}
 
 \begin{frame}
@@ -515,12 +499,11 @@ Elior Sulem and Omri Abend }
 
 \begin{frame}
 	\frametitle{Conclusion}
-	Differences between legal and illegal Darknet sites:	
-	\begin{itemize}\setlength\itemsep{1em}
-	\item Vocabulary
-	\item Shallow syntax (POS)
-	\item Named entities
-	\end{itemize}
+	Differences between legal and illegal Darknet sites include:
+	
+	Vocabulary,
+	shallow syntax (POS)
+	and named entities.
 	\vfill
 	\pause
 	
@@ -534,9 +517,7 @@ Elior Sulem and Omri Abend }
 	\pause
 	
 	\begin{minipage}{.7\textwidth}
-	Code: {\color{blue}\url{https://github.com/huji-nlp/cyber}}
-	
-	Data: {\color{blue}\url{dan.eldad1@mail.huji.ac.il}}
+	\color{blue}\url{https://github.com/huji-nlp/cyber}
 	\end{minipage}
 	\pause
 	\begin{minipage}{.28\textwidth}

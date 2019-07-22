@@ -1,23 +1,11 @@
-logo res
 fluency
 engage: show example earlier
 use darknet styling
-add "funded by" to main slide
 first sentence must be polished
 possible uses
-mirror screen
-pdfpc
-remove "what is the dark web"
-freenet - good to know about
-remove jupyter, add just spacy
 add disclaimer about legal and illegal subjectvitiy
-remove outline slides
 frame "the majority of the data..." _in this dataset_
 add example for word frequency vectors
 motivation for manipulations should be the first thing on the slide
 make results tables easier to see
-remove slide 22
-conclusion: Vocabulary Shallow syntax (POS) Named entities on one line; add implication
-remove data contact email
 color coding in the results
-check colors to use for colorblind friendly
