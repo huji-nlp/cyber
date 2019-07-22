@@ -4,4 +4,3 @@ use darknet styling
 first sentence must be polished
 add example for word frequency vectors
 motivation for manipulations should be the first thing on the slide
-color coding in the results

@@ -112,7 +112,7 @@ Elior Sulem and Omri Abend }
 	\end{center}
 \end{frame}
 
-\section{Data: Darknet \& eBay}
+\section{Data}
 
 \begin{frame}
 	\frametitle{DUTA-10K}
@@ -226,7 +226,7 @@ Elior Sulem and Omri Abend }
 	\end{center}
 \end{frame}
 
-\section{Domain Differences: Vocabulary \& Named Entities}
+\section{Domain Differences}
 
 \begin{frame}
 	\frametitle{Vocabulary}
@@ -298,7 +298,7 @@ Elior Sulem and Omri Abend }
 	$\Rightarrow$ Standard NLP is not suited for this domain.
 \end{frame}
 
-\section{Classification: Legal \& Illegal Drugs, eBay}
+\section{Classification}
 
 \begin{frame}
 	\frametitle{Classes}
@@ -384,9 +384,9 @@ Elior Sulem and Omri Abend }
 \end{frame}
 
 \begin{frame}
-	\frametitle{Results: eBay vs. Legal Onion Drugs}
+	\frametitle{Results}
 	
-	Clear separation by content (by NB), but also by function (by SVM).
+	\textbf{\color{yellow} eBay} vs. \textbf{\color{green} Legal Onion} drugs:
 	
 	\begin{center}
 		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
@@ -408,9 +408,9 @@ Elior Sulem and Omri Abend }
 \end{frame}
 
 \begin{frame}
-	\frametitle{Results: Legal vs. Illegal Onion Drugs}
+	\frametitle{Results}
 	
-	Harder to distinguish by content, easier by POS distribution (SVM again).
+	\textbf{\color{green} Legal Onion} vs. \textbf{\color{red} Illegal Onion} drugs:
 	
 	\begin{center}
 		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
@@ -431,7 +431,7 @@ Elior Sulem and Omri Abend }
 	\end{center}
 \end{frame}
 
-\section{Cross-Domain Classification: Legal \& Illegal Forums}
+\section{Cross-Domain Classification}
 
 \begin{frame}
 	\frametitle{Darknet Forums}
@@ -452,9 +452,9 @@ Elior Sulem and Omri Abend }
 \end{frame}
 
 \begin{frame}
-	\frametitle{Results: Legal vs. Illegal Onion Forums}
+	\frametitle{Results}
 	
-	Harder for most classifiers, but SVM succeeds using content and function.
+	\textbf{\color{green} Legal Onion} vs. \textbf{\color{red} Illegal Onion} forums:
 	
 	\begin{center}
 		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
@@ -476,9 +476,10 @@ Elior Sulem and Omri Abend }
 \end{frame}
 
 \begin{frame}
-	\frametitle{Results: Trained on Drugs, Tested on Forums}
+	\frametitle{Results}
 	
-	Effective cross-domain generalization even with bag-of-words.
+	Trained on \textbf{drugs},
+	evaluated on \textbf{forums} (\textbf{\color{green} Legal Onion} vs. \textbf{\color{red} Illegal Onion}):
 	
 	\begin{center}
 		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
