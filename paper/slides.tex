@@ -234,20 +234,36 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 
 \begin{frame}
 	\frametitle{Vocabulary}
-	Distance between word frequencies distributions, measured by:
-	\begin{minipage}{.45\textwidth}
+	
+	\begin{flushright}\tt\small
+	\begin{tabular}{|lr|}
+	\hline
+	to & 0.0486 \\
+	the & 0.4242 \\
+	of & 0.0162 \\
+	\ldots & \\
+	cocaine & 0.0041 \\
+	Free & 0.0041 \\
+	\ldots & \\
+	\hline
+	\end{tabular}
+	\end{flushright}
+	\vspace{-35mm}
+	
+	Distance between word distributions\pause, measured by:
+	\begin{minipage}{.43\textwidth}
 		\begin{itemize}
 			\item Jensen-Shannon divergence
 		\end{itemize}
-	\end{minipage}\hfill
-	\begin{minipage}{.45\textwidth}
+	\end{minipage}
+	\begin{minipage}{.3\textwidth}
 		\begin{itemize}
 			\item L1 distance
 		\end{itemize}
 	\end{minipage}
 	\vfill
 	
-	Splitting each dataset in half, we find small ``self-distances''{\pause}, \\ 
+	Small ``self-distances'' found by splitting each in half {\pause}, \\ 
 	but the different domains are about equidistant.
 	
 	\begin{center}

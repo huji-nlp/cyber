@@ -2,4 +2,3 @@ fluency
 engage: show example earlier
 use darknet styling
 first sentence must be polished
-add example for word frequency vectors
