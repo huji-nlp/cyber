@@ -138,6 +138,30 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\hspace{2cm} Illegal \hspace{5cm} Legal
 \end{frame}
 
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[fragile]
+	\small
+	\begin{center}\color{OwlGreen}
+		\begin{verbatim}
+			Finest organic cannabis grown by proffessional growers in the
+			netherlands.
+			We double seal all packages for odor less delivery.
+			Shipping within 24 hours!
+			              Product                    Price          Quantity
+			1g Original Haze                    15 EUR = 0.025 ฿ 1_ X Buy now
+			5g Original Haze                    65 EUR = 0.108 ฿ 1_ X Buy now
+			1g Bubblegum                        10 EUR = 0.017 ฿ 1_ X Buy now
+			5g Bubblegum                        45 EUR = 0.075 ฿ 1_ X Buy now
+			1g Jack Herer                       14 EUR = 0.023 ฿ 1_ X Buy now
+			5g Jack Herer                       60 EUR = 0.099 ฿ 1_ X Buy now
+			1g Chronic                          9 EUR = 0.015 ฿  1_ X Buy now
+			5g Chronic                          40 EUR = 0.066 ฿ 1_ X Buy now
+			1g Banana Kush                      11 EUR = 0.018 ฿ 1_ X Buy now
+		\end{verbatim}
+	\end{center}
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=white}
 \begin{frame}[fragile]
 	\frametitle{Control Data: eBay}
 	Product descriptions acquired by searching for drug-related terms.
@@ -187,47 +211,11 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\frametitle{Cleaning}
 	\begin{itemize}\setlength\itemsep{1em}
 	\item Remove non-linguistic content: buttons, encryption keys, URLs...
-	
 	\item Split to paragraphs, join to single lines, remove duplicates.
+	\item Sampled 571 paragraphs from each, for comparable size.
+	\includegraphics[width=.2\textwidth]{pipette.png}
 
 	\end{itemize}
-	\small
-	\begin{center}\color{red}
-		\begin{verbatim}
-			Finest organic cannabis grown by proffessional growers in the
-			netherlands.
-			We double seal all packages for odor less delivery.
-			Shipping within 24 hours!
-			              Product                    Price          Quantity
-			1g Original Haze                    15 EUR = 0.025 ฿ 1_ X Buy now
-			5g Original Haze                    65 EUR = 0.108 ฿ 1_ X Buy now
-			1g Bubblegum                        10 EUR = 0.017 ฿ 1_ X Buy now
-			5g Bubblegum                        45 EUR = 0.075 ฿ 1_ X Buy now
-			1g Jack Herer                       14 EUR = 0.023 ฿ 1_ X Buy now
-			5g Jack Herer                       60 EUR = 0.099 ฿ 1_ X Buy now
-			1g Chronic                          9 EUR = 0.015 ฿  1_ X Buy now
-			5g Chronic                          40 EUR = 0.066 ฿ 1_ X Buy now
-			1g Banana Kush                      11 EUR = 0.018 ฿ 1_ X Buy now
-		\end{verbatim}
-	\end{center}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Clean Data}
-
-	Sampled 571 paragraphs from each, for comparable size.
-	
-	\begin{center}
-	\def\arraystretch{2}
-	\begin{tabular}{c|ccc}
-	& Public Web && Dark Web \\ 
-	\hline
-	\multirow{2}{*}{Legal} & \textbf{\color{yellow} eBay} && \textbf{\color{green} Legal Onion} \\
-	& (14,276 words) && (14,802 words) \\\\
-	\multirow{2}{*}{Illegal} &&& \textbf{\color{red} Illegal Onion} \\
-	&&& (15,049 words)
-	\end{tabular}
-	\end{center}
 \end{frame}
 
 \section{Domain Differences}
@@ -235,20 +223,27 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 \begin{frame}
 	\frametitle{Vocabulary}
 	
-	\begin{flushright}\tt\small
-	\begin{tabular}{|lr|}
+	\begin{flushright}
+	\tt\small\rowcolors{1}{lightgray!60}{lightgray!30}
+	\setlength{\tabcolsep}{2pt}
+	\begin{tabular}{||lr|}
 	\hline
 	to & 0.0486 \\
 	the & 0.4242 \\
 	of & 0.0162 \\
+	is & 0.0118 \\
+	and & 0.0102 \\
 	\ldots & \\
+	EUR & 0.0094 \\
 	cocaine & 0.0041 \\
 	Free & 0.0041 \\
+	drug & 0.0035 \\
+	1 & 0.0025 \\
 	\ldots & \\
 	\hline
 	\end{tabular}
 	\end{flushright}
-	\vspace{-35mm}
+	\vspace{-55mm}
 	
 	Distance between word distributions\pause, measured by:
 	\begin{minipage}{.43\textwidth}
@@ -263,7 +258,7 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\end{minipage}
 	\vfill
 	
-	Small ``self-distances'' found by splitting each in half {\pause}, \\ 
+	Small ``self-distances'', found by splitting each in half{\pause}, \\ 
 	but the different domains are about equidistant.
 	
 	\begin{center}
