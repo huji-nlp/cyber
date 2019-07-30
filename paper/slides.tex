@@ -214,9 +214,9 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\begin{tabular}{c|ccc}
 	& Public Web && Dark Web \\ 
 	\hline
-	\multirow{2}{*}{Legal} & \textbf{\color{yellow} eBay} && \textbf{\color{green} Legal Onion} \\
+	\multirow{2}{*}{Legal} & \textbf{\color{yellow}\Huge eBay} && \textbf{\color{green}\Huge Legal Onion} \\
 	& (188 pages, 35,799 words) && (35 pages, 61,655 words) \\\\
-	\multirow{2}{*}{Illegal} &&& \textbf{\color{red} Illegal Onion} \\
+	\multirow{2}{*}{Illegal} &&& \textbf{\color{red}\Huge Illegal Onion} \\
 	&&& (255 pages, 1,438,351 words)
 	\end{tabular}
 	\end{center}
@@ -290,9 +290,9 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	
 	\begin{center}
 	\begin{tikzpicture}
-	\draw[line width=2] (0,1) node[anchor=north]{\textbf{\color{yellow} eBay}}
-	  -- (2,0) node[anchor=north]{\textbf{\color{green} Legal Onion}}
-	  -- (2,2) node[anchor=south]{\textbf{\color{red} Illegal Onion}}
+	\draw[line width=2] (0,1) node[anchor=north]{\textbf{\color{yellow}\LARGE eBay}}
+	  -- (2,0) node[anchor=north]{\textbf{\color{green}\LARGE Legal Onion}}
+	  -- (2,2) node[anchor=south]{\textbf{\color{red}\LARGE Illegal Onion}}
 	  -- cycle;
 	\end{tikzpicture}
 	\end{center}
@@ -304,10 +304,10 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 \begin{frame}
 	\frametitle{Characteristics of Darknet Data}
 	
-	Diverse: sub-domains are distinguishable.
+	\textbf{Diverse}: sub-domains are distinguishable.
 	\vfill
 	
-	Unique: distinguishable from other domains.
+	\textbf{Unique}: distinguishable from other domains.
 	
 	\begin{figure}
 		\centering
@@ -321,7 +321,7 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	NE extraction [spaCy] + Wikification \cite{bunescu2006using}.
 	\vfill
 	
-	\begin{center}
+	\begin{center}\LARGE
 	\begin{tabular}{l|c}
 	 & \% (of detected NEs) Wikifiable\\
 	 \hline
@@ -345,7 +345,7 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 \begin{frame}
 	\frametitle{Classes}
 	We identified three domains. Two binary classification settings:
-	\begin{center}
+	\begin{center}\LARGE
 	\{ \textbf{\color{yellow} eBay}, \textbf{\color{green} Legal Onion} \}
 	\vfill
 	
@@ -366,7 +366,7 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\frametitle{Classifiers}
 	
 	\begin{minipage}{.7\textwidth}
-	\begin{itemize}\setlength\itemsep{1em}
+	\begin{itemize}\setlength\itemsep{2em}
 		\item NB: Naive Bayes (bag of words)
 		\item SVM: Support Vector Machine
 		\item BoE: sum/average GloVe + MLP
@@ -403,13 +403,13 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\end{minipage}
 	\begin{minipage}{.59\textwidth}
 	\begin{itemize}\setlength\itemsep{1em}
-		\item \spot<3->(content)[fill=yellow!50]{Replace \textbf{content} words with their POS}
+		\item \spot<3>(content)[fill=yellow!50]{Replace \textbf{content} words with their POS}
 		\item Replace \textbf{function} words with their POS
 	\end{itemize}
 	\end{minipage}
 	\vfill
 	
-    \[\{\textsc{adj, adv, noun, propn, verb, x, num}\}\]
+    \[\text{Content POS: }\{\textsc{adj, adv, noun, propn, verb, x, num}\}\]
 	\vfill
 	\pause
 	
@@ -421,7 +421,6 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\small\textsc{propn} & \small\textsc{propn} &(& \small\textsc{propn} & \small\textsc{propn} &)& \small\textsc{verb} & \small\textsc{verb} & for & \small\textsc{propn} & \small\textsc{propn}
 	\end{tabular}}
 	\vfill
-	\pause
 	
 	{\color{red}
 	\setlength{\tabcolsep}{9.5pt}
