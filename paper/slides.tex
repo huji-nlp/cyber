@@ -228,12 +228,13 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\frametitle{Cleaning}
 	\LARGE
 	\begin{itemize}\setlength\itemsep{1em}
-		\item Remove non-linguistic content: buttons, URLs...
-		\item Split to paragraphs, join to single lines, remove duplicates.
-		\item Sampled 571 paragraphs from each, for comparable size.
+		\item Filter out \textbf{non-English} pages.
+		\item Remove \textbf{non-linguistic} content: buttons, URLs...
+		\item Split to \textbf{paragraphs}, join to single lines, remove duplicates.
+		\item Sampled 571 paragraphs from each, for \textbf{comparable size}.
 	\end{itemize}
 	\begin{center}
-	\includegraphics[width=.2\textwidth]{pipette.png}
+	\includegraphics[width=.15\textwidth]{pipette.png}
 	\end{center}
 	
 	\colorbox{black}{\color{OwlGreen}\tt\scriptsize
@@ -439,11 +440,12 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 
 \begin{frame}
 	\frametitle{Results}
-	
+	\Large
 	\textbf{\color{yellow} eBay} vs. \textbf{\color{green} Legal Onion} drugs:
 	
+	\vspace{-1cm}
 	\begin{center}
-		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.4}
 		\begin{tabular}{l *{5}{R}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
@@ -464,10 +466,12 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 \begin{frame}
 	\frametitle{Results}
 	
-	\textbf{\color{green} Legal Onion} vs. \textbf{\color{red} Illegal Onion} drugs:
+	\Large
+	\textbf{\color{green} Legal Onion} vs. \\ \textbf{\color{red} Illegal Onion} drugs:
 	
+	\vspace{-16mm}
 	\begin{center}
-		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.4}
 		\begin{tabular}{l *{5}{R}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
@@ -489,7 +493,7 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 
 \begin{frame}
 	\frametitle{Darknet Forums}
-	
+	\LARGE
 	Can we generalize beyond drugs?
 	\vfill
 	\pause
@@ -501,17 +505,19 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\vfill
 	
 	\begin{center}
-	\includegraphics[width=.5\textwidth]{forum.jpg}
+	\includegraphics[width=.4\textwidth]{forum.jpg}
 	\end{center}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Results}
 	
-	\textbf{\color{green} Legal Onion} vs. \textbf{\color{red} Illegal Onion} forums:
+	\Large
+	\textbf{\color{green} Legal Onion} vs. \\ \textbf{\color{red} Illegal Onion} forums:
 	
+	\vspace{-17mm}
 	\begin{center}
-		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.4}
 		\begin{tabular}{l *{5}{R}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
@@ -532,11 +538,13 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 \begin{frame}
 	\frametitle{Results}
 	
+	\Large
 	Trained on \textbf{drugs},
-	evaluated on \textbf{forums} (\textbf{\color{green} Legal Onion} vs. \textbf{\color{red} Illegal Onion}):
+	evaluated on \\ \textbf{forums} (\textbf{\color{green} Legal} vs. \textbf{\color{red} Illegal}):
 	
+	\vspace{-17mm}
 	\begin{center}
-		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.8}
+		\setlength{\tabcolsep}{8pt}\def\arraystretch{1.4}
 		\begin{tabular}{l *{5}{R}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{full}}
 		& \multicolumn{1}{c}{\bf \rotatebox{90}{drop}\rotatebox{90}{content}}
@@ -558,10 +566,11 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 
 \begin{frame}
 	\frametitle{Conclusion}
+	\Large
 	\begin{minipage}{.65\textwidth}
-	Language of legal and illegal Darknet is \textbf{different}:
+	Language of \textbf{\color{green} legal}$\leftrightarrow$\textbf{\color{red} illegal} Darknet is \textbf{different}:
 	\begin{itemize}\setlength\itemsep{1em}
-	\item As different as \textbf{Darknet vs. eBay}.
+	\item As different as \textbf{Darknet vs. \color{yellow}eBay}.
 	\item Can be distinguished \textbf{just by POS}.
 	\end{itemize}
 	\end{minipage}
@@ -577,22 +586,34 @@ July 31, 2019 \hfill $^*$Equal contribution \hfill ACL 2019, Florence}
 	\vfill
 	\pause
 	
-	Scientifically observed through multiple lenses:
-	\begin{itemize}\setlength\itemsep{1em}
-	\item Word statistics
-	\item Wikification
-	\item Predictive
+	Observed through multiple lenses:
+	
+	\begin{minipage}{.25\textwidth}
+	\begin{itemize}
+	\item Vocabulary
 	\end{itemize}
-	\vfill
+	\end{minipage}
+	\begin{minipage}{.25\textwidth}
+	\begin{itemize}
+	\item Wikification
+	\end{itemize}
+	\end{minipage}
+	\begin{minipage}{.2\textwidth}
+	\begin{itemize}
+	\item Prediction
+	\end{itemize}
+	\end{minipage}
 	\pause
+	\vfill
 	
 	\begin{minipage}{.7\textwidth}
 	\color{blue}\url{https://github.com/huji-nlp/cyber}
 	\end{minipage}
 	\pause
+	\hfill
 	\begin{minipage}{.28\textwidth}
 	\centering\vspace{-2cm}
-	\includegraphics[width=.8\textwidth]{onion.jpg}
+	\includegraphics[width=.6\textwidth]{onion.jpg}
 	
 	Thanks!
 	\end{minipage}
