@@ -2,11 +2,20 @@
 
 This repository contains code and data for the following paper:
 
-    @InProceedings{choshen2019language,
-      author    = {Choshen, Leshem   and  Eldad, Dan  and  Hershcovich, Daniel  and  Sulem, Elior and  Abend, Omri},
-      title     = {The Language of Legal and Illegal Activity on the Darknet},
-      booktitle = {Proc. of ACL},
-      year      = {2019}
+    @inproceedings{choshen-etal-2019-language,
+        title = "The Language of Legal and Illegal Activity on the {D}arknet",
+        author = "Choshen, Leshem  and
+          Eldad, Dan  and
+          Hershcovich, Daniel  and
+          Sulem, Elior  and
+          Abend, Omri",
+        booktitle = "Proceedings of the 57th Conference of the Association for Computational Linguistics",
+        month = jul,
+        year = "2019",
+        address = "Florence, Italy",
+        publisher = "Association for Computational Linguistics",
+        url = "https://www.aclweb.org/anthology/P19-1419",
+        pages = "4271--4279"
     }
 
 ## Contents
