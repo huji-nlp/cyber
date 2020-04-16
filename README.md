@@ -1,6 +1,6 @@
 # The Language of Legal and Illegal Activity on the Darknet
 
-This repository contains code and data for the following paper:
+This repository contains code and data for the following [paper](https://www.aclweb.org/anthology/P19-1419.pdf):
 
     @inproceedings{choshen-etal-2019-language,
         title = "The Language of Legal and Illegal Activity on the {D}arknet",
